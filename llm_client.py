@@ -86,6 +86,12 @@ MODEL_REGISTRY = {
         "key_env": "GROQ_API_KEY",
         "notes": "Groq GPT-OSS 20B — fast, cheap sibling of the default",
     },
+    "groq-qwen3-27b": {
+        "provider": "groq",
+        "model": "qwen/qwen3.6-27b",
+        "key_env": "GROQ_API_KEY",
+        "notes": "Groq Qwen 3.6 27B — general-purpose chat, Kimi K2 replacement",
+    },
     # --- NVIDIA hosted NIM (free tier; needs NVIDIA_API_KEY from build.nvidia.com) ---
     "nvidia-llama33": {
         "provider": "nvidia",
