@@ -273,6 +273,8 @@ if __name__ == "__main__":
     ap.add_argument("--list", action="store_true", help="just print the registry")
     ap.add_argument("--model", default=None, help="model key to smoke-test (needs the key)")
     ap.add_argument("--prompt", default="Say hi in 3 words.")
+    ap.add_argument("--bench", action="store_true",
+                    help="run every registered model on a story prompt, timed")
     args = ap.parse_args()
     if args.list or not args.model:
         rows = list_models()
@@ -284,5 +286,35 @@ if __name__ == "__main__":
         print(f"\nDefault: {DEFAULT_MODEL_KEY}")
         print("\nSmoke test with: python llm_client.py --model groq-gpt-oss-120b")
         raise SystemExit(0)
+
+    if args.bench:
+        story_prompt = ("Write a simple short story of about 150 words "
+                        "about a stray cat that finds a home.")
+        print(f"Benchmarking all {len(MODEL_REGISTRY)} models")
+        print(f"Prompt: {story_prompt}")
+        results = []  # (key, seconds-or-None, response)
+        for key in model_keys():
+            print(f"\n{'=' * 70}\n--- {key} ---")
+            t0 = time.perf_counter()
+            try:
+                txt = call_llm([{"role": "user", "content": story_prompt}],
+                               model_key=key)
+                elapsed = time.perf_counter() - t0
+                results.append((key, elapsed, txt))
+                print(f"time: {elapsed:.1f}s\n")
+                print(txt)
+            except Exception as e:
+                elapsed = time.perf_counter() - t0
+                results.append((key, None, ""))
+                print(f"FAILED after {elapsed:.1f}s: {e}")
+        print(f"\n{'=' * 70}\nRANKING (working models, fastest first)")
+        for k, t in sorted(((k, t) for k, t, _ in results if t is not None),
+                           key=lambda x: x[1]):
+            print(f"{t:6.1f}s  {k}")
+        failed = [k for k, t, _ in results if t is None]
+        if failed:
+            print("failed: " + ", ".join(failed))
+        raise SystemExit(0)
+
     txt = call_llm([{"role": "user", "content": args.prompt}], model_key=args.model)
     print(f"[{args.model}] -> {txt}")
