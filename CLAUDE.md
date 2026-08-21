@@ -10,7 +10,7 @@ and reasoning hooks for adding features. Read this before modifying the code.
 
 A fully automated, **zero-cost** pipeline that turns trending AI/tech/business news into
 ready-to-edit YouTube Shorts (9:16, 1080×1920). It discovers stories from free
-RSS feeds + Hacker News + Reddit + **Google News RSS**, writes a non-technical "hook-first" narration script,
+RSS feeds + Hacker News + Reddit + **Google News RSS** + **YouTube channel feeds**, writes a non-technical "hook-first" narration script,
 generates voiceover, asks LLM for a per-sentence visual plan, downloads one
 free stock video/photo PER SENTENCE (so clips align with the words spoken),
 and cuts them together chronologically into a draft MP4.
@@ -23,7 +23,7 @@ and cuts them together chronologically into a draft MP4.
 - **Subtle transition clicks** — 1000Hz sine at sentence boundaries
 - **NO burned-in captions** — `captions.srt` is separate reference file
 
-- **Language/Runtime:** Python 3.13 (works on 3.10+)
+- **Language/Runtime:** Python 3.13 (works on 3.10+) — invoke everything with `python3` (see §2)
 - **External paid APIs:** NONE. Two free APIs — Groq (LLM: research, script,
   AND per-sentence visual plan + tag verification) and Pexels (stock video + photos).
   Optional: NVIDIA NIM (free tier) for alternative LLM models.
@@ -42,6 +42,11 @@ and cuts them together chronologically into a draft MP4.
 A `.env` file in the project root holds all secrets and is auto-loaded by
 `run_pipeline.py`, `script_generator.py`, and `llm_client.py` (manual `export` not required).
 
+**Always run scripts with `python3`, not `python`.** On this machine bare
+`python` resolves to an interpreter without the project dependencies
+(`ModuleNotFoundError: No module named 'requests'`). Every command example in
+this file uses `python3`.
+
 Required keys:
 ```
 GROQ_API_KEY="gsk-..."      # script generation (free, 30 req/min) — console.groq.com
@@ -51,6 +56,7 @@ PEXELS_API_KEY="qkn-..."    # stock footage download (free) — pexels.com/api
 Optional key:
 ```
 NVIDIA_API_KEY="nvapi-..."  # alternative LLM models on NVIDIA NIM (free tier) — build.nvidia.com
+                            # also used by --rank-model nvidia-nemotron-ultra for the rerank
 ```
 
 Python dependencies (`pip install -r requirements.txt`):
@@ -88,21 +94,30 @@ The pipeline selects stories in this order:
    - Skipped unless `--no-dedupe` flag used
 
 3. **LLM Editorial Rerank — PRECISION layer** (`llm_ranker.rerank`):
-   - ONE LLM call (~3k tokens) reads the whole pool: title, source, summary, RAW engagement numbers (HN points, YouTube views), age
+   - ONE LLM call (~7.5k tokens worst case) reads the whole pool: title, source, summary, RAW engagement numbers (HN points, YouTube views), age
    - Returns a best-first shortlist (`max(count*3, 12)` picks) with a one-line editorial reason per pick, plus same-event duplicate groups
    - The LLM weighs engagement itself (no hardcoded divisor) and explicitly demotes academic papers without news hooks, insider discussions, vague headlines — fixes the arXiv-crowding failure mode keyword scoring had
    - Picks ONLY from provided IDs; hallucinated/repeated IDs dropped at parse time
    - ANY failure (bad JSON, <3 valid picks, API error) → falls back to heuristic order (`rank_source == "heuristic"`) with a `[llm-rank] fell back...` log line — discovery never hard-depends on a live API
    - Skipped entirely with `--no-llm-rank`
+   - Defaults to the same model as script generation; `--rank-model <key>` runs
+     ONLY this call on another provider — e.g. `--rank-model nvidia-nemotron-ultra`
+     keeps scripts on Groq while ranking rides NVIDIA's separate rate limits
+     (needed because Groq's 8k TPM cap rejects the full-size rerank request —
+     see known issue 22)
 
 4. **Interactive Picker** (unless `--auto` or non-TTY):
    - LLM-ranked runs display **best-first with the LLM's reason** under each candidate (plus `↻ same event as #N` on duplicate-group members); heuristic fallback keeps the old **grouped-by-category** display — **ALL stories shown**
-   - Prompts: `Pick stories to generate (e.g. 1,3,5 / all / top3): `
+   - Prompts: `Pick stories to generate:` (hint line printed above it)
    - **Commands:**
      - `1,3,5` — specific indices
      - `top3` / `top5` — top N
      - `all` — generate all shown candidates
      - `Enter` (empty) — defaults to top-N (where N = `--count`)
+   - Every selection path indexes `picker_list` — the EXACT order the displayed
+     numbers refer to — never the raw score-sorted list (the grouped-by-category
+     display reorders stories; indexing it directly made typed numbers pick the
+     wrong story)
 
 5. **Generation**:
    - For each selected story: fetch article/comments → LLM call → voice → assets → assemble
@@ -114,17 +129,18 @@ The pipeline selects stories in this order:
 
 Run with:
 ```
-python run_pipeline.py --count 3 --outdir output
-python run_pipeline.py --quick          # 1 script only, no video (fast review)
-python run_pipeline.py --count 1        # one full video incl. assembly
-python run_pipeline.py --count 2 --no-video   # scripts + voice only
-python run_pipeline.py --model groq-gpt-oss-20b --count 1  # fast/cheap Groq sibling
-python run_pipeline.py --model nvidia-nemotron-ultra --count 1  # use NVIDIA NIM
-python run_pipeline.py --model nvidia-gpt-oss-120b --count 1  # use GPT-OSS 120B on NVIDIA
-python run_pipeline.py --auto --count 5     # non-interactive (cron-friendly)
-python run_pipeline.py --no-dedupe --count 3 # allow regenerating today's stories
-python run_pipeline.py --compare-models "groq-gpt-oss-120b,nvidia-nemotron-ultra" --count 1  # cross-model comparison
-python run_pipeline.py --with-hook-text --count 1  # burn headline on gradient fallback
+python3 run_pipeline.py --count 3 --outdir output
+python3 run_pipeline.py --quick          # 1 script only, no video (fast review)
+python3 run_pipeline.py --count 1        # one full video incl. assembly
+python3 run_pipeline.py --count 2 --no-video   # scripts + voice only
+python3 run_pipeline.py --model groq-gpt-oss-20b --count 1  # fast/cheap Groq sibling
+python3 run_pipeline.py --model nvidia-nemotron-ultra --count 1  # use NVIDIA NIM
+python3 run_pipeline.py --model nvidia-gpt-oss-120b --count 1  # use GPT-OSS 120B on NVIDIA
+python3 run_pipeline.py --rank-model nvidia-nemotron-ultra --count 1  # Groq scripts + NVIDIA ranking
+python3 run_pipeline.py --auto --count 5     # non-interactive (cron-friendly)
+python3 run_pipeline.py --no-dedupe --count 3 # allow regenerating today's stories
+python3 run_pipeline.py --compare-models "groq-gpt-oss-120b,nvidia-nemotron-ultra" --count 1  # cross-model comparison
+python3 run_pipeline.py --with-hook-text --count 1  # burn headline on gradient fallback
 ```
 
 Flow (one story → one Short):
@@ -133,20 +149,24 @@ Flow (one story → one Short):
 run_pipeline.py (main)
   │
   ├─ Step 1: news_fetcher.rank_top_stories()
-  │     ├─ fetch_rss()      for each feed in RSS_FEEDS (incl. TLDR AI, TLDR Tech/Founders/Crypto, CNBC, TechCrunch Startups, MarketWatch, Reddit RSS, Google News RSS)
+  │     ├─ fetch_rss()      for each feed in RSS_FEEDS (blogs + CNBC, TechCrunch Startups,
+  │     │                   MarketWatch, Reddit RSS, Google News RSS)
   │     ├─ fetch_hn_signal()   Hacker News top stories (niche-filtered: AI + business/finance); keeps
   │     │                     hn_id so comments can be fetched later
+  │     ├─ fetch_youtube_feeds()  three channel Atom feeds (real view counts + descriptions)
   │     ├─ dedupe() + score_story()  (recency + niche + normalized engagement per source type)
-  │     └─ returns top N story dicts with category field
+  │     └─ returns FULL candidate pool (default 40) with category field
   │
   ├─ Daily dedupe: filter out stories already generated today (output/_generated_log.json)
   │
   ├─ LLM editorial rerank (llm_ranker.rerank): ONE call over the pool →
   │     best-first shortlist + per-pick reason + duplicate groups
-  │     (any failure → heuristic order; skipped with --no-llm-rank)
+  │     (any failure → heuristic order; skipped with --no-llm-rank;
+  │      runs on --rank-model when set, else on --model)
   │
   ├─ Story picker (interactive, unless --auto or non-TTY):
-  │     Print ranked candidates grouped by category; prompt "Pick stories to generate (e.g. 1,3,5 / all / top3 / list): "
+  │     Print ranked candidates (best-first w/ reasons, or grouped by category
+  │     on heuristic fallback); prompt "Pick stories to generate:"
   │
   └─ for each selected story:
        process_story(story, model_key)            # script_generator.py
@@ -219,14 +239,25 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - `call_llm(messages, model_key, temperature, max_tokens)` — single curl path for
   both Groq and NVIDIA (both speak OpenAI-style `/v1/chat/completions`).
   3 retries + backoff. `--max-time` scales with `max_tokens` (extra timeout
-  multiplier for 120b/550b models). Strips leaked reasoning (think-tag) blocks
-  from content and raises (→ retry) if a model returns only hidden reasoning.
+  multiplier for 120b/550b models). Guards — each raises so the retry loop
+  gets another roll instead of handing downstream garbage:
+  - strips complete `...</think>` reasoning blocks from content; drops a
+    truncated stub; raises if NOTHING but hidden reasoning remains
+  - raises on empty content and on `finish_reason=length` (budget exhausted
+    mid-output — reasoning models draw hidden reasoning from the SAME
+    `max_tokens` budget)
+  - rate-limit errors embedding "try again in Xs" sleep that long WITHOUT
+    burning an attempt (max 3 waits — the fallback cascade shares one org TPM
+    pool, so switching Groq models wouldn't dodge the wall anyway)
+  - hard API errors (bad key, unknown model id, hard quota like the 8k TPM
+    rejection) raise IMMEDIATELY — retrying cannot fix them
 - `resolve_model(key)` / `list_models()` / `model_keys()` — helpers for CLI.
 - `available_models()` — returns model keys whose API keys are present in env.
 - Auto-loads `.env` so `GROQ_API_KEY` and `NVIDIA_API_KEY` just work.
 - CLI: `--list` prints the registry; `--model <key> [--prompt ...]` smoke-tests
   one model; `--bench` runs every registered model on a fixed story prompt,
-  timed, with a fastest-first ranking — run it before/after registry edits.
+  timed with `time.perf_counter()`, with a fastest-first ranking — run it
+  before/after registry edits.
 
 ### script_generator.py — "the combined call" (the brain)
 - **Uses `llm_client.call_llm`** (model key passed from run_pipeline; defaults to
@@ -242,21 +273,30 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - `process_story(story, content=None)` — public entry; fetches content if needed.
 
 ### news_fetcher.py — "discover & rank"
-- `RSS_FEEDS` widened: AI/tech feeds + **TLDR AI** + **TLDR Tech/Founders/Crypto** + **CNBC Business**
-  + **TechCrunch Startups** + **MarketWatch** + **Reddit RSS** (r/programming, ML, artificial, singularity,
-  stocks, investing, wallstreetbets, economics, business via `old.reddit.com/r/{sub}/top/.rss`)
-  + **Google News RSS** (3 category queries: AI, Business, Science — redirects resolved for top candidates only).
+- `RSS_FEEDS`: AI/tech blogs (OpenAI, Google AI, TechCrunch AI, The Verge AI,
+  Ars Technica, MIT Tech Review, VentureBeat, arXiv cs.AI) + business/finance
+  (CNBC Business, TechCrunch Startups, MarketWatch) + Reddit RSS (r/programming
+  via `old.reddit.com/r/{sub}/top/.rss`) + **Google News RSS** (3 category
+  queries: AI, Business, Science — redirects resolved for top candidates only).
+- `YOUTUBE_CHANNELS`: three live channel feeds (CNBC Television, Bloomberg
+  Technology, Yahoo Finance) fetched by `fetch_youtube_feeds()` inside
+  `collect_all_stories()`. Dedicated parser (NOT folded into `fetch_rss`) keeps
+  `media:description` → summary and `media:statistics@views` → real engagement.
+  Two more candidates parked in a comment until their channel IDs are verified;
+  a dead/wrong ID fails soft (`[skip]` log, empty list).
 - `HN_KEYWORDS` regex widened: AI terms + `business|finance|market|stock|earnings|
   startup funding|crypto|bitcoin|economy|inflation|layoff|acquisition|ipo|revenue|fed|interest rate`.
 - `NICHE_KEYWORDS` widened additively with the same business/finance terms.
 - `SOURCE_CATEGORIES` mapping: every source tagged ai/business/science for picker grouping and logging.
-- `ENGAGEMENT_SOURCES` set: sources with native engagement data (HN, Reddit) — others get neutral default.
+- `ENGAGEMENT_SOURCES` set: sources with native engagement data (HN, Reddit, the
+  three YouTube channels) — others get neutral default.
 - `rank_top_stories(candidate_pool=40)`: returns the FULL heuristic-ranked
   candidate pool (recall filter — callers truncate after the LLM rerank).
 - Story dict keys (contract): `source, title, link, summary, published,
-  published_raw, score, hn_points, hn_comments, hn_id, post_id, category`.
+  published_raw, score, hn_points, hn_comments, hn_id, post_id, views, category`.
 - Scoring: recency (exponential decay ~48h, ≤40 pts, soft weight) + niche keyword hits (≤30) +
-  normalized engagement per source type (≤30; HN/Reddit native, plain RSS/Google News get 15 pts default).
+  normalized engagement per source type (≤30; HN native points/comments, YouTube
+  real view counts `min(views/2000, 30)`, plain RSS/Google News get 15 pts default).
 - Logging: candidate count and average score per category, per-source fetch success counts.
 
 ### llm_ranker.py — "editorial rerank" (precision layer over the pool)
@@ -269,8 +309,13 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - Prompt forbids inventing IDs; `_parse_picks` drops unknown/repeated IDs,
   caps picks, and requires ≥3 valid picks or the whole call counts as failed.
 - `POOL_SIZE=40`, `MIN_POOL=5` (smaller pool → skip the call), temperature 0.2,
-  `max_tokens=1024` (~3k tokens total per run — fits the free tier).
-- Standalone: `python llm_ranker.py [--model KEY] [--pool N]` — fetches the
+  `max_tokens=5120` (~7.5k tokens worst case: ~2.4k input + 5120 output cap).
+  GPT-OSS draws hidden reasoning from the SAME budget — at 1024 it reasoned
+  over all 40 candidates and returned empty content on every attempt (same
+  failure mode that forced `COMBINED_MAX_TOKENS` up to 4096). NOTE: 5120 puts
+  the request over Groq's 8k TPM cap — see known issue 22 for why that's
+  accepted and how to route around it.
+- Standalone: `python3 llm_ranker.py [--model KEY] [--pool N]` — fetches the
   live pool, prints heuristic vs LLM order side by side with timing.
 
 ### article_fetcher.py — "fetch real content" (Step 1.5)
@@ -281,7 +326,12 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - Extraction: `_extract_article_text(html)` → **trafilatura** (best) →
   **readability-lxml** (fallback) → **stdlib regex HTML-stripper** (always
   available; install both for best quality).
+- Paywalled domains short-circuit to the Jina reader proxy (`r.jina.ai`);
+  comment caches live in `cache/comments.json` (TTL from config).
 - On ANY fetch failure: falls back to `story['summary']` and **logs** it.
+- **OPEN ITEM:** no YouTube branch yet — a YouTube watch-page link fails
+  extraction and falls back to the ≤400-char video description. Planned:
+  `youtube-transcript-api==0.6.2`, branched on `source.startswith("YouTube")`.
 
 ### voice_generator.py — "narration"
 - `generate_narration(text, project_dir=...)` → `narration.mp3`.
@@ -329,9 +379,24 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - Output: 1080×1920, H.264 ultrafast CRF 23/28, AAC 128k.
 
 ### run_pipeline.py — "orchestrator + I/O"
-- `main()`: arg parsing (`--model`, `--auto`, `--no-dedupe`, `--no-llm-rank`), banner with model.
-- `check_prerequisites(model_key)` warns about whichever key the chosen model needs.
-- After ranking: daily dedupe → LLM editorial rerank (`llm_ranker.rerank`, skipped with
+- `main()`: arg parsing (`--model`, `--rank-model`, `--auto`, `--no-dedupe`,
+  `--no-llm-rank`, `--compare-models`, `--with-hook-text`), banner showing
+  `Model:` plus a separate `Rank:` line ONLY when the rank model differs.
+- `--rank-model <key>` decouples the editorial rerank from script generation
+  (default: same as `--model`, backward compatible). Validated via
+  `llm_client.resolve_model()` up front, BEFORE any network calls. Script
+  generation, the fallback cascade, and everything downstream stay on `--model`.
+- `check_prerequisites(model_key)` warns about whichever key the chosen SCRIPT
+  model needs — it does NOT check the rank model's key, so a missing
+  `NVIDIA_API_KEY` only surfaces later as the `[llm-rank] fell back` line.
+- Script-generation fallback cascade is DERIVED FROM THE REGISTRY
+  (`llm_client.model_keys()`): Groq keys first, then the rest — can't go stale
+  when rows are added/removed.
+- Picker builds `picker_list` matching the displayed numbering exactly; every
+  selection path (`Enter`, `all`, `topN`, comma indices) indexes THAT list,
+  never `top_stories` directly (fixes typed-number-picks-wrong-story bug).
+- After ranking: daily dedupe (BEFORE the rerank, so already-generated stories
+  don't burn LLM picks) → LLM editorial rerank (`llm_ranker.rerank`, skipped with
   `--no-llm-rank`) → story picker (interactive unless `--auto`; `--auto` takes the ranked
   best-N and drops same-event duplicates).
 - `process_story(story)` called per selected story.
@@ -394,7 +459,7 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
    This has already bitten repeatedly: `deepseek-r1-distill-llama-70b` and
    `moonshotai/kimi-k2-instruct-0905` both vanished from Groq's catalog
    ("does not exist or you do not have access"). Always smoke-test a new row
-   (`python llm_client.py --model <key>`) before committing it.
+   (`python3 llm_client.py --model <key>`) before committing it.
 
 8. **Clip cache is global** (`~/.shorts_clip_cache.json`), shared across runs
    and projects. Reusing clips saves bandwidth but means two unrelated Shorts
@@ -426,7 +491,7 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
     so you can spot a high fallback rate — at which point the script-quality
     problem the upgrade targets will resurface *upstream* of the LLM, and no
     prompt tweak will fix it (you'd be back to title+blurb inputs). Watch this
-    metric.
+    metric. Currently hits EVERY YouTube-source story (no transcript branch yet).
 
 11. **Reddit RSS 429s in this sandbox.** `old.reddit.com/r/{sub}/top/.rss` endpoints
     rate-limit this sandbox's IP. Uses browser UA + 8s delay + 3 retries; works on normal hosts.
@@ -437,8 +502,10 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
 12. **The combined LLM call needs token + time headroom.** It returns script +
     5 headlines + youtube_title + youtube_description + a 6-9-entry per-sentence
     plan as JSON — bigger than a bare script. `call_llm`'s curl `--max-time` is
-    scaled to `max_tokens` (`COMBINED_MAX_TOKENS=2048`); if you shrink either,
-    watch for curl exit 28 (timeout mid-JSON) or a truncated response that
+    scaled to `max_tokens` (`COMBINED_MAX_TOKENS=4096`, raised from 2048 after
+    real runs hit `finish_reason=length` mid-JSON — reasoning models spend
+    hidden reasoning from the same budget); if you shrink either, watch for
+    curl exit 28 (timeout mid-JSON) or a truncated response that
     `_parse_combined` rejects.
 
 13. **Script ↔ plan sentence count is coupled by construction.** The script is
@@ -493,11 +560,21 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
     if picks start looking keyword-driven again. `--no-llm-rank` forces the
     old behavior (A/B switch + API-down escape hatch).
 
-16. **Reddit RSS 429s in this sandbox.** `old.reddit.com` RSS endpoints rate-limit
-    this sandbox's IP. Uses browser UA + 8s delay + 3 retries; works on normal hosts.
-    Some subs (r/programming, r/stocks, r/economics, r/singularity) succeed;
-    others (r/MachineLearning, r/artificial, r/investing, r/wallstreetbets, r/business)
-    may 429. Not a code bug — environmental.
+22. **Groq free-tier TPM cap rejects the full-size rerank request.** Groq's
+    on-demand quota is 8000 tokens/min; the rerank sends ~3.4k input + 5120
+    max output ≈ 8.5k → rejected outright ("Request too large for model
+    `openai/gpt-oss-120b` ... TPM: Limit 8000, Requested 8504"). `call_llm`
+    treats this as a hard API error and raises immediately (no retry burn),
+    and the rerank falls back to heuristic cleanly. Workarounds:
+    - `--rank-model nvidia-nemotron-ultra` — ranking runs on NVIDIA's separate
+      limits while scripts stay on Groq (verified working, ~9s per rerank)
+    - drop the rerank cap 5120 → 4096 (3384 + 4096 = 7480 < 8000) so the stock
+      default works flag-free — costs reasoning headroom
+    History: before the 5120 cap (commit 944cf1e), `max_tokens=1024` starved
+    GPT-OSS's hidden reasoning → "LLM returned empty content" ×3 → silent
+    heuristic fallback on EVERY run. If picks suddenly look keyword-driven,
+    grep for `[llm-rank] fell back` FIRST — it's usually a quota/token issue,
+    not a taste regression.
 
 ---
 
@@ -505,46 +582,53 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
 
 Run these in order (fast → slow) to isolate which layer broke:
 
-1. **News layer:** `python news_fetcher.py` → prints top stories with scores.
-   (Reddit RSS may `[skip] 429` in this sandbox — see known issue 16.)
-   Then `python llm_ranker.py` → runs the ONE editorial rerank call over the
+1. **News layer:** `python3 news_fetcher.py` → prints top stories with scores.
+   (Reddit RSS may `[skip] 429` in this sandbox — see known issue 11.)
+   Then `python3 llm_ranker.py` → runs the ONE editorial rerank call over the
    live pool and prints heuristic vs LLM order with reasons + timing; verify
    arXiv-style papers sink, and that a broken key produces the
    `[llm-rank] fell back to heuristic order` line instead of a crash.
-2. **Fetch layer:** `python article_fetcher.py [URL]` → fetches a real
+   (On Groq expect the known-issue-22 TPM rejection + clean fallback; use
+   `--model nvidia-nemotron-ultra` to exercise the success path.)
+2. **Fetch layer:** `python3 article_fetcher.py [URL]` → fetches a real
    article + comments and prints the extracted text; with no URL, demos on the
    current top HN story. Verify the fallback path by pointing it at a dead URL
    and checking you get `✗ ... fell back to RSS blurb`.
-3. **LLM client:** `python llm_client.py --list` — lists all models;
-   `python llm_client.py --model groq-gpt-oss-120b` (needs key) smoke-tests the
-   transport; `python llm_client.py --bench` times every registered model.
-4. **Script layer:** `python script_generator.py [URL]` → with a URL, live-fetches
+3. **LLM client:** `python3 llm_client.py --list` — lists all models;
+   `python3 llm_client.py --model groq-gpt-oss-120b` (needs key) smoke-tests the
+   transport; `python3 llm_client.py --bench` times every registered model.
+4. **Script layer:** `python3 script_generator.py [URL]` → with a URL, live-fetches
    it and runs the ONE combined LLM call, printing `script`, `headline_options`,
    `chosen_headline`, `youtube_title`, `youtube_description`, and `shots[]`
    (per-sentence `search_term`/`media_type`). With no args, uses an embedded
    test story. Needs `GROQ_API_KEY` (or `NVIDIA_API_KEY` with `--model`).
-5. **Storyboard layer:** `python storyboard_generator.py` (reads stdin) →
+5. **Storyboard layer:** `python3 storyboard_generator.py` (reads stdin) →
    writes `test_output/` and prints the shot plan. With no `plan` passed it
    calls LLM for per-sentence visuals (standalone fallback); in the real
    pipeline run_pipeline passes the combined-call plan so no LLM call happens.
-6. **Voice layer:** `python voice_generator.py --script "hello" --output /tmp/t.mp3`
-7. **Asset layer:** `python asset_collector.py technology /tmp/test_cache` (legacy
+6. **Voice layer:** `python3 voice_generator.py --script "hello" --output /tmp/t.mp3`
+7. **Asset layer:** `python3 asset_collector.py technology /tmp/test_cache` (legacy
    path) OR build a fake `plan` and call `collect_assets_for_plan(plan, dir)`
    (the real per-sentence path — exercises video+photo download + cache). Needs
    `PEXELS_API_KEY`.
-8. **Assembler layer:** `python video_assembler.py output/01_test` → needs a
+8. **Assembler layer:** `python3 video_assembler.py output/01_test` → needs a
    project with narration + `asset_plan.json` + `timing.json` + `assets/`.
-9. **Full quick:** `python run_pipeline.py --quick` (1 story, no video, ~1 min).
-10. **Full video:** `python run_pipeline.py --count 1` (real end-to-end, ~5-10 min).
+9. **Full quick:** `python3 run_pipeline.py --quick` (1 story, no video, ~1 min).
+10. **Full video:** `python3 run_pipeline.py --count 1` (real end-to-end, ~5-10 min).
     Verify with ffprobe: `ffprobe output/01_*/draft_video.mp4` — expect 1080x1920,
     duration ≈ narration, video+audio, NO subtitle stream.
-11. **Model flag:** `python run_pipeline.py --model groq-gpt-oss-20b --count 1 --no-video`
+11. **Model flag:** `python3 run_pipeline.py --model groq-gpt-oss-20b --count 1 --no-video`
     and (if NVIDIA key set) `--model nvidia-nemotron-ultra --count 1 --no-video`
     or `--model nvidia-gpt-oss-120b --count 1 --no-video`.
-12. **Cross-model comparison:** `python run_pipeline.py --compare-models "groq-gpt-oss-120b,nvidia-nemotron-ultra" --count 1 --no-dedupe`
+    **Rank-model flag:** `python3 run_pipeline.py --rank-model nvidia-nemotron-ultra --count 1`
+    → banner shows BOTH models (`Model:` + `Rank:` lines), the rerank log reads
+    `Running LLM editorial rerank (nvidia-nemotron-ultra)...`, and scripts still
+    generate on Groq. With no NVIDIA key set, expect the `[llm-rank] fell back`
+    line (prerequisite check does NOT cover the rank model's key).
+12. **Cross-model comparison:** `python3 run_pipeline.py --compare-models "groq-gpt-oss-120b,nvidia-nemotron-ultra" --count 1 --no-dedupe`
     runs the SAME story across multiple models (model-specific folders).
-13. **Interactive picker:** `python run_pipeline.py --count 5 --no-video` (TTY) → exercises story picker; 
-    type `list` to view all without generating; re-run confirms daily dedupe filters them; 
+13. **Interactive picker:** `python3 run_pipeline.py --count 5 --no-video` (TTY) → exercises story picker;
+    all candidates shown by default (numbered exactly as selectable); re-run confirms daily dedupe filters them;
     `--no-dedupe` brings them back; `--auto` skips the prompt.
 14. **YouTube meta:** Inspect `youtube_meta.json` in a new project: title (punchy, ≤60), 
     description (≤200, +hashtags), on_screen_hook present.
@@ -562,16 +646,21 @@ Keep these patterns in mind so new code fits the project's conventions:
   a new `fetch_*` function** in `news_fetcher.py`. Preserve the story-dict keys
   the contract depends on (`hn_points`/`hn_comments` for engagement, plus `hn_id`
   for HN or `post_id` for Reddit so `article_fetcher` can pull comments).
+  YouTube channels go in `YOUTUBE_CHANNELS` (needs the numeric channel ID —
+  grab it with the grep one-liner in the comment there).
 - **Tune editorial taste → edit `RANK_SYSTEM_PROMPT` in `llm_ranker.py`** (what
   gets promoted/demoted, pick count via `max_picks`). The pool size is
   `news_fetcher.rank_top_stories(candidate_pool=N)` and must stay ≥
   `llm_ranker.MIN_POOL`. If you change the reranker's output keys, keep
   `llm_reason`/`llm_dup_of` — the picker and `--auto` dedupe read them.
+  Mind the token math when touching `max_tokens` (known issue 22).
 - **Improve article extraction → swap the backend in
-  `article_fetcher._extract_article_text`**. Priority chain is trafilatura →
-  readability-lxml → stdlib regex; each is optional and degrades to the next.
+  `article_fetcher._extract_article_text`**. Priority chain is trafilatura → readability-lxml → stdlib regex; each is optional and degrades to the next.
   Both are in `requirements.txt` now. Update the `trafilatura.extract` flags or
   add a new backend (e.g. `goose3`) ahead of the stdlib fallback.
+  **YouTube branch (open item):** add a `source.startswith("YouTube")` branch in
+  `fetch_article_content` using `youtube-transcript-api==0.6.2` (video ID from
+  the watch URL), so YouTube stories stop running on the ≤400-char description.
 - **Change the niche → edit `NICHE_KEYWORDS`** (relevance scoring) and the
   fallback `RELATABLE_TERMS`/`_term_from_sentence` in `storyboard_generator`
   (so fallback asset searches stay on-niche). Tweak `COMBINED_SYSTEM_PROMPT`
@@ -607,6 +696,8 @@ Keep these patterns in mind so new code fits the project's conventions:
   fetching is free public JSON; Reddit throttles (hence `REDDIT_REQUEST_DELAY`).
   If you ever hit Groq 429s, add a small `time.sleep` between stories in
   `main()`'s loop, not inside `_call_llm` (which already retries).
+  Provider-level token walls (TPM/TPD) are handled by routing stages to
+  different providers via `--model` / `--rank-model` — see known issue 22.
 - **Thumbnails / actual rendering →** this project only *describes* thumbnails
   in text notes. A natural Phase 2 is generating the thumbnail image (PIL) from
   the notes + the per-sentence `key_numbers`. Put it in a new
@@ -622,12 +713,12 @@ Keep these patterns in mind so new code fits the project's conventions:
 ## 8. File map
 
 ```
-run_pipeline.py          Orchestrator + per-project I/O + real-timing + edit/BGM helpers + story picker + daily dedupe + youtube_meta.json
-llm_client.py            Provider-agnostic LLM transport (Groq + NVIDIA NIM), MODEL_REGISTRY, call_llm, available_models()
-news_fetcher.py          RSS (incl. TLDR AI/Tech/Founders/Crypto, CNBC, TechCrunch Startups, MarketWatch, Reddit RSS) + HN discovery + heuristic ranking (Step 1, recall filter)
-llm_ranker.py            ONE-call LLM editorial rerank of the pool (Step 1.5): best-first picks + reasons + duplicate groups; heuristic fallback
+run_pipeline.py          Orchestrator + per-project I/O + real-timing + edit/BGM helpers + story picker + daily dedupe + youtube_meta.json + --rank-model wiring
+llm_client.py            Provider-agnostic LLM transport (Groq + NVIDIA NIM), MODEL_REGISTRY, call_llm (+guards), available_models(), --bench
+news_fetcher.py          RSS (blogs + CNBC, TechCrunch Startups, MarketWatch, Reddit RSS, Google News) + HN discovery + YouTube channel feeds + heuristic ranking (Step 1, recall filter)
+llm_ranker.py            ONE-call LLM editorial rerank of the pool (Step 1.5): best-first picks + reasons + duplicate groups; heuristic fallback; max_tokens=5120
 article_fetcher.py       Fetch real article text + HN/Reddit comments (Step 1.5);
-                         trafilatura→readability→stdlib with RSS-summary fallback
+                         trafilatura→readability→stdlib with RSS-summary fallback (YouTube branch OPEN)
 script_generator.py      ONE combined LLM call: script + 5 headlines + youtube_title + youtube_description + per-sentence search terms (Steps 2-3); validator with 1 retry; uses llm_client
 voice_generator.py       Edge-TTS narration (Step 4)
 storyboard_generator.py   Formats the combined call's plan → shot list + SRT + timing.json
@@ -646,7 +737,7 @@ output/                  Generated Shorts, one folder each — not committed
 
 ## 9. Conventions
 
-- Each module is independently runnable (`python <module>.py` smoke tests).
+- Each module is independently runnable (`python3 <module>.py` smoke tests).
 - Secrets stay in `.env`; never hardcode, never echo values, never commit.
 - Per-step failures in the batch are logged and skipped, not raised — keeps a
   bad story from wrecking the whole run.
