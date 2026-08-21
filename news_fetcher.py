@@ -3,7 +3,8 @@ news_fetcher.py
 Step 1 of the Shorts pipeline: discover and rank trending topics.
 
 Uses only `requests` + stdlib XML parsing (no feedparser dependency).
-Free / zero-cost — just RSS feeds and the Hacker News public API.
+Free / zero-cost — RSS feeds, the Hacker News public API, and YouTube
+channel RSS feeds (which also give us real view counts for engagement).
 """
 
 import re
@@ -38,6 +39,28 @@ RSS_FEEDS = {
     "TechCrunch Startups": "https://techcrunch.com/category/startups/feed/",
     "MarketWatch": "https://feeds.marketwatch.com/marketwatch/topstories/",
 }
+
+# ---------------------------------------------------------------------------
+# YouTube channel RSS feeds — static channel IDs, no resolver complexity.
+#
+# Each channel ships ~15 recent videos with REAL view counts
+# (media:group/media:statistics@views), so YouTube stories get genuine
+# engagement scoring instead of the neutral-RSS default.
+#
+# To find a channel ID from its @handle:
+#   curl -s "https://www.youtube.com/@HANDLE" | grep -o '"externalId":"[^"]*"' | head -1
+#
+# Parked candidates (verify the ID with the command above, then activate):
+#   "YouTube TheAIGRID":     "<paste-channel-id>",   # AI-native daily news
+#   "YouTube AI Explained":  "<paste-channel-id>",   # AI-native deep dives
+# A wrong/dead ID fails soft: fetch_youtube_feed logs "[skip]" and moves on.
+# ---------------------------------------------------------------------------
+YOUTUBE_CHANNELS = {
+    "YouTube CNBC": "UCrp_UI8XtuYfpiqluWLD7Lw",           # CNBC Television — markets/earnings interviews
+    "YouTube Bloomberg Tech": "UCIALMKvObZNtJ6AmdCLP7Lg", # Bloomberg Technology — tech + AI coverage
+    "YouTube Yahoo Finance": "UCEAZeUIeJs0IjQiqTCdVSIg",  # broad business coverage
+}
+YOUTUBE_FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
 
 # Hacker News: used as a proxy for "viral discussions" / social engagement signal
 HN_TOP_STORIES_URL = "https://hacker-news.firebaseio.com/v0/topstories.json"
@@ -85,14 +108,22 @@ SOURCE_CATEGORIES = {
     "MarketWatch": "business",
     # Science sources
     "Google News Science": "science",
+    # YouTube channels
+    "YouTube CNBC": "business",
+    "YouTube Bloomberg Tech": "ai",
+    "YouTube Yahoo Finance": "business",
     # Hacker News
     "Hacker News": "ai",  # primarily AI/tech discussions
 }
 
-# Sources that have native engagement data (HN points, Reddit upvotes/comments)
+# Sources that have native engagement data (HN points, Reddit upvotes/comments,
+# YouTube view counts)
 ENGAGEMENT_SOURCES = {
     "Hacker News",
     "Reddit r/programming",
+    "YouTube CNBC",
+    "YouTube Bloomberg Tech",
+    "YouTube Yahoo Finance",
 }
 
 REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; ShortsBot/1.0)"}
@@ -211,6 +242,81 @@ def fetch_rss(source_name: str, url: str) -> list[dict]:
     return stories
 
 
+def fetch_youtube_feed(source_name: str, channel_id: str) -> list[dict]:
+    """Fetch one YouTube channel's Atom video feed.
+
+    Dedicated parser (deliberately NOT folded into fetch_rss): fetch_rss
+    discards the XML tree after extracting bare Atom fields, and YouTube
+    entries carry the two things we actually want in media:* extensions:
+      - media:group/media:description   -> summary (the video description;
+        YouTube entries have NO <summary>/<content>, so without this every
+        story would get summary="" -> weaker niche scoring AND an empty
+        article_fetcher fallback)
+      - media:group/media:statistics@views -> story["views"] (real engagement
+        signal for score_story)
+    Reuses REQUEST_HEADERS/REQUEST_TIMEOUT; _parse_date already handles
+    YouTube's ISO-8601 published timestamps. A dead/wrong channel ID fails
+    soft: "[skip]" log, empty list.
+    """
+    stories = []
+    url = YOUTUBE_FEED_URL.format(channel_id)
+    try:
+        resp = requests.get(url, headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
+        resp.raise_for_status()
+        root = ET.fromstring(resp.content)
+    except Exception as e:
+        print(f"  [skip] {source_name}: {e}")
+        return stories
+
+    ns = {
+        "atom": "http://www.w3.org/2005/Atom",
+        "media": "http://search.yahoo.com/mrss/",
+    }
+    for entry in root.findall("atom:entry", ns):
+        title = entry.findtext("atom:title", default="", namespaces=ns)
+        link_el = entry.find("atom:link", ns)
+        link = link_el.get("href") if link_el is not None else ""
+        published = entry.findtext("atom:published", default="", namespaces=ns)
+
+        summary = ""
+        views = None
+        media_group = entry.find("media:group", ns)
+        if media_group is not None:
+            summary = (media_group.findtext("media:description",
+                                            default="", namespaces=ns) or "").strip()
+            stats = media_group.find("media:statistics", ns)
+            if stats is not None:
+                try:
+                    views = int(stats.get("views", ""))
+                except (TypeError, ValueError):
+                    views = None
+
+        category = SOURCE_CATEGORIES.get(source_name, "general")
+        story = {
+            "source": source_name,
+            "title": (title or "").strip(),
+            "link": (link or "").strip(),
+            "summary": summary[:400],  # same cap as every other source
+            "published_raw": published,
+            "published": _parse_date(published),
+            "category": category,
+        }
+        if views is not None:
+            story["views"] = views
+        stories.append(story)
+
+    return stories
+
+
+def fetch_youtube_feeds() -> list[dict]:
+    """Fetch all configured YouTube channel feeds (see YOUTUBE_CHANNELS)."""
+    all_stories = []
+    for name, channel_id in YOUTUBE_CHANNELS.items():
+        print(f"Fetching {name}...")
+        all_stories.extend(fetch_youtube_feed(name, channel_id))
+    return all_stories
+
+
 def fetch_hn_signal(limit: int = 60) -> list[dict]:
     """Pull top Hacker News stories as a 'social engagement' signal source."""
     stories = []
@@ -301,6 +407,10 @@ def collect_all_stories() -> list[dict]:
 
     print("Fetching Hacker News signal...")
     all_stories.extend(fetch_hn_signal())
+
+    print("Fetching YouTube channel feeds...")
+    all_stories.extend(fetch_youtube_feeds())
+
     return all_stories
 
 
@@ -330,13 +440,19 @@ def score_story(story: dict, now: datetime) -> float:
     score += min(hits, 6) * 5  # up to 30 pts
 
     # Social engagement proxy — normalized per source type
-    # Sources with native engagement data (HN, Reddit) get engagement score
+    # Sources with native engagement data (HN, Reddit, YouTube) get engagement score
     # Sources without (plain RSS, Google News) get neutral default (15 pts mid-range)
     if story.get("source") in ENGAGEMENT_SOURCES:
         # Hacker News
         if "hn_points" in story:
             score += min(story["hn_points"] / 10, 20)  # up to 20 pts
             score += min(story.get("hn_comments", 0) / 5, 10)  # up to 10 pts
+        # YouTube — real view counts from media:statistics.
+        # Linear like the HN formula: 60k views = full 30 pts. Tunable divisor.
+        # A fresh video still wins on recency; a day-old viral clip now
+        # correctly outranks an ignored one.
+        elif "views" in story:
+            score += min(story["views"] / 2000, 30)  # up to 30 pts
         # Reddit RSS — engagement in summary field as "X points · Y comments"
         # (Reddit RSS includes this in description; fallback to neutral if missing)
         elif "Reddit" in story.get("source", ""):
