@@ -74,18 +74,6 @@ def _signup_url(provider: str) -> str:
 # ---------------------------------------------------------------------------
 MODEL_REGISTRY = {
     # --- Groq (free, 30 req/min) ---
-    "groq-llama33": {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "key_env": "GROQ_API_KEY",
-        "notes": "Groq Llama 3.3 70B — fast, free, the default",
-    },
-    "groq-llama4": {
-        "provider": "groq",
-        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
-        "key_env": "GROQ_API_KEY",
-        "notes": "Groq Llama 4 Scout 17B",
-    },
     "groq-gpt-oss-120b": {
         "provider": "groq",
         "model": "openai/gpt-oss-120b",
@@ -93,12 +81,6 @@ MODEL_REGISTRY = {
         "notes": "Groq GPT-OSS 120B — strongest reasoning on Groq",
     },
     # --- NVIDIA hosted NIM (free tier; needs NVIDIA_API_KEY from build.nvidia.com) ---
-    "nvidia-nemotron-super": {
-        "provider": "nvidia",
-        "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-        "key_env": "NVIDIA_API_KEY",
-        "notes": "NVIDIA Nemotron Super 49B (v1.5) — reasoning model",
-    },
     "nvidia-llama33": {
         "provider": "nvidia",
         "model": "meta/llama-3.3-70b-instruct",
@@ -119,7 +101,7 @@ MODEL_REGISTRY = {
     },
 }
 
-DEFAULT_MODEL_KEY = "groq-llama33"
+DEFAULT_MODEL_KEY = "groq-gpt-oss-120b"
 
 
 def list_models() -> list[dict]:
@@ -282,7 +264,7 @@ if __name__ == "__main__":
             print(f"{r['key']:<28} {r['provider']:<8} {r['model']}")
             print(f"{'':28}          — {r['notes']}")
         print(f"\nDefault: {DEFAULT_MODEL_KEY}")
-        print("\nSmoke test with: python llm_client.py --model groq-llama33")
+        print("\nSmoke test with: python llm_client.py --model groq-gpt-oss-120b")
         raise SystemExit(0)
     txt = call_llm([{"role": "user", "content": args.prompt}], model_key=args.model)
     print(f"[{args.model}] -> {txt}")
