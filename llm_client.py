@@ -239,7 +239,16 @@ def call_llm(messages: list[dict],
             open_tag = "<" + "think" + ">"
             if open_tag in content:  # truncated mid-reasoning: drop the stub too
                 content = content.split(open_tag)[0]
-            return content.strip()
+            content = content.strip()
+            if not content:
+                # Model spent its whole token budget on hidden reasoning and
+                # never answered (Qwen does this on longer prompts). Raise so
+                # the retry loop gets another roll of the dice.
+                raise RuntimeError(
+                    f"model '{model_id}' returned only hidden reasoning, no "
+                    f"answer — needs more max_tokens or a different model"
+                )
+            return content
         except (ConnectionError, json.JSONDecodeError,
                 subprocess.TimeoutExpired, KeyError, RuntimeError) as e:
             last_error = e
