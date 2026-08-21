@@ -21,6 +21,7 @@ Flags:
     --model       LLM model key (default: groq-gpt-oss-120b). See `python llm_client.py --list`
     --auto        Don't prompt for story selection; generate top-N automatically
     --no-dedupe   Don't filter out stories already generated today
+    --no-llm-rank Skip the LLM editorial rerank; rank by heuristic score only
 """
 
 import argparse
@@ -48,6 +49,7 @@ if _env_path.exists():
 # Import llm_client early so model keys can be validated in CLI
 import llm_client
 
+import llm_ranker
 from news_fetcher import rank_top_stories
 from script_generator import process_story
 from voice_generator import generate_narration
@@ -602,6 +604,7 @@ Examples:
   python run_pipeline.py --model groq-gpt-oss-20b --count 1  # fast/cheap Groq sibling
   python run_pipeline.py --auto --count 5             # non-interactive (cron-friendly)
   python run_pipeline.py --no-dedupe --count 3        # allow regenerating today's stories
+  python run_pipeline.py --no-llm-rank --count 3      # heuristic ranking only (skip LLM rerank)
 
 Valid --model keys: {', '.join(sorted(llm_client.MODEL_REGISTRY.keys()))}
 Default model: {llm_client.DEFAULT_MODEL_KEY}
@@ -634,6 +637,10 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     parser.add_argument(
         "--no-dedupe", action="store_true",
         help="Don't filter out stories already generated today"
+    )
+    parser.add_argument(
+        "--no-llm-rank", action="store_true",
+        help="Skip the LLM editorial rerank; rank by heuristic score only"
     )
     parser.add_argument(
         "--compare-models", type=str, default=None,
@@ -696,38 +703,38 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     # --- Step 1: Discover trending topics ---
     print("┌─ Step 1: Discovering trending topics")
     print("│")
-    top_stories = rank_top_stories(top_n=args.count * 3)  # fetch more for picker
+    top_stories = rank_top_stories()  # full heuristic-ranked candidate pool
 
     if not top_stories:
         print("│  No stories found. Check your network connection / feed URLs.")
         print("└─ Aborting.")
         return
 
-    print("│")
-    # Group by category for display
-    cat_order = ["ai", "business", "science", "general"]
-    by_cat = defaultdict(list)
-    for s in top_stories:
-        cat = s.get("category", "general")
-        by_cat[cat].append(s)
-
-    display_idx = 1
-    for cat in cat_order:
-        if by_cat[cat]:
-            print(f"│  ── {cat.upper()} ──")
-            for s in by_cat[cat]:
-                print(f"│  {display_idx:2d}. [{s.get('score','?'):>5}] ({s['source']}) {s['title'][:75]}")
-                display_idx += 1
-    print("└─")
-
-    # --- Daily dedupe (before picker) ---
+    # --- Daily dedupe (BEFORE the LLM rerank — don't burn picks on stories
+    #     that were already generated today) ---
     if not args.no_dedupe:
         top_stories, removed = _filter_deduped_today(outdir, top_stories)
         if removed:
-            print(f"  [dedupe] Filtered out {removed} story(s) already generated today.")
+            print(f"│  [dedupe] Filtered out {removed} story(s) already generated today.")
         if not top_stories:
-            print("  All candidates already generated today. Use --no-dedupe to override.")
+            print("│  All candidates already generated today. Use --no-dedupe to override.")
+            print("└─ Aborting.")
             return
+
+    # --- Step 1.5: LLM editorial rerank (precision layer over the pool) ---
+    # Heuristic scoring stays as the cheap recall filter; ONE LLM call does
+    # the editorial taste ranking and returns a best-first shortlist with a
+    # one-line reason per pick. Any failure falls back to heuristic order.
+    if args.no_llm_rank:
+        print("│  [llm-rank] skipped (--no-llm-rank) — heuristic order")
+        rank_source = "heuristic"
+    else:
+        print("│  Running LLM editorial rerank...")
+        top_stories, rank_source = llm_ranker.rerank(
+            top_stories, model_key=args.model,
+            max_picks=max(args.count * 3, 12),
+        )
+    print("└─")
 
     # --- Story picker (interactive) ---
     if not args.auto and sys.stdin.isatty():
@@ -736,19 +743,29 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
         print("│  Enter numbers (e.g. 1,3,5), 'top3', 'all', or press Enter for top-N:")
         print("└─")
 
-        # Show initial grouped list (all stories)
-        by_cat = defaultdict(list)
-        for s in top_stories:
-            cat = s.get("category", "general")
-            by_cat[cat].append(s)
+        cat_order = ["ai", "business", "science", "general"]
+        if rank_source == "llm":
+            # LLM order IS the editorial ranking — show best-first with reasons
+            for display_idx, s in enumerate(top_stories, 1):
+                print(f"  {display_idx:2d}. [{s.get('score','?'):>5}] ({s['source']}) {s['title'][:75]}")
+                if s.get("llm_reason"):
+                    print(f"       └─ {s['llm_reason']}")
+                if s.get("llm_dup_of"):
+                    print(f"       └─ ↻ same event as #{s['llm_dup_of']}")
+        else:
+            # Heuristic fallback: grouped by category (old behavior)
+            by_cat = defaultdict(list)
+            for s in top_stories:
+                cat = s.get("category", "general")
+                by_cat[cat].append(s)
 
-        display_idx = 1
-        for cat in cat_order:
-            if by_cat[cat]:
-                print(f"  ── {cat.upper()} ──")
-                for s in by_cat[cat]:
-                    print(f"  {display_idx:2d}. [{s.get('score','?'):>5}] ({s['source']}) {s['title'][:75]}")
-                    display_idx += 1
+            display_idx = 1
+            for cat in cat_order:
+                if by_cat[cat]:
+                    print(f"  ── {cat.upper()} ──")
+                    for s in by_cat[cat]:
+                        print(f"  {display_idx:2d}. [{s.get('score','?'):>5}] ({s['source']}) {s['title'][:75]}")
+                        display_idx += 1
         print()
         tries = 0
         selected = []
@@ -783,8 +800,17 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
             selected = top_stories[:args.count]
         top_stories = selected
     else:
-        # Non-interactive: just take top-N
-        top_stories = top_stories[:args.count]
+        # Non-interactive: take the ranked best-N. With LLM ranking this is
+        # the editorial shortlist order; same-event duplicates (flagged by
+        # the reranker) are dropped in favor of their best-ranked keeper.
+        selected = []
+        for s in top_stories:
+            if s.get("llm_dup_of"):
+                continue
+            selected.append(s)
+            if len(selected) >= args.count:
+                break
+        top_stories = selected
 
     # --- Steps 2-3: Research + Script ---
     print()
@@ -858,6 +884,8 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     daily_dir = _get_daily_outdir(outdir)
     print("╔══════════════════════════════════════════════════════╗")
     print(f"║  Done: {completed} successful, {failed} failed                   ║")
+    rank_label = "LLM editorial rerank" if rank_source == "llm" else "heuristic scores"
+    print(f"║  Ranking: {rank_label}  ║")
     print(f"║  Output: {daily_dir.resolve()}  ║")
     if not args.no_video and completed > 0:
         print("║                                                      ║")

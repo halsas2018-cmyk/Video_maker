@@ -476,7 +476,13 @@ def dedupe(stories: list[dict]) -> list[dict]:
     return unique
 
 
-def rank_top_stories(top_n: int = 10, candidate_pool: int = 30) -> list[dict]:
+def rank_top_stories(candidate_pool: int = 40) -> list[dict]:
+    """Heuristic-score and rank all collected stories; return the FULL pool.
+
+    The heuristic layer is the RECALL filter (recency + niche + engagement);
+    callers (run_pipeline -> llm_ranker) truncate after the LLM editorial
+    rerank, so no top_n slicing happens here anymore.
+    """
     now = datetime.now(timezone.utc)
     all_stories = dedupe(collect_all_stories())
     for s in all_stories:
@@ -514,7 +520,8 @@ def rank_top_stories(top_n: int = 10, candidate_pool: int = 30) -> list[dict]:
     for src, counts in src_fetch.items():
         print(f"  {src}: {counts['success']} fetched")
 
-    return candidates[:top_n]
+    # Return the FULL pool — the caller truncates after the LLM rerank.
+    return candidates
 
 
 if __name__ == "__main__":

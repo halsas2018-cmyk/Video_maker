@@ -68,26 +68,35 @@ System tools (install separately, NOT via pip):
 
 ---
 
-## 3.5. Story Selection Process
+## 3.5. Story Selection Process (recall → precision funnel)
 
 The pipeline selects stories in this order:
 
-1. **Fetch & Rank** (`news_fetcher.rank_top_stories`):
-   - Pulls from all RSS feeds (Tech, AI, Business, Reddit RSS, **Google News RSS**) + Hacker News top stories
+1. **Fetch & Heuristic Rank — RECALL layer** (`news_fetcher.rank_top_stories`):
+   - Pulls from all RSS feeds (Tech, AI, Business, Reddit RSS, **Google News RSS**) + Hacker News + **YouTube channel feeds**
    - Each story tagged with a **category** (ai / business / science) by source
    - Each story scored on:
      - **Recency** (≤40 pts): exponential decay over ~48 hours (newer = higher; soft weight, not hard cutoff — a 2-day-old story with strong engagement can outrank a fresh one with none)
      - **Niche relevance** (≤30 pts): keyword hits in title+summary against `NICHE_KEYWORDS`
-     - **Engagement** (≤30 pts): normalized per source type — HN/Reddit get native points/comments; plain RSS blogs and Google News get a neutral default (15 pts) so they aren't structurally penalized for lacking engagement data
-   - Returns top N candidates (default pool: 30, ranked by combined score)
+     - **Engagement** (≤30 pts): normalized per source type — HN/Reddit get native points/comments; YouTube gets real view counts (`min(views/2000, 30)`); plain RSS blogs and Google News get a neutral default (15 pts) so they aren't structurally penalized for lacking engagement data
+   - Returns the FULL candidate pool (default: 40, ranked by combined score) — this layer is the cheap volume filter, NOT the final decider
    - **Logging:** prints candidate count and average score per category, and per-source fetch success counts
 
-2. **Daily Dedupe** (`output/_generated_log.json`):
+2. **Daily Dedupe** (`output/<daily>/_generated_log.json`):
    - Filters out stories already generated today (by normalized title fingerprint)
+   - Runs BEFORE the LLM rerank so already-generated stories don't burn LLM picks
    - Skipped unless `--no-dedupe` flag used
 
-3. **Interactive Picker** (unless `--auto` or non-TTY):
-   - Displays ranked list **grouped by category** (AI / BUSINESS / SCIENCE) with scores and sources — **ALL stories shown**
+3. **LLM Editorial Rerank — PRECISION layer** (`llm_ranker.rerank`):
+   - ONE LLM call (~3k tokens) reads the whole pool: title, source, summary, RAW engagement numbers (HN points, YouTube views), age
+   - Returns a best-first shortlist (`max(count*3, 12)` picks) with a one-line editorial reason per pick, plus same-event duplicate groups
+   - The LLM weighs engagement itself (no hardcoded divisor) and explicitly demotes academic papers without news hooks, insider discussions, vague headlines — fixes the arXiv-crowding failure mode keyword scoring had
+   - Picks ONLY from provided IDs; hallucinated/repeated IDs dropped at parse time
+   - ANY failure (bad JSON, <3 valid picks, API error) → falls back to heuristic order (`rank_source == "heuristic"`) with a `[llm-rank] fell back...` log line — discovery never hard-depends on a live API
+   - Skipped entirely with `--no-llm-rank`
+
+4. **Interactive Picker** (unless `--auto` or non-TTY):
+   - LLM-ranked runs display **best-first with the LLM's reason** under each candidate (plus `↻ same event as #N` on duplicate-group members); heuristic fallback keeps the old **grouped-by-category** display — **ALL stories shown**
    - Prompts: `Pick stories to generate (e.g. 1,3,5 / all / top3): `
    - **Commands:**
      - `1,3,5` — specific indices
@@ -95,8 +104,9 @@ The pipeline selects stories in this order:
      - `all` — generate all shown candidates
      - `Enter` (empty) — defaults to top-N (where N = `--count`)
 
-4. **Generation**:
+5. **Generation**:
    - For each selected story: fetch article/comments → LLM call → voice → assets → assemble
+   - `--auto` takes the ranked best-N and auto-drops same-event duplicates (keeps each group's best-ranked member)
 
 ---
 
@@ -130,6 +140,10 @@ run_pipeline.py (main)
   │     └─ returns top N story dicts with category field
   │
   ├─ Daily dedupe: filter out stories already generated today (output/_generated_log.json)
+  │
+  ├─ LLM editorial rerank (llm_ranker.rerank): ONE call over the pool →
+  │     best-first shortlist + per-pick reason + duplicate groups
+  │     (any failure → heuristic order; skipped with --no-llm-rank)
   │
   ├─ Story picker (interactive, unless --auto or non-TTY):
   │     Print ranked candidates grouped by category; prompt "Pick stories to generate (e.g. 1,3,5 / all / top3 / list): "
@@ -237,12 +251,27 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - `NICHE_KEYWORDS` widened additively with the same business/finance terms.
 - `SOURCE_CATEGORIES` mapping: every source tagged ai/business/science for picker grouping and logging.
 - `ENGAGEMENT_SOURCES` set: sources with native engagement data (HN, Reddit) — others get neutral default.
-- `rank_top_stories(top_n=10, candidate_pool=30)`: returns ranked story dicts.
+- `rank_top_stories(candidate_pool=40)`: returns the FULL heuristic-ranked
+  candidate pool (recall filter — callers truncate after the LLM rerank).
 - Story dict keys (contract): `source, title, link, summary, published,
   published_raw, score, hn_points, hn_comments, hn_id, post_id, category`.
 - Scoring: recency (exponential decay ~48h, ≤40 pts, soft weight) + niche keyword hits (≤30) +
   normalized engagement per source type (≤30; HN/Reddit native, plain RSS/Google News get 15 pts default).
 - Logging: candidate count and average score per category, per-source fetch success counts.
+
+### llm_ranker.py — "editorial rerank" (precision layer over the pool)
+- `rerank(stories, model_key, max_picks=12) -> (stories, rank_source)` — ONE
+  LLM call over the heuristic pool; returns best-first order, adds `llm_reason`
+  to each picked story and `llm_dup_of` to same-event duplicates; `rank_source`
+  is `"llm"` or `"heuristic"` (any failure → input order unchanged; never raises).
+- Engagement goes in RAW (HN points, YouTube views) — the model weighs it
+  itself; no hardcoded divisor.
+- Prompt forbids inventing IDs; `_parse_picks` drops unknown/repeated IDs,
+  caps picks, and requires ≥3 valid picks or the whole call counts as failed.
+- `POOL_SIZE=40`, `MIN_POOL=5` (smaller pool → skip the call), temperature 0.2,
+  `max_tokens=1024` (~3k tokens total per run — fits the free tier).
+- Standalone: `python llm_ranker.py [--model KEY] [--pool N]` — fetches the
+  live pool, prints heuristic vs LLM order side by side with timing.
 
 ### article_fetcher.py — "fetch real content" (Step 1.5)
 - `fetch_article_content(story) -> dict` with `article_text` (≤4000 chars),
@@ -300,9 +329,11 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - Output: 1080×1920, H.264 ultrafast CRF 23/28, AAC 128k.
 
 ### run_pipeline.py — "orchestrator + I/O"
-- `main()`: arg parsing (`--model`, `--auto`, `--no-dedupe`), banner with model.
+- `main()`: arg parsing (`--model`, `--auto`, `--no-dedupe`, `--no-llm-rank`), banner with model.
 - `check_prerequisites(model_key)` warns about whichever key the chosen model needs.
-- After ranking: daily dedupe (`output/_generated_log.json`) → story picker (interactive unless `--auto`).
+- After ranking: daily dedupe → LLM editorial rerank (`llm_ranker.rerank`, skipped with
+  `--no-llm-rank`) → story picker (interactive unless `--auto`; `--auto` takes the ranked
+  best-N and drops same-event duplicates).
 - `process_story(story)` called per selected story.
 - `save_project` writes `youtube_meta.json` + all other artifacts; logs to daily dedupe log.
 - Real narration timing via ffprobe → `_sentence_timings_from_audio` → passed to storyboard.
@@ -453,6 +484,15 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
     nothing but reasoning remains. If you re-add a reasoning model, give it a
     much larger `max_tokens` and expect slower responses than the GPT-OSS rows.
 
+21. **LLM rerank is nondeterministic and best-effort by design.** Same pool,
+    different run → different order (temperature 0.2 reduces but doesn't
+    eliminate variance). Accepted deliberately: the human pick is the anchor,
+    and `--auto` gets a fresh editorial take, not a bug. If the call fails
+    (rate limit, unparseable JSON, <3 valid picks) the pipeline falls back to
+    heuristic order and prints `[llm-rank] fell back...` — grep for that line
+    if picks start looking keyword-driven again. `--no-llm-rank` forces the
+    old behavior (A/B switch + API-down escape hatch).
+
 16. **Reddit RSS 429s in this sandbox.** `old.reddit.com` RSS endpoints rate-limit
     this sandbox's IP. Uses browser UA + 8s delay + 3 retries; works on normal hosts.
     Some subs (r/programming, r/stocks, r/economics, r/singularity) succeed;
@@ -467,6 +507,10 @@ Run these in order (fast → slow) to isolate which layer broke:
 
 1. **News layer:** `python news_fetcher.py` → prints top stories with scores.
    (Reddit RSS may `[skip] 429` in this sandbox — see known issue 16.)
+   Then `python llm_ranker.py` → runs the ONE editorial rerank call over the
+   live pool and prints heuristic vs LLM order with reasons + timing; verify
+   arXiv-style papers sink, and that a broken key produces the
+   `[llm-rank] fell back to heuristic order` line instead of a crash.
 2. **Fetch layer:** `python article_fetcher.py [URL]` → fetches a real
    article + comments and prints the extracted text; with no URL, demos on the
    current top HN story. Verify the fallback path by pointing it at a dead URL
@@ -518,6 +562,11 @@ Keep these patterns in mind so new code fits the project's conventions:
   a new `fetch_*` function** in `news_fetcher.py`. Preserve the story-dict keys
   the contract depends on (`hn_points`/`hn_comments` for engagement, plus `hn_id`
   for HN or `post_id` for Reddit so `article_fetcher` can pull comments).
+- **Tune editorial taste → edit `RANK_SYSTEM_PROMPT` in `llm_ranker.py`** (what
+  gets promoted/demoted, pick count via `max_picks`). The pool size is
+  `news_fetcher.rank_top_stories(candidate_pool=N)` and must stay ≥
+  `llm_ranker.MIN_POOL`. If you change the reranker's output keys, keep
+  `llm_reason`/`llm_dup_of` — the picker and `--auto` dedupe read them.
 - **Improve article extraction → swap the backend in
   `article_fetcher._extract_article_text`**. Priority chain is trafilatura →
   readability-lxml → stdlib regex; each is optional and degrades to the next.
@@ -575,7 +624,8 @@ Keep these patterns in mind so new code fits the project's conventions:
 ```
 run_pipeline.py          Orchestrator + per-project I/O + real-timing + edit/BGM helpers + story picker + daily dedupe + youtube_meta.json
 llm_client.py            Provider-agnostic LLM transport (Groq + NVIDIA NIM), MODEL_REGISTRY, call_llm, available_models()
-news_fetcher.py          RSS (incl. TLDR AI/Tech/Founders/Crypto, CNBC, TechCrunch Startups, MarketWatch, Reddit RSS) + HN discovery + ranking (Step 1)
+news_fetcher.py          RSS (incl. TLDR AI/Tech/Founders/Crypto, CNBC, TechCrunch Startups, MarketWatch, Reddit RSS) + HN discovery + heuristic ranking (Step 1, recall filter)
+llm_ranker.py            ONE-call LLM editorial rerank of the pool (Step 1.5): best-first picks + reasons + duplicate groups; heuristic fallback
 article_fetcher.py       Fetch real article text + HN/Reddit comments (Step 1.5);
                          trafilatura→readability→stdlib with RSS-summary fallback
 script_generator.py      ONE combined LLM call: script + 5 headlines + youtube_title + youtube_description + per-sentence search terms (Steps 2-3); validator with 1 retry; uses llm_client
