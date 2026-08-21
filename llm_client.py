@@ -192,6 +192,7 @@ def call_llm(messages: list[dict],
     timeout_multiplier = 3.0 if any(s in model_id.lower() for s in ("120b", "550b")) else 1.0
     
     last_error = None
+    rate_limit_waits = 0
     for attempt in range(1, 4):
         try:
             # Increased timeout: 0.3s per token * multiplier + 60s base
@@ -221,6 +222,22 @@ def call_llm(messages: list[dict],
                 # Surface provider/model so a wrong model id is obvious
                 err = resp_data["error"]
                 err_msg = err.get("message", str(err)) if isinstance(err, dict) else str(err)
+                # Rate limits are transient — Groq embeds "try again in Xs"
+                # in the message. Wait that out and retry WITHOUT burning an
+                # attempt (the fallback cascade shares one org TPM pool, so
+                # the next Groq model would hit the same wall otherwise).
+                m = re.search(r"try again in ([\d.]+)s", err_msg)
+                if m and "rate limit" in err_msg.lower():
+                    if rate_limit_waits >= 3:
+                        raise RuntimeError(
+                            f"{row['provider']} API error for model "
+                            f"'{model_id}': {err_msg}"
+                        )
+                    rate_limit_waits += 1
+                    wait = float(m.group(1)) + 2.0
+                    print(f"  [rate limit] waiting {wait:.0f}s before retry...")
+                    time.sleep(wait)
+                    continue
                 raise RuntimeError(
                     f"{row['provider']} API error for model '{model_id}': {err_msg}"
                 )
