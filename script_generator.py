@@ -42,7 +42,6 @@ if _env_path.exists():
                 os.environ[_k] = _v
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-MODEL = "llama-3.3-70b-versatile"  # fast, free, 70B params
 
 # Word targets sized for ~33-45s Shorts at the +20% narration rate
 # (~3.9 words/sec → 110-150 words ≈ 28-38s; we keep the +20% rate that's
@@ -53,14 +52,18 @@ MIN_WORDS = 110
 # The combined call returns script + 5 headlines + a per-sentence plan (each
 # shot has sentence/search_term/asset_type). That JSON is bigger than a bare
 # script, so bump the token cap so the response isn't truncated mid-array.
-COMBINED_MAX_TOKENS = 2048
+# Reasoning models (GPT-OSS) draw their hidden reasoning from this SAME
+# budget — 2048 truncated mid-JSON on real runs (finish_reason=length),
+# so 4096 leaves room for reasoning + the full JSON payload.
+COMBINED_MAX_TOKENS = 4096
 
 # Banned filler loaded from config.py (allows env override)
 from config import BANNED_FILLER
 
 
 def _call_llm(messages: list[dict], temperature: float = 0.5,
-              max_tokens: int = 1024, model_key: str = "groq-llama33") -> str:
+              max_tokens: int = 1024,
+              model_key: str = llm_client.DEFAULT_MODEL_KEY) -> str:
     """Wrapper over llm_client.call_llm for backward compatibility.
 
     Uses the specified model_key so the caller can choose the model.
@@ -188,7 +191,8 @@ def _source_block(story: dict, content: dict) -> str:
 
 
 def generate_combined(story: dict, content: dict,
-                     retry_feedback: str = "", model_key: str = "groq-llama33") -> dict:
+                     retry_feedback: str = "",
+                     model_key: str = llm_client.DEFAULT_MODEL_KEY) -> dict:
     """One LLM call → script + headlines + per-sentence plan. Validates + retries once.
 
     Returns a dict: {script, headline_options, chosen_headline, youtube_title,
@@ -362,7 +366,9 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
                 problems.append(f'headline "{parsed.get("chosen_headline")}" shares no meaningful words with source title/summary')
         
         # Additional: headline must contain at least one specific entity (number, proper noun, name)
-        import re
+        # NOTE: no local `import re` here — it would shadow the module-level
+        # import and make every earlier re.* use in this function raise
+        # UnboundLocalError ("cannot access local variable 're'").
         has_number = bool(re.search(r'\b\d+[kKmMbB%]?\b', parsed.get("chosen_headline", "")))
         has_proper_noun = bool(re.search(r'\b[A-Z][a-z]+\b', parsed.get("chosen_headline", "")))
         if not (has_number or has_proper_noun):
@@ -372,7 +378,9 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
     for opt in parsed.get("headline_options", []):
         opt_lower = opt.lower()
         opt_words = set(re.findall(r'\b\w{4,}\b', opt_lower))
-        if opt_words and source_words:
+        # `source_words` only exists when `story` was provided — guard so a
+        # story=None call with a missing chosen_headline can't NameError here.
+        if opt_words and story and source_words:
             overlap = opt_words & source_words
             if not overlap:
                 problems.append(f'headline option "{opt}" shares no meaningful words with source')
@@ -392,7 +400,8 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
     return problems
 
 
-def process_story(story: dict, content: dict | None = None, model_key: str = "groq-llama33") -> dict:
+def process_story(story: dict, content: dict | None = None,
+                  model_key: str = llm_client.DEFAULT_MODEL_KEY) -> dict:
     """End-to-end Step 2-3 for one story: ONE combined LLM call.
 
     Now fetches real article text + comments (via article_fetcher) and produces
