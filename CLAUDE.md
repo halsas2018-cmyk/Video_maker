@@ -108,12 +108,12 @@ python run_pipeline.py --count 3 --outdir output
 python run_pipeline.py --quick          # 1 script only, no video (fast review)
 python run_pipeline.py --count 1        # one full video incl. assembly
 python run_pipeline.py --count 2 --no-video   # scripts + voice only
-python run_pipeline.py --model groq-deepseek --count 1  # use DeepSeek on Groq
-python run_pipeline.py --model nvidia-nemotron-super --count 1  # use NVIDIA NIM
+python run_pipeline.py --model groq-gpt-oss-20b --count 1  # fast/cheap Groq sibling
+python run_pipeline.py --model nvidia-nemotron-ultra --count 1  # use NVIDIA NIM
 python run_pipeline.py --model nvidia-gpt-oss-120b --count 1  # use GPT-OSS 120B on NVIDIA
 python run_pipeline.py --auto --count 5     # non-interactive (cron-friendly)
 python run_pipeline.py --no-dedupe --count 3 # allow regenerating today's stories
-python run_pipeline.py --compare-models "groq-llama33,nvidia-nemotron-super" --count 1  # cross-model comparison
+python run_pipeline.py --compare-models "groq-gpt-oss-120b,nvidia-nemotron-ultra" --count 1  # cross-model comparison
 python run_pipeline.py --with-hook-text --count 1  # burn headline on gradient fallback
 ```
 
@@ -197,18 +197,26 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 
 ### llm_client.py — "provider-agnostic LLM transport" (NEW)
 - `MODEL_REGISTRY` — flat table, one row per choosable model. Single place to add/edit.
-  Keys: `groq-llama33` (default), `groq-deepseek`, `groq-llama4`,
-  `nvidia-nemotron-super`, `nvidia-llama33`, `nvidia-gpt-oss-120b`, `nvidia-llama-3-1-70b`.
+  Keys: `groq-gpt-oss-120b` (default), `groq-gpt-oss-20b`, `nvidia-llama33`,
+  `nvidia-gpt-oss-120b`, `nvidia-llama-3-1-70b`, `nvidia-nemotron-ultra`.
+  All 6 live-verified (Aug 2026); dead rows removed after smoke tests:
+  `groq-llama33`, `groq-llama4`, `groq-deepseek`, `groq-kimi-k2`,
+  `groq-qwen3-27b`, `nvidia-nemotron-super` (see known issues 7 and 20).
 - `call_llm(messages, model_key, temperature, max_tokens)` — single curl path for
   both Groq and NVIDIA (both speak OpenAI-style `/v1/chat/completions`).
-  3 retries + backoff. `--max-time` scales with `max_tokens`.
+  3 retries + backoff. `--max-time` scales with `max_tokens` (extra timeout
+  multiplier for 120b/550b models). Strips leaked reasoning (think-tag) blocks
+  from content and raises (→ retry) if a model returns only hidden reasoning.
 - `resolve_model(key)` / `list_models()` / `model_keys()` — helpers for CLI.
 - `available_models()` — returns model keys whose API keys are present in env.
 - Auto-loads `.env` so `GROQ_API_KEY` and `NVIDIA_API_KEY` just work.
+- CLI: `--list` prints the registry; `--model <key> [--prompt ...]` smoke-tests
+  one model; `--bench` runs every registered model on a fixed story prompt,
+  timed, with a fastest-first ranking — run it before/after registry edits.
 
 ### script_generator.py — "the combined call" (the brain)
 - **Uses `llm_client.call_llm`** (model key passed from run_pipeline; defaults to
-  `groq-llama33` for backward compatibility).
+  `groq-gpt-oss-120b` via `llm_client.DEFAULT_MODEL_KEY`).
 - `_call_llm` is now a thin wrapper; the old curl logic moved to `llm_client`.
 - `COMBINED_SYSTEM_PROMPT` Part B expanded: generates `youtube_title` (≤60 chars,
   punchy, YouTube-SEO) and `youtube_description` (≤200 chars + hashtags) alongside
@@ -349,9 +357,13 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
    the call site) but means error surfaces look like curl/JSON errors, not HTTP
    errors. If script generation fails, check `llm_client.call_llm` retry logs first.
 
-7. **Groq model name is hardcoded in registry** (`llama-3.3-70b-versatile`). If Groq
+7. **Groq model name is hardcoded in registry** (`openai/gpt-oss-120b`). If Groq
    deprecates it, every run breaks until `MODEL_REGISTRY` is updated. Consider reading
    from env (`GROQ_MODEL`) with the current value as default. Same for NVIDIA model IDs.
+   This has already bitten repeatedly: `deepseek-r1-distill-llama-70b` and
+   `moonshotai/kimi-k2-instruct-0905` both vanished from Groq's catalog
+   ("does not exist or you do not have access"). Always smoke-test a new row
+   (`python llm_client.py --model <key>`) before committing it.
 
 8. **Clip cache is global** (`~/.shorts_clip_cache.json`), shared across runs
    and projects. Reusing clips saves bandwidth but means two unrelated Shorts
@@ -433,6 +445,14 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
     means any manually added clips in that folder would be lost — avoid manual
     edits during active generation.
 
+20. **Reasoning models leak think-tags and can burn the whole token budget.**
+    Qwen-style models emit hidden reasoning into `content` and can spend the
+    entire `max_tokens` on it, returning an empty answer (`groq-qwen3-27b` did
+    this on every attempt and was removed from the registry). `call_llm` strips
+    complete reasoning blocks, drops truncated ones, and raises (→ retry) when
+    nothing but reasoning remains. If you re-add a reasoning model, give it a
+    much larger `max_tokens` and expect slower responses than the GPT-OSS rows.
+
 16. **Reddit RSS 429s in this sandbox.** `old.reddit.com` RSS endpoints rate-limit
     this sandbox's IP. Uses browser UA + 8s delay + 3 retries; works on normal hosts.
     Some subs (r/programming, r/stocks, r/economics, r/singularity) succeed;
@@ -451,7 +471,9 @@ Run these in order (fast → slow) to isolate which layer broke:
    article + comments and prints the extracted text; with no URL, demos on the
    current top HN story. Verify the fallback path by pointing it at a dead URL
    and checking you get `✗ ... fell back to RSS blurb`.
-3. **LLM client:** `python llm_client.py --list` — lists all models; `python llm_client.py --model groq-llama33` (needs key) smoke-tests the transport.
+3. **LLM client:** `python llm_client.py --list` — lists all models;
+   `python llm_client.py --model groq-gpt-oss-120b` (needs key) smoke-tests the
+   transport; `python llm_client.py --bench` times every registered model.
 4. **Script layer:** `python script_generator.py [URL]` → with a URL, live-fetches
    it and runs the ONE combined LLM call, printing `script`, `headline_options`,
    `chosen_headline`, `youtube_title`, `youtube_description`, and `shots[]`
@@ -472,10 +494,10 @@ Run these in order (fast → slow) to isolate which layer broke:
 10. **Full video:** `python run_pipeline.py --count 1` (real end-to-end, ~5-10 min).
     Verify with ffprobe: `ffprobe output/01_*/draft_video.mp4` — expect 1080x1920,
     duration ≈ narration, video+audio, NO subtitle stream.
-11. **Model flag:** `python run_pipeline.py --model groq-deepseek --count 1 --no-video`
-    and (if NVIDIA key set) `--model nvidia-nemotron-super --count 1 --no-video`
+11. **Model flag:** `python run_pipeline.py --model groq-gpt-oss-20b --count 1 --no-video`
+    and (if NVIDIA key set) `--model nvidia-nemotron-ultra --count 1 --no-video`
     or `--model nvidia-gpt-oss-120b --count 1 --no-video`.
-12. **Cross-model comparison:** `python run_pipeline.py --compare-models "groq-llama33,nvidia-nemotron-super" --count 1 --no-dedupe`
+12. **Cross-model comparison:** `python run_pipeline.py --compare-models "groq-gpt-oss-120b,nvidia-nemotron-ultra" --count 1 --no-dedupe`
     runs the SAME story across multiple models (model-specific folders).
 13. **Interactive picker:** `python run_pipeline.py --count 5 --no-video` (TTY) → exercises story picker; 
     type `list` to view all without generating; re-run confirms daily dedupe filters them; 
