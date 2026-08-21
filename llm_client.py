@@ -236,8 +236,9 @@ def call_llm(messages: list[dict],
             # Some models (e.g. Qwen via Groq) leak ...</think> reasoning
             # into content — strip it so downstream JSON parsing sees clean text.
             content = re.sub(r".*?</think>", "", content, flags=re.DOTALL)
-            if "" in content:  # truncated mid-reasoning: drop the stub too
-                content = content.split("")[0]
+            open_tag = "<" + "think" + ">"
+            if open_tag in content:  # truncated mid-reasoning: drop the stub too
+                content = content.split(open_tag)[0]
             return content.strip()
         except (ConnectionError, json.JSONDecodeError,
                 subprocess.TimeoutExpired, KeyError, RuntimeError) as e:
