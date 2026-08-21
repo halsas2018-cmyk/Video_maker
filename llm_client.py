@@ -80,6 +80,18 @@ MODEL_REGISTRY = {
         "key_env": "GROQ_API_KEY",
         "notes": "Groq GPT-OSS 120B — strongest reasoning on Groq",
     },
+    "groq-kimi-k2": {
+        "provider": "groq",
+        "model": "moonshotai/kimi-k2-instruct-0905",
+        "key_env": "GROQ_API_KEY",
+        "notes": "Groq Kimi K2 Instruct — very strong large MoE",
+    },
+    "groq-gpt-oss-20b": {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "key_env": "GROQ_API_KEY",
+        "notes": "Groq GPT-OSS 20B — fast, cheap sibling of the default",
+    },
     # --- NVIDIA hosted NIM (free tier; needs NVIDIA_API_KEY from build.nvidia.com) ---
     "nvidia-llama33": {
         "provider": "nvidia",
@@ -98,6 +110,12 @@ MODEL_REGISTRY = {
         "model": "meta/llama-3.1-70b-instruct",
         "key_env": "NVIDIA_API_KEY",
         "notes": "Meta Llama 3.1 70B Instruct on NVIDIA — solid general purpose",
+    },
+    "nvidia-nemotron-ultra": {
+        "provider": "nvidia",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b",
+        "key_env": "NVIDIA_API_KEY",
+        "notes": "NVIDIA Nemotron 3 Ultra 550B — biggest reasoning model",
     },
 }
 
@@ -177,7 +195,7 @@ def call_llm(messages: list[dict],
     })
 
     # Model-specific timeout multipliers (120B models need much more time)
-    timeout_multiplier = 3.0 if "120b" in model_id.lower() else 1.0
+    timeout_multiplier = 3.0 if any(s in model_id.lower() for s in ("120b", "550b")) else 1.0
     
     last_error = None
     for attempt in range(1, 4):
