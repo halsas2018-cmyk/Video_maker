@@ -80,12 +80,6 @@ MODEL_REGISTRY = {
         "key_env": "GROQ_API_KEY",
         "notes": "Groq GPT-OSS 120B — strongest reasoning on Groq",
     },
-    "groq-kimi-k2": {
-        "provider": "groq",
-        "model": "moonshotai/kimi-k2-instruct-0905",
-        "key_env": "GROQ_API_KEY",
-        "notes": "Groq Kimi K2 Instruct — very strong large MoE",
-    },
     "groq-gpt-oss-20b": {
         "provider": "groq",
         "model": "openai/gpt-oss-20b",
