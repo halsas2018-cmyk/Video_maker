@@ -224,9 +224,18 @@ def call_llm(messages: list[dict],
                 raise RuntimeError(
                     f"{row['provider']} API error for model '{model_id}': {err_msg}"
                 )
-            content = resp_data["choices"][0]["message"]["content"]
+            choice = resp_data["choices"][0]
+            content = choice["message"]["content"]
             if content is None or not content.strip():
                 raise RuntimeError(f"LLM returned empty content for model '{model_id}'")
+            if choice.get("finish_reason") == "length":
+                # Token budget exhausted mid-output (GPT-OSS reasoning draws on
+                # the same budget). Raise so the retry loop re-rolls instead of
+                # handing downstream a truncated JSON payload.
+                raise RuntimeError(
+                    f"model '{model_id}' stopped at the token limit "
+                    f"(finish_reason=length) — output truncated"
+                )
             # Some models (e.g. Qwen via Groq) leak ...</think> reasoning
             # into content — strip it so downstream JSON parsing sees clean text.
             content = re.sub(r".*?</think>", "", content, flags=re.DOTALL)
