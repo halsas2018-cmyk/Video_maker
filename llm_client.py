@@ -80,17 +80,17 @@ MODEL_REGISTRY = {
         "key_env": "GROQ_API_KEY",
         "notes": "Groq Llama 3.3 70B — fast, free, the default",
     },
-    "groq-deepseek": {
-        "provider": "groq",
-        "model": "deepseek-r1-distill-llama-70b",
-        "key_env": "GROQ_API_KEY",
-        "notes": "Groq DeepSeek-R1 Distill 70B — reasoning-heavy",
-    },
     "groq-llama4": {
         "provider": "groq",
         "model": "meta-llama/llama-4-scout-17b-16e-instruct",
         "key_env": "GROQ_API_KEY",
         "notes": "Groq Llama 4 Scout 17B",
+    },
+    "groq-gpt-oss-120b": {
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "key_env": "GROQ_API_KEY",
+        "notes": "Groq GPT-OSS 120B — strongest reasoning on Groq",
     },
     # --- NVIDIA hosted NIM (free tier; needs NVIDIA_API_KEY from build.nvidia.com) ---
     "nvidia-nemotron-super": {
