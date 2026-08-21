@@ -19,6 +19,9 @@ Flags:
     --no-video    Skip asset download & video assembly (scripts + voice only)
     --quick       Minimal output — 1 script for quick review
     --model       LLM model key (default: groq-gpt-oss-120b). See `python llm_client.py --list`
+    --rank-model  LLM key for the editorial rerank ONLY (default: same as --model).
+                  e.g. --rank-model nvidia-nemotron-ultra keeps scripts on Groq
+                  while ranking runs on NVIDIA (separate rate limits)
     --auto        Don't prompt for story selection; generate top-N automatically
     --no-dedupe   Don't filter out stories already generated today
     --no-llm-rank Skip the LLM editorial rerank; rank by heuristic score only
@@ -605,6 +608,7 @@ Examples:
   python run_pipeline.py --auto --count 5             # non-interactive (cron-friendly)
   python run_pipeline.py --no-dedupe --count 3        # allow regenerating today's stories
   python run_pipeline.py --no-llm-rank --count 3      # heuristic ranking only (skip LLM rerank)
+  python run_pipeline.py --rank-model nvidia-nemotron-ultra --count 1  # Groq scripts + NVIDIA ranking
 
 Valid --model keys: {', '.join(sorted(llm_client.MODEL_REGISTRY.keys()))}
 Default model: {llm_client.DEFAULT_MODEL_KEY}
@@ -629,6 +633,13 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     parser.add_argument(
         "--model", type=str, default=llm_client.DEFAULT_MODEL_KEY,
         help=f"LLM model key (default: {llm_client.DEFAULT_MODEL_KEY})"
+    )
+    parser.add_argument(
+        "--rank-model", type=str, default=None,
+        help="LLM model key for the editorial rerank ONLY (default: same as "
+             "--model). Keeps script generation on one provider while ranking "
+             "runs on another — e.g. --rank-model nvidia-nemotron-ultra leaves "
+             "scripts on Groq but ranks on NVIDIA (separate rate limits)"
     )
     parser.add_argument(
         "--auto", action="store_true",
@@ -664,6 +675,14 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
         print(f"ERROR: {e}")
         sys.exit(1)
 
+    # Rank model defaults to --model (backward compatible); validate early too
+    rank_model = args.rank_model or args.model
+    try:
+        llm_client.resolve_model(rank_model)
+    except ValueError as e:
+        print(f"ERROR: Invalid --rank-model: {e}")
+        sys.exit(1)
+
     # Handle --compare-models
     compare_models = None
     if args.compare_models:
@@ -696,6 +715,8 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     print("╠══════════════════════════════════════════════════════╣")
     print(f"║  Target: {args.count} Shorts{' (scripts only)' if args.no_video else ''}            ║")
     print(f"║  Model:  {args.model:<46} ║")
+    if rank_model != args.model:
+        print(f"║  Rank:   {rank_model:<46} ║")
     print(f"║  Output: {outdir.resolve()}  ║")
     print("╚══════════════════════════════════════════════════════╝")
     print()
@@ -725,13 +746,16 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     # Heuristic scoring stays as the cheap recall filter; ONE LLM call does
     # the editorial taste ranking and returns a best-first shortlist with a
     # one-line reason per pick. Any failure falls back to heuristic order.
+    # Uses --rank-model when set (decoupled from the script-generation model —
+    # e.g. Groq's 8k TPM cap rejects the ~8.5k-token rerank request, while
+    # NVIDIA's limits absorb it).
     if args.no_llm_rank:
         print("│  [llm-rank] skipped (--no-llm-rank) — heuristic order")
         rank_source = "heuristic"
     else:
-        print("│  Running LLM editorial rerank...")
+        print(f"│  Running LLM editorial rerank ({rank_model})...")
         top_stories, rank_source = llm_ranker.rerank(
-            top_stories, model_key=args.model,
+            top_stories, model_key=rank_model,
             max_picks=max(args.count * 3, 12),
         )
     print("└─")
