@@ -233,6 +233,11 @@ def call_llm(messages: list[dict],
             content = resp_data["choices"][0]["message"]["content"]
             if content is None or not content.strip():
                 raise RuntimeError(f"LLM returned empty content for model '{model_id}'")
+            # Some models (e.g. Qwen via Groq) leak ...</think> reasoning
+            # into content — strip it so downstream JSON parsing sees clean text.
+            content = re.sub(r".*?</think>", "", content, flags=re.DOTALL)
+            if "" in content:  # truncated mid-reasoning: drop the stub too
+                content = content.split("")[0]
             return content.strip()
         except (ConnectionError, json.JSONDecodeError,
                 subprocess.TimeoutExpired, KeyError, RuntimeError) as e:
