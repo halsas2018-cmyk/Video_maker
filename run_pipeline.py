@@ -10,7 +10,7 @@ Requirements (set in .env file or export):
 
 Usage:
     python run_pipeline.py --count 3 --outdir output
-    python run_pipeline.py --model groq-deepseek --count 1
+    python run_pipeline.py --model groq-gpt-oss-20b --count 1
     python run_pipeline.py --auto --count 5
 
 Flags:
@@ -18,7 +18,7 @@ Flags:
     --outdir      Output directory (default: output)
     --no-video    Skip asset download & video assembly (scripts + voice only)
     --quick       Minimal output — 1 script for quick review
-    --model       LLM model key (default: groq-llama33). See `python llm_client.py --list`
+    --model       LLM model key (default: groq-gpt-oss-120b). See `python llm_client.py --list`
     --auto        Don't prompt for story selection; generate top-N automatically
     --no-dedupe   Don't filter out stories already generated today
 """
@@ -191,7 +191,7 @@ def _sentence_timings_from_audio(script: str, total_duration: float) -> list[tup
     return timings
 
 
-def check_prerequisites(model_key: str = "groq-llama33"):
+def check_prerequisites(model_key: str = llm_client.DEFAULT_MODEL_KEY):
     """Check API key and critical dependencies before starting.
 
     Script generation uses the key for the chosen model.
@@ -231,7 +231,7 @@ def _get_daily_outdir(base_outdir: Path) -> Path:
     return daily_dir
 
 
-def save_project(result: dict, outdir: Path, index: int, no_video: bool = False, model_key: str = "groq-llama33", render_hook_text: bool = False):
+def save_project(result: dict, outdir: Path, index: int, no_video: bool = False, model_key: str = llm_client.DEFAULT_MODEL_KEY, render_hook_text: bool = False):
     """
     Save all project files for one Short.
 
@@ -252,7 +252,7 @@ def save_project(result: dict, outdir: Path, index: int, no_video: bool = False,
     story = result["story"]
     # Get daily directory (e.g., output/09_08_short_vids/)
     daily_dir = _get_daily_outdir(outdir)
-    # Format: MMDD_XX_model_slug (e.g., 08_09_01_groq-llama33_oracle_bans_ai_code)
+    # Format: MMDD_XX_model_slug (e.g., 08_09_01_groq-gpt-oss-120b_oracle_bans_ai_code)
     today = date.today()
     date_str = f"{today.month:02d}_{today.day:02d}"
     model_slug = slugify(model_key.replace(".", "-"))
@@ -599,7 +599,7 @@ Examples:
   python run_pipeline.py --count 3                    # 3 full videos
   python run_pipeline.py --count 1 --no-video         # 1 script only, no video
   python run_pipeline.py --count 5 --outdir my_videos # custom output dir
-  python run_pipeline.py --model groq-deepseek --count 1  # use DeepSeek on Groq
+  python run_pipeline.py --model groq-gpt-oss-20b --count 1  # fast/cheap Groq sibling
   python run_pipeline.py --auto --count 5             # non-interactive (cron-friendly)
   python run_pipeline.py --no-dedupe --count 3        # allow regenerating today's stories
 
@@ -637,7 +637,7 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     )
     parser.add_argument(
         "--compare-models", type=str, default=None,
-        help="Comma-separated model keys to run the SAME story across (e.g. 'groq-llama33,nvidia-nemotron-super')"
+        help="Comma-separated model keys to run the SAME story across (e.g. 'groq-gpt-oss-120b,nvidia-nemotron-ultra')"
     )
     parser.add_argument(
         "--with-hook-text", action="store_true",
@@ -801,8 +801,12 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     # Determine which models to run
     models_to_run = compare_models if compare_models else [args.model]
     
-    # Fallback models if primary fails (Groq models are more reliable)
-    fallback_models = ["groq-llama33", "groq-deepseek", "groq-llama4"]
+    # Fallback models if primary fails (Groq models are more reliable).
+    # Derived from the registry so it can't go stale when rows are
+    # added/removed — Groq keys first, then the rest.
+    _all_keys = llm_client.model_keys()
+    fallback_models = ([k for k in _all_keys if k.startswith("groq-")]
+                       + [k for k in _all_keys if not k.startswith("groq-")])
 
     for i, story in enumerate(top_stories, 1):
         print(f"│")
