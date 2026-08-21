@@ -10,8 +10,9 @@ reason per pick — the judgment keyword scoring can't make (it's why an arXiv
 paper about BPD once topped the AI category on keyword hits alone).
 
 Design constraints:
-  - ONE call per run (~3k tokens total) — fits the Groq free tier alongside
-    the combined script call and tag verification.
+  - ONE call per run (~7.5k tokens worst case: ~2.5k input + 5120 output cap)
+    — fits the Groq free tier alongside the combined script call and tag
+    verification.
   - Engagement numbers (HN points, YouTube views) are passed in as RAW
     features; the LLM weighs them itself instead of a hardcoded divisor.
   - The LLM may ONLY pick from the provided numbered IDs — hallucinated or
@@ -177,8 +178,12 @@ def rerank(stories: list[dict],
 
     t0 = time.perf_counter()
     try:
+        # 5120, not 1024: GPT-OSS spends hidden reasoning from the SAME
+        # token budget (known issues 12/20). At 1024 it reasoned about all
+        # 40 candidates and returned empty content on every attempt —
+        # same failure mode that forced COMBINED_MAX_TOKENS up to 4096.
         raw = llm_client.call_llm(messages, model_key=model_key,
-                                  temperature=0.2, max_tokens=1024)
+                                  temperature=0.2, max_tokens=5120)
         parsed = _parse_picks(raw, len(stories), max_picks)
     except Exception as e:
         print(f"  [llm-rank] fell back to heuristic order: {e}")

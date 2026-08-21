@@ -462,7 +462,7 @@ def _generate_thumbnail_notes(story: dict, result: dict) -> str:
         "## Text Overlay Suggestions",
         "- Bold, 3-5 words max",
         "- High contrast (white text with black stroke)",
-        f"- Example: \"{_generate_thumbnail_text(title, research)}\"",
+        f'- Example: "{_generate_thumbnail_text(title, research)}"',
         "",
         "## Color Palette",
         "- Background: Dark (attracts more attention in Shorts feed)",
@@ -744,9 +744,15 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
         print("└─")
 
         cat_order = ["ai", "business", "science", "general"]
+        # picker_list IS the order the displayed numbers refer to — every
+        # selection below indexes THIS list, never top_stories directly.
+        # (Bug fix: the grouped-by-category display reorders stories, so
+        # displayed #N silently mapped to a different story than
+        # top_stories[N-1] — typing "3" could generate the story shown as #2.)
         if rank_source == "llm":
+            picker_list = list(top_stories)
             # LLM order IS the editorial ranking — show best-first with reasons
-            for display_idx, s in enumerate(top_stories, 1):
+            for display_idx, s in enumerate(picker_list, 1):
                 print(f"  {display_idx:2d}. [{s.get('score','?'):>5}] ({s['source']}) {s['title'][:75]}")
                 if s.get("llm_reason"):
                     print(f"       └─ {s['llm_reason']}")
@@ -759,13 +765,13 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
                 cat = s.get("category", "general")
                 by_cat[cat].append(s)
 
-            display_idx = 1
+            picker_list = []
             for cat in cat_order:
                 if by_cat[cat]:
                     print(f"  ── {cat.upper()} ──")
                     for s in by_cat[cat]:
-                        print(f"  {display_idx:2d}. [{s.get('score','?'):>5}] ({s['source']}) {s['title'][:75]}")
-                        display_idx += 1
+                        print(f"  {len(picker_list) + 1:2d}. [{s.get('score','?'):>5}] ({s['source']}) {s['title'][:75]}")
+                        picker_list.append(s)
         print()
         tries = 0
         selected = []
@@ -775,20 +781,20 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
             except (EOFError, KeyboardInterrupt):
                 choice = ""
             if not choice:
-                selected = top_stories[:args.count]
+                selected = picker_list[:args.count]
                 break
             choice_lower = choice.lower()
             if choice_lower == "all":
-                selected = top_stories
+                selected = picker_list
                 break
             if choice_lower.startswith("top") and choice_lower[3:].isdigit():
                 n = int(choice_lower[3:])
-                selected = top_stories[:n]
+                selected = picker_list[:n]
                 break
             # Parse comma-separated indices
             try:
                 indices = [int(x.strip()) - 1 for x in choice.split(",")]
-                selected = [top_stories[i] for i in indices if 0 <= i < len(top_stories)]
+                selected = [picker_list[i] for i in indices if 0 <= i < len(picker_list)]
                 if selected:
                     break
             except (ValueError, IndexError):
@@ -797,7 +803,7 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
             print(f"  Invalid input. Try again ({3 - tries} tries left).")
         if not selected:
             print("  Too many invalid attempts. Falling back to top-N.")
-            selected = top_stories[:args.count]
+            selected = picker_list[:args.count]
         top_stories = selected
     else:
         # Non-interactive: take the ranked best-N. With LLM ranking this is
