@@ -276,7 +276,7 @@ if __name__ == "__main__":
     ap.add_argument("--bench", action="store_true",
                     help="run every registered model on a story prompt, timed")
     args = ap.parse_args()
-    if args.list or not args.model:
+    if args.list or (not args.model and not args.bench):
         rows = list_models()
         print(f"{'--model key':<28} {'provider':<8} model")
         print("-" * 70)
