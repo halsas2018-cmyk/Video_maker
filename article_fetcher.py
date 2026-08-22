@@ -549,7 +549,10 @@ if __name__ == "__main__":
     import sys
     url = sys.argv[1] if len(sys.argv) > 1 else None
     if url:
-        story = {"title": "(direct url)", "source": "rss", "link": url}
+        # Label YouTube URLs like a real pipeline story would be ("YouTube …"
+        # → source_kind "youtube"); everything else stays "rss".
+        src = "YouTube (direct)" if _video_id_from_url(url) else "rss"
+        story = {"title": "(direct url)", "source": src, "link": url}
     else:
         # demo with a recent top HN story
         try:
