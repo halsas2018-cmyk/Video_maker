@@ -288,7 +288,10 @@ def fetch_youtube_transcript(story: dict) -> str:
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
         segments = YouTubeTranscriptApi.get_transcript(vid)
-    except Exception:
+    except Exception as e:
+        # Visible, not swallowed: "dep missing" vs "no captions" vs
+        # "datacenter IP blocked" are different problems with different fixes.
+        print(f"    [yt-transcript] unavailable: {e}")
         return ""
     # Captions come back as timestamped fragments; join + collapse whitespace
     # so the script generator sees one continuous body of text.
@@ -438,15 +441,22 @@ def fetch_article_content(story: dict) -> dict:
     else:
         source_kind = "rss"
 
+    # Route the ARTICLE BODY by URL, not by source string: channel-feed
+    # stories carry source="YouTube …", but an HN/Reddit/RSS story whose
+    # link IS a video must get the transcript too (watch-page scraping only
+    # ever yields footer junk). source_kind stays honest so HN/Reddit
+    # stories linking videos keep their comment path.
+    is_yt_video = _video_id_from_url(link) is not None
+
     article_text, comments = "", []
     used_fallback, fallback_reason = False, ""
 
     # 1) Fetch the article body (works for RSS blogs + external HN links).
     if link:
-        # YouTube stories: pull the transcript instead of scraping the watch
+        # YouTube videos: pull the transcript instead of scraping the watch
         # page (extraction always failed there → every YouTube story used to
         # fall back to the thin ≤400-char video description).
-        if source_kind == "youtube":
+        if is_yt_video:
             transcript = fetch_youtube_transcript(story)
             if transcript:
                 article_text = _cap(transcript)
