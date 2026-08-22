@@ -7,7 +7,7 @@ comments) for a candidate story, so Groq gets real detail instead of the
 For each story it returns:
   - article_text  : up to ~4000 chars of extracted body ("" if unavailable)
   - comments      : top community comments, text only (HN/Reddit), ≤10
-  - source_kind   : "hn" | "reddit" | "rss"
+  - source_kind   : "hn" | "reddit" | "rss" | "youtube"
   - used_fallback : True if we fell back to the RSS summary (logged so the
                     fallback rate is visible — see the upgrade spec)
   - fallback_reason: short string when used_fallback is True
@@ -260,6 +260,43 @@ def _cap(text: str, limit: int = MAX_ARTICLE_CHARS) -> str:
 
 
 # ---------------------------------------------------------------------------
+# YouTube transcripts
+# ---------------------------------------------------------------------------
+
+# Matches watch?v=, youtu.be/, and /shorts/ URLs; captures the 11-char ID.
+YT_VIDEO_ID_RE = re.compile(r"(?:watch\?v=|youtu\.be/|shorts/)([A-Za-z0-9_-]{11})")
+
+
+def _video_id_from_url(url: str) -> str | None:
+    """Extract the 11-char video ID from a YouTube watch/youtu.be/shorts URL."""
+    m = YT_VIDEO_ID_RE.search(url or "")
+    return m.group(1) if m else None
+
+
+def fetch_youtube_transcript(story: dict) -> str:
+    """Fetch a YouTube video's transcript via youtube-transcript-api.
+
+    Returns "" on ANY failure (dep missing, no captions, region-blocked,
+    rate-limited) — the caller then falls back to the ≤400-char video
+    description exactly like any other failed fetch. Dependency pinned to
+    youtube-transcript-api==0.6.2 (module-level get_transcript(); the 1.x
+    rewrite moved to an instance .fetch() API).
+    """
+    vid = _video_id_from_url(story.get("link", ""))
+    if not vid:
+        return ""
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+        segments = YouTubeTranscriptApi.get_transcript(vid)
+    except Exception:
+        return ""
+    # Captions come back as timestamped fragments; join + collapse whitespace
+    # so the script generator sees one continuous body of text.
+    text = " ".join((seg.get("text") or "").strip() for seg in segments)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+# ---------------------------------------------------------------------------
 # Comment fetching (HN + Reddit)
 # ---------------------------------------------------------------------------
 
@@ -377,7 +414,7 @@ def fetch_article_content(story: dict) -> dict:
         {
           "article_text": str,        # ≤4000 chars body, "" if unavailable
           "comments":    list[str],   # ≤10 top community comments
-          "source_kind":  "hn"|"reddit"|"rss",
+          "source_kind":  "hn"|"reddit"|"rss"|"youtube",
           "used_fallback": bool,       # True if we fell back to RSS summary
           "fallback_reason": str,
           "article_chars": int,
@@ -396,6 +433,8 @@ def fetch_article_content(story: dict) -> dict:
         source_kind = "hn"
     elif "reddit" in source:
         source_kind = "reddit"
+    elif source.startswith("youtube"):
+        source_kind = "youtube"
     else:
         source_kind = "rss"
 
@@ -404,8 +443,17 @@ def fetch_article_content(story: dict) -> dict:
 
     # 1) Fetch the article body (works for RSS blogs + external HN links).
     if link:
-        # Check for known paywalled domains first
-        if _is_paywalled(link):
+        # YouTube stories: pull the transcript instead of scraping the watch
+        # page (extraction always failed there → every YouTube story used to
+        # fall back to the thin ≤400-char video description).
+        if source_kind == "youtube":
+            transcript = fetch_youtube_transcript(story)
+            if transcript:
+                article_text = _cap(transcript)
+            else:
+                fallback_reason = "no transcript available (captions disabled?)"
+        # Check for known paywalled domains next
+        elif _is_paywalled(link):
             # Try textise service for paywalled content
             textise_content = _fetch_via_textise(link)
             if textise_content:
