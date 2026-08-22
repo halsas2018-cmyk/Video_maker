@@ -59,7 +59,9 @@ NVIDIA_API_KEY="nvapi-..."  # alternative LLM models on NVIDIA NIM (free tier) �
                             # also used by --rank-model nvidia-nemotron-ultra for the rerank
 ```
 
-Python dependencies (`pip install -r requirements.txt`):
+Python dependencies (`pip install -r requirements.txt`; on this Debian-based
+box pip exits with "externally-managed-environment" (PEP 668) — use
+`python3 -m pip install --break-system-packages -r requirements.txt`):
 - `requests` — RSS + Hacker News fetching (`news_fetcher.py`)
 - `edge-tts` — local Microsoft Edge TTS voiceover (`voice_generator.py`)
 - `Pillow` — gradient fallback background (`video_assembler.py`)

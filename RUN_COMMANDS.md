@@ -271,6 +271,11 @@ Before running, ensure:
    # (requests, edge-tts, Pillow, trafilatura, readability-lxml,
    #  youtube-transcript-api)
    ```
+   On Debian/Ubuntu, pip refuses with "externally-managed-environment"
+   (PEP 668) — add the override flag:
+   ```bash
+   python3 -m pip install --break-system-packages -r requirements.txt
+   ```
 
 4. **Run the prerequisites check:**
    ```bash
