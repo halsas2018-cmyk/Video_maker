@@ -18,6 +18,13 @@ Pillow>=10.0.0
 trafilatura>=2.0.0
 readability-lxml>=0.8.0
 
+# YouTube transcripts (Step 1.5 — YouTube-source stories fetch captions via
+# youtube-transcript-api instead of scraping the watch page, whose extraction
+# always failed). Pinned to 0.6.2: the 1.x rewrite moved to an instance
+# .fetch() API; article_fetcher.fetch_youtube_transcript() uses the 0.x
+# module-level get_transcript().
+youtube-transcript-api==0.6.2
+
 # Assembly also requires ffmpeg (install via apt/brew/choco):
 #   sudo apt install ffmpeg        # Linux
 #   brew install ffmpeg            # macOS
