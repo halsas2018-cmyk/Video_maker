@@ -55,14 +55,14 @@ RSS_FEEDS = {
 # Parked candidates (verify the ID with the command above, then activate):
 #   "YouTube TheAIGRID":     "<paste-channel-id>",   # AI-native daily news
 #   "YouTube AI Explained":  "<paste-channel-id>",   # AI-native deep dives
+#   "YouTube CNBC Make It":  "UCH5_L3ytGbBziX0CLuYdQ1Q",  # ID extracted but feed 404s — re-verify
+#   "YouTube The Economist": "UC0p5jTq6Xx_DosDFxVXnWaQ",  # ID extracted, feed never tested — verify first
 # A wrong/dead ID fails soft: fetch_youtube_feed logs "[skip]" and moves on.
 # ---------------------------------------------------------------------------
 YOUTUBE_CHANNELS = {
     "YouTube CNBC": "UCrp_UI8XtuYfpiqluWLD7Lw",           # CNBC Television — markets/earnings interviews
-    "YouTube CNBC Make It": "UCH5_L3ytGbBziX0CLuYdQ1Q",   # CNBC Make It — money/careers/success stories
     "YouTube Bloomberg Tech": "UCIALMKvObZNtJ6AmdCLP7Lg", # Bloomberg Technology — tech + AI coverage
     "YouTube Yahoo Finance": "UCEAZeUIeJs0IjQiqTCdVSIg",  # broad business coverage
-    "YouTube The Economist": "UC0p5jTq6Xx_DosDFxVXnWaQ",  # The Economist — global economy/policy explainers
 }
 YOUTUBE_FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
 
@@ -114,10 +114,8 @@ SOURCE_CATEGORIES = {
     "Google News Science": "science",
     # YouTube channels
     "YouTube CNBC": "business",
-    "YouTube CNBC Make It": "business",
     "YouTube Bloomberg Tech": "ai",
     "YouTube Yahoo Finance": "business",
-    "YouTube The Economist": "business",
     # Hacker News
     "Hacker News": "ai",  # primarily AI/tech discussions
 }
@@ -128,10 +126,8 @@ ENGAGEMENT_SOURCES = {
     "Hacker News",
     "Reddit r/programming",
     "YouTube CNBC",
-    "YouTube CNBC Make It",
     "YouTube Bloomberg Tech",
     "YouTube Yahoo Finance",
-    "YouTube The Economist",
 }
 
 REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; ShortsBot/1.0)"}
