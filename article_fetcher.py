@@ -278,19 +278,24 @@ def fetch_youtube_transcript(story: dict) -> str:
 
     Returns "" on ANY failure (dep missing, no captions, region-blocked,
     rate-limited) — the caller then falls back to the ≤400-char video
-    description exactly like any other failed fetch. Dependency pinned to
-    youtube-transcript-api==0.6.2 (module-level get_transcript(); the 1.x
-    rewrite moved to an instance .fetch() API).
+    description exactly like any other failed fetch. Uses the 1.x instance
+    API (YouTubeTranscriptApi().fetch()): 0.6.2's module-level
+    get_transcript() broke against current YouTube — its timedtext parser
+    got empty responses back and died with xml ParseError "no element
+    found". to_raw_data() restores the [{text, start, duration}] shape the
+    join below expects.
     """
     vid = _video_id_from_url(story.get("link", ""))
     if not vid:
         return ""
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
-        segments = YouTubeTranscriptApi.get_transcript(vid)
+        segments = YouTubeTranscriptApi().fetch(vid).to_raw_data()
     except Exception as e:
         # Visible, not swallowed: "dep missing" vs "no captions" vs
-        # "datacenter IP blocked" are different problems with different fixes.
+        # "IP blocked" are different problems with different fixes — 1.x
+        # raises typed errors (TranscriptsDisabled, IpBlocked, ...) so the
+        # message names the actual cause.
         print(f"    [yt-transcript] unavailable: {e}")
         return ""
     # Captions come back as timestamped fragments; join + collapse whitespace

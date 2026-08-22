@@ -65,6 +65,9 @@ box pip exits with "externally-managed-environment" (PEP 668) — use
 - `requests` — RSS + Hacker News fetching (`news_fetcher.py`)
 - `edge-tts` — local Microsoft Edge TTS voiceover (`voice_generator.py`)
 - `Pillow` — gradient fallback background (`video_assembler.py`)
+- `trafilatura` + `readability-lxml` — article extraction chain
+  (`article_fetcher.py`; stdlib stripper fallback if missing)
+- `youtube-transcript-api` (1.x) — YouTube video captions (`article_fetcher.py`)
 - stdlib only otherwise: `urllib` (Pexels download), `xml.etree` (RSS parse),
   `subprocess` (ffmpeg + Groq/NVIDIA via curl)
 
@@ -331,9 +334,16 @@ assets/*.{mp4,jpg}  draft_video.mp4       _bg_gradient.png (fallback)
 - Paywalled domains short-circuit to the Jina reader proxy (`r.jina.ai`);
   comment caches live in `cache/comments.json` (TTL from config).
 - On ANY fetch failure: falls back to `story['summary']` and **logs** it.
-- **OPEN ITEM:** no YouTube branch yet — a YouTube watch-page link fails
-  extraction and falls back to the ≤400-char video description. Planned:
-  `youtube-transcript-api==0.6.2`, branched on `source.startswith("YouTube")`.
+- **YouTube transcripts:** any story whose LINK is a YouTube video
+  (`watch?v=` / `youtu.be/` / `shorts/`, detected by `_video_id_from_url` —
+  routing is by URL, NOT the source string, so HN/Reddit/RSS stories linking
+  videos get transcripts too while keeping their comment path) pulls captions
+  via `youtube-transcript-api` (1.x instance API,
+  `YouTubeTranscriptApi().fetch(vid).to_raw_data()`) INSTEAD of scraping the
+  watch page (extraction always yields footer junk there). Failure →
+  `fallback_reason: "no transcript available (captions disabled?)"` + the
+  usual summary fallback; the cause is printed (`[yt-transcript] unavailable:`)
+  so dep-missing vs no-captions vs IP-blocked stay distinguishable.
 
 ### voice_generator.py — "narration"
 - `generate_narration(text, project_dir=...)` → `narration.mp3`.
@@ -493,7 +503,9 @@ Documented so they aren't re-discovered. These are pre-existing, not regressions
     so you can spot a high fallback rate — at which point the script-quality
     problem the upgrade targets will resurface *upstream* of the LLM, and no
     prompt tweak will fix it (you'd be back to title+blurb inputs). Watch this
-    metric. Currently hits EVERY YouTube-source story (no transcript branch yet).
+    metric. YouTube-video stories now pull transcripts first (URL-routed since
+    commit 431affc), so the fallback mainly hits paywalls, dead links, and
+    caption-less videos.
 
 11. **Reddit RSS 429s in this sandbox.** `old.reddit.com/r/{sub}/top/.rss` endpoints
     rate-limit this sandbox's IP. Uses browser UA + 8s delay + 3 retries; works on normal hosts.
@@ -660,9 +672,11 @@ Keep these patterns in mind so new code fits the project's conventions:
   `article_fetcher._extract_article_text`**. Priority chain is trafilatura → readability-lxml → stdlib regex; each is optional and degrades to the next.
   Both are in `requirements.txt` now. Update the `trafilatura.extract` flags or
   add a new backend (e.g. `goose3`) ahead of the stdlib fallback.
-  **YouTube branch (open item):** add a `source.startswith("YouTube")` branch in
-  `fetch_article_content` using `youtube-transcript-api==0.6.2` (video ID from
-  the watch URL), so YouTube stories stop running on the ≤400-char description.
+  **YouTube transcripts (done):** routing lives in `fetch_article_content` —
+  `_video_id_from_url(link)` gates a `fetch_youtube_transcript` call placed
+  BEFORE the paywall check. Keep failures non-fatal (return "" → RSS-summary
+  fallback); if YouTube breaks the parser again, bump the pinned
+  `youtube-transcript-api` version rather than patching around it.
 - **Change the niche → edit `NICHE_KEYWORDS`** (relevance scoring) and the
   fallback `RELATABLE_TERMS`/`_term_from_sentence` in `storyboard_generator`
   (so fallback asset searches stay on-niche). Tweak `COMBINED_SYSTEM_PROMPT`
@@ -720,7 +734,8 @@ llm_client.py            Provider-agnostic LLM transport (Groq + NVIDIA NIM), MO
 news_fetcher.py          RSS (blogs + CNBC, TechCrunch Startups, MarketWatch, Reddit RSS, Google News) + HN discovery + YouTube channel feeds + heuristic ranking (Step 1, recall filter)
 llm_ranker.py            ONE-call LLM editorial rerank of the pool (Step 1.5): best-first picks + reasons + duplicate groups; heuristic fallback; max_tokens=5120
 article_fetcher.py       Fetch real article text + HN/Reddit comments (Step 1.5);
-                         trafilatura→readability→stdlib with RSS-summary fallback (YouTube branch OPEN)
+                         trafilatura→readability→stdlib with RSS-summary fallback;
+                         YouTube-video links pull captions (youtube-transcript-api)
 script_generator.py      ONE combined LLM call: script + 5 headlines + youtube_title + youtube_description + per-sentence search terms (Steps 2-3); validator with 1 retry; uses llm_client
 voice_generator.py       Edge-TTS narration (Step 4)
 storyboard_generator.py   Formats the combined call's plan → shot list + SRT + timing.json
