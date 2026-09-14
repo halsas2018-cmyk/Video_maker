@@ -1,778 +1,782 @@
 {
   "shots": [
     {
-      "sentence": "A programmer just found hidden code in Apple software that lets you swap out Siri for other AI tools like Claude.",
-      "search_term": "person coding on laptop",
+      "sentence": "One startup just secured four billion dollars in interest to build nuclear-powered data centers that float in the middle of the ocean.",
+      "search_term": "cargo ship ocean",
       "media_type": "video",
-      "visual": "Close up of a developer typing code on a dark screen.",
+      "visual": "A large cargo ship moving through the open ocean.",
       "asset_path": "project_assets/shot_1.mp4",
-      "duration_seconds": 2.774
+      "duration_seconds": 3.352
     },
     {
-      "sentence": "A programmer just found hidden code in Apple software that lets you swap out Siri for other AI tools like Claude.",
-      "search_term": "futuristic digital interface",
+      "sentence": "One startup just secured four billion dollars in interest to build nuclear-powered data centers that float in the middle of the ocean.",
+      "search_term": "nuclear power plant",
       "media_type": "video",
-      "visual": "Abstract blue light glowing on a computer screen.",
+      "visual": "Close up of a futuristic energy facility or abstract glowing core.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.774
+      "duration_seconds": 3.352
     },
     {
-      "sentence": "Instead of being stuck with Apple's own brain, you could soon pick your favorite AI to handle your daily tasks.",
-      "search_term": "smart phone interaction",
+      "sentence": "This is part of a massive shift at Y Combinator, where the latest batch of companies feels more like science fiction than simple apps.",
+      "search_term": "futuristic technology",
       "media_type": "video",
-      "visual": "Hand holding a smartphone with app icons on display.",
+      "visual": "Abstract digital lights moving across a dark screen.",
       "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 2.642
+      "duration_seconds": 3.657
     },
     {
-      "sentence": "Instead of being stuck with Apple's own brain, you could soon pick your favorite AI to handle your daily tasks.",
-      "search_term": "AI brain abstract",
+      "sentence": "This is part of a massive shift at Y Combinator, where the latest batch of companies feels more like science fiction than simple apps.",
+      "search_term": "startup office",
       "media_type": "video",
-      "visual": "Glowing neural network animation representing intelligence.",
+      "visual": "A busy, modern office space with people collaborating.",
       "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 2.642
+      "duration_seconds": 3.657
     },
     {
-      "sentence": "One video shows a user telling Siri to ask Claude to set a reminder, and it actually works.",
-      "search_term": "person using voice assistant",
+      "sentence": "Investors are buzzing about Dipole Labs, which is redesigning the internal hardware of data centers to stop energy from being wasted as heat.",
+      "search_term": "computer hardware",
       "media_type": "video",
-      "visual": "Close up of a person speaking into their phone.",
+      "visual": "Close up of high-end server hardware and circuit boards.",
       "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 2.378
+      "duration_seconds": 3.505
     },
     {
-      "sentence": "One video shows a user telling Siri to ask Claude to set a reminder, and it actually works.",
-      "search_term": "calendar app on screen",
+      "sentence": "Investors are buzzing about Dipole Labs, which is redesigning the internal hardware of data centers to stop energy from being wasted as heat.",
+      "search_term": "server room",
       "media_type": "video",
-      "visual": "A notification popping up on a digital calendar.",
+      "visual": "Rows of blinking lights in a modern data center.",
       "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.378
+      "duration_seconds": 3.505
     },
     {
-      "sentence": "Even crazier, the system is designed so these outside models can take full control of your Apple apps and data.",
-      "search_term": "data flowing through network",
+      "sentence": "Then there is Isengard, a company already making ten million dollars by mass-producing jet-powered drones for allied countries.",
+      "search_term": "drone flight",
       "media_type": "video",
-      "visual": "Rapid streams of digital data moving across a screen.",
+      "visual": "A drone flying rapidly over a landscape.",
       "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 2.642
+      "duration_seconds": 2.743
     },
     {
-      "sentence": "Even crazier, the system is designed so these outside models can take full control of your Apple apps and data.",
-      "search_term": "locked secure file",
+      "sentence": "Then there is Isengard, a company already making ten million dollars by mass-producing jet-powered drones for allied countries.",
+      "search_term": "jet engine",
       "media_type": "video",
-      "visual": "A digital padlock icon appearing over a folder.",
+      "visual": "Close up of a jet engine turbine spinning.",
       "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 2.642
+      "duration_seconds": 2.743
     },
     {
-      "sentence": "This massive shift might be forced by European laws that demand Apple open its doors to outside competition.",
-      "search_term": "European flag architecture",
-      "media_type": "photo",
-      "visual": "A modern government building facade in Europe.",
-      "asset_path": "project_assets/shot_9.jpg",
-      "duration_seconds": 2.378
-    },
-    {
-      "sentence": "This massive shift might be forced by European laws that demand Apple open its doors to outside competition.",
-      "search_term": "gavel on desk",
+      "sentence": "We are also seeing startups like Lamb Labs, which is hardcoding artificial intelligence models directly into physical computer chips to boost efficiency.",
+      "search_term": "microchip",
       "media_type": "video",
-      "visual": "A wooden gavel hitting a sounding block.",
+      "visual": "Extreme close up of a silicon computer chip.",
+      "asset_path": "project_assets/shot_9.mp4",
+      "duration_seconds": 3.352
+    },
+    {
+      "sentence": "We are also seeing startups like Lamb Labs, which is hardcoding artificial intelligence models directly into physical computer chips to boost efficiency.",
+      "search_term": "artificial intelligence",
+      "media_type": "video",
+      "visual": "Digital neural network glowing on a black background.",
       "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 2.378
+      "duration_seconds": 3.352
     },
     {
-      "sentence": "While it is still hidden for now, the engineering is finished and ready to change everything.",
-      "search_term": "server room lights",
+      "sentence": "As these companies move from software to heavy-duty engineering, we have to wonder which tasks will belong to humans and which will finally be left to robots.",
+      "search_term": "robot arm",
       "media_type": "video",
-      "visual": "Rows of blinking lights in a data center.",
+      "visual": "An industrial robotic arm working on an assembly line.",
       "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 2.113
+      "duration_seconds": 4.114
     },
     {
-      "sentence": "While it is still hidden for now, the engineering is finished and ready to change everything.",
-      "search_term": "loading bar progress",
+      "sentence": "As these companies move from software to heavy-duty engineering, we have to wonder which tasks will belong to humans and which will finally be left to robots.",
+      "search_term": "human silhouette",
       "media_type": "video",
-      "visual": "A progress bar filling up to one hundred percent.",
+      "visual": "A human silhouette looking out at a horizon.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 2.113
-    },
-    {
-      "sentence": "Would you actually pay to have a smarter AI running your iPhone, or is the original Siri good enough?",
-      "search_term": "person thinking deeply",
-      "media_type": "video",
-      "visual": "A person looking thoughtful while holding a smartphone.",
-      "asset_path": "",
-      "duration_seconds": 2.51
-    },
-    {
-      "sentence": "Would you actually pay to have a smarter AI running your iPhone, or is the original Siri good enough?",
-      "search_term": "modern technology background",
-      "media_type": "video",
-      "visual": "Clean, minimalist office space with tech gadgets.",
-      "asset_path": "",
-      "duration_seconds": 2.51
+      "duration_seconds": 4.114
     }
   ],
   "words": [
     {
-      "word": "A",
-      "start": 0.151,
-      "end": 0.191
+      "word": "One",
+      "start": 0.191,
+      "end": 0.311
     },
     {
-      "word": "programmer",
-      "start": 0.211,
-      "end": 0.631
+      "word": "startup",
+      "start": 0.331,
+      "end": 0.651
     },
     {
       "word": "just",
-      "start": 0.691,
-      "end": 0.831
+      "start": 0.791,
+      "end": 0.971
     },
     {
-      "word": "found",
-      "start": 0.851,
-      "end": 1.051
+      "word": "secured",
+      "start": 1.011,
+      "end": 1.392
     },
     {
-      "word": "hidden",
-      "start": 1.091,
-      "end": 1.311
+      "word": "$4",
+      "start": 1.492,
+      "end": 1.612
     },
     {
-      "word": "code",
-      "start": 1.351,
-      "end": 1.552
+      "word": "billion",
+      "start": 1.732,
+      "end": 2.392
     },
     {
       "word": "in",
-      "start": 1.572,
-      "end": 1.652
-    },
-    {
-      "word": "Apple",
-      "start": 1.772,
-      "end": 1.972
-    },
-    {
-      "word": "software",
-      "start": 1.992,
-      "end": 2.412
-    },
-    {
-      "word": "that",
       "start": 2.432,
-      "end": 2.552
+      "end": 2.492
     },
     {
-      "word": "lets",
-      "start": 2.572,
-      "end": 2.712
+      "word": "interest",
+      "start": 2.592,
+      "end": 2.912
     },
     {
-      "word": "you",
-      "start": 2.732,
-      "end": 2.832
+      "word": "to",
+      "start": 2.972,
+      "end": 3.052
     },
     {
-      "word": "swap",
-      "start": 2.872,
-      "end": 3.112
-    },
-    {
-      "word": "out",
-      "start": 3.152,
+      "word": "build",
+      "start": 3.072,
       "end": 3.272
     },
     {
-      "word": "Siri",
-      "start": 3.312,
-      "end": 3.592
+      "word": "nuclear-powered",
+      "start": 3.332,
+      "end": 3.933
     },
     {
-      "word": "for",
-      "start": 3.632,
-      "end": 3.732
+      "word": "data",
+      "start": 3.953,
+      "end": 4.193
     },
     {
-      "word": "other",
-      "start": 3.832,
-      "end": 3.992
-    },
-    {
-      "word": "AI",
-      "start": 4.092,
-      "end": 4.332
-    },
-    {
-      "word": "tools",
-      "start": 4.372,
-      "end": 4.593
-    },
-    {
-      "word": "like",
-      "start": 4.613,
-      "end": 4.753
-    },
-    {
-      "word": "Clod.",
-      "start": 4.793,
-      "end": 5.093
-    },
-    {
-      "word": "Instead",
-      "start": 5.453,
-      "end": 5.693
-    },
-    {
-      "word": "of",
-      "start": 5.713,
-      "end": 5.773
-    },
-    {
-      "word": "being",
-      "start": 5.813,
-      "end": 5.993
-    },
-    {
-      "word": "stuck",
-      "start": 6.053,
-      "end": 6.273
-    },
-    {
-      "word": "with",
-      "start": 6.293,
-      "end": 6.413
-    },
-    {
-      "word": "Apple's",
-      "start": 6.593,
-      "end": 6.833
-    },
-    {
-      "word": "own",
-      "start": 6.893,
-      "end": 6.993
-    },
-    {
-      "word": "brain,",
-      "start": 7.033,
-      "end": 7.273
-    },
-    {
-      "word": "you",
-      "start": 7.594,
-      "end": 7.674
-    },
-    {
-      "word": "could",
-      "start": 7.694,
-      "end": 7.834
-    },
-    {
-      "word": "soon",
-      "start": 7.874,
-      "end": 8.074
-    },
-    {
-      "word": "pick",
-      "start": 8.114,
-      "end": 8.254
-    },
-    {
-      "word": "your",
-      "start": 8.294,
-      "end": 8.414
-    },
-    {
-      "word": "favorite",
-      "start": 8.474,
-      "end": 8.774
-    },
-    {
-      "word": "AI",
-      "start": 8.794,
-      "end": 9.074
-    },
-    {
-      "word": "to",
-      "start": 9.114,
-      "end": 9.214
-    },
-    {
-      "word": "handle",
-      "start": 9.254,
-      "end": 9.454
-    },
-    {
-      "word": "your",
-      "start": 9.474,
-      "end": 9.574
-    },
-    {
-      "word": "daily",
-      "start": 9.614,
-      "end": 9.814
-    },
-    {
-      "word": "tasks.",
-      "start": 9.854,
-      "end": 10.234
-    },
-    {
-      "word": "One",
-      "start": 10.755,
-      "end": 10.855
-    },
-    {
-      "word": "video",
-      "start": 10.875,
-      "end": 11.175
-    },
-    {
-      "word": "shows",
-      "start": 11.215,
-      "end": 11.415
-    },
-    {
-      "word": "a",
-      "start": 11.455,
-      "end": 11.515
-    },
-    {
-      "word": "user",
-      "start": 11.595,
-      "end": 11.795
-    },
-    {
-      "word": "telling",
-      "start": 11.815,
-      "end": 12.055
-    },
-    {
-      "word": "Siri",
-      "start": 12.095,
-      "end": 12.355
-    },
-    {
-      "word": "to",
-      "start": 12.375,
-      "end": 12.435
-    },
-    {
-      "word": "ask",
-      "start": 12.535,
-      "end": 12.695
-    },
-    {
-      "word": "Clod",
-      "start": 12.735,
-      "end": 13.015
-    },
-    {
-      "word": "to",
-      "start": 13.055,
-      "end": 13.115
-    },
-    {
-      "word": "set",
-      "start": 13.155,
-      "end": 13.296
-    },
-    {
-      "word": "a",
-      "start": 13.316,
-      "end": 13.336
-    },
-    {
-      "word": "reminder,",
-      "start": 13.376,
-      "end": 13.756
-    },
-    {
-      "word": "and",
-      "start": 14.116,
-      "end": 14.196
-    },
-    {
-      "word": "it",
-      "start": 14.216,
-      "end": 14.276
-    },
-    {
-      "word": "actually",
-      "start": 14.336,
-      "end": 14.616
-    },
-    {
-      "word": "works.",
-      "start": 14.656,
-      "end": 14.896
-    },
-    {
-      "word": "Even",
-      "start": 15.396,
-      "end": 15.576
-    },
-    {
-      "word": "crazier,",
-      "start": 15.616,
-      "end": 16.036
-    },
-    {
-      "word": "the",
-      "start": 16.297,
-      "end": 16.397
-    },
-    {
-      "word": "system",
-      "start": 16.437,
-      "end": 16.717
-    },
-    {
-      "word": "is",
-      "start": 16.757,
-      "end": 16.817
-    },
-    {
-      "word": "designed",
-      "start": 16.857,
-      "end": 17.237
-    },
-    {
-      "word": "so",
-      "start": 17.277,
-      "end": 17.417
-    },
-    {
-      "word": "these",
-      "start": 17.437,
-      "end": 17.597
-    },
-    {
-      "word": "outside",
-      "start": 17.657,
-      "end": 18.017
-    },
-    {
-      "word": "models",
-      "start": 18.037,
-      "end": 18.297
-    },
-    {
-      "word": "can",
-      "start": 18.337,
-      "end": 18.457
-    },
-    {
-      "word": "take",
-      "start": 18.477,
-      "end": 18.637
-    },
-    {
-      "word": "full",
-      "start": 18.717,
-      "end": 18.877
-    },
-    {
-      "word": "control",
-      "start": 18.917,
-      "end": 19.278
-    },
-    {
-      "word": "of",
-      "start": 19.298,
-      "end": 19.358
-    },
-    {
-      "word": "your",
-      "start": 19.378,
-      "end": 19.498
-    },
-    {
-      "word": "Apple",
-      "start": 19.538,
-      "end": 19.738
-    },
-    {
-      "word": "apps",
-      "start": 19.818,
-      "end": 19.978
-    },
-    {
-      "word": "and",
-      "start": 20.018,
-      "end": 20.098
-    },
-    {
-      "word": "data.",
-      "start": 20.118,
-      "end": 20.358
-    },
-    {
-      "word": "This",
-      "start": 20.718,
-      "end": 20.879
-    },
-    {
-      "word": "massive",
-      "start": 20.959,
-      "end": 21.28
-    },
-    {
-      "word": "shift",
-      "start": 21.32,
-      "end": 21.58
-    },
-    {
-      "word": "might",
-      "start": 21.641,
-      "end": 21.801
-    },
-    {
-      "word": "be",
-      "start": 21.841,
-      "end": 21.941
-    },
-    {
-      "word": "forced",
-      "start": 22.022,
-      "end": 22.262
-    },
-    {
-      "word": "by",
-      "start": 22.282,
-      "end": 22.403
-    },
-    {
-      "word": "European",
-      "start": 22.483,
-      "end": 22.864
-    },
-    {
-      "word": "laws",
-      "start": 22.904,
-      "end": 23.185
+      "word": "centers",
+      "start": 4.213,
+      "end": 4.493
     },
     {
       "word": "that",
-      "start": 23.225,
-      "end": 23.345
+      "start": 4.653,
+      "end": 4.773
     },
     {
-      "word": "demand",
-      "start": 23.365,
-      "end": 23.726
+      "word": "float",
+      "start": 4.853,
+      "end": 5.113
     },
     {
-      "word": "Apple",
-      "start": 23.866,
-      "end": 24.067
-    },
-    {
-      "word": "open",
-      "start": 24.187,
-      "end": 24.348
-    },
-    {
-      "word": "its",
-      "start": 24.388,
-      "end": 24.488
-    },
-    {
-      "word": "doors",
-      "start": 24.528,
-      "end": 24.809
-    },
-    {
-      "word": "to",
-      "start": 24.869,
-      "end": 24.949
-    },
-    {
-      "word": "outside",
-      "start": 25.029,
-      "end": 25.35
-    },
-    {
-      "word": "competition.",
-      "start": 25.39,
-      "end": 25.912
-    },
-    {
-      "word": "While",
-      "start": 26.273,
-      "end": 26.413
-    },
-    {
-      "word": "it",
-      "start": 26.433,
-      "end": 26.473
-    },
-    {
-      "word": "is",
-      "start": 26.513,
-      "end": 26.593
-    },
-    {
-      "word": "still",
-      "start": 26.614,
-      "end": 26.814
-    },
-    {
-      "word": "hidden",
-      "start": 26.874,
-      "end": 27.055
-    },
-    {
-      "word": "for",
-      "start": 27.095,
-      "end": 27.195
-    },
-    {
-      "word": "now,",
-      "start": 27.235,
-      "end": 27.416
+      "word": "in",
+      "start": 5.233,
+      "end": 5.293
     },
     {
       "word": "the",
-      "start": 27.716,
-      "end": 27.797
+      "start": 5.313,
+      "end": 5.393
     },
     {
-      "word": "engineering",
-      "start": 27.837,
-      "end": 28.258
+      "word": "middle",
+      "start": 5.453,
+      "end": 5.673
+    },
+    {
+      "word": "of",
+      "start": 5.693,
+      "end": 5.733
+    },
+    {
+      "word": "the",
+      "start": 5.753,
+      "end": 5.853
+    },
+    {
+      "word": "ocean.",
+      "start": 5.933,
+      "end": 6.154
+    },
+    {
+      "word": "This",
+      "start": 6.514,
+      "end": 6.634
     },
     {
       "word": "is",
-      "start": 28.318,
-      "end": 28.398
+      "start": 6.694,
+      "end": 6.774
     },
     {
-      "word": "finished",
-      "start": 28.478,
-      "end": 28.779
+      "word": "part",
+      "start": 6.814,
+      "end": 6.994
     },
     {
-      "word": "and",
-      "start": 29.06,
-      "end": 29.14
-    },
-    {
-      "word": "ready",
-      "start": 29.18,
-      "end": 29.341
-    },
-    {
-      "word": "to",
-      "start": 29.361,
-      "end": 29.421
-    },
-    {
-      "word": "change",
-      "start": 29.461,
-      "end": 29.722
-    },
-    {
-      "word": "everything.",
-      "start": 29.762,
-      "end": 30.103
-    },
-    {
-      "word": "Would",
-      "start": 30.443,
-      "end": 30.584
-    },
-    {
-      "word": "you",
-      "start": 30.604,
-      "end": 30.684
-    },
-    {
-      "word": "actually",
-      "start": 30.764,
-      "end": 31.045
-    },
-    {
-      "word": "pay",
-      "start": 31.085,
-      "end": 31.246
-    },
-    {
-      "word": "to",
-      "start": 31.286,
-      "end": 31.346
-    },
-    {
-      "word": "have",
-      "start": 31.366,
-      "end": 31.486
+      "word": "of",
+      "start": 7.014,
+      "end": 7.074
     },
     {
       "word": "a",
-      "start": 31.506,
-      "end": 31.526
+      "start": 7.114,
+      "end": 7.154
     },
     {
-      "word": "smarter",
-      "start": 31.586,
-      "end": 31.907
+      "word": "massive",
+      "start": 7.254,
+      "end": 7.614
     },
     {
-      "word": "AI",
-      "start": 31.947,
-      "end": 32.208
+      "word": "shift",
+      "start": 7.674,
+      "end": 7.934
     },
     {
-      "word": "running",
-      "start": 32.268,
-      "end": 32.449
+      "word": "at",
+      "start": 7.974,
+      "end": 8.054
     },
     {
-      "word": "your",
-      "start": 32.469,
-      "end": 32.569
+      "word": "Y-combinator,",
+      "start": 8.194,
+      "end": 8.715
     },
     {
-      "word": "iPhone?",
-      "start": 32.629,
-      "end": 32.93
-    },
-    {
-      "word": "Or",
-      "start": 33.271,
-      "end": 33.331
-    },
-    {
-      "word": "is",
-      "start": 33.371,
-      "end": 33.431
+      "word": "where",
+      "start": 8.955,
+      "end": 9.055
     },
     {
       "word": "the",
-      "start": 33.451,
-      "end": 33.531
+      "start": 9.075,
+      "end": 9.155
     },
     {
-      "word": "original",
-      "start": 33.572,
-      "end": 33.912
+      "word": "latest",
+      "start": 9.175,
+      "end": 9.435
     },
     {
-      "word": "Siri",
-      "start": 33.953,
-      "end": 34.173
+      "word": "batch",
+      "start": 9.495,
+      "end": 9.715
     },
     {
-      "word": "good",
-      "start": 34.193,
-      "end": 34.313
+      "word": "of",
+      "start": 9.755,
+      "end": 9.815
     },
     {
-      "word": "enough?",
-      "start": 34.354,
-      "end": 34.534
+      "word": "companies",
+      "start": 9.855,
+      "end": 10.195
+    },
+    {
+      "word": "feels",
+      "start": 10.255,
+      "end": 10.495
+    },
+    {
+      "word": "more",
+      "start": 10.555,
+      "end": 10.695
+    },
+    {
+      "word": "like",
+      "start": 10.735,
+      "end": 10.876
+    },
+    {
+      "word": "science",
+      "start": 10.956,
+      "end": 11.236
+    },
+    {
+      "word": "fiction",
+      "start": 11.276,
+      "end": 11.576
+    },
+    {
+      "word": "than",
+      "start": 11.676,
+      "end": 11.796
+    },
+    {
+      "word": "simple",
+      "start": 11.856,
+      "end": 12.076
+    },
+    {
+      "word": "apps.",
+      "start": 12.176,
+      "end": 12.336
+    },
+    {
+      "word": "Investors",
+      "start": 12.816,
+      "end": 13.257
+    },
+    {
+      "word": "are",
+      "start": 13.357,
+      "end": 13.437
+    },
+    {
+      "word": "buzzing",
+      "start": 13.537,
+      "end": 13.817
+    },
+    {
+      "word": "about",
+      "start": 13.877,
+      "end": 14.077
+    },
+    {
+      "word": "dipole",
+      "start": 14.137,
+      "end": 14.497
+    },
+    {
+      "word": "apps,",
+      "start": 14.637,
+      "end": 14.817
+    },
+    {
+      "word": "which",
+      "start": 15.097,
+      "end": 15.217
+    },
+    {
+      "word": "is",
+      "start": 15.257,
+      "end": 15.337
+    },
+    {
+      "word": "redesigning",
+      "start": 15.377,
+      "end": 15.898
+    },
+    {
+      "word": "the",
+      "start": 15.938,
+      "end": 16.018
+    },
+    {
+      "word": "internal",
+      "start": 16.078,
+      "end": 16.498
+    },
+    {
+      "word": "hardware",
+      "start": 16.538,
+      "end": 16.878
+    },
+    {
+      "word": "of",
+      "start": 16.898,
+      "end": 16.958
+    },
+    {
+      "word": "data",
+      "start": 16.998,
+      "end": 17.218
+    },
+    {
+      "word": "centers",
+      "start": 17.238,
+      "end": 17.518
+    },
+    {
+      "word": "to",
+      "start": 17.658,
+      "end": 17.738
+    },
+    {
+      "word": "stop",
+      "start": 17.778,
+      "end": 17.999
+    },
+    {
+      "word": "energy",
+      "start": 18.119,
+      "end": 18.399
+    },
+    {
+      "word": "from",
+      "start": 18.439,
+      "end": 18.559
+    },
+    {
+      "word": "being",
+      "start": 18.599,
+      "end": 18.799
+    },
+    {
+      "word": "wasted",
+      "start": 18.859,
+      "end": 19.179
+    },
+    {
+      "word": "as",
+      "start": 19.239,
+      "end": 19.299
+    },
+    {
+      "word": "heat.",
+      "start": 19.359,
+      "end": 19.559
+    },
+    {
+      "word": "Then",
+      "start": 19.959,
+      "end": 20.079
+    },
+    {
+      "word": "there",
+      "start": 20.099,
+      "end": 20.239
+    },
+    {
+      "word": "is",
+      "start": 20.28,
+      "end": 20.34
+    },
+    {
+      "word": "Eisengaard,",
+      "start": 20.36,
+      "end": 20.96
+    },
+    {
+      "word": "a",
+      "start": 21.32,
+      "end": 21.36
+    },
+    {
+      "word": "company",
+      "start": 21.4,
+      "end": 21.7
+    },
+    {
+      "word": "already",
+      "start": 21.82,
+      "end": 22.08
+    },
+    {
+      "word": "making",
+      "start": 22.14,
+      "end": 22.38
+    },
+    {
+      "word": "$10",
+      "start": 22.46,
+      "end": 22.661
+    },
+    {
+      "word": "million",
+      "start": 22.701,
+      "end": 23.281
+    },
+    {
+      "word": "by",
+      "start": 23.321,
+      "end": 23.461
+    },
+    {
+      "word": "mass",
+      "start": 23.521,
+      "end": 23.741
+    },
+    {
+      "word": "producing",
+      "start": 23.781,
+      "end": 24.121
+    },
+    {
+      "word": "jet-powered",
+      "start": 24.181,
+      "end": 24.661
+    },
+    {
+      "word": "drones",
+      "start": 24.681,
+      "end": 25.001
+    },
+    {
+      "word": "for",
+      "start": 25.082,
+      "end": 25.202
+    },
+    {
+      "word": "allied",
+      "start": 25.282,
+      "end": 25.522
+    },
+    {
+      "word": "countries.",
+      "start": 25.562,
+      "end": 25.902
+    },
+    {
+      "word": "We",
+      "start": 26.362,
+      "end": 26.462
+    },
+    {
+      "word": "are",
+      "start": 26.482,
+      "end": 26.582
+    },
+    {
+      "word": "also",
+      "start": 26.642,
+      "end": 26.882
+    },
+    {
+      "word": "seeing",
+      "start": 26.922,
+      "end": 27.142
+    },
+    {
+      "word": "startups",
+      "start": 27.182,
+      "end": 27.583
+    },
+    {
+      "word": "like",
+      "start": 27.623,
+      "end": 27.763
+    },
+    {
+      "word": "Lamb",
+      "start": 27.823,
+      "end": 28.043
+    },
+    {
+      "word": "Labs.",
+      "start": 28.063,
+      "end": 28.383
+    },
+    {
+      "word": "which",
+      "start": 28.623,
+      "end": 28.743
+    },
+    {
+      "word": "is",
+      "start": 28.784,
+      "end": 28.844
+    },
+    {
+      "word": "hard",
+      "start": 28.904,
+      "end": 29.064
+    },
+    {
+      "word": "coding",
+      "start": 29.104,
+      "end": 29.385
+    },
+    {
+      "word": "artificial",
+      "start": 29.465,
+      "end": 29.906
+    },
+    {
+      "word": "intelligence",
+      "start": 29.926,
+      "end": 30.368
+    },
+    {
+      "word": "models",
+      "start": 30.408,
+      "end": 30.688
+    },
+    {
+      "word": "directly",
+      "start": 30.769,
+      "end": 31.25
+    },
+    {
+      "word": "into",
+      "start": 31.39,
+      "end": 31.551
+    },
+    {
+      "word": "physical",
+      "start": 31.631,
+      "end": 31.972
+    },
+    {
+      "word": "computer",
+      "start": 31.992,
+      "end": 32.353
+    },
+    {
+      "word": "chips",
+      "start": 32.373,
+      "end": 32.613
+    },
+    {
+      "word": "to",
+      "start": 32.914,
+      "end": 32.994
+    },
+    {
+      "word": "boost",
+      "start": 33.014,
+      "end": 33.215
+    },
+    {
+      "word": "efficiency.",
+      "start": 33.255,
+      "end": 33.736
+    },
+    {
+      "word": "As",
+      "start": 34.117,
+      "end": 34.197
+    },
+    {
+      "word": "these",
+      "start": 34.237,
+      "end": 34.378
+    },
+    {
+      "word": "companies",
+      "start": 34.438,
+      "end": 34.779
+    },
+    {
+      "word": "move",
+      "start": 34.839,
+      "end": 35.04
+    },
+    {
+      "word": "from",
+      "start": 35.06,
+      "end": 35.18
+    },
+    {
+      "word": "software",
+      "start": 35.24,
+      "end": 35.721
+    },
+    {
+      "word": "to",
+      "start": 35.741,
+      "end": 35.822
+    },
+    {
+      "word": "heavy",
+      "start": 35.862,
+      "end": 36.022
+    },
+    {
+      "word": "duty",
+      "start": 36.062,
+      "end": 36.263
+    },
+    {
+      "word": "engineering,",
+      "start": 36.303,
+      "end": 36.724
+    },
+    {
+      "word": "we",
+      "start": 37.085,
+      "end": 37.185
+    },
+    {
+      "word": "have",
+      "start": 37.225,
+      "end": 37.345
+    },
+    {
+      "word": "to",
+      "start": 37.386,
+      "end": 37.446
+    },
+    {
+      "word": "wonder",
+      "start": 37.506,
+      "end": 37.726
+    },
+    {
+      "word": "which",
+      "start": 37.746,
+      "end": 37.907
+    },
+    {
+      "word": "tasks",
+      "start": 37.947,
+      "end": 38.288
+    },
+    {
+      "word": "will",
+      "start": 38.308,
+      "end": 38.448
+    },
+    {
+      "word": "belong",
+      "start": 38.468,
+      "end": 38.729
+    },
+    {
+      "word": "to",
+      "start": 38.749,
+      "end": 38.809
+    },
+    {
+      "word": "humans",
+      "start": 38.869,
+      "end": 39.19
+    },
+    {
+      "word": "and",
+      "start": 39.511,
+      "end": 39.571
+    },
+    {
+      "word": "which",
+      "start": 39.591,
+      "end": 39.711
+    },
+    {
+      "word": "will",
+      "start": 39.732,
+      "end": 39.872
+    },
+    {
+      "word": "finally",
+      "start": 39.912,
+      "end": 40.213
+    },
+    {
+      "word": "be",
+      "start": 40.273,
+      "end": 40.353
+    },
+    {
+      "word": "left",
+      "start": 40.393,
+      "end": 40.574
+    },
+    {
+      "word": "to",
+      "start": 40.594,
+      "end": 40.654
+    },
+    {
+      "word": "robots.",
+      "start": 40.694,
+      "end": 41.095
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"

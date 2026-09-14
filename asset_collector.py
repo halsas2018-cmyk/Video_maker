@@ -33,24 +33,18 @@ except ImportError:
 
 PEXELS_VIDEO_API = "https://api.pexels.com/videos/search"
 PEXELS_PHOTO_API = "https://api.pexels.com/v1/search"   # the photos endpoint
-PIXABAY_API = "https://pixabay.com/api/"
+PIXABAY_API = "https://pixabay.com/api/"          # photos endpoint
+PIXABAY_VIDEO_API = "https://pixabay.com/api/videos/"  # videos endpoint (separate URL)
 CACHE_FILE = Path.home() / ".shorts_clip_cache.json"
 COMMENT_CACHE_FILE = Path.home() / ".shorts_comment_cache.json"
 
-# Data-conservation settings. Shorts are ~20-30s and people watch for the
-# visuals, so we keep reasonable resolution but cap file size per asset.
-# A 5-8 second clip at a sensible resolution does not exceed ~15 MB.
-MAX_CLIPS_PER_SHORT = 12         # safety ceiling only — per-sentence plan
-                                 # naturally yields ~4-8 assets; this just
-                                 # guards against a runaway plan
+# Download settings.
+# MAX_CLIPS_PER_SHORT and MAX_DOWNLOAD_BYTES limits removed — pipeline now
+# downloads the full set of assets required by the visual plan without
+# count or per-asset byte-size restrictions.
 REQUEST_DELAY = 1.0
 
-# Target the SMALLEST usable file at or above the resolution floor (by file
-# size reported by Pexels), not just "the first HD file" — this is what
-# actually saves data. 480p portrait (480x854) is watchable and keeps a
-# 5-8s clip comfortably under the 15 MB cap.
-MIN_CLIP_WIDTH = 480             # portrait 480p — watchable, small files
-MAX_DOWNLOAD_BYTES = 15 * 1024 * 1024   # ~15 MB hard cap per asset (HEAD-checked)
+MIN_CLIP_WIDTH = 480             # portrait 480p — minimum usable resolution
 
 # Pexels sits behind Cloudflare and 403s default urllib/python User-Agents.
 PEXELS_USER_AGENT = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -242,9 +236,7 @@ def collect_assets(keywords: list[str], project_dir: Path,
         print("    Get a free key at: https://www.pexels.com/api/")
         return []
 
-    if max_clips is None:
-        max_clips = MAX_CLIPS_PER_SHORT
-
+    # max_clips=None means no count limit (MAX_CLIPS_PER_SHORT removed)
     cache = _load_cache()
     downloaded_paths = []
     used_queries = set()
@@ -288,8 +280,6 @@ def collect_assets(keywords: list[str], project_dir: Path,
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         future_to_query = {executor.submit(_process_query, q): q for q in search_queries}
         for future in concurrent.futures.as_completed(future_to_query):
-            if len(downloaded_paths) >= max_clips:
-                break
             result = future.result()
             if result:
                 status, path, query = result
@@ -345,8 +335,6 @@ def collect_assets_for_plan(plan: list[dict], project_dir: Path, force_fresh: bo
     used_queries = set()
 
     for i, item in enumerate(plan):
-        if len(result) >= MAX_CLIPS_PER_SHORT:
-            break
         query = (item.get("search_term") or "").strip()
         media = (item.get("media_type") or "video").lower()
         if not query:
@@ -473,11 +461,6 @@ def _download_photo(clip: dict, query: str, assets_dir: Path) -> Path | None:
                         if not chunk:
                             break
                         total += len(chunk)
-                        if total > MAX_DOWNLOAD_BYTES:
-                            f.close()
-                            filepath.unlink(missing_ok=True)
-                            print(f"  Skipped photo (streamed too big)")
-                            return None
                         f.write(chunk)
             if filepath.stat().st_size < 1024:
                 filepath.unlink(missing_ok=True)
@@ -617,12 +600,6 @@ def _download(clip: dict, query: str, assets_dir: Path) -> Path | None:
                         if not chunk:
                             break
                         total += len(chunk)
-                        if total > MAX_DOWNLOAD_BYTES:
-                            f.close()
-                            filepath.unlink(missing_ok=True)
-                            print(f"  Skipped (streamed too big: "
-                                  f">{MAX_DOWNLOAD_BYTES / (1024 * 1024):.0f} MB)")
-                            return None
                         f.write(chunk)
             size_kb = filepath.stat().st_size / 1024
             if size_kb < 10:
@@ -666,8 +643,8 @@ def _search_pixabay(query: str, api_key: str, media_type: str = "video") -> list
     """
     per_page = 5
     if media_type == "video":
-        url = (f"{PIXABAY_API}?key={api_key}&q={urllib.parse.quote(query)}"
-               f"&per_page={per_page}&orientation=vertical&video_type=all")
+        url = (f"{PIXABAY_VIDEO_API}?key={api_key}&q={urllib.parse.quote(query)}"
+               f"&per_page={per_page}&video_type=all")
     else:
         url = (f"{PIXABAY_API}?key={api_key}&q={urllib.parse.quote(query)}"
                f"&per_page={per_page}&orientation=vertical&image_type=photo")
@@ -697,21 +674,26 @@ def _search_pixabay(query: str, api_key: str, media_type: str = "video") -> list
     for item in data.get("hits", []):
         if media_type == "video":
             videos = item.get("videos", {})
-            # Prefer smaller vertical formats
-            for quality in ["large", "medium", "small", "tiny"]:
+            # Collect all portrait-usable quality tiers, then pick the smallest
+            # (matching the Pexels approach: smallest file ≥ MIN_CLIP_WIDTH)
+            usable = []
+            for quality in ["tiny", "small", "medium", "large"]:
                 if quality in videos:
                     v = videos[quality]
                     w, h = v.get("width", 0), v.get("height", 0)
                     if h > w and w >= MIN_CLIP_WIDTH:
-                        clips.append({
+                        usable.append({
                             "url": v["url"],
                             "width": w,
                             "height": h,
-                            "size_bytes": 0,
+                            "size_bytes": v.get("size", 0) or 0,
                             "duration": item.get("duration", 10),
                             "id": item.get("id"),
                         })
-                        break
+            if usable:
+                # Smallest file first; fall back to first usable if sizes unknown
+                usable.sort(key=lambda c: (c["size_bytes"] or float("inf"), c["duration"]))
+                clips.append(usable[0])
         else:
             # Photos - use webformatURL or largeImageURL
             photo_url = item.get("webformatURL") or item.get("largeImageURL")
@@ -749,11 +731,6 @@ def _download_pixabay(clip: dict, query: str, assets_dir: Path, is_video: bool =
                         if not chunk:
                             break
                         total += len(chunk)
-                        if total > MAX_DOWNLOAD_BYTES:
-                            f.close()
-                            filepath.unlink(missing_ok=True)
-                            print(f"  Skipped Pixabay {ext} (streamed too big)")
-                            return None
                         f.write(chunk)
             size_kb = filepath.stat().st_size / 1024
             if size_kb < 10:
