@@ -1,7 +1,11 @@
 """
 run_pipeline.py
-PHASE 1 — Fully automated pipeline: discover -> research -> script -> voice ->
-storyboard -> captions -> assets -> video draft.
+PHASE 1 — Automated pipeline: discover -> research -> script -> voice ->
+storyboard -> captions -> assets -> stage for Remotion.
+
+The pipeline prepares all assets and props in the public/ directory.
+Use --render flag to automatically render with Remotion after staging.
+Without --render, use: npx remotion render ShortsComposition [output.mp4] --props=remotion_props.json
 
 Requirements (set in .env file or export):
     GROQ_API_KEY="gsk-..."            # required — get at console.groq.com
@@ -12,25 +16,28 @@ Usage:
     python run_pipeline.py --count 3 --outdir output
     python run_pipeline.py --model groq-gpt-oss-20b --count 1
     python run_pipeline.py --auto --count 5
+    python run_pipeline.py --auto --render --count 3  # Stage + render
 
 Flags:
     --count       Number of videos to produce (default: 3, max: 10)
     --outdir      Output directory (default: output)
-    --no-video    Skip asset download & video assembly (scripts + voice only)
+    --no-video    Skip asset download & staging (scripts + voice only)
     --quick       Minimal output — 1 script for quick review
-    --model       LLM model key (default: groq-gpt-oss-120b). See `python llm_client.py --list`
+    --model       LLM model key (default: gemini-31-flash-lite). See `python llm_client.py --list`
     --rank-model  LLM key for the editorial rerank ONLY (default: same as --model).
                   e.g. --rank-model nvidia-nemotron-ultra keeps scripts on Groq
                   while ranking runs on NVIDIA (separate rate limits)
     --auto        Don't prompt for story selection; generate top-N automatically
     --no-dedupe   Don't filter out stories already generated today
     --no-llm-rank Skip the LLM editorial rerank; rank by heuristic score only
+    --render      Render video with Remotion after staging assets (default: stage only)
 """
 
 import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 from collections import defaultdict
 from datetime import date, datetime
@@ -58,7 +65,7 @@ from script_generator import process_story
 from voice_generator import generate_narration
 from storyboard_generator import generate_storyboard
 from asset_collector import collect_assets, collect_assets_for_plan, collect_assets_for_plan_with_fallback
-from video_assembler import assemble_video_simple
+from remotion_assembler import assemble_video_remotion
 
 
 def slugify(text: str, max_len: int = 50) -> str:
@@ -194,6 +201,110 @@ def _sentence_timings_from_audio(script: str, total_duration: float) -> list[tup
         s, _ = timings[-1]
         timings[-1] = (s, total_duration)
     return timings
+
+
+def _sentence_timings_from_word_timestamps(words: list[dict],
+                                            sentences: list[str],
+                                            fallback_total_dur: float = None) -> list[tuple]:
+    """Derive per-sentence (start, end) timings from WhisperX word-level timestamps.
+
+    Walks the word list and matches each word to the corresponding word in the
+    sentence list (case-insensitive, punctuation stripped). A sentence boundary
+    is reached when the next sentence's first word is encountered.
+
+    Falls back to the word-count proxy (`_sentence_timings_from_audio`) if word
+    matching fails for any sentence — e.g. WhisperX dropped a word, TTS pronounced
+    a word differently, or the script/sentences list is empty.
+
+    Args:
+        words: WhisperX output — list of {"word": str, "start": float, "end": float}.
+        sentences: The script's sentences (already split, in order).
+        fallback_total_dur: If provided, used to seed the proxy fallback's total
+            duration (typically the real narration duration from ffprobe).
+
+    Returns:
+        list of (start, end) floats, one per sentence.
+    """
+    if not sentences or not words:
+        if fallback_total_dur:
+            return _sentence_timings_from_audio(__sentences_joined(sentences), fallback_total_dur)
+        return []
+
+    # Normalize: strip punctuation/case for matching.
+    def _clean(w: str) -> str:
+        return re.sub(r"[^\w']", "", w.lower()).strip("'")
+
+    cleaned_words = [_clean(w.get("word", "")) for w in words]
+    # Split sentences into words first, then clean each word — avoids collapsing
+    # spaces when the regex strips punctuation from the whole sentence string.
+    cleaned_sents = [[_clean(w) for w in s.split()] for s in sentences]
+
+    timings = []
+    word_idx = 0
+    success = True
+
+    for sent_words in cleaned_sents:
+        sent_words = [w for w in sent_words if w]
+        if not sent_words:
+            timings.append((0.0, 0.0))
+            success = False
+            break
+
+        # Find the start of this sentence in the word stream.
+        start_time = None
+        end_time = None
+        matched = 0
+
+        while word_idx < len(cleaned_words) and matched < len(sent_words):
+            if cleaned_words[word_idx] == sent_words[matched]:
+                if start_time is None:
+                    start_time = words[word_idx].get("start", 0.0)
+                end_time = words[word_idx].get("end", start_time)
+                matched += 1
+            word_idx += 1
+
+        if matched < len(sent_words):
+            # Didn't match all expected words for this sentence.
+            success = False
+            break
+
+        # If the next word in the stream is punctuation (e.g. "."), grab its
+        # end time so sentence boundaries align precisely with the spoken pause.
+        while word_idx < len(cleaned_words) and cleaned_words[word_idx] == "":
+            end_time = words[word_idx].get("end", end_time)
+            word_idx += 1
+
+        if start_time is not None and end_time is not None:
+            timings.append((float(start_time), float(end_time)))
+        else:
+            success = False
+            break
+
+    if success and len(timings) == len(sentences):
+        # Clamp last end to the real last word's end (no overshoot).
+        timings[-1] = (timings[-1][0], words[-1].get("end", timings[-1][1]))
+        return timings
+
+    # Fallback: use the word-count proxy with the real total duration.
+    if fallback_total_dur:
+        return _sentence_timings_from_audio(__sentences_joined(sentences), fallback_total_dur)
+    # Last resort: derive total from last word.
+    total = words[-1].get("end", 0.0) if words else 0.0
+    if total > 0:
+        return _sentence_timings_from_audio(__sentences_joined(sentences), total)
+    return []
+
+
+def __sentences_joined(sentences: list[str]) -> str:
+    """Join sentences with spaces (mirrors script_generator's concatenation)."""
+    return " ".join(sentences).strip()
+
+
+def _split_script_into_sentences(script: str) -> list[str]:
+    """Split a script into sentences using the same logic as storyboard_generator."""
+    import re as _re
+    parts = _re.split(r'(?<=[.!?])\s+', script.strip())
+    return [p.strip() for p in parts if p.strip()]
 
 
 def check_prerequisites(model_key: str = llm_client.DEFAULT_MODEL_KEY):
@@ -338,16 +449,51 @@ def save_project(result: dict, outdir: Path, index: int, no_video: bool = False,
     except Exception as e:
         print(f"  ✗ narration.mp3 FAILED: {e}")
 
-    # --- Measure REAL narration timing (drives storyboard + assembly sync) ---
-    sentence_timings = []
+    # --- WhisperX Timestamp Extraction (before timing.json) ---
+    timestamps = []
     if narration_path.exists():
+        print(f"  ─ Extracting word timestamps with WhisperX...")
+        try:
+            whisper_py = "/root/kinetic_typo_vid/venv/bin/python3"
+            extractor = project_dir / "extract_word_timestamps.py"
+            if not extractor.exists():
+                import shutil
+                shutil.copy("extract_word_timestamps.py", extractor)
+
+            subprocess.run(
+                [whisper_py, str(extractor), str(narration_path), "--output", str(project_dir / "timestamps.json")],
+                check=True,
+                capture_output=True,
+                text=True
+            )
+            print(f"  ✓ timestamps.json (WhisperX)")
+            # Load the timestamps for sentence-level timing derivation.
+            timestamps_path = project_dir / "timestamps.json"
+            if timestamps_path.exists():
+                timestamps = json.loads(timestamps_path.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"  ⚠ WhisperX timestamp extraction failed: {e}")
+            (project_dir / "timestamps.json").write_text("[]", encoding="utf-8")
+            timestamps = []
+
+    # --- Measure REAL narration timing (drives storyboard + assembly sync) ---
+    # Prefer accurate per-sentence timings derived from WhisperX word timestamps.
+    # Fall back to the word-count proxy if timestamps.json is missing/empty.
+    sentence_timings = []
+    if timestamps:
+        sentences = _split_script_into_sentences(result["script"])
+        sentence_timings = _sentence_timings_from_word_timestamps(
+            timestamps, sentences, fallback_total_dur=_audio_duration(narration_path)
+        )
+        print(f"  · timing {len(sentence_timings)} sentence(s) from WhisperX word timestamps")
+    elif narration_path.exists():
         real_dur = _audio_duration(narration_path)
         if real_dur > 0:
             sentence_timings = _sentence_timings_from_audio(
                 result["script"], real_dur
             )
             print(f"  · narration is {real_dur:.1f}s; timing {len(sentence_timings)} "
-                  f"sentence(s) from real audio")
+                  f"sentence(s) from real audio (word-count proxy)")
         else:
             print(f"  · couldn't probe narration duration; timing will be estimated")
 
@@ -413,39 +559,137 @@ def save_project(result: dict, outdir: Path, index: int, no_video: bool = False,
         else:
             print(f"  ─ No keywords for asset search")
 
-    # --- Video draft (chronological, NO burned captions) ---
+    # --- Stage assets to public directory for Remotion (skip actual rendering) ---
     if narration_path.exists():
-        print(f"  ─ Assembling video draft...")
-        max_retries = 2
-        for attempt in range(max_retries + 1):
+        print(f"  ─ Staging assets to public directory...")
+        try:
+            import shutil
+
+            # Stage assets into Remotion public/ project_assets/ folder
+            public_assets_dir = Path(__file__).parent / "public" / "project_assets"
+            if public_assets_dir.exists():
+                shutil.rmtree(public_assets_dir)
+            public_assets_dir.mkdir(parents=True, exist_ok=True)
+
+            # Copy narration to public/
+            narration_src = narration_path
+            narration_dst = public_assets_dir / "narration.mp3"
+            shutil.copy(narration_src, narration_dst)
+            print(f"  ✓ staged narration.mp3")
+
+            # Copy timestamps to public/
+            timestamps_path = project_dir / "timestamps.json"
+            if timestamps_path.exists():
+                shutil.copy(timestamps_path, public_assets_dir / "timestamps.json")
+                print(f"  ✓ staged timestamps.json")
+
+            # Load asset plan
+            asset_plan_path = project_dir / "asset_plan.json"
+            shots = []
+            if asset_plan_path.exists():
+                try:
+                    data = json.loads(asset_plan_path.read_text(encoding="utf-8"))
+                    if isinstance(data, dict):
+                        shots = (
+                            data.get("per_sentence")
+                            or data.get("asset_plan")
+                            or data.get("head", [])
+                        )
+                    elif isinstance(data, list):
+                        shots = data
+                except Exception:
+                    pass
+
+            if not shots:
+                print(f"  ⚠ No shots loaded from asset_plan.json")
+
+            # Copy downloaded assets into public/project_assets/ and prepare props
+            assets_dir = project_dir / "assets"
+            manifest_path = project_dir / "assets_manifest.json"
+            manifest = {}
+            if manifest_path.exists():
+                try:
+                    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                except Exception:
+                    pass
+
+            enriched_shots = []
+            for idx, s in enumerate(shots):
+                match_path = None
+
+                # 1) Prefer the manifest (index -> filename) when available.
+                staged_name = manifest.get(str(idx))
+                if staged_name:
+                    cand = assets_dir / staged_name
+                    if cand.exists():
+                        match_path = cand
+
+                # 2) Fallback: sequential shot_{idx+1}.{ext} naming.
+                if not match_path:
+                    for ext in ["mp4", "jpg", "png", "webp"]:
+                        p = assets_dir / f"shot_{idx+1}.{ext}"
+                        if p.exists():
+                            match_path = p
+                            break
+
+                # 3) Last resort: whatever sits at position idx (best-effort, unordered).
+                if not match_path and assets_dir.exists():
+                    files = sorted(
+                        [f for f in assets_dir.iterdir()
+                         if f.suffix.lower() in {".mp4", ".jpg", ".png", ".webp"}],
+                        key=lambda f: f.name,
+                    )
+                    if idx < len(files):
+                        match_path = files[idx]
+
+                staged_rel_path = ""
+                if match_path and match_path.exists():
+                    dest_name = f"shot_{idx+1}{match_path.suffix}"
+                    shutil.copy(match_path, public_assets_dir / dest_name)
+                    staged_rel_path = f"project_assets/{dest_name}"
+                    print(f"  ✓ staged {dest_name}")
+
+                enriched_shots.append({
+                    "sentence": s.get("sentence", ""),
+                    "search_term": s.get("search_term", ""),
+                    "media_type": s.get("media_type", "video"),
+                    "visual": s.get("visual", ""),
+                    "asset_path": staged_rel_path,
+                    "duration_seconds": s.get("duration_seconds", 3.0),
+                })
+
+            # Write remotion props for later rendering
+            words = []
+            if timestamps_path.exists():
+                try:
+                    words = json.loads(timestamps_path.read_text(encoding="utf-8"))
+                except Exception:
+                    pass
+
+            props = {
+                "shots": enriched_shots,
+                "words": words,
+                "narrationSrc": "project_assets/narration.mp3",
+            }
+
+            # Write to project directory
+            props_json_path = project_dir / "remotion_props.json"
+            props_json_path.write_text(json.dumps(props, indent=2), encoding="utf-8")
+            print(f"  ✓ generated remotion_props.json")
+
+            # Also publish to public/ for Studio mode
             try:
-                headline = result.get("headline", "")
-                assemble_video_simple(project_dir, headline=headline, render_hook_text=render_hook_text)
-                print(f"  ✓ draft_video.mp4")
-                break
-            except RuntimeError as e:
-                if "assets exhausted" in str(e) and attempt < max_retries:
-                    print(f"  ⚠ {e}")
-                    print(f"  ─ Re-downloading fresh assets (attempt {attempt + 1}/{max_retries})...")
-                    # Clear assets dir and re-download with force_fresh=True
-                    import shutil
-                    assets_dir = project_dir / "assets"
-                    if assets_dir.exists():
-                        shutil.rmtree(assets_dir)
-                    assets_dir.mkdir(parents=True, exist_ok=True)
-                    # Re-download with fresh search (force_fresh bypasses cache)
-                    asset_plan = sb_result.get("asset_plan", []) if sb_result else []
-                    if asset_plan:
-                        try:
-                            collect_assets_for_plan_with_fallback(asset_plan, project_dir, force_fresh=True)
-                            print(f"  ✓ Fresh assets downloaded")
-                            continue  # Retry assembly
-                        except Exception as e2:
-                            print(f"  ✗ Fresh asset download FAILED: {e2}")
-                print(f"  ✗ draft_video.mp4 FAILED: {e}")
-                break
+                public_props_path = Path(__file__).parent / "public" / "remotion_props.json"
+                public_props_path.write_text(json.dumps(props, indent=2), encoding="utf-8")
+                print(f"  ✓ published remotion_props.json to public/")
+            except Exception as e:
+                print(f"  ⚠ Could not publish to public/: {e}")
+
+            print(f"  ✓ Assets staged to public directory (skipping Remotion render)")
+        except Exception as e:
+            print(f"  ⚠ Asset staging FAILED: {e}")
     else:
-        print(f"  ─ Skipping video (no narration available)")
+        print(f"  ─ Skipping asset staging (no narration available)")
 
     return project_dir, assets_downloaded
 
@@ -664,6 +908,10 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
     parser.add_argument(
         "--branding", action="store_true",
         help="Enable branding elements (placeholder for future intro/outro)"
+    )
+    parser.add_argument(
+        "--render", action="store_true",
+        help="Render video with Remotion after staging assets (default: stage only, use --render to actually render)"
     )
 
     args = parser.parse_args()
@@ -889,9 +1137,19 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
                 print(f"│  ✗ FAILED (all models exhausted): {last_error}")
                 failed += 1
                 continue
-                
+
             try:
                 project_dir, assets_got = save_project(result, outdir, i, no_video=args.no_video, model_key=model_key, render_hook_text=args.with_hook_text)
+
+                # Render with Remotion if --render flag is set and not --no-video
+                if args.render and not args.no_video and project_dir.exists():
+                    try:
+                        print(f"│  ─ Rendering video with Remotion...")
+                        output_video = assemble_video_remotion(project_dir)
+                        print(f"│  ✓ Rendered: {output_video.name}")
+                    except Exception as rend_err:
+                        print(f"│  ⚠ Remotion render FAILED: {rend_err}")
+
                 # Log to daily dedupe
                 _log_generated_story(outdir, story, model_key, project_dir.name)
                 completed += 1
@@ -905,7 +1163,7 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
                 total_comments += fetch.get("comment_count", 0)
 
             except Exception as e:
-                print(f"│  ✗ FAILED (model: {model_key}): {e}")
+                print(f"│  ✗ FAILED (model: {model_key}): {e}"); import traceback; traceback.print_exc()
                 failed += 1
                 continue
 
@@ -922,7 +1180,6 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
         print("║  Each project folder contains:                        ║")
         print("║  ├── script.txt         Narration script              ║")
         print("║  ├── narration.mp3      Voiceover audio               ║")
-        print("║  ├── headline.txt       On-screen hook headline       ║")
         print("║  ├── storyboard.md      Visual shot plan              ║")
         print("║  ├── captions.srt       Timed subtitles               ║")
         print("║  ├── metadata.txt       Title, source, score          ║")
@@ -931,8 +1188,11 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
         print("║  ├── thumbnail_notes.txt Thumbnail design suggestions ║")
         print("║  ├── edit_plan.json     Full editing instructions     ║")
         print("║  ├── youtube_meta.json  YouTube title + description   ║")
-        print("║  └── draft_video.mp4    Assembled video draft         ║")
+        print("║  ├── remotion_props.json Remotion props              ║")
+        print("║  └── assets/            Staged assets (public/project_assets/) ║")
         print(f"║  Assets downloaded: {total_assets_downloaded} total              ║")
+        render_status = "rendered" if args.render else "render skipped"
+        print(f"║  ── Assets staged to public/ (Remotion {render_status}) ║")
         if total_assets_downloaded == 0:
             print("║  ⚠ WARNING: No stock assets downloaded — videos used gradient fallback  ║")
         if fallback_count > 0:

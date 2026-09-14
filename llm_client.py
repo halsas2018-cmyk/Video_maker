@@ -36,6 +36,8 @@ import json
 import time
 import subprocess
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Auto-load .env (so a pasted NVIDIA_API_KEY just works, same as GROQ_API_KEY)
@@ -55,19 +57,21 @@ if _env_path.exists():
 # ---------------------------------------------------------------------------
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 
 def _signup_url(provider: str) -> str:
     return {
         "groq": "https://console.groq.com",
         "nvidia": "https://build.nvidia.com",
+        "gemini": "https://makersuite.google.com/app/apikey",
     }.get(provider, "")
 
 
 # ---------------------------------------------------------------------------
 # Model registry — one row per choosable model. Add/edit freely.
 #   key         — the value passed to run_pipeline --model
-#   provider    — "groq" | "nvidia"   (selects endpoint + key env)
+#   provider    — "groq" | "nvidia" | "gemini"   (selects endpoint + key env)
 #   model       — the string sent in the API `model` field
 #   key_env     — env var that holds that provider's API key
 #   notes       — short human label for --help / error messages
@@ -111,9 +115,22 @@ MODEL_REGISTRY = {
         "key_env": "NVIDIA_API_KEY",
         "notes": "NVIDIA Nemotron 3 Ultra 550B — biggest reasoning model",
     },
+    # --- Google Gemini 3.1 Flash Lite (free tier; needs GEMINI_API_KEY from makersuite.google.com) ---
+    "gemini-31-flash-lite": {
+        "provider": "gemini",
+        "model": "gemini-3.1-flash-lite",
+        "key_env": "GEMINI_API_KEY",
+        "notes": "Google Gemini 3.1 Flash Lite — fast, efficient, optimized for cost",
+    },
+    "gemini-15-flash": {
+        "provider": "gemini",
+        "model": "gemini-1.5-flash",
+        "key_env": "GEMINI_API_KEY",
+        "notes": "Google Gemini 1.5 Flash — legacy model version",
+    },
 }
 
-DEFAULT_MODEL_KEY = "groq-gpt-oss-120b"
+DEFAULT_MODEL_KEY = "gemini-31-flash-lite"
 
 
 def list_models() -> list[dict]:
@@ -137,11 +154,17 @@ def resolve_model(model_key: str) -> dict:
     return {"key": model_key, **row}
 
 
-def _endpoint(provider: str) -> str:
+def _endpoint(row: dict) -> str:
+    """Return the endpoint URL for a model row (includes model name for Gemini)."""
+    provider = row["provider"]
     if provider == "groq":
         return GROQ_URL
     if provider == "nvidia":
         return NVIDIA_URL
+    if provider == "gemini":
+        # Gemini uses a different URL format that includes the model name
+        model = row["model"]
+        return GEMINI_URL.format(model=model)
     raise ValueError(f"Unknown provider: {provider}")
 
 
@@ -178,15 +201,42 @@ def call_llm(messages: list[dict],
     """
     row = resolve_model(model_key)
     api_key = _key_for(row)
-    endpoint = _endpoint(row["provider"])
+    endpoint = _endpoint(row)
     model_id = row["model"]
 
-    payload = json.dumps({
-        "model": model_id,
-        "messages": messages,
-        "temperature": temperature,
-        "max_tokens": max_tokens,
-    })
+    if row["provider"] == "gemini":
+        system_messages = [m for m in messages if m.get("role") == "system"]
+        conversation_messages = [m for m in messages if m.get("role") != "system"]
+
+        contents = []
+        for m in conversation_messages:
+            role = "model" if m.get("role") == "assistant" else "user"
+            contents.append({
+                "role": role,
+                "parts": [{"text": m.get("content", "")}],
+            })
+
+        gemini_payload = {
+            "contents": contents,
+            "generationConfig": {
+                "temperature": temperature,
+                "maxOutputTokens": max_tokens,
+            },
+        }
+
+        if system_messages:
+            gemini_payload["systemInstruction"] = {
+                "parts": [{"text": system_messages[0].get("content", "")}]
+            }
+
+        payload = json.dumps(gemini_payload)
+    else:
+        payload = json.dumps({
+            "model": model_id,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        })
 
     # Model-specific timeout multipliers (120B models need much more time)
     timeout_multiplier = 3.0 if any(s in model_id.lower() for s in ("120b", "550b")) else 1.0
@@ -203,7 +253,7 @@ def call_llm(messages: list[dict],
                     "--max-time", str(curl_max_time),
                     "-X", "POST", endpoint,
                     "-H", "Content-Type: application/json",
-                    "-H", f"Authorization: Bearer {api_key}",
+                    "-H", (f"x-goog-api-key: {api_key}" if row["provider"] == "gemini" else f"Authorization: Bearer {api_key}"),
                     "-d", payload,
                 ],
                 capture_output=True,
@@ -241,8 +291,23 @@ def call_llm(messages: list[dict],
                 raise RuntimeError(
                     f"{row['provider']} API error for model '{model_id}': {err_msg}"
                 )
-            choice = resp_data["choices"][0]
-            content = choice["message"]["content"]
+            if row["provider"] == "gemini":
+                candidates = resp_data.get("candidates", [])
+                if not candidates:
+                    raise RuntimeError(f"Gemini returned no candidates: {resp_data}")
+                parts = candidates[0].get("content", {}).get("parts", [])
+                content = "".join(
+                    part.get("text", "")
+                    for part in parts
+                    if isinstance(part, dict)
+                )
+                choice = {
+                    "message": {"content": content},
+                    "finish_reason": candidates[0].get("finishReason"),
+                }
+            else:
+                choice = resp_data["choices"][0]
+                content = choice["message"]["content"]
             if content is None or not content.strip():
                 raise RuntimeError(f"LLM returned empty content for model '{model_id}'")
             if choice.get("finish_reason") == "length":
