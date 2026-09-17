@@ -1,577 +1,698 @@
 {
   "shots": [
     {
-      "sentence": "By 2050, the AI boom could create enough trash to fill 23 million shipping containers.",
-      "search_term": "shipping containers port",
+      "sentence": "An Iceland-based startup called Treble just raised eighteen million dollars to change how machines hear the world.",
+      "search_term": "Iceland landscape aerial",
       "media_type": "video",
-      "visual": "Dolly zoom shot of massive shipping containers stacked in a port.",
+      "visual": "Cinematic drone shot of Iceland landscape.",
       "asset_path": "project_assets/shot_1.mp4",
-      "duration_seconds": 2.439
+      "duration_seconds": 2.511
     },
     {
-      "sentence": "By 2050, the AI boom could create enough trash to fill 23 million shipping containers.",
-      "search_term": "cargo ship aerial",
+      "sentence": "An Iceland-based startup called Treble just raised eighteen million dollars to change how machines hear the world.",
+      "search_term": "money falling",
       "media_type": "video",
-      "visual": "Aerial view of a large container ship on the ocean.",
+      "visual": "Abstract shot representing funding.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.439
+      "duration_seconds": 2.511
     },
     {
-      "sentence": "If you lined those containers up, they would circle the Earth six times.",
-      "search_term": "earth from space",
+      "sentence": "Most AI right now is trained on random internet clips, but Treble says that is not good enough for the next generation of smart tech.",
+      "search_term": "data server room",
       "media_type": "video",
-      "visual": "Cinematic shot of Earth rotating in space.",
+      "visual": "Rows of blinking server lights.",
       "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 2.113
+      "duration_seconds": 3.692
     },
     {
-      "sentence": "If you lined those containers up, they would circle the Earth six times.",
-      "search_term": "globe map animation",
+      "sentence": "Most AI right now is trained on random internet clips, but Treble says that is not good enough for the next generation of smart tech.",
+      "search_term": "glitch digital screen",
       "media_type": "video",
-      "visual": "Digital visualization of a line wrapping around a globe.",
+      "visual": "Distorted digital interface effect.",
       "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 2.113
+      "duration_seconds": 3.692
     },
     {
-      "sentence": "AI feels weightless, but every model relies on massive, power-hungry hardware that eventually dies.",
-      "search_term": "server room flashing lights",
+      "sentence": "Instead, they build realistic physics simulations to teach AI how sound moves through a real room.",
+      "search_term": "sound wave animation",
       "media_type": "video",
-      "visual": "Close up of high-tech server racks in a dark data center.",
+      "visual": "Visualizing sound frequency waves.",
       "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 2.276
+      "duration_seconds": 2.363
     },
     {
-      "sentence": "AI feels weightless, but every model relies on massive, power-hungry hardware that eventually dies.",
-      "search_term": "computer motherboard close up",
+      "sentence": "Instead, they build realistic physics simulations to teach AI how sound moves through a real room.",
+      "search_term": "3d architecture wireframe",
       "media_type": "video",
-      "visual": "Macro shot of circuit board components and processors.",
+      "visual": "Digital room model spinning.",
       "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.276
+      "duration_seconds": 2.363
     },
     {
-      "sentence": "Most of this junk isn't recycled, but instead gets dumped into shadowy sites where it leaks toxic materials like lead.",
-      "search_term": "electronic waste dump",
+      "sentence": "The company already counts giants like Amazon and Logitech as customers for their testing tools.",
+      "search_term": "smart speaker on table",
       "media_type": "video",
-      "visual": "A pile of discarded computer parts and cables in an outdoor setting.",
+      "visual": "Close up of a modern smart speaker.",
       "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 3.251
+      "duration_seconds": 2.215
     },
     {
-      "sentence": "Most of this junk isn't recycled, but instead gets dumped into shadowy sites where it leaks toxic materials like lead.",
-      "search_term": "industrial pollution",
+      "sentence": "The company already counts giants like Amazon and Logitech as customers for their testing tools.",
+      "search_term": "office meeting",
       "media_type": "video",
-      "visual": "Smoke rising from an industrial site, representing environmental damage.",
+      "visual": "Professional setting showing hardware testing.",
       "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 3.251
+      "duration_seconds": 2.215
     },
     {
-      "sentence": "Experts warn that without a plan, this buildout is turning into a cataclysmic waste crisis.",
-      "search_term": "alarm clock ringing",
+      "sentence": "Their goal is to power wearables that offer what they call superhuman hearing.",
+      "search_term": "person wearing futuristic glasses",
       "media_type": "video",
-      "visual": "Close up of a clock ticking, symbolizing urgency.",
+      "visual": "Close up of someone wearing smart glasses.",
       "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 2.439
+      "duration_seconds": 1.92
     },
     {
-      "sentence": "Experts warn that without a plan, this buildout is turning into a cataclysmic waste crisis.",
-      "search_term": "man looking at computer screen worried",
+      "sentence": "Their goal is to power wearables that offer what they call superhuman hearing.",
+      "search_term": "human ear close up",
       "media_type": "video",
-      "visual": "A person looking concerned while staring at a glowing monitor.",
+      "visual": "Macro shot of an ear.",
       "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 2.439
+      "duration_seconds": 1.92
     },
     {
-      "sentence": "We are currently on track to produce over 200 million metric tons of electronic trash every single year.",
-      "search_term": "landfill aerial",
+      "sentence": "You could walk into a noisy restaurant and tell your device to mute everything except the person standing two meters away.",
+      "search_term": "crowded restaurant blurred",
       "media_type": "video",
-      "visual": "Wide aerial shot of a massive waste landfill.",
+      "visual": "Shaky POV shot of a busy restaurant.",
       "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 2.926
+      "duration_seconds": 3.102
     },
     {
-      "sentence": "We are currently on track to produce over 200 million metric tons of electronic trash every single year.",
-      "search_term": "data visualization chart",
+      "sentence": "You could walk into a noisy restaurant and tell your device to mute everything except the person standing two meters away.",
+      "search_term": "noise cancellation",
       "media_type": "video",
-      "visual": "Animated bar chart showing exponential growth.",
+      "visual": "Visual effect showing sound isolation.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 2.926
+      "duration_seconds": 3.102
+    },
+    {
+      "sentence": "It is a massive upgrade from today's basic voice assistants.",
+      "search_term": "digital assistant interface",
+      "media_type": "video",
+      "visual": "Glowing abstract AI interface.",
+      "asset_path": "project_assets/shot_13.mp4",
+      "duration_seconds": 1.477
+    },
+    {
+      "sentence": "It is a massive upgrade from today's basic voice assistants.",
+      "search_term": "man looking confused at phone",
+      "media_type": "video",
+      "visual": "Person struggling with current tech.",
+      "asset_path": "project_assets/shot_14.mp4",
+      "duration_seconds": 1.477
     }
   ],
   "words": [
     {
-      "word": "By",
+      "word": "An",
       "start": 0.131,
-      "end": 0.231
+      "end": 0.211
     },
     {
-      "word": "2050,",
-      "start": 0.271,
-      "end": 0.852
+      "word": "Iceland-based",
+      "start": 0.311,
+      "end": 0.771
     },
     {
-      "word": "the",
-      "start": 1.092,
-      "end": 1.192
+      "word": "startup",
+      "start": 0.791,
+      "end": 1.132
     },
     {
-      "word": "AI",
-      "start": 1.252,
-      "end": 1.512
+      "word": "called",
+      "start": 1.172,
+      "end": 1.352
     },
     {
-      "word": "boom",
-      "start": 1.552,
-      "end": 1.793
+      "word": "Treble",
+      "start": 1.392,
+      "end": 1.672
     },
     {
-      "word": "could",
-      "start": 1.813,
-      "end": 1.933
+      "word": "just",
+      "start": 1.812,
+      "end": 2.012
     },
     {
-      "word": "create",
-      "start": 1.973,
-      "end": 2.233
+      "word": "raised",
+      "start": 2.092,
+      "end": 2.332
     },
     {
-      "word": "enough",
-      "start": 2.273,
-      "end": 2.513
-    },
-    {
-      "word": "trash",
-      "start": 2.573,
-      "end": 2.954
-    },
-    {
-      "word": "to",
-      "start": 3.134,
-      "end": 3.234
-    },
-    {
-      "word": "fill",
-      "start": 3.294,
-      "end": 3.494
-    },
-    {
-      "word": "23",
-      "start": 3.654,
-      "end": 3.794
+      "word": "$18",
+      "start": 2.352,
+      "end": 2.812
     },
     {
       "word": "million",
-      "start": 4.255,
-      "end": 4.535
+      "start": 2.853,
+      "end": 3.413
     },
     {
-      "word": "shipping",
-      "start": 4.575,
-      "end": 4.815
+      "word": "to",
+      "start": 3.653,
+      "end": 3.733
     },
     {
-      "word": "containers.",
-      "start": 4.855,
-      "end": 5.256
+      "word": "change",
+      "start": 3.773,
+      "end": 4.013
     },
     {
-      "word": "If",
-      "start": 5.716,
-      "end": 5.776
+      "word": "how",
+      "start": 4.053,
+      "end": 4.153
     },
     {
-      "word": "you",
-      "start": 5.796,
-      "end": 5.896
+      "word": "machines",
+      "start": 4.173,
+      "end": 4.553
     },
     {
-      "word": "line",
-      "start": 5.936,
-      "end": 6.076
-    },
-    {
-      "word": "those",
-      "start": 6.117,
-      "end": 6.257
-    },
-    {
-      "word": "containers",
-      "start": 6.297,
-      "end": 6.677
-    },
-    {
-      "word": "up,",
-      "start": 6.777,
-      "end": 6.857
-    },
-    {
-      "word": "they",
-      "start": 7.097,
-      "end": 7.197
-    },
-    {
-      "word": "would",
-      "start": 7.218,
-      "end": 7.338
-    },
-    {
-      "word": "circle",
-      "start": 7.398,
-      "end": 7.658
+      "word": "hear",
+      "start": 4.593,
+      "end": 4.734
     },
     {
       "word": "the",
-      "start": 7.698,
-      "end": 7.798
+      "start": 4.754,
+      "end": 4.834
     },
     {
-      "word": "Earth",
-      "start": 7.838,
-      "end": 8.038
-    },
-    {
-      "word": "six",
-      "start": 8.118,
-      "end": 8.298
-    },
-    {
-      "word": "times.",
-      "start": 8.359,
-      "end": 8.639
-    },
-    {
-      "word": "AI",
-      "start": 9.139,
-      "end": 9.399
-    },
-    {
-      "word": "feels",
-      "start": 9.46,
-      "end": 9.7
-    },
-    {
-      "word": "weightless,",
-      "start": 9.76,
-      "end": 10.14
-    },
-    {
-      "word": "but",
-      "start": 10.42,
-      "end": 10.541
-    },
-    {
-      "word": "every",
-      "start": 10.601,
-      "end": 10.781
-    },
-    {
-      "word": "model",
-      "start": 10.841,
-      "end": 11.101
-    },
-    {
-      "word": "relies",
-      "start": 11.121,
-      "end": 11.461
-    },
-    {
-      "word": "on",
-      "start": 11.521,
-      "end": 11.601
-    },
-    {
-      "word": "massive,",
-      "start": 11.662,
-      "end": 12.042
-    },
-    {
-      "word": "power-hungry",
-      "start": 12.302,
-      "end": 12.863
-    },
-    {
-      "word": "hardware",
-      "start": 12.903,
-      "end": 13.283
-    },
-    {
-      "word": "that",
-      "start": 13.303,
-      "end": 13.403
-    },
-    {
-      "word": "eventually",
-      "start": 13.443,
-      "end": 13.824
-    },
-    {
-      "word": "dies.",
-      "start": 13.864,
-      "end": 14.124
+      "word": "world.",
+      "start": 4.874,
+      "end": 5.094
     },
     {
       "word": "Most",
-      "start": 14.604,
-      "end": 14.764
+      "start": 5.514,
+      "end": 5.674
     },
     {
-      "word": "of",
-      "start": 14.784,
-      "end": 14.844
+      "word": "AI",
+      "start": 5.734,
+      "end": 5.974
     },
     {
-      "word": "this",
-      "start": 14.864,
-      "end": 15.005
+      "word": "right",
+      "start": 6.054,
+      "end": 6.214
     },
     {
-      "word": "junk",
-      "start": 15.065,
-      "end": 15.285
-    },
-    {
-      "word": "isn't",
-      "start": 15.365,
-      "end": 15.525
-    },
-    {
-      "word": "recycled,",
-      "start": 15.565,
-      "end": 16.026
-    },
-    {
-      "word": "but",
-      "start": 16.266,
-      "end": 16.346
-    },
-    {
-      "word": "instead",
-      "start": 16.386,
-      "end": 16.726
-    },
-    {
-      "word": "gets",
-      "start": 16.766,
-      "end": 16.926
-    },
-    {
-      "word": "dumped",
-      "start": 16.966,
-      "end": 17.207
-    },
-    {
-      "word": "into",
-      "start": 17.247,
-      "end": 17.387
-    },
-    {
-      "word": "shadowy",
-      "start": 17.427,
-      "end": 17.807
-    },
-    {
-      "word": "sites",
-      "start": 17.847,
-      "end": 18.107
-    },
-    {
-      "word": "where",
-      "start": 18.127,
-      "end": 18.268
-    },
-    {
-      "word": "it",
-      "start": 18.288,
-      "end": 18.348
-    },
-    {
-      "word": "leaks",
-      "start": 18.388,
-      "end": 18.588
-    },
-    {
-      "word": "toxic",
-      "start": 18.648,
-      "end": 18.988
-    },
-    {
-      "word": "materials",
-      "start": 19.028,
-      "end": 19.429
-    },
-    {
-      "word": "like",
-      "start": 19.469,
-      "end": 19.609
-    },
-    {
-      "word": "lead.",
-      "start": 19.669,
-      "end": 19.889
-    },
-    {
-      "word": "Experts",
-      "start": 20.309,
-      "end": 20.65
-    },
-    {
-      "word": "warn",
-      "start": 20.71,
-      "end": 20.95
-    },
-    {
-      "word": "that",
-      "start": 20.97,
-      "end": 21.07
-    },
-    {
-      "word": "without",
-      "start": 21.09,
-      "end": 21.31
-    },
-    {
-      "word": "a",
-      "start": 21.35,
-      "end": 21.37
-    },
-    {
-      "word": "plan,",
-      "start": 21.43,
-      "end": 21.751
-    },
-    {
-      "word": "this",
-      "start": 22.091,
-      "end": 22.251
-    },
-    {
-      "word": "build-out",
-      "start": 22.291,
-      "end": 22.712
+      "word": "now",
+      "start": 6.254,
+      "end": 6.454
     },
     {
       "word": "is",
-      "start": 22.832,
-      "end": 22.912
+      "start": 6.535,
+      "end": 6.595
     },
     {
-      "word": "turning",
-      "start": 22.972,
-      "end": 23.252
-    },
-    {
-      "word": "into",
-      "start": 23.312,
-      "end": 23.532
-    },
-    {
-      "word": "a",
-      "start": 23.572,
-      "end": 23.592
-    },
-    {
-      "word": "cataclysmic",
-      "start": 23.652,
-      "end": 24.273
-    },
-    {
-      "word": "waste",
-      "start": 24.333,
-      "end": 24.573
-    },
-    {
-      "word": "crisis.",
-      "start": 24.633,
-      "end": 25.014
-    },
-    {
-      "word": "We",
-      "start": 25.475,
-      "end": 25.575
-    },
-    {
-      "word": "are",
-      "start": 25.616,
-      "end": 25.696
-    },
-    {
-      "word": "currently",
-      "start": 25.736,
-      "end": 26.079
+      "word": "trained",
+      "start": 6.675,
+      "end": 6.955
     },
     {
       "word": "on",
-      "start": 26.139,
-      "end": 26.22
+      "start": 7.035,
+      "end": 7.115
     },
     {
-      "word": "track",
-      "start": 26.28,
-      "end": 26.522
+      "word": "random",
+      "start": 7.235,
+      "end": 7.535
     },
     {
-      "word": "to",
-      "start": 26.562,
-      "end": 26.622
+      "word": "internet",
+      "start": 7.575,
+      "end": 7.875
     },
     {
-      "word": "produce",
-      "start": 26.643,
-      "end": 26.925
+      "word": "clips,",
+      "start": 7.915,
+      "end": 8.195
     },
     {
-      "word": "over",
-      "start": 27.005,
-      "end": 27.146
+      "word": "but",
+      "start": 8.536,
+      "end": 8.656
     },
     {
-      "word": "200",
-      "start": 27.247,
-      "end": 27.69
+      "word": "Treble",
+      "start": 8.716,
+      "end": 8.996
     },
     {
-      "word": "million",
-      "start": 27.791,
-      "end": 28.072
+      "word": "says",
+      "start": 9.036,
+      "end": 9.196
     },
     {
-      "word": "metric",
-      "start": 28.113,
-      "end": 28.375
+      "word": "that",
+      "start": 9.216,
+      "end": 9.336
     },
     {
-      "word": "tons",
-      "start": 28.415,
-      "end": 28.697
+      "word": "is",
+      "start": 9.376,
+      "end": 9.456
+    },
+    {
+      "word": "not",
+      "start": 9.536,
+      "end": 9.696
+    },
+    {
+      "word": "good",
+      "start": 9.856,
+      "end": 10.016
+    },
+    {
+      "word": "enough",
+      "start": 10.036,
+      "end": 10.236
+    },
+    {
+      "word": "for",
+      "start": 10.277,
+      "end": 10.357
+    },
+    {
+      "word": "the",
+      "start": 10.377,
+      "end": 10.457
+    },
+    {
+      "word": "next",
+      "start": 10.537,
+      "end": 10.697
+    },
+    {
+      "word": "generation",
+      "start": 10.737,
+      "end": 11.217
     },
     {
       "word": "of",
-      "start": 28.737,
-      "end": 28.797
+      "start": 11.257,
+      "end": 11.317
     },
     {
-      "word": "electronic",
-      "start": 28.838,
-      "end": 29.301
+      "word": "smart",
+      "start": 11.377,
+      "end": 11.617
     },
     {
-      "word": "trash",
-      "start": 29.341,
-      "end": 29.684
+      "word": "tech.",
+      "start": 11.657,
+      "end": 11.917
     },
     {
-      "word": "every",
-      "start": 29.905,
-      "end": 30.086
+      "word": "Instead,",
+      "start": 12.318,
+      "end": 12.718
     },
     {
-      "word": "single",
-      "start": 30.127,
-      "end": 30.388
+      "word": "they",
+      "start": 12.998,
+      "end": 13.138
     },
     {
-      "word": "year.",
-      "start": 30.409,
-      "end": 30.57
+      "word": "build",
+      "start": 13.158,
+      "end": 13.378
+    },
+    {
+      "word": "realistic",
+      "start": 13.438,
+      "end": 13.918
+    },
+    {
+      "word": "physics",
+      "start": 13.999,
+      "end": 14.259
+    },
+    {
+      "word": "simulations",
+      "start": 14.299,
+      "end": 14.839
+    },
+    {
+      "word": "to",
+      "start": 14.899,
+      "end": 14.979
+    },
+    {
+      "word": "teach",
+      "start": 15.019,
+      "end": 15.239
+    },
+    {
+      "word": "AI",
+      "start": 15.379,
+      "end": 15.659
+    },
+    {
+      "word": "how",
+      "start": 15.719,
+      "end": 15.86
+    },
+    {
+      "word": "sound",
+      "start": 15.9,
+      "end": 16.22
+    },
+    {
+      "word": "moves",
+      "start": 16.3,
+      "end": 16.54
+    },
+    {
+      "word": "through",
+      "start": 16.58,
+      "end": 16.78
+    },
+    {
+      "word": "a",
+      "start": 16.8,
+      "end": 16.84
+    },
+    {
+      "word": "real",
+      "start": 16.88,
+      "end": 17.08
+    },
+    {
+      "word": "room.",
+      "start": 17.12,
+      "end": 17.3
+    },
+    {
+      "word": "The",
+      "start": 17.66,
+      "end": 17.761
+    },
+    {
+      "word": "company",
+      "start": 17.781,
+      "end": 18.081
+    },
+    {
+      "word": "already",
+      "start": 18.221,
+      "end": 18.501
+    },
+    {
+      "word": "counts",
+      "start": 18.561,
+      "end": 18.821
+    },
+    {
+      "word": "giants",
+      "start": 18.881,
+      "end": 19.181
+    },
+    {
+      "word": "like",
+      "start": 19.221,
+      "end": 19.361
+    },
+    {
+      "word": "Amazon",
+      "start": 19.542,
+      "end": 19.942
+    },
+    {
+      "word": "and",
+      "start": 19.962,
+      "end": 20.062
+    },
+    {
+      "word": "Logitech",
+      "start": 20.122,
+      "end": 20.562
+    },
+    {
+      "word": "as",
+      "start": 20.622,
+      "end": 20.682
+    },
+    {
+      "word": "customers",
+      "start": 20.742,
+      "end": 21.142
+    },
+    {
+      "word": "for",
+      "start": 21.162,
+      "end": 21.242
+    },
+    {
+      "word": "their",
+      "start": 21.262,
+      "end": 21.382
+    },
+    {
+      "word": "testing",
+      "start": 21.403,
+      "end": 21.683
+    },
+    {
+      "word": "tools.",
+      "start": 21.723,
+      "end": 21.963
+    },
+    {
+      "word": "Their",
+      "start": 22.383,
+      "end": 22.523
+    },
+    {
+      "word": "goal",
+      "start": 22.563,
+      "end": 22.783
+    },
+    {
+      "word": "is",
+      "start": 22.823,
+      "end": 22.903
+    },
+    {
+      "word": "to",
+      "start": 22.923,
+      "end": 22.984
+    },
+    {
+      "word": "power",
+      "start": 23.044,
+      "end": 23.324
+    },
+    {
+      "word": "wearables",
+      "start": 23.344,
+      "end": 23.724
+    },
+    {
+      "word": "that",
+      "start": 23.764,
+      "end": 23.884
+    },
+    {
+      "word": "offer",
+      "start": 23.964,
+      "end": 24.185
+    },
+    {
+      "word": "what",
+      "start": 24.205,
+      "end": 24.325
+    },
+    {
+      "word": "they",
+      "start": 24.345,
+      "end": 24.465
+    },
+    {
+      "word": "call",
+      "start": 24.505,
+      "end": 24.725
+    },
+    {
+      "word": "superhuman",
+      "start": 24.785,
+      "end": 25.245
+    },
+    {
+      "word": "hearing.",
+      "start": 25.265,
+      "end": 25.506
+    },
+    {
+      "word": "You",
+      "start": 25.866,
+      "end": 25.946
+    },
+    {
+      "word": "could",
+      "start": 25.966,
+      "end": 26.066
+    },
+    {
+      "word": "walk",
+      "start": 26.106,
+      "end": 26.266
+    },
+    {
+      "word": "into",
+      "start": 26.306,
+      "end": 26.466
+    },
+    {
+      "word": "a",
+      "start": 26.506,
+      "end": 26.546
+    },
+    {
+      "word": "noisy",
+      "start": 26.607,
+      "end": 26.907
+    },
+    {
+      "word": "restaurant",
+      "start": 26.967,
+      "end": 27.347
+    },
+    {
+      "word": "and",
+      "start": 27.507,
+      "end": 27.607
+    },
+    {
+      "word": "tell",
+      "start": 27.647,
+      "end": 27.787
+    },
+    {
+      "word": "your",
+      "start": 27.828,
+      "end": 27.928
+    },
+    {
+      "word": "device",
+      "start": 27.948,
+      "end": 28.268
+    },
+    {
+      "word": "to",
+      "start": 28.308,
+      "end": 28.388
+    },
+    {
+      "word": "mute",
+      "start": 28.428,
+      "end": 28.628
+    },
+    {
+      "word": "everything",
+      "start": 28.828,
+      "end": 29.209
+    },
+    {
+      "word": "except",
+      "start": 29.349,
+      "end": 29.609
+    },
+    {
+      "word": "the",
+      "start": 29.649,
+      "end": 29.709
+    },
+    {
+      "word": "person",
+      "start": 29.749,
+      "end": 30.069
+    },
+    {
+      "word": "standing",
+      "start": 30.129,
+      "end": 30.43
+    },
+    {
+      "word": "two",
+      "start": 30.49,
+      "end": 30.63
+    },
+    {
+      "word": "meters",
+      "start": 30.69,
+      "end": 30.93
+    },
+    {
+      "word": "away.",
+      "start": 30.99,
+      "end": 31.23
+    },
+    {
+      "word": "It",
+      "start": 31.591,
+      "end": 31.631
+    },
+    {
+      "word": "is",
+      "start": 31.671,
+      "end": 31.751
+    },
+    {
+      "word": "a",
+      "start": 31.771,
+      "end": 31.811
+    },
+    {
+      "word": "massive",
+      "start": 31.891,
+      "end": 32.231
+    },
+    {
+      "word": "upgrade",
+      "start": 32.311,
+      "end": 32.652
+    },
+    {
+      "word": "from",
+      "start": 32.672,
+      "end": 32.792
+    },
+    {
+      "word": "today's",
+      "start": 32.812,
+      "end": 33.092
+    },
+    {
+      "word": "basic",
+      "start": 33.212,
+      "end": 33.532
+    },
+    {
+      "word": "voice",
+      "start": 33.552,
+      "end": 33.772
+    },
+    {
+      "word": "assistance.",
+      "start": 33.792,
+      "end": 34.193
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"
