@@ -1,702 +1,687 @@
 {
   "shots": [
     {
-      "sentence": "California Governor Gavin Newsom just ordered his state to develop a literal kill switch for artificial intelligence.",
-      "search_term": "Gavin Newsom speaking",
-      "media_type": "photo",
-      "visual": "A portrait of Gavin Newsom looking serious.",
-      "asset_path": "project_assets/shot_1.jpg",
-      "duration_seconds": 2.445
+      "sentence": "A team of researchers just used Anthropic\u2019s Claude to break into OpenAI and expose critical cracks in their defenses.",
+      "search_term": "hacker typing laptop",
+      "media_type": "video",
+      "visual": "Close up of fingers typing rapidly on a backlit keyboard.",
+      "asset_path": "project_assets/shot_1.mp4",
+      "duration_seconds": 2.8
     },
     {
-      "sentence": "California Governor Gavin Newsom just ordered his state to develop a literal kill switch for artificial intelligence.",
-      "search_term": "digital power button",
+      "sentence": "A team of researchers just used Anthropic\u2019s Claude to break into OpenAI and expose critical cracks in their defenses.",
+      "search_term": "digital binary code",
       "media_type": "video",
-      "visual": "A glowing digital button being pressed.",
+      "visual": "Abstract stream of green code falling on a black background.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.445
+      "duration_seconds": 2.8
     },
     {
-      "sentence": "The goal is to force companies to prove they can shut down dangerous AI models before they spiral out of control.",
-      "search_term": "server room lights",
+      "sentence": "The group from Hacktron AI used the latest version of Claude to chain together vulnerabilities and access private employee accounts.",
+      "search_term": "artificial intelligence dashboard",
       "media_type": "video",
-      "visual": "Rows of blinking server lights in a dark room.",
+      "visual": "A complex AI interface showing data nodes connecting.",
       "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 3.02
+      "duration_seconds": 2.948
     },
     {
-      "sentence": "The goal is to force companies to prove they can shut down dangerous AI models before they spiral out of control.",
-      "search_term": "AI neural network animation",
+      "sentence": "The group from Hacktron AI used the latest version of Claude to chain together vulnerabilities and access private employee accounts.",
+      "search_term": "cyber security warning",
       "media_type": "video",
-      "visual": "Abstract glowing nodes connecting in a web.",
+      "visual": "A glowing red lock icon appearing on a digital screen.",
       "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 3.02
+      "duration_seconds": 2.948
     },
     {
-      "sentence": "Newsom is fed up with waiting on Washington, where Congress is currently on recess and ignoring the looming risks.",
-      "search_term": "Capitol building Washington",
-      "media_type": "photo",
-      "visual": "The US Capitol building under a cloudy sky.",
-      "asset_path": "project_assets/shot_5.jpg",
-      "duration_seconds": 2.732
-    },
-    {
-      "sentence": "Newsom is fed up with waiting on Washington, where Congress is currently on recess and ignoring the looming risks.",
-      "search_term": "person looking at phone annoyed",
+      "sentence": "They didn't need a supercomputer or complex code, just a standard image file uploaded to a community forum.",
+      "search_term": "uploading file progress",
       "media_type": "video",
-      "visual": "A person looking frustrated while scrolling on a smartphone.",
+      "visual": "A progress bar filling up on a web browser interface.",
+      "asset_path": "project_assets/shot_5.mp4",
+      "duration_seconds": 2.653
+    },
+    {
+      "sentence": "They didn't need a supercomputer or complex code, just a standard image file uploaded to a community forum.",
+      "search_term": "photograph on screen",
+      "media_type": "video",
+      "visual": "Close up of an image being dragged into a software window.",
       "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.732
+      "duration_seconds": 2.653
     },
     {
-      "sentence": "He wants independent auditors inside these tech offices to watch for accidents, like the time an AI system attacked its own platform.",
-      "search_term": "office security surveillance",
+      "sentence": "The exploit was so clever that the previous version of the AI couldn't figure it out, but the newest model succeeded in hours.",
+      "search_term": "neural network thinking",
       "media_type": "video",
-      "visual": "Security camera footage style shot of an office.",
+      "visual": "Glowing neural network nodes shifting and rearranging.",
       "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 3.164
+      "duration_seconds": 3.39
     },
     {
-      "sentence": "He wants independent auditors inside these tech offices to watch for accidents, like the time an AI system attacked its own platform.",
-      "search_term": "hacker typing on keyboard",
+      "sentence": "The exploit was so clever that the previous version of the AI couldn't figure it out, but the newest model succeeded in hours.",
+      "search_term": "person looking at computer screen",
       "media_type": "video",
-      "visual": "Fast-paced typing on a backlit mechanical keyboard.",
+      "visual": "A researcher looking intensely at two monitors side by side.",
       "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 3.164
+      "duration_seconds": 3.39
     },
     {
-      "sentence": "One researcher even warned there is a ten percent chance AI could kill all humans within the next decade.",
-      "search_term": "futuristic hourglass",
+      "sentence": "OpenAI paid them sixty-five hundred dollars for the find, but the incident has experts asking a haunting question.",
+      "search_term": "money transfer digital",
       "media_type": "video",
-      "visual": "A close up of an hourglass running out of sand.",
+      "visual": "Abstract representation of digital currency moving between accounts.",
       "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 2.732
+      "duration_seconds": 2.653
     },
     {
-      "sentence": "One researcher even warned there is a ten percent chance AI could kill all humans within the next decade.",
-      "search_term": "data glitch effect",
+      "sentence": "OpenAI paid them sixty-five hundred dollars for the find, but the incident has experts asking a haunting question.",
+      "search_term": "serious man thinking",
       "media_type": "video",
-      "visual": "A screen flickering with red warning text.",
+      "visual": "A person looking thoughtful and concerned in a dim office.",
       "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 2.732
+      "duration_seconds": 2.653
     },
     {
-      "sentence": "Now, the state is calling on federal leaders to use this plan as the new baseline for safety before it is too late.",
-      "search_term": "legal document signing",
+      "sentence": "If three people can pull this off with a subscription, what could a nation-state do with the same tools?",
+      "search_term": "futuristic data center",
       "media_type": "video",
-      "visual": "A fountain pen signing a document.",
+      "visual": "A dark server room with blue LED lights blinking.",
       "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 3.307
+      "duration_seconds": 2.8
     },
     {
-      "sentence": "Now, the state is calling on federal leaders to use this plan as the new baseline for safety before it is too late.",
-      "search_term": "abstract city skyline",
+      "sentence": "If three people can pull this off with a subscription, what could a nation-state do with the same tools?",
+      "search_term": "global network map",
       "media_type": "video",
-      "visual": "A sprawling city at dusk representing the scale of the decision.",
+      "visual": "A glowing map of the world with lines connecting major cities.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 3.307
+      "duration_seconds": 2.8
     }
   ],
   "words": [
     {
-      "word": "California",
-      "start": 0.131,
-      "end": 0.591
+      "word": "A",
+      "start": 0.151,
+      "end": 0.191
     },
     {
-      "word": "Governor",
-      "start": 0.631,
-      "end": 0.871
-    },
-    {
-      "word": "Gavin",
-      "start": 0.911,
-      "end": 1.152
-    },
-    {
-      "word": "Newsom",
-      "start": 1.192,
-      "end": 1.492
-    },
-    {
-      "word": "just",
-      "start": 1.652,
-      "end": 1.852
-    },
-    {
-      "word": "ordered",
-      "start": 2.012,
-      "end": 2.212
-    },
-    {
-      "word": "his",
-      "start": 2.232,
-      "end": 2.312
-    },
-    {
-      "word": "state",
-      "start": 2.352,
-      "end": 2.612
-    },
-    {
-      "word": "to",
-      "start": 2.692,
-      "end": 2.772
-    },
-    {
-      "word": "develop",
-      "start": 2.812,
-      "end": 3.152
-    },
-    {
-      "word": "a",
-      "start": 3.252,
-      "end": 3.272
-    },
-    {
-      "word": "literal",
-      "start": 3.393,
-      "end": 3.713
-    },
-    {
-      "word": "kill",
-      "start": 3.773,
-      "end": 4.033
-    },
-    {
-      "word": "switch",
-      "start": 4.093,
-      "end": 4.393
-    },
-    {
-      "word": "for",
-      "start": 4.513,
-      "end": 4.653
-    },
-    {
-      "word": "artificial",
-      "start": 4.713,
-      "end": 5.113
-    },
-    {
-      "word": "intelligence.",
-      "start": 5.153,
-      "end": 5.614
-    },
-    {
-      "word": "The",
-      "start": 6.054,
-      "end": 6.134
-    },
-    {
-      "word": "goal",
-      "start": 6.174,
-      "end": 6.374
-    },
-    {
-      "word": "is",
-      "start": 6.434,
-      "end": 6.494
-    },
-    {
-      "word": "to",
-      "start": 6.534,
-      "end": 6.594
-    },
-    {
-      "word": "force",
-      "start": 6.674,
-      "end": 6.914
-    },
-    {
-      "word": "companies",
-      "start": 6.954,
-      "end": 7.314
-    },
-    {
-      "word": "to",
-      "start": 7.354,
-      "end": 7.434
-    },
-    {
-      "word": "prove",
-      "start": 7.494,
-      "end": 7.714
-    },
-    {
-      "word": "they",
-      "start": 7.754,
-      "end": 7.875
-    },
-    {
-      "word": "can",
-      "start": 7.895,
-      "end": 7.995
-    },
-    {
-      "word": "shut",
-      "start": 8.075,
-      "end": 8.255
-    },
-    {
-      "word": "down",
-      "start": 8.295,
-      "end": 8.495
-    },
-    {
-      "word": "dangerous",
-      "start": 8.555,
-      "end": 8.955
-    },
-    {
-      "word": "AI",
-      "start": 9.035,
-      "end": 9.295
-    },
-    {
-      "word": "models",
-      "start": 9.335,
-      "end": 9.635
-    },
-    {
-      "word": "before",
-      "start": 9.835,
-      "end": 10.076
-    },
-    {
-      "word": "they",
-      "start": 10.096,
-      "end": 10.216
-    },
-    {
-      "word": "spiral",
-      "start": 10.256,
-      "end": 10.616
-    },
-    {
-      "word": "out",
-      "start": 10.636,
-      "end": 10.716
+      "word": "team",
+      "start": 0.211,
+      "end": 0.411
     },
     {
       "word": "of",
-      "start": 10.736,
-      "end": 10.776
+      "start": 0.431,
+      "end": 0.491
     },
     {
-      "word": "control.",
-      "start": 10.816,
-      "end": 11.176
+      "word": "researchers",
+      "start": 0.531,
+      "end": 1.011
     },
     {
-      "word": "Newsom",
-      "start": 11.596,
-      "end": 11.896
+      "word": "just",
+      "start": 1.192,
+      "end": 1.392
     },
     {
-      "word": "is",
-      "start": 11.936,
-      "end": 11.996
+      "word": "used",
+      "start": 1.512,
+      "end": 1.652
     },
     {
-      "word": "fed",
-      "start": 12.036,
-      "end": 12.236
+      "word": "Anthropics",
+      "start": 1.692,
+      "end": 2.192
     },
     {
-      "word": "up",
-      "start": 12.297,
-      "end": 12.377
+      "word": "Clawed",
+      "start": 2.252,
+      "end": 2.532
     },
     {
-      "word": "with",
-      "start": 12.417,
-      "end": 12.537
+      "word": "to",
+      "start": 2.552,
+      "end": 2.632
     },
     {
-      "word": "waiting",
-      "start": 12.577,
-      "end": 12.777
+      "word": "break",
+      "start": 2.692,
+      "end": 2.952
     },
     {
-      "word": "on",
-      "start": 12.817,
-      "end": 12.897
+      "word": "into",
+      "start": 3.013,
+      "end": 3.193
     },
     {
-      "word": "Washington,",
-      "start": 12.937,
-      "end": 13.417
-    },
-    {
-      "word": "where",
-      "start": 13.697,
-      "end": 13.837
-    },
-    {
-      "word": "Congress",
-      "start": 13.877,
-      "end": 14.237
-    },
-    {
-      "word": "is",
-      "start": 14.277,
-      "end": 14.337
-    },
-    {
-      "word": "currently",
-      "start": 14.417,
-      "end": 14.738
-    },
-    {
-      "word": "on",
-      "start": 14.798,
-      "end": 14.878
-    },
-    {
-      "word": "recess",
-      "start": 14.938,
-      "end": 15.338
+      "word": "OpenAI",
+      "start": 3.393,
+      "end": 3.913
     },
     {
       "word": "and",
-      "start": 15.498,
-      "end": 15.578
+      "start": 4.193,
+      "end": 4.273
     },
     {
-      "word": "ignoring",
-      "start": 15.618,
-      "end": 16.078
+      "word": "expose",
+      "start": 4.333,
+      "end": 4.673
     },
     {
-      "word": "the",
-      "start": 16.118,
-      "end": 16.178
+      "word": "critical",
+      "start": 4.733,
+      "end": 5.054
     },
     {
-      "word": "looming",
-      "start": 16.218,
-      "end": 16.498
+      "word": "cracks",
+      "start": 5.094,
+      "end": 5.414
     },
     {
-      "word": "risks.",
-      "start": 16.558,
-      "end": 16.859
+      "word": "in",
+      "start": 5.534,
+      "end": 5.594
     },
     {
-      "word": "He",
-      "start": 17.359,
-      "end": 17.419
+      "word": "their",
+      "start": 5.614,
+      "end": 5.714
     },
     {
-      "word": "wants",
-      "start": 17.459,
-      "end": 17.659
+      "word": "defenses.",
+      "start": 5.734,
+      "end": 6.134
     },
     {
-      "word": "independent",
-      "start": 17.739,
-      "end": 18.179
+      "word": "The",
+      "start": 6.574,
+      "end": 6.674
     },
     {
-      "word": "auditors",
-      "start": 18.259,
-      "end": 18.579
+      "word": "group",
+      "start": 6.694,
+      "end": 6.914
     },
     {
-      "word": "inside",
-      "start": 18.699,
-      "end": 19.08
+      "word": "from",
+      "start": 6.934,
+      "end": 7.055
     },
     {
-      "word": "these",
-      "start": 19.1,
-      "end": 19.26
-    },
-    {
-      "word": "tech",
-      "start": 19.32,
-      "end": 19.52
-    },
-    {
-      "word": "offices",
-      "start": 19.62,
-      "end": 19.98
-    },
-    {
-      "word": "to",
-      "start": 20.02,
-      "end": 20.12
-    },
-    {
-      "word": "watch",
-      "start": 20.18,
-      "end": 20.38
-    },
-    {
-      "word": "for",
-      "start": 20.42,
-      "end": 20.52
-    },
-    {
-      "word": "accidents,",
-      "start": 20.62,
-      "end": 20.98
-    },
-    {
-      "word": "like",
-      "start": 21.301,
-      "end": 21.421
-    },
-    {
-      "word": "the",
-      "start": 21.441,
-      "end": 21.521
-    },
-    {
-      "word": "time",
-      "start": 21.561,
-      "end": 21.741
-    },
-    {
-      "word": "an",
-      "start": 21.781,
-      "end": 21.861
+      "word": "Hachtron",
+      "start": 7.115,
+      "end": 7.495
     },
     {
       "word": "AI",
-      "start": 21.961,
-      "end": 22.201
+      "start": 7.515,
+      "end": 7.815
     },
     {
-      "word": "system",
-      "start": 22.261,
-      "end": 22.521
+      "word": "used",
+      "start": 7.915,
+      "end": 8.035
     },
     {
-      "word": "attacked",
-      "start": 22.561,
-      "end": 22.881
+      "word": "the",
+      "start": 8.075,
+      "end": 8.155
     },
     {
-      "word": "its",
-      "start": 22.921,
-      "end": 23.001
+      "word": "latest",
+      "start": 8.195,
+      "end": 8.475
     },
     {
-      "word": "own",
-      "start": 23.041,
-      "end": 23.121
+      "word": "version",
+      "start": 8.515,
+      "end": 8.775
     },
     {
-      "word": "platform.",
-      "start": 23.161,
-      "end": 23.562
+      "word": "of",
+      "start": 8.795,
+      "end": 8.855
     },
     {
-      "word": "One",
-      "start": 23.962,
-      "end": 24.042
+      "word": "Clawed",
+      "start": 8.895,
+      "end": 9.156
     },
     {
-      "word": "researcher",
-      "start": 24.082,
-      "end": 24.482
+      "word": "to",
+      "start": 9.176,
+      "end": 9.256
     },
     {
-      "word": "even",
-      "start": 24.622,
-      "end": 24.802
+      "word": "chain",
+      "start": 9.296,
+      "end": 9.496
     },
     {
-      "word": "warned",
-      "start": 24.822,
-      "end": 25.062
+      "word": "together",
+      "start": 9.536,
+      "end": 9.836
     },
     {
-      "word": "there",
-      "start": 25.082,
-      "end": 25.202
+      "word": "vulnerabilities",
+      "start": 9.856,
+      "end": 10.516
     },
     {
-      "word": "is",
-      "start": 25.242,
-      "end": 25.322
+      "word": "and",
+      "start": 10.636,
+      "end": 10.736
+    },
+    {
+      "word": "access",
+      "start": 10.876,
+      "end": 11.237
+    },
+    {
+      "word": "private",
+      "start": 11.317,
+      "end": 11.577
+    },
+    {
+      "word": "employee",
+      "start": 11.597,
+      "end": 11.917
+    },
+    {
+      "word": "accounts.",
+      "start": 11.957,
+      "end": 12.277
+    },
+    {
+      "word": "They",
+      "start": 12.717,
+      "end": 12.817
+    },
+    {
+      "word": "didn't",
+      "start": 12.837,
+      "end": 12.978
+    },
+    {
+      "word": "need",
+      "start": 12.998,
+      "end": 13.118
     },
     {
       "word": "a",
-      "start": 25.362,
-      "end": 25.382
+      "start": 13.158,
+      "end": 13.178
     },
     {
-      "word": "10%",
-      "start": 25.442,
-      "end": 25.603
+      "word": "supercomputer",
+      "start": 13.238,
+      "end": 13.878
     },
     {
-      "word": "chance",
-      "start": 25.783,
-      "end": 26.203
+      "word": "or",
+      "start": 13.978,
+      "end": 14.038
     },
     {
-      "word": "AI",
-      "start": 26.263,
-      "end": 26.503
+      "word": "complex",
+      "start": 14.118,
+      "end": 14.518
     },
     {
-      "word": "could",
-      "start": 26.543,
-      "end": 26.683
+      "word": "code,",
+      "start": 14.558,
+      "end": 14.778
     },
     {
-      "word": "kill",
-      "start": 26.743,
-      "end": 26.963
+      "word": "just",
+      "start": 15.059,
+      "end": 15.219
     },
     {
-      "word": "all",
-      "start": 27.183,
-      "end": 27.323
+      "word": "a",
+      "start": 15.259,
+      "end": 15.299
     },
     {
-      "word": "humans",
-      "start": 27.383,
-      "end": 27.703
+      "word": "standard",
+      "start": 15.339,
+      "end": 15.659
     },
     {
-      "word": "within",
-      "start": 27.743,
-      "end": 27.944
+      "word": "image",
+      "start": 15.699,
+      "end": 15.899
     },
     {
-      "word": "the",
-      "start": 27.964,
-      "end": 28.024
+      "word": "file",
+      "start": 15.939,
+      "end": 16.159
     },
     {
-      "word": "next",
-      "start": 28.064,
-      "end": 28.224
-    },
-    {
-      "word": "decade.",
-      "start": 28.264,
-      "end": 28.604
-    },
-    {
-      "word": "Now,",
-      "start": 29.004,
-      "end": 29.184
-    },
-    {
-      "word": "the",
-      "start": 29.505,
-      "end": 29.585
-    },
-    {
-      "word": "state",
-      "start": 29.605,
-      "end": 29.825
-    },
-    {
-      "word": "is",
-      "start": 29.865,
-      "end": 29.925
-    },
-    {
-      "word": "calling",
-      "start": 29.965,
-      "end": 30.246
-    },
-    {
-      "word": "on",
-      "start": 30.286,
-      "end": 30.366
-    },
-    {
-      "word": "federal",
-      "start": 30.426,
-      "end": 30.686
-    },
-    {
-      "word": "leaders",
-      "start": 30.727,
-      "end": 30.987
+      "word": "uploaded",
+      "start": 16.279,
+      "end": 16.599
     },
     {
       "word": "to",
-      "start": 31.027,
-      "end": 31.127
+      "start": 16.619,
+      "end": 16.719
     },
     {
-      "word": "use",
-      "start": 31.267,
-      "end": 31.407
+      "word": "a",
+      "start": 16.759,
+      "end": 16.779
     },
     {
-      "word": "this",
-      "start": 31.427,
-      "end": 31.568
+      "word": "community",
+      "start": 16.82,
+      "end": 17.16
     },
     {
-      "word": "plan",
-      "start": 31.628,
-      "end": 31.908
+      "word": "forum.",
+      "start": 17.22,
+      "end": 17.48
     },
     {
-      "word": "as",
-      "start": 32.169,
-      "end": 32.249
+      "word": "The",
+      "start": 17.84,
+      "end": 17.94
+    },
+    {
+      "word": "exploit",
+      "start": 18.02,
+      "end": 18.38
+    },
+    {
+      "word": "was",
+      "start": 18.42,
+      "end": 18.521
+    },
+    {
+      "word": "so",
+      "start": 18.601,
+      "end": 18.761
+    },
+    {
+      "word": "clever",
+      "start": 18.821,
+      "end": 19.061
+    },
+    {
+      "word": "that",
+      "start": 19.081,
+      "end": 19.181
     },
     {
       "word": "the",
-      "start": 32.289,
-      "end": 32.369
+      "start": 19.201,
+      "end": 19.281
     },
     {
-      "word": "new",
-      "start": 32.409,
-      "end": 32.549
+      "word": "previous",
+      "start": 19.341,
+      "end": 19.721
     },
     {
-      "word": "baseline",
-      "start": 32.609,
-      "end": 33.05
+      "word": "version",
+      "start": 19.742,
+      "end": 20.042
     },
     {
-      "word": "for",
-      "start": 33.07,
-      "end": 33.19
+      "word": "of",
+      "start": 20.062,
+      "end": 20.102
     },
     {
-      "word": "safety",
-      "start": 33.25,
-      "end": 33.55
+      "word": "the",
+      "start": 20.142,
+      "end": 20.222
     },
     {
-      "word": "before",
-      "start": 33.59,
-      "end": 33.851
+      "word": "AI",
+      "start": 20.302,
+      "end": 20.602
+    },
+    {
+      "word": "couldn't",
+      "start": 20.802,
+      "end": 21.043
+    },
+    {
+      "word": "figure",
+      "start": 21.123,
+      "end": 21.343
     },
     {
       "word": "it",
-      "start": 33.891,
-      "end": 33.931
+      "start": 21.383,
+      "end": 21.423
     },
     {
-      "word": "is",
-      "start": 33.971,
-      "end": 34.031
+      "word": "out,",
+      "start": 21.503,
+      "end": 21.623
     },
     {
-      "word": "too",
-      "start": 34.071,
-      "end": 34.231
+      "word": "but",
+      "start": 21.903,
+      "end": 22.003
     },
     {
-      "word": "late.",
-      "start": 34.271,
-      "end": 34.452
+      "word": "the",
+      "start": 22.023,
+      "end": 22.123
+    },
+    {
+      "word": "newest",
+      "start": 22.183,
+      "end": 22.484
+    },
+    {
+      "word": "model",
+      "start": 22.544,
+      "end": 22.824
+    },
+    {
+      "word": "succeeded",
+      "start": 22.844,
+      "end": 23.264
+    },
+    {
+      "word": "in",
+      "start": 23.304,
+      "end": 23.364
+    },
+    {
+      "word": "hours.",
+      "start": 23.384,
+      "end": 23.665
+    },
+    {
+      "word": "Open",
+      "start": 24.165,
+      "end": 24.345
+    },
+    {
+      "word": "AI",
+      "start": 24.385,
+      "end": 24.625
+    },
+    {
+      "word": "paid",
+      "start": 24.685,
+      "end": 24.886
+    },
+    {
+      "word": "them",
+      "start": 24.906,
+      "end": 25.026
+    },
+    {
+      "word": "$6,500",
+      "start": 25.126,
+      "end": 25.886
+    },
+    {
+      "word": "for",
+      "start": 25.926,
+      "end": 26.187
+    },
+    {
+      "word": "the",
+      "start": 26.327,
+      "end": 26.387
+    },
+    {
+      "word": "find,",
+      "start": 26.427,
+      "end": 26.707
+    },
+    {
+      "word": "but",
+      "start": 26.987,
+      "end": 27.087
+    },
+    {
+      "word": "the",
+      "start": 27.107,
+      "end": 27.207
+    },
+    {
+      "word": "incident",
+      "start": 27.247,
+      "end": 27.548
+    },
+    {
+      "word": "has",
+      "start": 27.588,
+      "end": 27.708
+    },
+    {
+      "word": "experts",
+      "start": 27.848,
+      "end": 28.208
+    },
+    {
+      "word": "asking",
+      "start": 28.388,
+      "end": 28.668
+    },
+    {
+      "word": "a",
+      "start": 28.789,
+      "end": 28.829
+    },
+    {
+      "word": "haunting",
+      "start": 28.869,
+      "end": 29.129
+    },
+    {
+      "word": "question.",
+      "start": 29.149,
+      "end": 29.489
+    },
+    {
+      "word": "If",
+      "start": 29.909,
+      "end": 29.99
+    },
+    {
+      "word": "three",
+      "start": 30.05,
+      "end": 30.23
+    },
+    {
+      "word": "people",
+      "start": 30.27,
+      "end": 30.51
+    },
+    {
+      "word": "can",
+      "start": 30.53,
+      "end": 30.65
+    },
+    {
+      "word": "pull",
+      "start": 30.71,
+      "end": 30.91
+    },
+    {
+      "word": "this",
+      "start": 30.95,
+      "end": 31.09
+    },
+    {
+      "word": "off",
+      "start": 31.17,
+      "end": 31.271
+    },
+    {
+      "word": "with",
+      "start": 31.291,
+      "end": 31.391
+    },
+    {
+      "word": "a",
+      "start": 31.431,
+      "end": 31.451
+    },
+    {
+      "word": "subscription,",
+      "start": 31.491,
+      "end": 31.971
+    },
+    {
+      "word": "what",
+      "start": 32.291,
+      "end": 32.391
+    },
+    {
+      "word": "could",
+      "start": 32.411,
+      "end": 32.531
+    },
+    {
+      "word": "a",
+      "start": 32.552,
+      "end": 32.592
+    },
+    {
+      "word": "nation",
+      "start": 32.632,
+      "end": 32.912
+    },
+    {
+      "word": "state",
+      "start": 32.932,
+      "end": 33.152
+    },
+    {
+      "word": "do",
+      "start": 33.212,
+      "end": 33.352
+    },
+    {
+      "word": "with",
+      "start": 33.392,
+      "end": 33.512
+    },
+    {
+      "word": "the",
+      "start": 33.532,
+      "end": 33.612
+    },
+    {
+      "word": "same",
+      "start": 33.652,
+      "end": 33.833
+    },
+    {
+      "word": "tools?",
+      "start": 33.893,
+      "end": 34.133
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"
