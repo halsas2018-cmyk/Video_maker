@@ -1,612 +1,727 @@
 [
   {
-    "word": "A",
-    "start": 0.151,
-    "end": 0.171
-  },
-  {
-    "word": "startup",
-    "start": 0.211,
-    "end": 0.551
-  },
-  {
-    "word": "called",
-    "start": 0.591,
-    "end": 0.812
-  },
-  {
-    "word": "Scroll",
-    "start": 0.872,
-    "end": 1.212
+    "word": "Apple",
+    "start": 0.171,
+    "end": 0.411
   },
   {
     "word": "is",
-    "start": 1.272,
+    "start": 0.451,
+    "end": 0.531
+  },
+  {
+    "word": "officially",
+    "start": 0.591,
+    "end": 1.012
+  },
+  {
+    "word": "paying",
+    "start": 1.052,
     "end": 1.312
   },
   {
-    "word": "trying",
+    "word": "out",
     "start": 1.372,
-    "end": 1.572
+    "end": 1.712
   },
   {
-    "word": "to",
-    "start": 1.592,
-    "end": 1.652
+    "word": "$250",
+    "start": 1.772,
+    "end": 2.032
   },
   {
-    "word": "turn",
-    "start": 1.692,
-    "end": 1.912
+    "word": "million",
+    "start": 2.392,
+    "end": 2.973
   },
   {
-    "word": "boring,",
-    "start": 1.972,
-    "end": 2.333
-  },
-  {
-    "word": "dry",
-    "start": 2.533,
-    "end": 2.733
-  },
-  {
-    "word": "textbooks",
-    "start": 2.793,
-    "end": 3.273
-  },
-  {
-    "word": "into",
-    "start": 3.374,
-    "end": 3.554
-  },
-  {
-    "word": "a",
-    "start": 3.594,
-    "end": 3.634
-  },
-  {
-    "word": "feed",
-    "start": 3.694,
-    "end": 3.914
-  },
-  {
-    "word": "that",
-    "start": 3.954,
-    "end": 4.074
-  },
-  {
-    "word": "looks",
-    "start": 4.114,
-    "end": 4.334
-  },
-  {
-    "word": "and",
-    "start": 4.454,
-    "end": 4.534
-  },
-  {
-    "word": "feels",
-    "start": 4.614,
-    "end": 4.915
-  },
-  {
-    "word": "just",
-    "start": 5.035,
-    "end": 5.195
-  },
-  {
-    "word": "like",
-    "start": 5.235,
-    "end": 5.355
-  },
-  {
-    "word": "TikTok.",
-    "start": 5.415,
-    "end": 5.855
-  },
-  {
-    "word": "The",
-    "start": 6.236,
-    "end": 6.316
-  },
-  {
-    "word": "app",
-    "start": 6.396,
-    "end": 6.536
-  },
-  {
-    "word": "uses",
-    "start": 6.616,
-    "end": 6.856
-  },
-  {
-    "word": "artificial",
-    "start": 6.916,
-    "end": 7.337
-  },
-  {
-    "word": "intelligence",
-    "start": 7.377,
-    "end": 7.817
-  },
-  {
-    "word": "to",
-    "start": 7.877,
-    "end": 7.977
-  },
-  {
-    "word": "transform",
-    "start": 8.017,
-    "end": 8.537
-  },
-  {
-    "word": "dense",
-    "start": 8.598,
-    "end": 8.818
-  },
-  {
-    "word": "files",
-    "start": 8.858,
-    "end": 9.178
-  },
-  {
-    "word": "into",
-    "start": 9.318,
-    "end": 9.458
-  },
-  {
-    "word": "short",
-    "start": 9.538,
-    "end": 9.738
-  },
-  {
-    "word": "videos,",
-    "start": 9.778,
-    "end": 10.179
-  },
-  {
-    "word": "interactive",
-    "start": 10.499,
-    "end": 10.939
-  },
-  {
-    "word": "quizzes,",
-    "start": 10.979,
-    "end": 11.34
-  },
-  {
-    "word": "and",
-    "start": 11.64,
-    "end": 11.72
-  },
-  {
-    "word": "bite-sized",
-    "start": 11.76,
-    "end": 12.2
-  },
-  {
-    "word": "audio.",
-    "start": 12.26,
-    "end": 12.561
-  },
-  {
-    "word": "Instead",
-    "start": 12.941,
-    "end": 13.181
-  },
-  {
-    "word": "of",
-    "start": 13.201,
-    "end": 13.261
-  },
-  {
-    "word": "staring",
-    "start": 13.301,
-    "end": 13.581
-  },
-  {
-    "word": "at",
-    "start": 13.601,
-    "end": 13.661
-  },
-  {
-    "word": "a",
-    "start": 13.701,
-    "end": 13.721
-  },
-  {
-    "word": "page,",
-    "start": 13.761,
-    "end": 14.042
-  },
-  {
-    "word": "you",
-    "start": 14.342,
-    "end": 14.442
-  },
-  {
-    "word": "swipe",
-    "start": 14.482,
-    "end": 14.722
-  },
-  {
-    "word": "up",
-    "start": 14.762,
-    "end": 14.842
-  },
-  {
-    "word": "to",
-    "start": 14.862,
-    "end": 14.942
-  },
-  {
-    "word": "learn",
-    "start": 14.962,
-    "end": 15.143
-  },
-  {
-    "word": "a",
-    "start": 15.163,
-    "end": 15.203
-  },
-  {
-    "word": "new",
-    "start": 15.263,
-    "end": 15.403
-  },
-  {
-    "word": "topic",
-    "start": 15.443,
-    "end": 15.803
-  },
-  {
-    "word": "or",
-    "start": 15.903,
-    "end": 16.003
-  },
-  {
-    "word": "swipe",
-    "start": 16.083,
-    "end": 16.363
-  },
-  {
-    "word": "sideways",
-    "start": 16.383,
-    "end": 16.804
-  },
-  {
-    "word": "to",
-    "start": 16.864,
-    "end": 16.944
-  },
-  {
-    "word": "dive",
-    "start": 16.984,
-    "end": 17.184
-  },
-  {
-    "word": "deeper",
-    "start": 17.224,
-    "end": 17.484
-  },
-  {
-    "word": "into",
-    "start": 17.504,
-    "end": 17.624
-  },
-  {
-    "word": "the",
-    "start": 17.644,
-    "end": 17.704
-  },
-  {
-    "word": "details.",
-    "start": 17.744,
-    "end": 18.125
-  },
-  {
-    "word": "The",
-    "start": 18.545,
-    "end": 18.646
-  },
-  {
-    "word": "founders,",
-    "start": 18.686,
-    "end": 19.066
-  },
-  {
-    "word": "Utsav",
-    "start": 19.367,
-    "end": 19.708
-  },
-  {
-    "word": "Gupta",
-    "start": 19.748,
-    "end": 20.109
-  },
-  {
-    "word": "and",
-    "start": 20.269,
-    "end": 20.349
-  },
-  {
-    "word": "Rebecca",
-    "start": 20.389,
-    "end": 20.69
-  },
-  {
-    "word": "Neff,",
-    "start": 20.75,
-    "end": 20.971
-  },
-  {
-    "word": "were",
-    "start": 21.272,
-    "end": 21.412
-  },
-  {
-    "word": "tired",
-    "start": 21.452,
-    "end": 21.713
-  },
-  {
-    "word": "of",
-    "start": 21.753,
-    "end": 21.813
-  },
-  {
-    "word": "feeling",
-    "start": 21.873,
-    "end": 22.154
-  },
-  {
-    "word": "empty",
-    "start": 22.254,
-    "end": 22.514
-  },
-  {
-    "word": "after",
-    "start": 22.715,
-    "end": 22.915
-  },
-  {
-    "word": "doing",
-    "start": 22.955,
-    "end": 23.156
-  },
-  {
-    "word": "scrolling",
-    "start": 23.176,
-    "end": 23.497
-  },
-  {
-    "word": "before",
-    "start": 23.537,
-    "end": 23.777
-  },
-  {
-    "word": "bed,",
-    "start": 23.817,
-    "end": 24.058
-  },
-  {
-    "word": "so",
-    "start": 24.379,
-    "end": 24.479
+    "word": "because",
+    "start": 3.173,
+    "end": 3.373
   },
   {
     "word": "they",
-    "start": 24.499,
-    "end": 24.599
+    "start": 3.393,
+    "end": 3.573
   },
   {
-    "word": "decided",
-    "start": 24.639,
-    "end": 24.98
-  },
-  {
-    "word": "to",
-    "start": 25.0,
-    "end": 25.08
-  },
-  {
-    "word": "build",
-    "start": 25.12,
-    "end": 25.301
-  },
-  {
-    "word": "something",
-    "start": 25.341,
-    "end": 25.581
-  },
-  {
-    "word": "better.",
-    "start": 25.621,
-    "end": 25.822
-  },
-  {
-    "word": "They",
-    "start": 26.243,
-    "end": 26.343
-  },
-  {
-    "word": "are",
-    "start": 26.363,
-    "end": 26.463
-  },
-  {
-    "word": "now",
-    "start": 26.483,
-    "end": 26.604
-  },
-  {
-    "word": "testing",
-    "start": 26.684,
-    "end": 27.025
-  },
-  {
-    "word": "this",
-    "start": 27.065,
-    "end": 27.225
-  },
-  {
-    "word": "with",
-    "start": 27.245,
-    "end": 27.365
-  },
-  {
-    "word": "schools",
-    "start": 27.446,
-    "end": 27.746
-  },
-  {
-    "word": "and",
-    "start": 27.786,
-    "end": 27.887
-  },
-  {
-    "word": "companies",
-    "start": 27.927,
-    "end": 28.267
-  },
-  {
-    "word": "who",
-    "start": 28.288,
-    "end": 28.388
-  },
-  {
-    "word": "want",
-    "start": 28.408,
-    "end": 28.508
+    "word": "failed",
+    "start": 3.653,
+    "end": 3.913
   },
   {
     "word": "to",
-    "start": 28.528,
-    "end": 28.588
+    "start": 3.953,
+    "end": 4.013
   },
   {
-    "word": "keep",
-    "start": 28.608,
-    "end": 28.769
-  },
-  {
-    "word": "people",
-    "start": 28.809,
-    "end": 29.029
-  },
-  {
-    "word": "engaged",
-    "start": 29.089,
-    "end": 29.47
-  },
-  {
-    "word": "without",
-    "start": 29.51,
-    "end": 29.791
+    "word": "deliver",
+    "start": 4.073,
+    "end": 4.373
   },
   {
     "word": "the",
-    "start": 29.831,
-    "end": 29.911
+    "start": 4.393,
+    "end": 4.493
   },
   {
-    "word": "usual",
-    "start": 30.011,
-    "end": 30.272
+    "word": "AI",
+    "start": 4.614,
+    "end": 4.954
   },
   {
-    "word": "social",
-    "start": 30.332,
-    "end": 30.573
+    "word": "features",
+    "start": 5.274,
+    "end": 5.594
   },
   {
-    "word": "media",
-    "start": 30.593,
-    "end": 30.833
+    "word": "they",
+    "start": 5.614,
+    "end": 5.734
   },
   {
-    "word": "burnout.",
-    "start": 30.873,
-    "end": 31.214
+    "word": "promised",
+    "start": 5.794,
+    "end": 6.114
   },
   {
-    "word": "It",
-    "start": 31.615,
-    "end": 31.655
+    "word": "for",
+    "start": 6.134,
+    "end": 6.234
   },
   {
-    "word": "is",
-    "start": 31.695,
-    "end": 31.775
+    "word": "Siri.",
+    "start": 6.274,
+    "end": 6.575
+  },
+  {
+    "word": "If",
+    "start": 6.935,
+    "end": 6.995
+  },
+  {
+    "word": "you",
+    "start": 7.035,
+    "end": 7.115
+  },
+  {
+    "word": "live",
+    "start": 7.155,
+    "end": 7.275
+  },
+  {
+    "word": "in",
+    "start": 7.295,
+    "end": 7.355
+  },
+  {
+    "word": "the",
+    "start": 7.375,
+    "end": 7.435
+  },
+  {
+    "word": "United",
+    "start": 7.475,
+    "end": 7.735
+  },
+  {
+    "word": "States",
+    "start": 7.795,
+    "end": 8.075
+  },
+  {
+    "word": "and",
+    "start": 8.256,
+    "end": 8.336
+  },
+  {
+    "word": "bought",
+    "start": 8.376,
+    "end": 8.576
+  },
+  {
+    "word": "an",
+    "start": 8.596,
+    "end": 8.656
+  },
+  {
+    "word": "iPhone",
+    "start": 8.736,
+    "end": 9.016
+  },
+  {
+    "word": "15",
+    "start": 9.116,
+    "end": 9.416
+  },
+  {
+    "word": "Pro,",
+    "start": 9.456,
+    "end": 9.736
+  },
+  {
+    "word": "Pro",
+    "start": 9.976,
+    "end": 10.177
+  },
+  {
+    "word": "Max,",
+    "start": 10.217,
+    "end": 10.517
+  },
+  {
+    "word": "or",
+    "start": 10.797,
+    "end": 10.877
+  },
+  {
+    "word": "any",
+    "start": 10.977,
+    "end": 11.097
+  },
+  {
+    "word": "iPhone",
+    "start": 11.217,
+    "end": 11.497
+  },
+  {
+    "word": "16",
+    "start": 11.597,
+    "end": 11.918
+  },
+  {
+    "word": "model",
+    "start": 11.958,
+    "end": 12.178
+  },
+  {
+    "word": "between",
+    "start": 12.218,
+    "end": 12.478
+  },
+  {
+    "word": "June",
+    "start": 12.538,
+    "end": 12.978
+  },
+  {
+    "word": "2024",
+    "start": 13.058,
+    "end": 13.478
+  },
+  {
+    "word": "and",
+    "start": 13.658,
+    "end": 13.739
+  },
+  {
+    "word": "March",
+    "start": 13.799,
+    "end": 14.219
+  },
+  {
+    "word": "2025,",
+    "start": 14.279,
+    "end": 14.719
+  },
+  {
+    "word": "you",
+    "start": 15.039,
+    "end": 15.119
+  },
+  {
+    "word": "are",
+    "start": 15.159,
+    "end": 15.259
+  },
+  {
+    "word": "eligible",
+    "start": 15.319,
+    "end": 15.68
+  },
+  {
+    "word": "for",
+    "start": 15.72,
+    "end": 15.84
   },
   {
     "word": "a",
-    "start": 31.796,
-    "end": 31.836
+    "start": 15.86,
+    "end": 15.9
   },
   {
-    "word": "bold",
-    "start": 31.936,
-    "end": 32.196
+    "word": "piece",
+    "start": 15.94,
+    "end": 16.16
   },
   {
-    "word": "experiment",
-    "start": 32.237,
-    "end": 32.718
+    "word": "of",
+    "start": 16.2,
+    "end": 16.24
   },
   {
-    "word": "to",
-    "start": 32.758,
-    "end": 32.838
+    "word": "that",
+    "start": 16.28,
+    "end": 16.4
   },
   {
-    "word": "see",
-    "start": 32.878,
-    "end": 33.038
+    "word": "settlement.",
+    "start": 16.44,
+    "end": 16.78
   },
   {
-    "word": "if",
-    "start": 33.099,
-    "end": 33.159
+    "word": "The",
+    "start": 17.16,
+    "end": 17.24
   },
   {
-    "word": "we",
-    "start": 33.199,
-    "end": 33.279
+    "word": "lawsuit",
+    "start": 17.28,
+    "end": 17.621
   },
   {
-    "word": "can",
-    "start": 33.299,
-    "end": 33.399
+    "word": "claims",
+    "start": 17.661,
+    "end": 17.961
   },
   {
-    "word": "actually",
-    "start": 33.459,
-    "end": 33.72
+    "word": "Apple",
+    "start": 18.201,
+    "end": 18.421
   },
   {
-    "word": "learn",
-    "start": 33.76,
-    "end": 33.96
+    "word": "misled",
+    "start": 18.441,
+    "end": 18.761
   },
   {
-    "word": "something",
-    "start": 33.981,
-    "end": 34.221
+    "word": "customers",
+    "start": 18.821,
+    "end": 19.242
+  },
+  {
+    "word": "by",
+    "start": 19.282,
+    "end": 19.422
+  },
+  {
+    "word": "advertising",
+    "start": 19.522,
+    "end": 20.062
+  },
+  {
+    "word": "these",
+    "start": 20.102,
+    "end": 20.242
+  },
+  {
+    "word": "phones",
+    "start": 20.302,
+    "end": 20.602
+  },
+  {
+    "word": "as",
+    "start": 20.702,
+    "end": 20.762
+  },
+  {
+    "word": "built",
+    "start": 20.802,
+    "end": 20.983
+  },
+  {
+    "word": "for",
+    "start": 21.043,
+    "end": 21.143
+  },
+  {
+    "word": "intelligence",
+    "start": 21.183,
+    "end": 21.663
   },
   {
     "word": "while",
-    "start": 34.241,
-    "end": 34.361
+    "start": 21.903,
+    "end": 22.023
   },
   {
-    "word": "we",
-    "start": 34.381,
-    "end": 34.462
+    "word": "the",
+    "start": 22.043,
+    "end": 22.123
   },
   {
-    "word": "scroll.",
-    "start": 34.482,
-    "end": 34.782
+    "word": "actual",
+    "start": 22.203,
+    "end": 22.483
+  },
+  {
+    "word": "features",
+    "start": 22.523,
+    "end": 22.844
+  },
+  {
+    "word": "were",
+    "start": 22.884,
+    "end": 23.024
+  },
+  {
+    "word": "nowhere",
+    "start": 23.124,
+    "end": 23.404
+  },
+  {
+    "word": "to",
+    "start": 23.424,
+    "end": 23.464
+  },
+  {
+    "word": "be",
+    "start": 23.504,
+    "end": 23.584
+  },
+  {
+    "word": "found",
+    "start": 23.644,
+    "end": 23.824
+  },
+  {
+    "word": "at",
+    "start": 23.864,
+    "end": 23.924
+  },
+  {
+    "word": "launch.",
+    "start": 23.984,
+    "end": 24.284
+  },
+  {
+    "word": "While",
+    "start": 24.725,
+    "end": 24.885
+  },
+  {
+    "word": "Apple",
+    "start": 24.985,
+    "end": 25.165
+  },
+  {
+    "word": "denies",
+    "start": 25.185,
+    "end": 25.525
+  },
+  {
+    "word": "doing",
+    "start": 25.565,
+    "end": 25.785
+  },
+  {
+    "word": "anything",
+    "start": 25.965,
+    "end": 26.265
+  },
+  {
+    "word": "wrong,",
+    "start": 26.325,
+    "end": 26.586
+  },
+  {
+    "word": "they",
+    "start": 26.866,
+    "end": 26.966
+  },
+  {
+    "word": "are",
+    "start": 26.986,
+    "end": 27.066
+  },
+  {
+    "word": "still",
+    "start": 27.086,
+    "end": 27.266
+  },
+  {
+    "word": "opening",
+    "start": 27.326,
+    "end": 27.566
+  },
+  {
+    "word": "up",
+    "start": 27.606,
+    "end": 27.666
+  },
+  {
+    "word": "the",
+    "start": 27.706,
+    "end": 27.766
+  },
+  {
+    "word": "portal",
+    "start": 27.826,
+    "end": 28.066
+  },
+  {
+    "word": "for",
+    "start": 28.106,
+    "end": 28.186
+  },
+  {
+    "word": "you",
+    "start": 28.227,
+    "end": 28.307
+  },
+  {
+    "word": "to",
+    "start": 28.327,
+    "end": 28.387
+  },
+  {
+    "word": "get",
+    "start": 28.407,
+    "end": 28.527
+  },
+  {
+    "word": "paid.",
+    "start": 28.567,
+    "end": 28.787
+  },
+  {
+    "word": "You",
+    "start": 29.167,
+    "end": 29.247
+  },
+  {
+    "word": "could",
+    "start": 29.267,
+    "end": 29.388
+  },
+  {
+    "word": "get",
+    "start": 29.408,
+    "end": 29.508
+  },
+  {
+    "word": "$25",
+    "start": 29.709,
+    "end": 30.331
+  },
+  {
+    "word": "per",
+    "start": 30.371,
+    "end": 30.451
+  },
+  {
+    "word": "device,",
+    "start": 30.491,
+    "end": 30.812
+  },
+  {
+    "word": "but",
+    "start": 31.113,
+    "end": 31.193
+  },
+  {
+    "word": "that",
+    "start": 31.233,
+    "end": 31.354
+  },
+  {
+    "word": "number",
+    "start": 31.394,
+    "end": 31.575
+  },
+  {
+    "word": "could",
+    "start": 31.615,
+    "end": 31.735
+  },
+  {
+    "word": "climb",
+    "start": 31.775,
+    "end": 32.016
+  },
+  {
+    "word": "as",
+    "start": 32.056,
+    "end": 32.116
+  },
+  {
+    "word": "high",
+    "start": 32.176,
+    "end": 32.417
+  },
+  {
+    "word": "as",
+    "start": 32.477,
+    "end": 32.537
+  },
+  {
+    "word": "$95",
+    "start": 32.558,
+    "end": 33.5
+  },
+  {
+    "word": "depending",
+    "start": 33.581,
+    "end": 33.902
+  },
+  {
+    "word": "on",
+    "start": 33.942,
+    "end": 34.002
+  },
+  {
+    "word": "how",
+    "start": 34.062,
+    "end": 34.182
+  },
+  {
+    "word": "many",
+    "start": 34.243,
+    "end": 34.423
+  },
+  {
+    "word": "people",
+    "start": 34.463,
+    "end": 34.724
+  },
+  {
+    "word": "actually",
+    "start": 34.824,
+    "end": 35.085
+  },
+  {
+    "word": "file",
+    "start": 35.125,
+    "end": 35.306
+  },
+  {
+    "word": "a",
+    "start": 35.346,
+    "end": 35.366
+  },
+  {
+    "word": "claim.",
+    "start": 35.386,
+    "end": 35.627
+  },
+  {
+    "word": "Just",
+    "start": 35.988,
+    "end": 36.169
+  },
+  {
+    "word": "head",
+    "start": 36.229,
+    "end": 36.369
+  },
+  {
+    "word": "to",
+    "start": 36.409,
+    "end": 36.469
+  },
+  {
+    "word": "the",
+    "start": 36.51,
+    "end": 36.61
+  },
+  {
+    "word": "official",
+    "start": 36.65,
+    "end": 37.011
+  },
+  {
+    "word": "settlement",
+    "start": 37.051,
+    "end": 37.372
+  },
+  {
+    "word": "website,",
+    "start": 37.392,
+    "end": 37.814
+  },
+  {
+    "word": "type",
+    "start": 38.094,
+    "end": 38.235
+  },
+  {
+    "word": "in",
+    "start": 38.255,
+    "end": 38.335
+  },
+  {
+    "word": "your",
+    "start": 38.355,
+    "end": 38.435
+  },
+  {
+    "word": "serial",
+    "start": 38.476,
+    "end": 38.756
+  },
+  {
+    "word": "number",
+    "start": 38.776,
+    "end": 38.997
+  },
+  {
+    "word": "and",
+    "start": 39.258,
+    "end": 39.358
+  },
+  {
+    "word": "make",
+    "start": 39.378,
+    "end": 39.519
+  },
+  {
+    "word": "sure",
+    "start": 39.559,
+    "end": 39.699
+  },
+  {
+    "word": "you",
+    "start": 39.719,
+    "end": 39.84
+  },
+  {
+    "word": "submit",
+    "start": 39.86,
+    "end": 40.161
+  },
+  {
+    "word": "everything",
+    "start": 40.341,
+    "end": 40.702
+  },
+  {
+    "word": "before",
+    "start": 40.742,
+    "end": 41.063
+  },
+  {
+    "word": "the",
+    "start": 41.104,
+    "end": 41.164
+  },
+  {
+    "word": "December",
+    "start": 41.204,
+    "end": 41.565
+  },
+  {
+    "word": "21st,",
+    "start": 41.585,
+    "end": 41.705
+  },
+  {
+    "word": "2026",
+    "start": 41.725,
+    "end": 41.826
+  },
+  {
+    "word": "deadline.",
+    "start": 41.846,
+    "end": 42.147
   }
 ]
