@@ -140,6 +140,7 @@ export const ShortsComposition: React.FC<ShortsCompositionProps> = ({
               {shot.media_type === "video" && assetUrl ? (
                 <OffthreadVideo
                   src={assetUrl}
+                  muted={true}
                   style={{
                     width: "100%",
                     height: "100%",

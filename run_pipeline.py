@@ -444,7 +444,7 @@ def save_project(result: dict, outdir: Path, index: int, no_video: bool = False,
     narration_path = project_dir / "narration.mp3"
     print(f"  ─ Voice generation...")
     try:
-        generate_narration(result["script"], project_dir=project_dir)
+        generate_narration(result["script"], project_dir=project_dir, format=result.get("format"))
         print(f"  ✓ narration.mp3")
     except Exception as e:
         print(f"  ✗ narration.mp3 FAILED: {e}")

@@ -1,687 +1,748 @@
 {
   "shots": [
     {
-      "sentence": "A security researcher just found a way to turn Meta\u2019s new Muse AI assistant into a puppet for hackers.",
-      "search_term": "hacker typing on keyboard",
-      "media_type": "video",
-      "visual": "Close up of hands typing rapidly on a laptop keyboard in a dark room.",
-      "asset_path": "project_assets/shot_1.mp4",
-      "duration_seconds": 2.707
+      "sentence": "An artificial intelligence just cracked a German army code that experts failed to solve for twenty years.",
+      "search_term": "vintage enigma machine",
+      "media_type": "photo",
+      "visual": "Close up shot of an old mechanical Enigma machine.",
+      "asset_path": "project_assets/shot_1.jpg",
+      "duration_seconds": 2.586
     },
     {
-      "sentence": "A security researcher just found a way to turn Meta\u2019s new Muse AI assistant into a puppet for hackers.",
-      "search_term": "abstract digital glitch",
+      "sentence": "An artificial intelligence just cracked a German army code that experts failed to solve for twenty years.",
+      "search_term": "digital binary code rain",
       "media_type": "video",
-      "visual": "Digital distortion effect over a computer screen.",
+      "visual": "Abstract digital code falling on screen.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.707
+      "duration_seconds": 2.586
     },
     {
-      "sentence": "By exploiting an undocumented setting, attackers could force the app to ignore Meta\u2019s servers and follow their own commands instead.",
+      "sentence": "The message was sent in nineteen forty-one, but it remained a complete mystery to researchers since two thousand and five.",
+      "search_term": "old parchment paper",
+      "media_type": "video",
+      "visual": "Close up of old, weathered historical documents.",
+      "asset_path": "project_assets/shot_3.mp4",
+      "duration_seconds": 3.042
+    },
+    {
+      "sentence": "The message was sent in nineteen forty-one, but it remained a complete mystery to researchers since two thousand and five.",
+      "search_term": "dusty archive room",
+      "media_type": "video",
+      "visual": "Slow pan over a dark, historical archive shelf.",
+      "asset_path": "project_assets/shot_4.mp4",
+      "duration_seconds": 3.042
+    },
+    {
+      "sentence": "OpenAI's latest model, GPT-six Astra, decoded it entirely on its own after being pointed toward the raw data.",
+      "search_term": "artificial intelligence brain",
+      "media_type": "video",
+      "visual": "Glowing neural network animation.",
+      "asset_path": "project_assets/shot_5.mp4",
+      "duration_seconds": 2.738
+    },
+    {
+      "sentence": "OpenAI's latest model, GPT-six Astra, decoded it entirely on its own after being pointed toward the raw data.",
+      "search_term": "programmer working at night",
+      "media_type": "video",
+      "visual": "Person sitting at a desk with multiple monitors.",
+      "asset_path": "project_assets/shot_6.mp4",
+      "duration_seconds": 2.738
+    },
+    {
+      "sentence": "It even built its own custom software to simulate how the machine worked and hunted for the correct key.",
+      "search_term": "software code scrolling",
+      "media_type": "video",
+      "visual": "Fast moving lines of C++ code on a screen.",
+      "asset_path": "project_assets/shot_7.mp4",
+      "duration_seconds": 2.89
+    },
+    {
+      "sentence": "It even built its own custom software to simulate how the machine worked and hunted for the correct key.",
+      "search_term": "data processing visualization",
+      "media_type": "video",
+      "visual": "Complex geometric data nodes connecting.",
+      "asset_path": "project_assets/shot_8.mp4",
+      "duration_seconds": 2.89
+    },
+    {
+      "sentence": "The hidden text revealed a simple request for march routes and instructions for an immediate radio reply.",
+      "search_term": "old typewriter typing",
+      "media_type": "video",
+      "visual": "Close up of metal keys hitting paper.",
+      "asset_path": "project_assets/shot_9.mp4",
+      "duration_seconds": 2.586
+    },
+    {
+      "sentence": "The hidden text revealed a simple request for march routes and instructions for an immediate radio reply.",
+      "search_term": "radio wave signal",
+      "media_type": "video",
+      "visual": "Visual representation of radio frequency waves.",
+      "asset_path": "project_assets/shot_10.mp4",
+      "duration_seconds": 2.586
+    },
+    {
+      "sentence": "Some experts now fear this proves the smartest human minds are becoming replaceable by products you can buy with electricity.",
+      "search_term": "pensive person looking at screen",
+      "media_type": "video",
+      "visual": "Close up of a person looking concerned at a monitor.",
+      "asset_path": "project_assets/shot_11.mp4",
+      "duration_seconds": 3.042
+    },
+    {
+      "sentence": "Some experts now fear this proves the smartest human minds are becoming replaceable by products you can buy with electricity.",
       "search_term": "server room lights",
       "media_type": "video",
-      "visual": "Rows of blinking server lights in a data center.",
-      "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 2.849
-    },
-    {
-      "sentence": "By exploiting an undocumented setting, attackers could force the app to ignore Meta\u2019s servers and follow their own commands instead.",
-      "search_term": "code on computer screen",
-      "media_type": "video",
-      "visual": "Scrolling lines of programming code on a dark monitor.",
-      "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 2.849
-    },
-    {
-      "sentence": "This meant a bad actor could secretly snap photos of you or write malicious files directly to your hard drive.",
-      "search_term": "webcam lens close up",
-      "media_type": "video",
-      "visual": "Extreme close up of a laptop webcam lens.",
-      "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 2.849
-    },
-    {
-      "sentence": "This meant a bad actor could secretly snap photos of you or write malicious files directly to your hard drive.",
-      "search_term": "folder file icon",
-      "media_type": "video",
-      "visual": "Digital animation of file folders appearing on a desktop.",
-      "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.849
-    },
-    {
-      "sentence": "The researcher behind the discovery said Meta simply failed to prioritize security from the very start of development.",
-      "search_term": "person looking frustrated at laptop",
-      "media_type": "video",
-      "visual": "A person sitting at a desk looking stressed at their computer screen.",
-      "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 2.564
-    },
-    {
-      "sentence": "The researcher behind the discovery said Meta simply failed to prioritize security from the very start of development.",
-      "search_term": "office workspace",
-      "media_type": "video",
-      "visual": "Empty modern office desk with a laptop.",
-      "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 2.564
-    },
-    {
-      "sentence": "Meta has since issued a patch, claiming the risk was low because an attacker needed local access to your machine first.",
-      "search_term": "software update notification",
-      "media_type": "video",
-      "visual": "Close up of a mouse clicking an update button on a screen.",
-      "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 2.992
-    },
-    {
-      "sentence": "Meta has since issued a patch, claiming the risk was low because an attacker needed local access to your machine first.",
-      "search_term": "shield icon security",
-      "media_type": "video",
-      "visual": "A glowing digital shield icon appearing on a screen.",
-      "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 2.992
-    },
-    {
-      "sentence": "Still, it is a massive headache for a company trying to prove their AI is safer than the competition.",
-      "search_term": "stock market graph going down",
-      "media_type": "video",
-      "visual": "A digital stock market line graph dipping downward.",
-      "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 2.707
-    },
-    {
-      "sentence": "Still, it is a massive headache for a company trying to prove their AI is safer than the competition.",
-      "search_term": "person rubbing temples",
-      "media_type": "video",
-      "visual": "A person looking tired and rubbing their temples in an office.",
+      "visual": "Rows of blinking blue server lights in a dark room.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 2.707
+      "duration_seconds": 3.042
+    },
+    {
+      "sentence": "If an AI can crack history's toughest puzzles, what happens when it starts creating its own unbreakable encryption?",
+      "search_term": "glowing digital lock",
+      "media_type": "video",
+      "visual": "Abstract animation of a digital security lock closing.",
+      "asset_path": "project_assets/shot_13.mp4",
+      "duration_seconds": 2.738
+    },
+    {
+      "sentence": "If an AI can crack history's toughest puzzles, what happens when it starts creating its own unbreakable encryption?",
+      "search_term": "futuristic city silhouette",
+      "media_type": "video",
+      "visual": "Wide shot of a blurred, high-tech city skyline.",
+      "asset_path": "project_assets/shot_14.mp4",
+      "duration_seconds": 2.738
     }
   ],
   "words": [
     {
-      "word": "A",
-      "start": 0.151,
-      "end": 0.191
+      "word": "An",
+      "start": 0.191,
+      "end": 0.271
     },
     {
-      "word": "security",
-      "start": 0.211,
-      "end": 0.591
+      "word": "artificial",
+      "start": 0.331,
+      "end": 0.752
     },
     {
-      "word": "researcher",
-      "start": 0.631,
-      "end": 1.052
+      "word": "intelligence",
+      "start": 0.792,
+      "end": 1.292
     },
     {
       "word": "just",
-      "start": 1.192,
-      "end": 1.372
+      "start": 1.352,
+      "end": 1.512
     },
     {
-      "word": "found",
-      "start": 1.412,
-      "end": 1.592
-    },
-    {
-      "word": "a",
-      "start": 1.632,
-      "end": 1.652
-    },
-    {
-      "word": "way",
-      "start": 1.692,
-      "end": 1.832
-    },
-    {
-      "word": "to",
-      "start": 1.872,
-      "end": 1.932
-    },
-    {
-      "word": "turn",
-      "start": 1.972,
-      "end": 2.153
-    },
-    {
-      "word": "Meta's",
-      "start": 2.213,
-      "end": 2.493
-    },
-    {
-      "word": "new",
-      "start": 2.553,
-      "end": 2.733
-    },
-    {
-      "word": "Muse",
-      "start": 2.773,
-      "end": 3.053
-    },
-    {
-      "word": "AI",
-      "start": 3.233,
-      "end": 3.494
-    },
-    {
-      "word": "assistant",
-      "start": 3.534,
-      "end": 3.994
-    },
-    {
-      "word": "into",
-      "start": 4.114,
-      "end": 4.294
+      "word": "cracked",
+      "start": 1.552,
+      "end": 1.793
     },
     {
       "word": "a",
-      "start": 4.334,
-      "end": 4.354
+      "start": 1.833,
+      "end": 1.873
     },
     {
-      "word": "puppet",
-      "start": 4.414,
-      "end": 4.675
+      "word": "German",
+      "start": 1.893,
+      "end": 2.173
     },
     {
-      "word": "for",
-      "start": 4.715,
-      "end": 4.815
+      "word": "army",
+      "start": 2.233,
+      "end": 2.433
     },
     {
-      "word": "hackers.",
-      "start": 4.855,
-      "end": 5.195
+      "word": "code",
+      "start": 2.473,
+      "end": 2.713
     },
     {
-      "word": "By",
-      "start": 5.615,
-      "end": 5.715
+      "word": "that",
+      "start": 2.733,
+      "end": 2.854
     },
     {
-      "word": "exploiting",
-      "start": 5.755,
-      "end": 6.216
-    },
-    {
-      "word": "an",
-      "start": 6.256,
-      "end": 6.336
-    },
-    {
-      "word": "undocumented",
-      "start": 6.456,
-      "end": 7.096
-    },
-    {
-      "word": "setting,",
-      "start": 7.116,
-      "end": 7.377
-    },
-    {
-      "word": "attackers",
-      "start": 7.717,
-      "end": 8.117
-    },
-    {
-      "word": "could",
-      "start": 8.137,
-      "end": 8.277
-    },
-    {
-      "word": "force",
-      "start": 8.357,
-      "end": 8.578
-    },
-    {
-      "word": "the",
-      "start": 8.618,
-      "end": 8.718
-    },
-    {
-      "word": "app",
-      "start": 8.798,
-      "end": 8.938
-    },
-    {
-      "word": "to",
-      "start": 8.958,
-      "end": 9.078
-    },
-    {
-      "word": "ignore",
-      "start": 9.138,
-      "end": 9.438
-    },
-    {
-      "word": "Meta's",
-      "start": 9.478,
-      "end": 9.698
-    },
-    {
-      "word": "servers",
-      "start": 9.718,
-      "end": 10.059
-    },
-    {
-      "word": "and",
-      "start": 10.339,
-      "end": 10.439
-    },
-    {
-      "word": "follow",
-      "start": 10.479,
-      "end": 10.699
-    },
-    {
-      "word": "their",
-      "start": 10.719,
-      "end": 10.839
-    },
-    {
-      "word": "own",
-      "start": 10.879,
-      "end": 10.979
-    },
-    {
-      "word": "commands",
-      "start": 11.039,
-      "end": 11.34
-    },
-    {
-      "word": "instead.",
-      "start": 11.38,
-      "end": 11.72
-    },
-    {
-      "word": "This",
-      "start": 12.1,
-      "end": 12.24
-    },
-    {
-      "word": "meant",
-      "start": 12.28,
-      "end": 12.421
-    },
-    {
-      "word": "a",
-      "start": 12.441,
-      "end": 12.501
-    },
-    {
-      "word": "bad",
-      "start": 12.541,
-      "end": 12.721
-    },
-    {
-      "word": "actor",
-      "start": 12.821,
-      "end": 13.041
-    },
-    {
-      "word": "could",
-      "start": 13.061,
-      "end": 13.201
-    },
-    {
-      "word": "secretly",
-      "start": 13.281,
-      "end": 13.662
-    },
-    {
-      "word": "snap",
-      "start": 13.702,
-      "end": 13.982
-    },
-    {
-      "word": "photos",
-      "start": 14.022,
-      "end": 14.302
-    },
-    {
-      "word": "of",
-      "start": 14.342,
-      "end": 14.382
-    },
-    {
-      "word": "you,",
-      "start": 14.422,
-      "end": 14.562
-    },
-    {
-      "word": "or",
-      "start": 14.822,
-      "end": 14.902
-    },
-    {
-      "word": "write",
-      "start": 14.922,
-      "end": 15.083
-    },
-    {
-      "word": "malicious",
-      "start": 15.123,
-      "end": 15.483
-    },
-    {
-      "word": "files",
-      "start": 15.503,
-      "end": 15.743
-    },
-    {
-      "word": "directly",
-      "start": 15.783,
-      "end": 16.163
-    },
-    {
-      "word": "to",
-      "start": 16.203,
-      "end": 16.264
-    },
-    {
-      "word": "your",
-      "start": 16.284,
-      "end": 16.404
-    },
-    {
-      "word": "hard",
-      "start": 16.424,
-      "end": 16.584
-    },
-    {
-      "word": "drive.",
-      "start": 16.604,
-      "end": 16.884
-    },
-    {
-      "word": "The",
-      "start": 17.224,
-      "end": 17.324
-    },
-    {
-      "word": "researcher",
-      "start": 17.344,
-      "end": 17.745
-    },
-    {
-      "word": "behind",
-      "start": 17.785,
-      "end": 18.005
-    },
-    {
-      "word": "the",
-      "start": 18.025,
-      "end": 18.105
-    },
-    {
-      "word": "discovery",
-      "start": 18.125,
-      "end": 18.605
-    },
-    {
-      "word": "said",
-      "start": 18.785,
-      "end": 18.946
-    },
-    {
-      "word": "Meta",
-      "start": 19.046,
-      "end": 19.306
-    },
-    {
-      "word": "simply",
-      "start": 19.346,
-      "end": 19.646
+      "word": "experts",
+      "start": 2.914,
+      "end": 3.234
     },
     {
       "word": "failed",
-      "start": 19.706,
-      "end": 19.966
+      "start": 3.294,
+      "end": 3.534
     },
     {
       "word": "to",
-      "start": 20.006,
-      "end": 20.086
+      "start": 3.574,
+      "end": 3.634
     },
     {
-      "word": "prioritize",
-      "start": 20.127,
-      "end": 20.747
-    },
-    {
-      "word": "security",
-      "start": 20.767,
-      "end": 21.207
-    },
-    {
-      "word": "from",
-      "start": 21.247,
-      "end": 21.367
-    },
-    {
-      "word": "the",
-      "start": 21.387,
-      "end": 21.468
-    },
-    {
-      "word": "very",
-      "start": 21.508,
-      "end": 21.748
-    },
-    {
-      "word": "start",
-      "start": 21.788,
-      "end": 22.028
-    },
-    {
-      "word": "of",
-      "start": 22.048,
-      "end": 22.108
-    },
-    {
-      "word": "development.",
-      "start": 22.128,
-      "end": 22.548
-    },
-    {
-      "word": "Meta",
-      "start": 22.949,
-      "end": 23.149
-    },
-    {
-      "word": "has",
-      "start": 23.169,
-      "end": 23.289
-    },
-    {
-      "word": "since",
-      "start": 23.309,
-      "end": 23.489
-    },
-    {
-      "word": "issued",
-      "start": 23.589,
-      "end": 23.829
-    },
-    {
-      "word": "a",
-      "start": 23.849,
-      "end": 23.889
-    },
-    {
-      "word": "patch,",
-      "start": 23.929,
-      "end": 24.25
-    },
-    {
-      "word": "claiming",
-      "start": 24.57,
-      "end": 24.83
-    },
-    {
-      "word": "the",
-      "start": 24.85,
-      "end": 24.93
-    },
-    {
-      "word": "risk",
-      "start": 24.97,
-      "end": 25.15
-    },
-    {
-      "word": "was",
-      "start": 25.17,
-      "end": 25.27
-    },
-    {
-      "word": "low",
-      "start": 25.331,
-      "end": 25.571
-    },
-    {
-      "word": "because",
-      "start": 25.631,
-      "end": 25.851
-    },
-    {
-      "word": "an",
-      "start": 25.871,
-      "end": 25.931
-    },
-    {
-      "word": "attacker",
-      "start": 25.951,
-      "end": 26.351
-    },
-    {
-      "word": "needed",
-      "start": 26.391,
-      "end": 26.632
-    },
-    {
-      "word": "local",
-      "start": 26.692,
-      "end": 26.932
-    },
-    {
-      "word": "access",
-      "start": 27.032,
-      "end": 27.352
-    },
-    {
-      "word": "to",
-      "start": 27.372,
-      "end": 27.452
-    },
-    {
-      "word": "your",
-      "start": 27.472,
-      "end": 27.572
-    },
-    {
-      "word": "machine",
-      "start": 27.592,
-      "end": 27.852
-    },
-    {
-      "word": "first.",
-      "start": 27.913,
-      "end": 28.193
-    },
-    {
-      "word": "Still,",
-      "start": 28.634,
-      "end": 28.917
-    },
-    {
-      "word": "it",
-      "start": 29.199,
-      "end": 29.26
-    },
-    {
-      "word": "is",
-      "start": 29.3,
-      "end": 29.381
-    },
-    {
-      "word": "a",
-      "start": 29.401,
-      "end": 29.421
-    },
-    {
-      "word": "massive",
-      "start": 29.502,
-      "end": 29.866
-    },
-    {
-      "word": "headache",
-      "start": 29.906,
-      "end": 30.169
+      "word": "solve",
+      "start": 3.694,
+      "end": 3.894
     },
     {
       "word": "for",
-      "start": 30.189,
-      "end": 30.29
+      "start": 3.935,
+      "end": 4.035
+    },
+    {
+      "word": "20",
+      "start": 4.155,
+      "end": 4.315
+    },
+    {
+      "word": "years.",
+      "start": 4.335,
+      "end": 4.595
+    },
+    {
+      "word": "The",
+      "start": 5.456,
+      "end": 5.556
+    },
+    {
+      "word": "message",
+      "start": 5.576,
+      "end": 5.856
+    },
+    {
+      "word": "was",
+      "start": 5.896,
+      "end": 5.996
+    },
+    {
+      "word": "sent",
+      "start": 6.036,
+      "end": 6.217
+    },
+    {
+      "word": "in",
+      "start": 6.257,
+      "end": 6.317
+    },
+    {
+      "word": "1941,",
+      "start": 6.577,
+      "end": 7.097
+    },
+    {
+      "word": "but",
+      "start": 7.358,
+      "end": 7.458
+    },
+    {
+      "word": "it",
+      "start": 7.498,
+      "end": 7.538
+    },
+    {
+      "word": "remained",
+      "start": 7.578,
+      "end": 7.838
     },
     {
       "word": "a",
-      "start": 30.31,
-      "end": 30.33
+      "start": 7.858,
+      "end": 7.898
     },
     {
-      "word": "company",
-      "start": 30.391,
-      "end": 30.714
+      "word": "complete",
+      "start": 7.938,
+      "end": 8.258
     },
     {
-      "word": "trying",
-      "start": 30.774,
-      "end": 30.996
+      "word": "mystery",
+      "start": 8.298,
+      "end": 8.579
     },
     {
       "word": "to",
-      "start": 31.017,
-      "end": 31.077
+      "start": 8.619,
+      "end": 8.699
     },
     {
-      "word": "prove",
-      "start": 31.118,
-      "end": 31.32
+      "word": "researchers",
+      "start": 8.759,
+      "end": 9.179
     },
     {
-      "word": "their",
-      "start": 31.34,
-      "end": 31.481
+      "word": "since",
+      "start": 9.219,
+      "end": 9.399
     },
     {
-      "word": "AI",
-      "start": 31.582,
-      "end": 31.865
+      "word": "2005.",
+      "start": 9.66,
+      "end": 10.28
     },
     {
-      "word": "is",
-      "start": 31.946,
-      "end": 32.006
+      "word": "Open",
+      "start": 11.161,
+      "end": 11.341
     },
     {
-      "word": "safer",
-      "start": 32.087,
-      "end": 32.349
+      "word": "AI's",
+      "start": 11.381,
+      "end": 11.682
     },
     {
-      "word": "than",
-      "start": 32.37,
-      "end": 32.471
+      "word": "latest",
+      "start": 11.722,
+      "end": 12.002
+    },
+    {
+      "word": "model,",
+      "start": 12.042,
+      "end": 12.302
+    },
+    {
+      "word": "GPT-6",
+      "start": 12.562,
+      "end": 13.303
+    },
+    {
+      "word": "Astra,",
+      "start": 13.383,
+      "end": 13.643
+    },
+    {
+      "word": "decoded",
+      "start": 13.863,
+      "end": 14.244
+    },
+    {
+      "word": "it",
+      "start": 14.284,
+      "end": 14.344
+    },
+    {
+      "word": "entirely",
+      "start": 14.384,
+      "end": 14.824
+    },
+    {
+      "word": "on",
+      "start": 14.904,
+      "end": 14.964
+    },
+    {
+      "word": "its",
+      "start": 15.005,
+      "end": 15.085
+    },
+    {
+      "word": "own",
+      "start": 15.165,
+      "end": 15.285
+    },
+    {
+      "word": "after",
+      "start": 15.385,
+      "end": 15.545
+    },
+    {
+      "word": "being",
+      "start": 15.565,
+      "end": 15.745
+    },
+    {
+      "word": "pointed",
+      "start": 15.785,
+      "end": 16.045
+    },
+    {
+      "word": "toward",
+      "start": 16.086,
+      "end": 16.286
     },
     {
       "word": "the",
-      "start": 32.491,
-      "end": 32.571
+      "start": 16.306,
+      "end": 16.366
     },
     {
-      "word": "competition.",
-      "start": 32.592,
-      "end": 33.076
+      "word": "raw",
+      "start": 16.426,
+      "end": 16.566
+    },
+    {
+      "word": "data.",
+      "start": 16.606,
+      "end": 16.846
+    },
+    {
+      "word": "It",
+      "start": 17.667,
+      "end": 17.727
+    },
+    {
+      "word": "even",
+      "start": 17.787,
+      "end": 17.967
+    },
+    {
+      "word": "built",
+      "start": 18.007,
+      "end": 18.227
+    },
+    {
+      "word": "its",
+      "start": 18.267,
+      "end": 18.368
+    },
+    {
+      "word": "own",
+      "start": 18.408,
+      "end": 18.548
+    },
+    {
+      "word": "custom",
+      "start": 18.608,
+      "end": 18.908
+    },
+    {
+      "word": "software",
+      "start": 18.948,
+      "end": 19.328
+    },
+    {
+      "word": "to",
+      "start": 19.348,
+      "end": 19.429
+    },
+    {
+      "word": "simulate",
+      "start": 19.469,
+      "end": 19.849
+    },
+    {
+      "word": "how",
+      "start": 19.889,
+      "end": 19.969
+    },
+    {
+      "word": "the",
+      "start": 20.009,
+      "end": 20.069
+    },
+    {
+      "word": "machine",
+      "start": 20.109,
+      "end": 20.409
+    },
+    {
+      "word": "worked",
+      "start": 20.449,
+      "end": 20.65
+    },
+    {
+      "word": "and",
+      "start": 20.69,
+      "end": 20.77
+    },
+    {
+      "word": "hunted",
+      "start": 20.81,
+      "end": 21.03
+    },
+    {
+      "word": "for",
+      "start": 21.05,
+      "end": 21.15
+    },
+    {
+      "word": "the",
+      "start": 21.17,
+      "end": 21.23
+    },
+    {
+      "word": "correct",
+      "start": 21.27,
+      "end": 21.53
+    },
+    {
+      "word": "key.",
+      "start": 21.59,
+      "end": 21.791
+    },
+    {
+      "word": "The",
+      "start": 22.596,
+      "end": 22.696
+    },
+    {
+      "word": "hidden",
+      "start": 22.716,
+      "end": 22.936
+    },
+    {
+      "word": "text",
+      "start": 22.976,
+      "end": 23.197
+    },
+    {
+      "word": "revealed",
+      "start": 23.257,
+      "end": 23.537
+    },
+    {
+      "word": "a",
+      "start": 23.597,
+      "end": 23.637
+    },
+    {
+      "word": "simple",
+      "start": 23.677,
+      "end": 23.918
+    },
+    {
+      "word": "request",
+      "start": 23.958,
+      "end": 24.298
+    },
+    {
+      "word": "for",
+      "start": 24.318,
+      "end": 24.438
+    },
+    {
+      "word": "march",
+      "start": 24.478,
+      "end": 24.699
+    },
+    {
+      "word": "routes",
+      "start": 24.739,
+      "end": 24.979
+    },
+    {
+      "word": "and",
+      "start": 25.019,
+      "end": 25.099
+    },
+    {
+      "word": "instructions",
+      "start": 25.139,
+      "end": 25.62
+    },
+    {
+      "word": "for",
+      "start": 25.66,
+      "end": 25.76
+    },
+    {
+      "word": "an",
+      "start": 25.8,
+      "end": 25.84
+    },
+    {
+      "word": "immediate",
+      "start": 25.88,
+      "end": 26.22
+    },
+    {
+      "word": "radio",
+      "start": 26.241,
+      "end": 26.521
+    },
+    {
+      "word": "reply.",
+      "start": 26.581,
+      "end": 26.941
+    },
+    {
+      "word": "Some",
+      "start": 27.843,
+      "end": 28.003
+    },
+    {
+      "word": "experts",
+      "start": 28.083,
+      "end": 28.403
+    },
+    {
+      "word": "now",
+      "start": 28.443,
+      "end": 28.583
+    },
+    {
+      "word": "fear",
+      "start": 28.664,
+      "end": 28.864
+    },
+    {
+      "word": "this",
+      "start": 28.884,
+      "end": 29.024
+    },
+    {
+      "word": "proves",
+      "start": 29.064,
+      "end": 29.304
+    },
+    {
+      "word": "the",
+      "start": 29.324,
+      "end": 29.424
+    },
+    {
+      "word": "smartest",
+      "start": 29.465,
+      "end": 29.825
+    },
+    {
+      "word": "human",
+      "start": 29.865,
+      "end": 30.065
+    },
+    {
+      "word": "minds",
+      "start": 30.105,
+      "end": 30.346
+    },
+    {
+      "word": "are",
+      "start": 30.386,
+      "end": 30.446
+    },
+    {
+      "word": "becoming",
+      "start": 30.486,
+      "end": 30.766
+    },
+    {
+      "word": "replaceable",
+      "start": 30.806,
+      "end": 31.267
+    },
+    {
+      "word": "by",
+      "start": 31.307,
+      "end": 31.427
+    },
+    {
+      "word": "products",
+      "start": 31.467,
+      "end": 31.767
+    },
+    {
+      "word": "you",
+      "start": 31.807,
+      "end": 31.887
+    },
+    {
+      "word": "can",
+      "start": 31.928,
+      "end": 32.048
+    },
+    {
+      "word": "buy",
+      "start": 32.068,
+      "end": 32.188
+    },
+    {
+      "word": "with",
+      "start": 32.228,
+      "end": 32.328
+    },
+    {
+      "word": "electricity.",
+      "start": 32.368,
+      "end": 32.889
+    },
+    {
+      "word": "If",
+      "start": 33.73,
+      "end": 33.81
+    },
+    {
+      "word": "an",
+      "start": 33.85,
+      "end": 33.91
+    },
+    {
+      "word": "AI",
+      "start": 33.99,
+      "end": 34.25
+    },
+    {
+      "word": "can",
+      "start": 34.29,
+      "end": 34.411
+    },
+    {
+      "word": "crack",
+      "start": 34.451,
+      "end": 34.671
+    },
+    {
+      "word": "history's",
+      "start": 34.711,
+      "end": 35.051
+    },
+    {
+      "word": "toughest",
+      "start": 35.091,
+      "end": 35.392
+    },
+    {
+      "word": "puzzles,",
+      "start": 35.412,
+      "end": 35.712
+    },
+    {
+      "word": "what",
+      "start": 36.013,
+      "end": 36.133
+    },
+    {
+      "word": "happens",
+      "start": 36.173,
+      "end": 36.453
+    },
+    {
+      "word": "when",
+      "start": 36.493,
+      "end": 36.593
+    },
+    {
+      "word": "it",
+      "start": 36.613,
+      "end": 36.673
+    },
+    {
+      "word": "starts",
+      "start": 36.713,
+      "end": 36.954
+    },
+    {
+      "word": "creating",
+      "start": 36.994,
+      "end": 37.294
+    },
+    {
+      "word": "its",
+      "start": 37.314,
+      "end": 37.414
+    },
+    {
+      "word": "own",
+      "start": 37.474,
+      "end": 37.575
+    },
+    {
+      "word": "unbreakable",
+      "start": 37.655,
+      "end": 38.095
+    },
+    {
+      "word": "encryption?",
+      "start": 38.135,
+      "end": 38.496
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"

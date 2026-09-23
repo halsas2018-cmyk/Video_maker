@@ -26,6 +26,24 @@ RATE = "+20%"       # faster-paced for Shorts retention
 PITCH = "+0Hz"      # natural
 VOLUME = "+0%"      # default
 
+# ---------------------------------------------------------------------------
+# Per-format voice & rate (mirrors kinetic_typo_vid)
+# ---------------------------------------------------------------------------
+FORMAT_PACING = {
+    "URGENT_BREAK": {"voice": "en-US-AndrewNeural", "rate": "+25%"},
+    "DEBATE":       {"voice": "en-US-AriaNeural",   "rate": "+25%"},
+    "EXPLAINER":    {"voice": "en-US-EricNeural",   "rate": "+25%"},
+}
+VALID_FORMATS = set(FORMAT_PACING.keys())
+
+def _resolve_pacing(format_tag: str | None) -> tuple[str, str]:
+    """Return (voice, rate) for a given format tag, falling back to defaults."""
+    if format_tag and format_tag in FORMAT_PACING:
+        return FORMAT_PACING[format_tag]["voice"], FORMAT_PACING[format_tag]["rate"]
+    if format_tag:
+        print(f"  [voice] unknown format '{format_tag}', falling back to defaults")
+    return VOICE, RATE
+
 OUTPUT_DIR = Path("output")
 TTS_TIMEOUT = 120.0  # seconds — increased for longer scripts (150 words @ +20% ≈ 40s audio)
 
@@ -52,7 +70,7 @@ async def _generate(text: str, output_path: str, voice: str = VOICE,
 
 
 def generate_narration(text: str, output_path: str = None,
-                       project_dir: Path = None) -> Path:
+                       project_dir: Path = None, format: str = None) -> Path:
     """
     Generate a narration MP3 from text.
 
@@ -60,6 +78,7 @@ def generate_narration(text: str, output_path: str = None,
         text: The script text to narrate.
         output_path: Direct output path (overrides project_dir).
         project_dir: If set, saves narration.mp3 inside this directory.
+        format: Optional story format (URGENT_BREAK, DEBATE, EXPLAINER) that drives voice and rate.
 
     Returns:
         Path to the generated MP3 file.
@@ -80,10 +99,12 @@ def generate_narration(text: str, output_path: str = None,
     output_path_obj = Path(output_path)
     output_path_obj.parent.mkdir(parents=True, exist_ok=True)
 
-    print(f"  Generating narration ({len(clean_text.split())} words)...")
+    # Resolve voice and rate based on optional format tag
+    voice, rate = _resolve_pacing(format)
+    print(f"  Generating narration ({len(clean_text.split())} words, voice={voice}, rate={rate}, format={format or 'default'})...")
     # Use asyncio.run() but handle case where event loop is already running
     try:
-        result = asyncio.run(_generate(clean_text, output_path))
+        result = asyncio.run(_generate(clean_text, output_path, voice=voice, rate=rate))
     except RuntimeError as e:
         if "cannot be called from a running event loop" in str(e):
             # Fallback: run in a new thread with its own event loop
@@ -96,7 +117,7 @@ def generate_narration(text: str, output_path: str = None,
                     loop.close()
 
             with concurrent.futures.ThreadPoolExecutor() as executor:
-                future = executor.submit(run_in_new_loop, _generate(clean_text, output_path))
+                future = executor.submit(run_in_new_loop, _generate(clean_text, output_path, voice=voice, rate=rate))
                 result = future.result(timeout=TTS_TIMEOUT)
         else:
             raise
