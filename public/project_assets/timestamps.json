@@ -1,507 +1,657 @@
 [
   {
-    "word": "Nearly",
-    "start": 0.211,
-    "end": 0.451
+    "word": "The",
+    "start": 0.171,
+    "end": 0.271
   },
   {
-    "word": "1,000",
-    "start": 0.551,
-    "end": 1.031
+    "word": "Pentagon",
+    "start": 0.291,
+    "end": 0.691
   },
   {
-    "word": "AI",
-    "start": 1.071,
-    "end": 1.392
+    "word": "is",
+    "start": 0.751,
+    "end": 0.811
   },
   {
-    "word": "agents",
-    "start": 1.512,
-    "end": 1.772
+    "word": "requesting",
+    "start": 0.851,
+    "end": 1.271
   },
   {
-    "word": "just",
-    "start": 1.832,
-    "end": 1.992
+    "word": "$30",
+    "start": 1.291,
+    "end": 1.552
   },
   {
-    "word": "spent",
-    "start": 2.012,
-    "end": 2.472
+    "word": "million",
+    "start": 1.592,
+    "end": 2.172
   },
   {
-    "word": "21",
+    "word": "to",
+    "start": 2.212,
+    "end": 2.292
+  },
+  {
+    "word": "build",
+    "start": 2.332,
+    "end": 2.532
+  },
+  {
+    "word": "an",
     "start": 2.552,
     "end": 2.612
   },
   {
-    "word": "hours",
-    "start": 2.652,
-    "end": 2.912
+    "word": "artificial",
+    "start": 2.672,
+    "end": 3.072
   },
   {
-    "word": "hunting",
-    "start": 2.952,
-    "end": 3.172
-  },
-  {
-    "word": "through",
-    "start": 3.192,
-    "end": 3.372
-  },
-  {
-    "word": "millions",
-    "start": 3.412,
-    "end": 3.692
-  },
-  {
-    "word": "of",
-    "start": 3.732,
-    "end": 3.792
-  },
-  {
-    "word": "DNA",
-    "start": 3.833,
-    "end": 4.233
-  },
-  {
-    "word": "sequences",
-    "start": 4.273,
-    "end": 4.733
-  },
-  {
-    "word": "to",
-    "start": 4.773,
-    "end": 4.853
-  },
-  {
-    "word": "find",
-    "start": 4.893,
-    "end": 5.073
-  },
-  {
-    "word": "something",
-    "start": 5.133,
-    "end": 5.373
-  },
-  {
-    "word": "new.",
-    "start": 5.433,
-    "end": 5.573
-  },
-  {
-    "word": "The",
-    "start": 6.394,
-    "end": 6.494
-  },
-  {
-    "word": "AI,",
-    "start": 6.574,
-    "end": 6.934
-  },
-  {
-    "word": "named",
-    "start": 7.194,
-    "end": 7.414
-  },
-  {
-    "word": "Claude,",
-    "start": 7.454,
-    "end": 7.774
-  },
-  {
-    "word": "successfully",
-    "start": 8.014,
-    "end": 8.514
-  },
-  {
-    "word": "uncovered",
-    "start": 8.594,
-    "end": 8.955
-  },
-  {
-    "word": "a",
-    "start": 8.995,
-    "end": 9.035
-  },
-  {
-    "word": "previously",
-    "start": 9.075,
-    "end": 9.555
-  },
-  {
-    "word": "unknown",
-    "start": 9.655,
-    "end": 9.955
-  },
-  {
-    "word": "enzyme",
-    "start": 10.035,
-    "end": 10.375
-  },
-  {
-    "word": "system",
-    "start": 10.435,
-    "end": 10.715
-  },
-  {
-    "word": "while",
-    "start": 10.735,
-    "end": 10.895
-  },
-  {
-    "word": "working",
-    "start": 10.935,
-    "end": 11.175
-  },
-  {
-    "word": "almost",
-    "start": 11.215,
-    "end": 11.456
-  },
-  {
-    "word": "entirely",
-    "start": 11.496,
-    "end": 11.956
-  },
-  {
-    "word": "on",
-    "start": 12.036,
-    "end": 12.096
-  },
-  {
-    "word": "its",
-    "start": 12.136,
-    "end": 12.216
-  },
-  {
-    "word": "own.",
-    "start": 12.316,
-    "end": 12.456
-  },
-  {
-    "word": "Anthropic",
-    "start": 13.296,
-    "end": 13.756
-  },
-  {
-    "word": "researchers",
-    "start": 13.796,
-    "end": 14.237
-  },
-  {
-    "word": "are",
-    "start": 14.277,
-    "end": 14.357
-  },
-  {
-    "word": "comparing",
-    "start": 14.397,
-    "end": 14.757
-  },
-  {
-    "word": "this",
-    "start": 14.797,
-    "end": 14.917
-  },
-  {
-    "word": "discovery",
-    "start": 14.957,
-    "end": 15.377
-  },
-  {
-    "word": "to",
-    "start": 15.417,
-    "end": 15.497
-  },
-  {
-    "word": "the",
-    "start": 15.517,
-    "end": 15.597
-  },
-  {
-    "word": "powerful",
-    "start": 15.617,
-    "end": 15.977
-  },
-  {
-    "word": "gene",
-    "start": 16.017,
-    "end": 16.237
-  },
-  {
-    "word": "editing",
-    "start": 16.277,
-    "end": 16.538
-  },
-  {
-    "word": "tool",
-    "start": 16.578,
-    "end": 16.778
-  },
-  {
-    "word": "known",
-    "start": 16.818,
-    "end": 16.998
-  },
-  {
-    "word": "as",
-    "start": 17.058,
-    "end": 17.118
-  },
-  {
-    "word": "CRISPR.",
-    "start": 17.178,
-    "end": 17.518
-  },
-  {
-    "word": "The",
-    "start": 18.338,
-    "end": 18.438
-  },
-  {
-    "word": "agents",
-    "start": 18.498,
-    "end": 18.778
-  },
-  {
-    "word": "flagged",
-    "start": 18.818,
-    "end": 19.099
-  },
-  {
-    "word": "a",
-    "start": 19.139,
-    "end": 19.179
-  },
-  {
-    "word": "repeating",
-    "start": 19.219,
-    "end": 19.559
-  },
-  {
-    "word": "pattern",
-    "start": 19.599,
-    "end": 19.879
-  },
-  {
-    "word": "in",
-    "start": 19.899,
-    "end": 19.959
-  },
-  {
-    "word": "the",
-    "start": 19.979,
-    "end": 20.039
-  },
-  {
-    "word": "data",
-    "start": 20.079,
-    "end": 20.299
+    "word": "intelligence",
+    "start": 3.112,
+    "end": 3.592
   },
   {
     "word": "that",
-    "start": 20.339,
-    "end": 20.439
-  },
-  {
-    "word": "humans",
-    "start": 20.479,
-    "end": 20.759
-  },
-  {
-    "word": "had",
-    "start": 20.779,
-    "end": 20.879
-  },
-  {
-    "word": "completely",
-    "start": 20.919,
-    "end": 21.339
-  },
-  {
-    "word": "overlooked",
-    "start": 21.44,
-    "end": 21.8
-  },
-  {
-    "word": "until",
-    "start": 21.84,
-    "end": 22.08
-  },
-  {
-    "word": "now.",
-    "start": 22.12,
-    "end": 22.28
-  },
-  {
-    "word": "While",
-    "start": 23.122,
-    "end": 23.282
-  },
-  {
-    "word": "the",
-    "start": 23.303,
-    "end": 23.383
-  },
-  {
-    "word": "exact",
-    "start": 23.443,
-    "end": 23.764
-  },
-  {
-    "word": "function",
-    "start": 23.804,
-    "end": 24.084
-  },
-  {
-    "word": "remains",
-    "start": 24.145,
-    "end": 24.425
-  },
-  {
-    "word": "a",
-    "start": 24.465,
-    "end": 24.505
-  },
-  {
-    "word": "mystery,",
-    "start": 24.546,
-    "end": 24.886
-  },
-  {
-    "word": "the",
-    "start": 25.087,
-    "end": 25.167
-  },
-  {
-    "word": "discovery",
-    "start": 25.207,
-    "end": 25.608
-  },
-  {
-    "word": "proves",
-    "start": 25.648,
-    "end": 25.889
-  },
-  {
-    "word": "that",
-    "start": 25.909,
-    "end": 26.029
-  },
-  {
-    "word": "AI",
-    "start": 26.109,
-    "end": 26.41
+    "start": 3.632,
+    "end": 3.732
   },
   {
     "word": "can",
-    "start": 26.45,
-    "end": 26.57
+    "start": 3.752,
+    "end": 3.852
   },
   {
-    "word": "now",
-    "start": 26.611,
-    "end": 26.731
+    "word": "detect",
+    "start": 3.872,
+    "end": 4.172
   },
   {
-    "word": "conduct",
-    "start": 26.771,
-    "end": 27.072
+    "word": "when",
+    "start": 4.212,
+    "end": 4.332
   },
   {
-    "word": "real",
-    "start": 27.132,
-    "end": 27.312
+    "word": "someone",
+    "start": 4.372,
+    "end": 4.593
   },
   {
-    "word": "scientific",
-    "start": 27.372,
-    "end": 27.854
+    "word": "is",
+    "start": 4.633,
+    "end": 4.693
   },
   {
-    "word": "research.",
-    "start": 27.894,
-    "end": 28.255
+    "word": "lying.",
+    "start": 4.733,
+    "end": 5.013
   },
   {
-    "word": "Are",
-    "start": 29.117,
-    "end": 29.217
+    "word": "This",
+    "start": 5.833,
+    "end": 5.973
   },
   {
-    "word": "we",
-    "start": 29.257,
-    "end": 29.337
+    "word": "new",
+    "start": 6.053,
+    "end": 6.153
   },
   {
-    "word": "ready",
-    "start": 29.377,
-    "end": 29.558
+    "word": "program,",
+    "start": 6.213,
+    "end": 6.633
   },
   {
-    "word": "for",
-    "start": 29.598,
-    "end": 29.698
+    "word": "called",
+    "start": 6.813,
+    "end": 7.013
   },
   {
-    "word": "a",
-    "start": 29.738,
-    "end": 29.778
+    "word": "Polygraph",
+    "start": 7.053,
+    "end": 7.494
   },
   {
-    "word": "future",
-    "start": 29.818,
-    "end": 30.079
+    "word": "Plus,",
+    "start": 7.514,
+    "end": 7.774
   },
   {
-    "word": "where",
-    "start": 30.119,
-    "end": 30.259
+    "word": "aims",
+    "start": 8.054,
+    "end": 8.234
   },
   {
-    "word": "machines",
-    "start": 30.279,
-    "end": 30.62
+    "word": "to",
+    "start": 8.274,
+    "end": 8.354
   },
   {
-    "word": "start",
-    "start": 30.64,
-    "end": 30.861
+    "word": "modernize",
+    "start": 8.394,
+    "end": 8.834
   },
   {
-    "word": "making",
-    "start": 30.901,
-    "end": 31.121
+    "word": "how",
+    "start": 8.874,
+    "end": 8.974
   },
   {
     "word": "the",
-    "start": 31.141,
-    "end": 31.202
+    "start": 8.994,
+    "end": 9.074
   },
   {
-    "word": "breakthroughs",
-    "start": 31.222,
-    "end": 31.623
+    "word": "government",
+    "start": 9.114,
+    "end": 9.434
+  },
+  {
+    "word": "vets",
+    "start": 9.454,
+    "end": 9.634
+  },
+  {
+    "word": "employees",
+    "start": 9.674,
+    "end": 10.174
+  },
+  {
+    "word": "and",
+    "start": 10.214,
+    "end": 10.294
+  },
+  {
+    "word": "catches",
+    "start": 10.335,
+    "end": 10.655
+  },
+  {
+    "word": "potential",
+    "start": 10.695,
+    "end": 11.055
+  },
+  {
+    "word": "insider",
+    "start": 11.095,
+    "end": 11.455
+  },
+  {
+    "word": "threats.",
+    "start": 11.475,
+    "end": 11.775
+  },
+  {
+    "word": "Unlike",
+    "start": 12.695,
+    "end": 12.935
+  },
+  {
+    "word": "traditional",
+    "start": 12.975,
+    "end": 13.356
+  },
+  {
+    "word": "tests,",
+    "start": 13.396,
+    "end": 13.716
+  },
+  {
+    "word": "this",
+    "start": 13.956,
+    "end": 14.096
+  },
+  {
+    "word": "version",
+    "start": 14.156,
+    "end": 14.436
+  },
+  {
+    "word": "uses",
+    "start": 14.516,
+    "end": 14.716
+  },
+  {
+    "word": "standoff",
+    "start": 14.736,
+    "end": 15.156
+  },
+  {
+    "word": "sensing",
+    "start": 15.176,
+    "end": 15.476
+  },
+  {
+    "word": "to",
+    "start": 15.516,
+    "end": 15.576
+  },
+  {
+    "word": "read",
+    "start": 15.616,
+    "end": 15.756
+  },
+  {
+    "word": "your",
+    "start": 15.776,
+    "end": 15.896
+  },
+  {
+    "word": "heart",
+    "start": 15.916,
+    "end": 16.056
+  },
+  {
+    "word": "rate",
+    "start": 16.096,
+    "end": 16.277
+  },
+  {
+    "word": "and",
+    "start": 16.317,
+    "end": 16.417
+  },
+  {
+    "word": "sweat",
+    "start": 16.477,
+    "end": 16.657
+  },
+  {
+    "word": "levels",
+    "start": 16.697,
+    "end": 16.957
+  },
+  {
+    "word": "without",
+    "start": 16.997,
+    "end": 17.237
+  },
+  {
+    "word": "touching",
+    "start": 17.277,
+    "end": 17.557
+  },
+  {
+    "word": "you.",
+    "start": 17.597,
+    "end": 17.717
+  },
+  {
+    "word": "The",
+    "start": 18.497,
+    "end": 18.597
+  },
+  {
+    "word": "technology",
+    "start": 18.617,
+    "end": 19.137
+  },
+  {
+    "word": "track",
+    "start": 19.178,
+    "end": 19.418
+  },
+  {
+    "word": "subtle",
+    "start": 19.438,
+    "end": 19.678
+  },
+  {
+    "word": "changes",
+    "start": 19.718,
+    "end": 20.038
+  },
+  {
+    "word": "in",
+    "start": 20.098,
+    "end": 20.158
+  },
+  {
+    "word": "facial",
+    "start": 20.198,
+    "end": 20.498
+  },
+  {
+    "word": "skin",
+    "start": 20.538,
+    "end": 20.738
+  },
+  {
+    "word": "temperature",
+    "start": 20.778,
+    "end": 21.138
+  },
+  {
+    "word": "and",
+    "start": 21.218,
+    "end": 21.298
+  },
+  {
+    "word": "poor",
+    "start": 21.338,
+    "end": 21.518
+  },
+  {
+    "word": "activity",
+    "start": 21.578,
+    "end": 21.958
+  },
+  {
+    "word": "to",
+    "start": 21.998,
+    "end": 22.078
+  },
+  {
+    "word": "determine",
+    "start": 22.098,
+    "end": 22.459
+  },
+  {
+    "word": "if",
+    "start": 22.499,
+    "end": 22.579
+  },
+  {
+    "word": "a",
+    "start": 22.619,
+    "end": 22.639
+  },
+  {
+    "word": "person",
+    "start": 22.679,
+    "end": 22.959
+  },
+  {
+    "word": "is",
+    "start": 22.999,
+    "end": 23.079
+  },
+  {
+    "word": "truthful.",
+    "start": 23.119,
+    "end": 23.479
+  },
+  {
+    "word": "Critics",
+    "start": 24.319,
+    "end": 24.599
+  },
+  {
+    "word": "argue",
+    "start": 24.659,
+    "end": 24.899
   },
   {
     "word": "that",
-    "start": 31.643,
-    "end": 31.763
+    "start": 24.919,
+    "end": 25.039
   },
   {
-    "word": "define",
-    "start": 31.783,
-    "end": 32.084
+    "word": "trying",
+    "start": 25.08,
+    "end": 25.28
   },
   {
-    "word": "our",
-    "start": 32.124,
-    "end": 32.204
+    "word": "to",
+    "start": 25.3,
+    "end": 25.36
   },
   {
-    "word": "biology?",
-    "start": 32.224,
-    "end": 32.685
+    "word": "turn",
+    "start": 25.4,
+    "end": 25.58
+  },
+  {
+    "word": "complex",
+    "start": 25.62,
+    "end": 26.0
+  },
+  {
+    "word": "human",
+    "start": 26.02,
+    "end": 26.24
+  },
+  {
+    "word": "behavior",
+    "start": 26.28,
+    "end": 26.66
+  },
+  {
+    "word": "into",
+    "start": 26.7,
+    "end": 26.86
+  },
+  {
+    "word": "a",
+    "start": 26.9,
+    "end": 26.92
+  },
+  {
+    "word": "simple",
+    "start": 26.98,
+    "end": 27.22
+  },
+  {
+    "word": "data",
+    "start": 27.26,
+    "end": 27.48
+  },
+  {
+    "word": "point",
+    "start": 27.52,
+    "end": 27.74
+  },
+  {
+    "word": "is",
+    "start": 27.78,
+    "end": 27.86
+  },
+  {
+    "word": "a",
+    "start": 27.9,
+    "end": 27.94
+  },
+  {
+    "word": "deeply",
+    "start": 27.98,
+    "end": 28.241
+  },
+  {
+    "word": "misguided",
+    "start": 28.281,
+    "end": 28.701
+  },
+  {
+    "word": "effort.",
+    "start": 28.741,
+    "end": 29.001
+  },
+  {
+    "word": "With",
+    "start": 29.788,
+    "end": 29.928
+  },
+  {
+    "word": "nearly",
+    "start": 29.988,
+    "end": 30.248
+  },
+  {
+    "word": "3",
+    "start": 30.368,
+    "end": 30.488
+  },
+  {
+    "word": "million",
+    "start": 30.548,
+    "end": 30.829
+  },
+  {
+    "word": "government",
+    "start": 30.849,
+    "end": 31.169
+  },
+  {
+    "word": "employees,",
+    "start": 31.209,
+    "end": 31.689
+  },
+  {
+    "word": "even",
+    "start": 31.989,
+    "end": 32.129
+  },
+  {
+    "word": "a",
+    "start": 32.169,
+    "end": 32.209
+  },
+  {
+    "word": "small",
+    "start": 32.269,
+    "end": 32.53
+  },
+  {
+    "word": "error",
+    "start": 32.61,
+    "end": 32.81
+  },
+  {
+    "word": "rate",
+    "start": 32.85,
+    "end": 33.03
+  },
+  {
+    "word": "could",
+    "start": 33.07,
+    "end": 33.21
+  },
+  {
+    "word": "result",
+    "start": 33.25,
+    "end": 33.55
+  },
+  {
+    "word": "in",
+    "start": 33.59,
+    "end": 33.67
+  },
+  {
+    "word": "thousands",
+    "start": 33.71,
+    "end": 34.071
+  },
+  {
+    "word": "of",
+    "start": 34.111,
+    "end": 34.171
+  },
+  {
+    "word": "false",
+    "start": 34.211,
+    "end": 34.431
+  },
+  {
+    "word": "accusations.",
+    "start": 34.491,
+    "end": 35.071
+  },
+  {
+    "word": "Would",
+    "start": 35.932,
+    "end": 36.052
+  },
+  {
+    "word": "you",
+    "start": 36.092,
+    "end": 36.172
+  },
+  {
+    "word": "trust",
+    "start": 36.212,
+    "end": 36.432
+  },
+  {
+    "word": "an",
+    "start": 36.472,
+    "end": 36.512
+  },
+  {
+    "word": "algorithm",
+    "start": 36.612,
+    "end": 37.012
+  },
+  {
+    "word": "to",
+    "start": 37.052,
+    "end": 37.132
+  },
+  {
+    "word": "decide",
+    "start": 37.172,
+    "end": 37.493
+  },
+  {
+    "word": "if",
+    "start": 37.533,
+    "end": 37.593
+  },
+  {
+    "word": "you",
+    "start": 37.613,
+    "end": 37.693
+  },
+  {
+    "word": "are",
+    "start": 37.733,
+    "end": 37.813
+  },
+  {
+    "word": "telling",
+    "start": 37.853,
+    "end": 38.073
+  },
+  {
+    "word": "the",
+    "start": 38.113,
+    "end": 38.173
+  },
+  {
+    "word": "truth",
+    "start": 38.233,
+    "end": 38.433
+  },
+  {
+    "word": "during",
+    "start": 38.473,
+    "end": 38.673
+  },
+  {
+    "word": "a",
+    "start": 38.713,
+    "end": 38.753
+  },
+  {
+    "word": "high",
+    "start": 38.793,
+    "end": 38.933
+  },
+  {
+    "word": "stakes",
+    "start": 38.953,
+    "end": 39.214
+  },
+  {
+    "word": "job",
+    "start": 39.254,
+    "end": 39.454
+  },
+  {
+    "word": "interview?",
+    "start": 39.474,
+    "end": 39.774
   }
 ]
