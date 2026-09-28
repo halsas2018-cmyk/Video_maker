@@ -1,457 +1,522 @@
 [
   {
-    "word": "Micron",
-    "start": 0.191,
-    "end": 0.591
+    "word": "NVIDIA",
+    "start": 0.251,
+    "end": 0.631
   },
   {
-    "word": "is",
-    "start": 0.631,
-    "end": 0.711
+    "word": "just",
+    "start": 0.672,
+    "end": 0.852
   },
   {
-    "word": "quietly",
-    "start": 0.751,
-    "end": 1.132
-  },
-  {
-    "word": "positioning",
-    "start": 1.152,
-    "end": 1.572
-  },
-  {
-    "word": "itself",
-    "start": 1.612,
-    "end": 1.932
-  },
-  {
-    "word": "to",
-    "start": 1.972,
-    "end": 2.052
-  },
-  {
-    "word": "dethrone",
-    "start": 2.072,
-    "end": 2.432
-  },
-  {
-    "word": "Nvidia",
-    "start": 2.512,
-    "end": 2.893
-  },
-  {
-    "word": "as",
-    "start": 2.993,
-    "end": 3.073
-  },
-  {
-    "word": "the",
-    "start": 3.093,
-    "end": 3.193
-  },
-  {
-    "word": "biggest",
-    "start": 3.213,
-    "end": 3.473
-  },
-  {
-    "word": "driver",
-    "start": 3.513,
-    "end": 3.813
-  },
-  {
-    "word": "of",
-    "start": 3.853,
-    "end": 3.913
-  },
-  {
-    "word": "profit",
-    "start": 3.953,
-    "end": 4.253
-  },
-  {
-    "word": "growth.",
-    "start": 4.293,
-    "end": 4.533
-  },
-  {
-    "word": "Investors",
-    "start": 5.394,
-    "end": 5.854
-  },
-  {
-    "word": "now",
-    "start": 5.894,
-    "end": 6.034
-  },
-  {
-    "word": "treat",
-    "start": 6.094,
-    "end": 6.294
-  },
-  {
-    "word": "the",
-    "start": 6.314,
-    "end": 6.374
-  },
-  {
-    "word": "company's",
-    "start": 6.414,
-    "end": 6.755
-  },
-  {
-    "word": "earnings",
-    "start": 6.815,
-    "end": 7.055
-  },
-  {
-    "word": "report",
-    "start": 7.095,
-    "end": 7.395
-  },
-  {
-    "word": "as",
-    "start": 7.455,
-    "end": 7.535
+    "word": "authorized",
+    "start": 0.932,
+    "end": 1.372
   },
   {
     "word": "a",
-    "start": 7.575,
-    "end": 7.615
-  },
-  {
-    "word": "major",
-    "start": 7.655,
-    "end": 7.895
-  },
-  {
-    "word": "market",
-    "start": 7.935,
-    "end": 8.175
-  },
-  {
-    "word": "event",
-    "start": 8.195,
-    "end": 8.456
-  },
-  {
-    "word": "in",
-    "start": 8.516,
-    "end": 8.576
-  },
-  {
-    "word": "its",
-    "start": 8.616,
-    "end": 8.716
-  },
-  {
-    "word": "own",
-    "start": 8.756,
-    "end": 8.876
-  },
-  {
-    "word": "right.",
-    "start": 8.916,
-    "end": 9.116
-  },
-  {
-    "word": "This",
-    "start": 9.936,
-    "end": 10.096
+    "start": 1.412,
+    "end": 1.452
   },
   {
     "word": "massive",
-    "start": 10.157,
-    "end": 10.477
+    "start": 1.492,
+    "end": 1.993
   },
   {
-    "word": "shift",
-    "start": 10.517,
-    "end": 10.737
+    "word": "$150",
+    "start": 2.033,
+    "end": 2.253
   },
   {
-    "word": "means",
-    "start": 10.797,
-    "end": 10.997
+    "word": "billion",
+    "start": 2.593,
+    "end": 2.873
   },
   {
-    "word": "the",
-    "start": 11.037,
-    "end": 11.097
+    "word": "share",
+    "start": 3.194,
+    "end": 3.394
   },
   {
-    "word": "company",
-    "start": 11.157,
-    "end": 11.457
-  },
-  {
-    "word": "is",
-    "start": 11.497,
-    "end": 11.577
-  },
-  {
-    "word": "becoming",
-    "start": 11.617,
-    "end": 11.937
-  },
-  {
-    "word": "far",
-    "start": 11.998,
-    "end": 12.178
-  },
-  {
-    "word": "more",
-    "start": 12.238,
-    "end": 12.378
-  },
-  {
-    "word": "important",
-    "start": 12.398,
-    "end": 12.738
-  },
-  {
-    "word": "to",
-    "start": 12.778,
-    "end": 12.838
+    "word": "buyback,",
+    "start": 3.434,
+    "end": 3.834
   },
   {
     "word": "the",
-    "start": 12.858,
-    "end": 12.918
+    "start": 4.114,
+    "end": 4.214
   },
   {
-    "word": "broader",
-    "start": 12.958,
-    "end": 13.198
+    "word": "largest",
+    "start": 4.234,
+    "end": 4.575
   },
   {
-    "word": "market.",
-    "start": 13.238,
-    "end": 13.538
+    "word": "in",
+    "start": 4.615,
+    "end": 4.675
   },
   {
-    "word": "While",
-    "start": 14.319,
-    "end": 14.519
+    "word": "history.",
+    "start": 4.715,
+    "end": 5.035
   },
   {
-    "word": "Nvidia",
-    "start": 14.619,
-    "end": 14.959
+    "word": "But",
+    "start": 5.836,
+    "end": 5.936
   },
   {
-    "word": "currently",
-    "start": 15.019,
-    "end": 15.319
-  },
-  {
-    "word": "dominates",
-    "start": 15.359,
-    "end": 15.74
-  },
-  {
-    "word": "headlines,",
-    "start": 15.76,
-    "end": 16.16
-  },
-  {
-    "word": "Micron",
-    "start": 16.44,
-    "end": 16.82
-  },
-  {
-    "word": "is",
-    "start": 16.86,
-    "end": 16.94
-  },
-  {
-    "word": "providing",
-    "start": 16.96,
-    "end": 17.32
-  },
-  {
-    "word": "the",
-    "start": 17.34,
-    "end": 17.42
-  },
-  {
-    "word": "essential",
-    "start": 17.46,
-    "end": 17.801
-  },
-  {
-    "word": "hardware",
-    "start": 17.841,
-    "end": 18.161
-  },
-  {
-    "word": "that",
-    "start": 18.181,
-    "end": 18.321
-  },
-  {
-    "word": "powers",
-    "start": 18.361,
-    "end": 18.681
-  },
-  {
-    "word": "everything",
-    "start": 18.761,
-    "end": 19.041
-  },
-  {
-    "word": "else.",
-    "start": 19.101,
-    "end": 19.261
-  },
-  {
-    "word": "Wall",
-    "start": 20.162,
-    "end": 20.362
-  },
-  {
-    "word": "Street",
-    "start": 20.382,
-    "end": 20.582
-  },
-  {
-    "word": "analysts",
-    "start": 20.642,
-    "end": 21.002
+    "word": "they",
+    "start": 5.956,
+    "end": 6.056
   },
   {
     "word": "are",
-    "start": 21.062,
-    "end": 21.163
+    "start": 6.096,
+    "end": 6.176
   },
   {
-    "word": "rapidly",
-    "start": 21.203,
-    "end": 21.543
+    "word": "also",
+    "start": 6.216,
+    "end": 6.456
   },
   {
-    "word": "adjusting",
-    "start": 21.583,
-    "end": 21.943
+    "word": "quietly",
+    "start": 6.516,
+    "end": 6.877
+  },
+  {
+    "word": "launching",
+    "start": 6.917,
+    "end": 7.217
+  },
+  {
+    "word": "a",
+    "start": 7.257,
+    "end": 7.297
+  },
+  {
+    "word": "new",
+    "start": 7.337,
+    "end": 7.457
+  },
+  {
+    "word": "safety",
+    "start": 7.517,
+    "end": 7.797
+  },
+  {
+    "word": "platform",
+    "start": 7.837,
+    "end": 8.278
+  },
+  {
+    "word": "to",
+    "start": 8.318,
+    "end": 8.398
+  },
+  {
+    "word": "wall",
+    "start": 8.438,
+    "end": 8.638
+  },
+  {
+    "word": "off",
+    "start": 8.678,
+    "end": 8.818
+  },
+  {
+    "word": "AI",
+    "start": 8.898,
+    "end": 9.198
+  },
+  {
+    "word": "agents.",
+    "start": 9.278,
+    "end": 9.579
+  },
+  {
+    "word": "These",
+    "start": 10.459,
+    "end": 10.64
+  },
+  {
+    "word": "agents",
+    "start": 10.72,
+    "end": 10.98
+  },
+  {
+    "word": "make",
+    "start": 11.02,
+    "end": 11.14
   },
   {
     "word": "their",
-    "start": 21.983,
-    "end": 22.103
+    "start": 11.16,
+    "end": 11.3
   },
   {
-    "word": "expectations",
-    "start": 22.143,
-    "end": 22.723
+    "word": "own",
+    "start": 11.34,
+    "end": 11.44
   },
   {
-    "word": "for",
-    "start": 22.763,
-    "end": 22.883
+    "word": "decisions,",
+    "start": 11.48,
+    "end": 11.901
   },
   {
-    "word": "how",
-    "start": 22.923,
-    "end": 23.024
+    "word": "so",
+    "start": 12.181,
+    "end": 12.321
   },
   {
-    "word": "much",
-    "start": 23.064,
-    "end": 23.204
+    "word": "NVIDIA",
+    "start": 12.381,
+    "end": 12.781
   },
   {
-    "word": "money",
-    "start": 23.264,
-    "end": 23.444
+    "word": "is",
+    "start": 12.861,
+    "end": 12.921
   },
   {
-    "word": "this",
-    "start": 23.464,
-    "end": 23.604
+    "word": "building",
+    "start": 12.961,
+    "end": 13.222
   },
   {
-    "word": "company",
-    "start": 23.644,
-    "end": 23.944
+    "word": "a",
+    "start": 13.262,
+    "end": 13.302
   },
   {
-    "word": "earns.",
-    "start": 24.044,
-    "end": 24.284
+    "word": "protective",
+    "start": 13.342,
+    "end": 13.722
   },
   {
-    "word": "If",
-    "start": 25.185,
-    "end": 25.265
+    "word": "force",
+    "start": 13.742,
+    "end": 13.982
   },
   {
-    "word": "this",
-    "start": 25.285,
-    "end": 25.445
+    "word": "field",
+    "start": 14.022,
+    "end": 14.242
   },
   {
-    "word": "growth",
-    "start": 25.485,
-    "end": 25.705
+    "word": "around",
+    "start": 14.282,
+    "end": 14.483
   },
   {
-    "word": "continues,",
-    "start": 25.745,
-    "end": 26.205
+    "word": "them.",
+    "start": 14.503,
+    "end": 14.643
   },
   {
-    "word": "Micron",
-    "start": 26.465,
-    "end": 26.866
+    "word": "This",
+    "start": 15.463,
+    "end": 15.604
   },
   {
-    "word": "could",
-    "start": 26.886,
-    "end": 27.026
+    "word": "shell",
+    "start": 15.664,
+    "end": 15.844
   },
   {
-    "word": "soon",
-    "start": 27.046,
-    "end": 27.246
-  },
-  {
-    "word": "dictate",
-    "start": 27.286,
-    "end": 27.606
+    "word": "prevents",
+    "start": 15.884,
+    "end": 16.164
   },
   {
     "word": "the",
-    "start": 27.626,
-    "end": 27.686
+    "start": 16.204,
+    "end": 16.284
   },
   {
-    "word": "direction",
-    "start": 27.726,
-    "end": 28.066
+    "word": "software",
+    "start": 16.324,
+    "end": 16.704
   },
   {
-    "word": "of",
-    "start": 28.086,
-    "end": 28.146
+    "word": "from",
+    "start": 16.724,
+    "end": 16.845
+  },
+  {
+    "word": "doing",
+    "start": 16.885,
+    "end": 17.065
+  },
+  {
+    "word": "anything",
+    "start": 17.165,
+    "end": 17.445
+  },
+  {
+    "word": "it",
+    "start": 17.485,
+    "end": 17.545
+  },
+  {
+    "word": "is",
+    "start": 17.585,
+    "end": 17.645
+  },
+  {
+    "word": "not",
+    "start": 17.685,
+    "end": 17.825
+  },
+  {
+    "word": "explicitly",
+    "start": 17.865,
+    "end": 18.326
+  },
+  {
+    "word": "supposed",
+    "start": 18.386,
+    "end": 18.686
+  },
+  {
+    "word": "to",
+    "start": 18.726,
+    "end": 18.766
+  },
+  {
+    "word": "do.",
+    "start": 18.806,
+    "end": 18.966
+  },
+  {
+    "word": "It",
+    "start": 19.847,
+    "end": 19.907
+  },
+  {
+    "word": "comes",
+    "start": 19.947,
+    "end": 20.147
+  },
+  {
+    "word": "as",
+    "start": 20.207,
+    "end": 20.267
   },
   {
     "word": "the",
-    "start": 28.166,
-    "end": 28.246
+    "start": 20.287,
+    "end": 20.387
   },
   {
-    "word": "entire",
-    "start": 28.286,
-    "end": 28.627
+    "word": "industry",
+    "start": 20.427,
+    "end": 20.748
   },
   {
-    "word": "stock",
-    "start": 28.687,
-    "end": 28.907
+    "word": "faces",
+    "start": 20.808,
+    "end": 21.128
   },
   {
-    "word": "market.",
-    "start": 28.947,
-    "end": 29.247
+    "word": "constant",
+    "start": 21.168,
+    "end": 21.528
+  },
+  {
+    "word": "headlines",
+    "start": 21.568,
+    "end": 21.949
+  },
+  {
+    "word": "about",
+    "start": 22.009,
+    "end": 22.189
+  },
+  {
+    "word": "hacking",
+    "start": 22.209,
+    "end": 22.529
+  },
+  {
+    "word": "and",
+    "start": 22.569,
+    "end": 22.669
+  },
+  {
+    "word": "unauthorized",
+    "start": 22.749,
+    "end": 23.27
+  },
+  {
+    "word": "data",
+    "start": 23.31,
+    "end": 23.53
+  },
+  {
+    "word": "breaches.",
+    "start": 23.55,
+    "end": 23.91
+  },
+  {
+    "word": "While",
+    "start": 24.771,
+    "end": 24.971
+  },
+  {
+    "word": "competitors",
+    "start": 25.011,
+    "end": 25.512
+  },
+  {
+    "word": "like",
+    "start": 25.552,
+    "end": 25.692
+  },
+  {
+    "word": "Anthropic",
+    "start": 25.732,
+    "end": 26.172
+  },
+  {
+    "word": "are",
+    "start": 26.232,
+    "end": 26.332
+  },
+  {
+    "word": "already",
+    "start": 26.392,
+    "end": 26.692
+  },
+  {
+    "word": "on",
+    "start": 26.733,
+    "end": 26.813
+  },
+  {
+    "word": "board,",
+    "start": 26.853,
+    "end": 27.113
+  },
+  {
+    "word": "open",
+    "start": 27.393,
+    "end": 27.573
+  },
+  {
+    "word": "AI",
+    "start": 27.613,
+    "end": 27.974
+  },
+  {
+    "word": "is",
+    "start": 28.034,
+    "end": 28.114
+  },
+  {
+    "word": "notably",
+    "start": 28.174,
+    "end": 28.494
+  },
+  {
+    "word": "absent",
+    "start": 28.614,
+    "end": 28.854
+  },
+  {
+    "word": "from",
+    "start": 28.874,
+    "end": 28.994
+  },
+  {
+    "word": "the",
+    "start": 29.014,
+    "end": 29.074
+  },
+  {
+    "word": "list.",
+    "start": 29.114,
+    "end": 29.355
+  },
+  {
+    "word": "Is",
+    "start": 30.199,
+    "end": 30.28
+  },
+  {
+    "word": "this",
+    "start": 30.32,
+    "end": 30.46
+  },
+  {
+    "word": "a",
+    "start": 30.5,
+    "end": 30.54
+  },
+  {
+    "word": "genuine",
+    "start": 30.601,
+    "end": 30.922
+  },
+  {
+    "word": "safety",
+    "start": 30.962,
+    "end": 31.223
+  },
+  {
+    "word": "breakthrough,",
+    "start": 31.263,
+    "end": 31.664
+  },
+  {
+    "word": "or",
+    "start": 31.925,
+    "end": 32.005
+  },
+  {
+    "word": "is",
+    "start": 32.045,
+    "end": 32.125
+  },
+  {
+    "word": "Nvidia",
+    "start": 32.206,
+    "end": 32.547
+  },
+  {
+    "word": "just",
+    "start": 32.587,
+    "end": 32.768
+  },
+  {
+    "word": "protecting",
+    "start": 32.808,
+    "end": 33.189
+  },
+  {
+    "word": "its",
+    "start": 33.209,
+    "end": 33.309
+  },
+  {
+    "word": "own",
+    "start": 33.349,
+    "end": 33.47
+  },
+  {
+    "word": "massive",
+    "start": 33.51,
+    "end": 33.791
+  },
+  {
+    "word": "investment?",
+    "start": 33.811,
+    "end": 34.232
   }
 ]
