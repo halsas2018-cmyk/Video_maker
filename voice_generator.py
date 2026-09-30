@@ -23,7 +23,7 @@ from pathlib import Path
 
 VOICE = "en-US-AndrewNeural"
 RATE = "+20%"       # faster-paced for Shorts retention
-PITCH = "+0Hz"      # natural
+PITCH = "+10Hz"      # natural
 VOLUME = "+0%"      # default
 
 # ---------------------------------------------------------------------------

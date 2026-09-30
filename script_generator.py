@@ -46,8 +46,8 @@ GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 # Word targets sized for ~33-45s Shorts at the +20% narration rate
 # (~3.9 words/sec → 110-150 words ≈ 28-38s; we keep the +20% rate that's
 # tuned for Shorts, accept landing around the lower end of the 30-60s goal).
-MAX_WORDS = 150
-MIN_WORDS = 110
+MAX_WORDS = 250
+MIN_WORDS = 100
 
 # The combined call returns script + 5 headlines + a per-sentence plan (each
 # shot has sentence/search_term/asset_type). That JSON is bigger than a bare
@@ -55,7 +55,7 @@ MIN_WORDS = 110
 # Reasoning models (GPT-OSS) draw their hidden reasoning from this SAME
 # budget — 2048 truncated mid-JSON on real runs (finish_reason=length),
 # so 4096 leaves room for reasoning + the full JSON payload.
-COMBINED_MAX_TOKENS = 4096
+COMBINED_MAX_TOKENS = 11096
 
 # Banned filler loaded from config.py (allows env override)
 from config import BANNED_FILLER
@@ -143,6 +143,8 @@ PART A — SCRIPT RULES:
 15. PLAIN NARRATION: clean punctuation for text-to-speech, no jargon, no acronyms
     without explanation, no emojis/symbols/markdown, no brackets or directions.
 
+16. TONE INSTRUCTION: Use mild, observational sarcasm like a friend sharing an ironic tech fail—never mean-spirited. Example: 'Oh great, another AI that ‘revolutionizes’ by solving a problem no one had.'
+
 PART B — HEADLINE + YOUTUBE METADATA RULES:
 Generate 5 headline options (on-screen hook). Each must create a curiosity gap
 using a CONCRETE noun from the story (a name, tool, number, or group) — not a
@@ -180,8 +182,18 @@ For EACH script sentence choose ONE OR MORE Pexels search terms (sub_shots):
   search terms so the sentence duration is covered by varied assets, not by
   looping the same clip. Each sub_shot covers ~2-3s of narration.
 
+PART D — FORMAT CLASSIFICATION:
+Based on the overall tone and content of the story and script, classify it into
+exactly one of these three formats:
+- "URGENT_BREAK": breaking news, urgent updates, alerts, crises, disasters,
+  emergencies, warnings — things that require immediate attention.
+- "DEBATE": arguments, controversies, disputes, opposing viewpoints, clashes,
+  debates about tech/AI topics.
+- "EXPLAINER": default explanatory/tutorial style stories that inform or teach.
+
 OUTPUT FORMAT (strict JSON, no markdown fences, no preamble):
 {{
+  "format": "URGENT_BREAK"|"DEBATE"|"EXPLAINER",
   "headline_options": ["...", "...", "...", "...", "..."],
   "chosen_headline": "...",
   "youtube_title": "...",
@@ -225,7 +237,7 @@ def generate_combined(story: dict, content: dict,
     """One LLM call → script + headlines + per-sentence plan. Validates + retries once.
 
     Returns a dict: {script, headline_options, chosen_headline, youtube_title,
-    youtube_description, shots, word_count}.
+    youtube_description, shots, word_count, format}.
     `shots` is the per-sentence list with sentence/search_term/asset_type, in
     order. `script` is reconstructed by joining shot sentences (so the script
     and the plan are guaranteed to have the same sentence count — this kills a
@@ -292,12 +304,12 @@ def generate_combined(story: dict, content: dict,
     all_words = " ".join(sentences).lower().split()
     unique_words = set(all_words)
     lexical_diversity = len(unique_words) / len(all_words) if all_words else 0
-    
+
     # Sentence length variety
     sent_lengths = [len(s.split()) for s in sentences]
     avg_sent_len = sum(sent_lengths) / len(sent_lengths) if sent_lengths else 0
     sent_len_variance = sum((l - avg_sent_len) ** 2 for l in sent_lengths) / len(sent_lengths) if sent_lengths else 0
-    
+
     quality_metrics = {
         "word_count": word_count,
         "sentence_count": len(sentences),
@@ -306,6 +318,12 @@ def generate_combined(story: dict, content: dict,
         "sentence_length_variance": round(sent_len_variance, 1),
         "unique_words": len(unique_words),
     }
+
+    # Format from LLM (validated by _validate)
+    format_tag = parsed.get("format", "EXPLAINER")
+    if format_tag not in ("URGENT_BREAK", "DEBATE", "EXPLAINER"):
+        # Fallback heuristic if LLM gave invalid format
+        format_tag = _determine_format_fallback(story, script)
 
     return {
         "script": script,
@@ -316,8 +334,20 @@ def generate_combined(story: dict, content: dict,
         "shots": shots,
         "word_count": word_count,
         "quality_metrics": quality_metrics,
-        "format": "EXPLAINER",
+        "format": format_tag,
     }
+
+
+def _determine_format_fallback(story: dict, script: str) -> str:
+    """Heuristic fallback for format classification."""
+    text = f"{story.get('title','')} {script}".lower()
+    urgent_keywords = ["break", "breaking", "alert", "urgent", "crisis", "emergency", "disaster", "warning"]
+    debate_keywords = ["debate", "argument", "controversy", "dispute", "argue", "opposing", "vs", "versus", "contend", "clash"]
+    if any(k in text for k in urgent_keywords):
+        return "URGENT_BREAK"
+    if any(k in text for k in debate_keywords):
+        return "DEBATE"
+    return "EXPLAINER"
 
 
 def _parse_combined(raw: str) -> dict | None:
@@ -357,6 +387,7 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
     - youtube_title missing, empty, or >60 chars
     - youtube_description missing, empty, or >200 chars
     - headline relevance to source (if story provided)
+    - format missing or invalid (must be URGENT_BREAK, DEBATE, or EXPLAINER)
     """
     problems = []
     shots = parsed.get("shots", [])
@@ -394,7 +425,7 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
             overlap = headline_words & source_words
             if not overlap:
                 problems.append(f'headline "{parsed.get("chosen_headline")}" shares no meaningful words with source title/summary')
-        
+
         # Additional: headline must contain at least one specific entity (number, proper noun, name)
         # NOTE: no local `import re` here — it would shadow the module-level
         # import and make every earlier re.* use in this function raise
@@ -403,7 +434,7 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
         has_proper_noun = bool(re.search(r'\b[A-Z][a-z]+\b', parsed.get("chosen_headline", "")))
         if not (has_number or has_proper_noun):
             problems.append(f'headline "{parsed.get("chosen_headline")}" lacks specific entity (number, name, or proper noun) — make it concrete')
-    
+
     # Validate headline options too (all 5 should be concrete)
     for opt in parsed.get("headline_options", []):
         opt_lower = opt.lower()
@@ -415,7 +446,7 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
             if not overlap:
                 problems.append(f'headline option "{opt}" shares no meaningful words with source')
                 break  # one is enough to flag
-    
+
     # youtube metadata sanity
     yt_title = (parsed.get("youtube_title") or "").strip()
     if not yt_title:
@@ -427,6 +458,14 @@ def _validate(parsed: dict, story: dict = None) -> list[str]:
         problems.append("missing youtube_description")
     elif len(yt_desc) > 200:
         problems.append(f"youtube_description exceeds 200 chars ({len(yt_desc)})")
+
+    # format validation
+    format_val = parsed.get("format")
+    if format_val is None:
+        problems.append("missing format field")
+    elif format_val not in ("URGENT_BREAK", "DEBATE", "EXPLAINER"):
+        problems.append(f'invalid format "{format_val}" — must be one of: URGENT_BREAK, DEBATE, EXPLAINER')
+
     return problems
 
 
