@@ -1,748 +1,612 @@
 {
   "shots": [
     {
-      "sentence": "A journalist claims Meta's new AI agent, Muse, secretly read his private messages without permission.",
-      "search_term": "person using smartphone",
+      "sentence": "ChatGPT can now virtually try on clothes for you using a new photo-editing model.",
+      "search_term": "person holding smartphone",
       "media_type": "video",
-      "visual": "Close up of someone looking suspiciously at their phone screen.",
+      "visual": "Close up of someone looking at a shopping app on a phone.",
       "asset_path": "project_assets/shot_1.mp4",
-      "duration_seconds": 2.317
+      "duration_seconds": 1.808
     },
     {
-      "sentence": "A journalist claims Meta's new AI agent, Muse, secretly read his private messages without permission.",
-      "search_term": "confused person",
+      "sentence": "ChatGPT can now virtually try on clothes for you using a new photo-editing model.",
+      "search_term": "fashion model runway",
       "media_type": "video",
-      "visual": "Close up of a person looking concerned at their laptop screen.",
+      "visual": "A quick cut of a model walking, transitioning to a digital overlay effect.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.317
+      "duration_seconds": 1.808
     },
     {
-      "sentence": "Meta is fighting back, insisting the app requires three separate manual permissions to access anything on your computer.",
-      "search_term": "security lock icon",
+      "sentence": "You just upload a selfie, hit the new try on button, and watch the AI morph the outfit onto your body.",
+      "search_term": "woman taking selfie",
       "media_type": "video",
-      "visual": "A digital graphic of a padlock locking.",
+      "visual": "A woman posing for a selfie in a bright room.",
       "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 2.781
+      "duration_seconds": 2.711
     },
     {
-      "sentence": "Meta is fighting back, insisting the app requires three separate manual permissions to access anything on your computer.",
-      "search_term": "computer settings menu",
+      "sentence": "You just upload a selfie, hit the new try on button, and watch the AI morph the outfit onto your body.",
+      "search_term": "digital interface animation",
       "media_type": "video",
-      "visual": "A person clicking through a complex settings menu on a Mac.",
+      "visual": "Abstract digital UI elements appearing over a person's silhouette.",
       "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 2.781
+      "duration_seconds": 2.711
     },
     {
-      "sentence": "They claim it is technically impossible for the AI to snoop unless you specifically invite it to.",
-      "search_term": "code stream",
+      "sentence": "It even handles screenshots, so you can steal a celebrity look without hunting down the actual brand.",
+      "search_term": "scrolling smartphone screen",
       "media_type": "video",
-      "visual": "Abstract lines of computer code running on a dark background.",
+      "visual": "Close up of a thumb scrolling through a social media feed.",
       "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 2.626
+      "duration_seconds": 2.195
     },
     {
-      "sentence": "They claim it is technically impossible for the AI to snoop unless you specifically invite it to.",
-      "search_term": "server room",
-      "media_type": "video",
-      "visual": "The interior of a high-tech data center.",
-      "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.626
+      "sentence": "It even handles screenshots, so you can steal a celebrity look without hunting down the actual brand.",
+      "search_term": "fashion photography",
+      "media_type": "photo",
+      "visual": "A stylish outfit displayed on a white background.",
+      "asset_path": "project_assets/shot_6.jpg",
+      "duration_seconds": 2.195
     },
     {
-      "sentence": "But here is the problem: Meta does not exactly have a stellar reputation for keeping our data private.",
-      "search_term": "warning sign",
+      "sentence": "OpenAI clearly wants a piece of the retail pie, despite their last attempt at instant checkout failing miserably.",
+      "search_term": "shopping bags",
       "media_type": "video",
-      "visual": "A close up of a caution or warning sign in a tech environment.",
+      "visual": "Many shopping bags being carried down a city street.",
       "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 2.781
+      "duration_seconds": 2.324
     },
     {
-      "sentence": "But here is the problem: Meta does not exactly have a stellar reputation for keeping our data private.",
-      "search_term": "data breach graph",
+      "sentence": "OpenAI clearly wants a piece of the retail pie, despite their last attempt at instant checkout failing miserably.",
+      "search_term": "error message on screen",
       "media_type": "video",
-      "visual": "Abstract red data visualization showing a downward trend.",
+      "visual": "A stylized glitch effect on a computer screen.",
       "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 2.781
+      "duration_seconds": 2.324
     },
     {
-      "sentence": "Just days ago, a jury found them guilty of misleading users in a case dating back to the Cambridge Analytica scandal.",
-      "search_term": "gavel",
+      "sentence": "Some people are already worried this is just another way for tech giants to feed us targeted ads.",
+      "search_term": "concerned person looking at screen",
       "media_type": "video",
-      "visual": "A wooden gavel hitting a sounding block in a courtroom.",
+      "visual": "A person looking skeptical while staring at their laptop.",
       "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 3.244
+      "duration_seconds": 2.324
     },
     {
-      "sentence": "Just days ago, a jury found them guilty of misleading users in a case dating back to the Cambridge Analytica scandal.",
-      "search_term": "lawyer talking",
+      "sentence": "Some people are already worried this is just another way for tech giants to feed us targeted ads.",
+      "search_term": "data network lines",
       "media_type": "video",
-      "visual": "A silhouette of a person standing in a formal courtroom setting.",
+      "visual": "Abstract glowing lines representing data tracking.",
       "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 3.244
+      "duration_seconds": 2.324
     },
     {
-      "sentence": "Now, another user reports that Muse accidentally leaked his home address to a stranger on Facebook Marketplace.",
-      "search_term": "shipping box",
+      "sentence": "Google already launched a similar tool last year, so the real question is whether you actually want your AI to be your personal stylist.",
+      "search_term": "diverse group of people shopping",
       "media_type": "video",
-      "visual": "A cardboard package sitting on a doorstep.",
+      "visual": "A group of friends laughing while looking at clothes in a store.",
       "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 2.626
+      "duration_seconds": 3.099
     },
     {
-      "sentence": "Now, another user reports that Muse accidentally leaked his home address to a stranger on Facebook Marketplace.",
-      "search_term": "nervous person",
+      "sentence": "Google already launched a similar tool last year, so the real question is whether you actually want your AI to be your personal stylist.",
+      "search_term": "person thinking",
       "media_type": "video",
-      "visual": "A person looking at their front door through a peephole.",
+      "visual": "A person looking up thoughtfully at the camera.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 2.626
-    },
-    {
-      "sentence": "Meta is looking into that one, but with this track record, would you ever trust their AI with your messages?",
-      "search_term": "human eye",
-      "media_type": "video",
-      "visual": "A macro shot of a human eye looking skeptical.",
-      "asset_path": "project_assets/shot_13.mp4",
-      "duration_seconds": 3.09
-    },
-    {
-      "sentence": "Meta is looking into that one, but with this track record, would you ever trust their AI with your messages?",
-      "search_term": "AI brain abstract",
-      "media_type": "video",
-      "visual": "Glowing digital brain animation pulsing with light.",
-      "asset_path": "project_assets/shot_14.mp4",
-      "duration_seconds": 3.09
+      "duration_seconds": 3.099
     }
   ],
   "words": [
     {
-      "word": "A",
-      "start": 0.211,
-      "end": 0.251
+      "word": "ChatGPT",
+      "start": 0.191,
+      "end": 0.972
     },
     {
-      "word": "journalist",
-      "start": 0.271,
-      "end": 0.672
+      "word": "can",
+      "start": 1.012,
+      "end": 1.132
     },
     {
-      "word": "claims",
-      "start": 0.712,
-      "end": 1.012
+      "word": "now",
+      "start": 1.172,
+      "end": 1.292
     },
     {
-      "word": "Meta's",
-      "start": 1.052,
-      "end": 1.332
+      "word": "virtually",
+      "start": 1.352,
+      "end": 1.733
     },
     {
-      "word": "new",
-      "start": 1.392,
-      "end": 1.512
+      "word": "try",
+      "start": 1.773,
+      "end": 1.993
     },
     {
-      "word": "AI",
-      "start": 1.592,
-      "end": 1.812
+      "word": "on",
+      "start": 2.033,
+      "end": 2.113
     },
     {
-      "word": "agent,",
-      "start": 1.912,
-      "end": 2.173
+      "word": "clothes",
+      "start": 2.173,
+      "end": 2.473
     },
     {
-      "word": "News,",
-      "start": 2.373,
+      "word": "for",
+      "start": 2.513,
       "end": 2.633
     },
     {
-      "word": "secretly",
-      "start": 2.913,
-      "end": 3.274
+      "word": "you",
+      "start": 2.653,
+      "end": 2.794
     },
     {
-      "word": "read",
-      "start": 3.334,
-      "end": 3.474
+      "word": "using",
+      "start": 2.894,
+      "end": 3.074
     },
     {
-      "word": "his",
-      "start": 3.514,
+      "word": "a",
+      "start": 3.114,
+      "end": 3.154
+    },
+    {
+      "word": "new",
+      "start": 3.194,
+      "end": 3.314
+    },
+    {
+      "word": "photo",
+      "start": 3.374,
       "end": 3.614
     },
     {
-      "word": "private",
-      "start": 3.674,
-      "end": 3.934
+      "word": "editing",
+      "start": 3.654,
+      "end": 3.895
     },
     {
-      "word": "messages",
-      "start": 3.974,
-      "end": 4.334
+      "word": "model.",
+      "start": 3.915,
+      "end": 4.175
+    },
+    {
+      "word": "You",
+      "start": 4.976,
+      "end": 5.096
+    },
+    {
+      "word": "just",
+      "start": 5.136,
+      "end": 5.296
+    },
+    {
+      "word": "upload",
+      "start": 5.356,
+      "end": 5.596
+    },
+    {
+      "word": "a",
+      "start": 5.636,
+      "end": 5.676
+    },
+    {
+      "word": "selfie,",
+      "start": 5.716,
+      "end": 6.077
+    },
+    {
+      "word": "hit",
+      "start": 6.257,
+      "end": 6.377
+    },
+    {
+      "word": "the",
+      "start": 6.417,
+      "end": 6.477
+    },
+    {
+      "word": "new",
+      "start": 6.517,
+      "end": 6.637
+    },
+    {
+      "word": "try",
+      "start": 6.677,
+      "end": 6.877
+    },
+    {
+      "word": "on",
+      "start": 6.937,
+      "end": 6.998
+    },
+    {
+      "word": "button,",
+      "start": 7.038,
+      "end": 7.298
+    },
+    {
+      "word": "and",
+      "start": 7.518,
+      "end": 7.598
+    },
+    {
+      "word": "watch",
+      "start": 7.638,
+      "end": 7.838
+    },
+    {
+      "word": "the",
+      "start": 7.878,
+      "end": 7.958
+    },
+    {
+      "word": "AI",
+      "start": 8.018,
+      "end": 8.259
+    },
+    {
+      "word": "morph",
+      "start": 8.299,
+      "end": 8.519
+    },
+    {
+      "word": "the",
+      "start": 8.539,
+      "end": 8.619
+    },
+    {
+      "word": "outfit",
+      "start": 8.679,
+      "end": 8.939
+    },
+    {
+      "word": "onto",
+      "start": 8.999,
+      "end": 9.14
+    },
+    {
+      "word": "your",
+      "start": 9.18,
+      "end": 9.28
+    },
+    {
+      "word": "body.",
+      "start": 9.3,
+      "end": 9.56
+    },
+    {
+      "word": "It",
+      "start": 10.401,
+      "end": 10.461
+    },
+    {
+      "word": "even",
+      "start": 10.521,
+      "end": 10.681
+    },
+    {
+      "word": "handles",
+      "start": 10.701,
+      "end": 10.981
+    },
+    {
+      "word": "screenshots,",
+      "start": 11.001,
+      "end": 11.522
+    },
+    {
+      "word": "so",
+      "start": 11.742,
+      "end": 11.822
+    },
+    {
+      "word": "you",
+      "start": 11.862,
+      "end": 11.942
+    },
+    {
+      "word": "can",
+      "start": 11.962,
+      "end": 12.082
+    },
+    {
+      "word": "steal",
+      "start": 12.122,
+      "end": 12.342
+    },
+    {
+      "word": "a",
+      "start": 12.383,
+      "end": 12.423
+    },
+    {
+      "word": "celebrity",
+      "start": 12.443,
+      "end": 12.823
+    },
+    {
+      "word": "look",
+      "start": 12.863,
+      "end": 13.003
     },
     {
       "word": "without",
-      "start": 4.374,
-      "end": 4.615
+      "start": 13.043,
+      "end": 13.283
     },
     {
-      "word": "permission.",
-      "start": 4.655,
-      "end": 5.015
+      "word": "hunting",
+      "start": 13.323,
+      "end": 13.564
     },
     {
-      "word": "Meta",
-      "start": 5.876,
-      "end": 6.096
-    },
-    {
-      "word": "is",
-      "start": 6.136,
-      "end": 6.216
-    },
-    {
-      "word": "fighting",
-      "start": 6.236,
-      "end": 6.496
-    },
-    {
-      "word": "back,",
-      "start": 6.536,
-      "end": 6.776
-    },
-    {
-      "word": "insisting",
-      "start": 7.137,
-      "end": 7.537
+      "word": "down",
+      "start": 13.584,
+      "end": 13.744
     },
     {
       "word": "the",
-      "start": 7.577,
-      "end": 7.657
+      "start": 13.784,
+      "end": 13.864
     },
     {
-      "word": "app",
-      "start": 7.757,
-      "end": 7.877
+      "word": "actual",
+      "start": 13.924,
+      "end": 14.184
     },
     {
-      "word": "requires",
-      "start": 7.937,
-      "end": 8.318
+      "word": "brand.",
+      "start": 14.204,
+      "end": 14.525
     },
     {
-      "word": "three",
-      "start": 8.378,
-      "end": 8.578
-    },
-    {
-      "word": "separate",
-      "start": 8.618,
-      "end": 8.938
-    },
-    {
-      "word": "manual",
-      "start": 8.978,
-      "end": 9.298
-    },
-    {
-      "word": "permissions",
-      "start": 9.338,
-      "end": 9.739
-    },
-    {
-      "word": "to",
-      "start": 9.819,
-      "end": 9.919
-    },
-    {
-      "word": "access",
-      "start": 9.999,
-      "end": 10.279
-    },
-    {
-      "word": "anything",
-      "start": 10.359,
-      "end": 10.639
-    },
-    {
-      "word": "on",
-      "start": 10.699,
-      "end": 10.759
-    },
-    {
-      "word": "your",
-      "start": 10.779,
-      "end": 10.88
-    },
-    {
-      "word": "computer.",
-      "start": 10.9,
-      "end": 11.26
-    },
-    {
-      "word": "They",
-      "start": 12.08,
-      "end": 12.201
-    },
-    {
-      "word": "claim",
-      "start": 12.221,
-      "end": 12.441
-    },
-    {
-      "word": "it",
-      "start": 12.461,
-      "end": 12.521
-    },
-    {
-      "word": "is",
-      "start": 12.581,
-      "end": 12.641
-    },
-    {
-      "word": "technically",
-      "start": 12.681,
-      "end": 13.061
-    },
-    {
-      "word": "impossible",
-      "start": 13.121,
-      "end": 13.582
-    },
-    {
-      "word": "for",
-      "start": 13.622,
-      "end": 13.702
-    },
-    {
-      "word": "the",
-      "start": 13.722,
-      "end": 13.802
+      "word": "Open",
+      "start": 15.365,
+      "end": 15.566
     },
     {
       "word": "AI",
-      "start": 13.882,
-      "end": 14.102
+      "start": 15.606,
+      "end": 15.886
     },
     {
-      "word": "to",
-      "start": 14.142,
-      "end": 14.222
+      "word": "clearly",
+      "start": 15.966,
+      "end": 16.266
     },
     {
-      "word": "snoop",
-      "start": 14.262,
-      "end": 14.502
-    },
-    {
-      "word": "unless",
-      "start": 14.542,
-      "end": 14.763
-    },
-    {
-      "word": "you",
-      "start": 14.783,
-      "end": 14.903
-    },
-    {
-      "word": "specifically",
-      "start": 14.923,
-      "end": 15.403
-    },
-    {
-      "word": "invite",
-      "start": 15.443,
-      "end": 15.683
-    },
-    {
-      "word": "it",
-      "start": 15.703,
-      "end": 15.763
-    },
-    {
-      "word": "to.",
-      "start": 15.803,
-      "end": 15.964
-    },
-    {
-      "word": "But",
-      "start": 16.784,
-      "end": 16.904
-    },
-    {
-      "word": "here",
-      "start": 16.944,
-      "end": 17.084
-    },
-    {
-      "word": "is",
-      "start": 17.124,
-      "end": 17.184
-    },
-    {
-      "word": "the",
-      "start": 17.205,
-      "end": 17.285
-    },
-    {
-      "word": "problem,",
-      "start": 17.305,
-      "end": 17.645
-    },
-    {
-      "word": "Meta",
-      "start": 17.885,
-      "end": 18.105
-    },
-    {
-      "word": "does",
-      "start": 18.145,
-      "end": 18.265
-    },
-    {
-      "word": "not",
-      "start": 18.305,
-      "end": 18.425
-    },
-    {
-      "word": "exactly",
-      "start": 18.486,
-      "end": 18.846
-    },
-    {
-      "word": "have",
-      "start": 18.886,
-      "end": 19.026
+      "word": "wants",
+      "start": 16.286,
+      "end": 16.486
     },
     {
       "word": "a",
-      "start": 19.046,
-      "end": 19.066
+      "start": 16.526,
+      "end": 16.546
     },
     {
-      "word": "stellar",
-      "start": 19.106,
-      "end": 19.386
-    },
-    {
-      "word": "reputation",
-      "start": 19.426,
-      "end": 19.987
-    },
-    {
-      "word": "for",
-      "start": 20.027,
-      "end": 20.147
-    },
-    {
-      "word": "keeping",
-      "start": 20.187,
-      "end": 20.427
-    },
-    {
-      "word": "our",
-      "start": 20.467,
-      "end": 20.567
-    },
-    {
-      "word": "data",
-      "start": 20.587,
-      "end": 20.787
-    },
-    {
-      "word": "private.",
-      "start": 20.827,
-      "end": 21.128
-    },
-    {
-      "word": "Just",
-      "start": 21.995,
-      "end": 22.195
-    },
-    {
-      "word": "days",
-      "start": 22.235,
-      "end": 22.395
-    },
-    {
-      "word": "ago,",
-      "start": 22.436,
-      "end": 22.636
-    },
-    {
-      "word": "a",
-      "start": 22.896,
-      "end": 22.936
-    },
-    {
-      "word": "jury",
-      "start": 22.976,
-      "end": 23.216
-    },
-    {
-      "word": "found",
-      "start": 23.256,
-      "end": 23.437
-    },
-    {
-      "word": "them",
-      "start": 23.457,
-      "end": 23.577
-    },
-    {
-      "word": "guilty",
-      "start": 23.597,
-      "end": 23.877
+      "word": "piece",
+      "start": 16.586,
+      "end": 16.787
     },
     {
       "word": "of",
-      "start": 23.917,
-      "end": 23.977
-    },
-    {
-      "word": "misleading",
-      "start": 24.037,
-      "end": 24.418
-    },
-    {
-      "word": "users",
-      "start": 24.498,
-      "end": 24.738
-    },
-    {
-      "word": "in",
-      "start": 24.818,
-      "end": 24.878
-    },
-    {
-      "word": "a",
-      "start": 24.898,
-      "end": 24.938
-    },
-    {
-      "word": "case",
-      "start": 24.978,
-      "end": 25.178
-    },
-    {
-      "word": "dating",
-      "start": 25.238,
-      "end": 25.479
-    },
-    {
-      "word": "back",
-      "start": 25.519,
-      "end": 25.699
-    },
-    {
-      "word": "to",
-      "start": 25.739,
-      "end": 25.819
+      "start": 16.827,
+      "end": 16.867
     },
     {
       "word": "the",
-      "start": 25.839,
-      "end": 25.899
+      "start": 16.907,
+      "end": 16.967
     },
     {
-      "word": "Cambridge",
-      "start": 25.939,
-      "end": 26.259
+      "word": "retail",
+      "start": 17.007,
+      "end": 17.327
     },
     {
-      "word": "Analytica",
-      "start": 26.34,
-      "end": 26.76
+      "word": "pie,",
+      "start": 17.367,
+      "end": 17.607
     },
     {
-      "word": "scandal.",
-      "start": 26.78,
-      "end": 27.14
-    },
-    {
-      "word": "Now,",
-      "start": 27.981,
-      "end": 28.181
-    },
-    {
-      "word": "another",
-      "start": 28.382,
-      "end": 28.642
-    },
-    {
-      "word": "user",
-      "start": 28.742,
-      "end": 28.942
-    },
-    {
-      "word": "reports",
-      "start": 28.982,
-      "end": 29.303
-    },
-    {
-      "word": "that",
-      "start": 29.343,
-      "end": 29.463
-    },
-    {
-      "word": "Muse",
-      "start": 29.503,
-      "end": 29.743
-    },
-    {
-      "word": "accidentally",
-      "start": 29.863,
-      "end": 30.364
-    },
-    {
-      "word": "leaked",
-      "start": 30.384,
-      "end": 30.584
-    },
-    {
-      "word": "his",
-      "start": 30.604,
-      "end": 30.704
-    },
-    {
-      "word": "home",
-      "start": 30.724,
-      "end": 30.884
-    },
-    {
-      "word": "address",
-      "start": 30.924,
-      "end": 31.225
-    },
-    {
-      "word": "to",
-      "start": 31.265,
-      "end": 31.365
-    },
-    {
-      "word": "a",
-      "start": 31.385,
-      "end": 31.425
-    },
-    {
-      "word": "stranger",
-      "start": 31.465,
-      "end": 31.825
-    },
-    {
-      "word": "on",
-      "start": 31.925,
-      "end": 31.985
-    },
-    {
-      "word": "Facebook",
-      "start": 32.045,
-      "end": 32.426
-    },
-    {
-      "word": "Marketplace.",
-      "start": 32.446,
-      "end": 32.946
-    },
-    {
-      "word": "Meta",
-      "start": 33.867,
-      "end": 34.067
-    },
-    {
-      "word": "is",
-      "start": 34.128,
-      "end": 34.188
-    },
-    {
-      "word": "looking",
-      "start": 34.228,
-      "end": 34.428
-    },
-    {
-      "word": "into",
-      "start": 34.468,
-      "end": 34.608
-    },
-    {
-      "word": "that",
-      "start": 34.628,
-      "end": 34.768
-    },
-    {
-      "word": "one,",
-      "start": 34.848,
-      "end": 34.968
-    },
-    {
-      "word": "but",
-      "start": 35.189,
-      "end": 35.289
-    },
-    {
-      "word": "with",
-      "start": 35.309,
-      "end": 35.429
-    },
-    {
-      "word": "this",
-      "start": 35.449,
-      "end": 35.569
-    },
-    {
-      "word": "track",
-      "start": 35.609,
-      "end": 35.829
-    },
-    {
-      "word": "record,",
-      "start": 35.869,
-      "end": 36.15
-    },
-    {
-      "word": "would",
-      "start": 36.33,
-      "end": 36.47
-    },
-    {
-      "word": "you",
-      "start": 36.49,
-      "end": 36.57
-    },
-    {
-      "word": "ever",
-      "start": 36.61,
-      "end": 36.75
-    },
-    {
-      "word": "trust",
-      "start": 36.81,
-      "end": 37.031
+      "word": "despite",
+      "start": 17.888,
+      "end": 18.208
     },
     {
       "word": "their",
-      "start": 37.051,
-      "end": 37.191
+      "start": 18.228,
+      "end": 18.368
     },
     {
-      "word": "AI",
-      "start": 37.251,
-      "end": 37.511
+      "word": "last",
+      "start": 18.388,
+      "end": 18.608
     },
     {
-      "word": "with",
-      "start": 37.531,
-      "end": 37.631
+      "word": "attempt",
+      "start": 18.648,
+      "end": 18.909
     },
     {
-      "word": "your",
-      "start": 37.651,
-      "end": 37.751
+      "word": "at",
+      "start": 18.969,
+      "end": 19.029
     },
     {
-      "word": "messages?",
-      "start": 37.771,
-      "end": 38.132
+      "word": "instant",
+      "start": 19.089,
+      "end": 19.369
+    },
+    {
+      "word": "checkout",
+      "start": 19.409,
+      "end": 19.749
+    },
+    {
+      "word": "failing",
+      "start": 19.789,
+      "end": 20.05
+    },
+    {
+      "word": "miserably.",
+      "start": 20.09,
+      "end": 20.49
+    },
+    {
+      "word": "Some",
+      "start": 21.371,
+      "end": 21.531
+    },
+    {
+      "word": "people",
+      "start": 21.571,
+      "end": 21.791
+    },
+    {
+      "word": "are",
+      "start": 21.831,
+      "end": 21.931
+    },
+    {
+      "word": "already",
+      "start": 21.992,
+      "end": 22.272
+    },
+    {
+      "word": "worried",
+      "start": 22.312,
+      "end": 22.552
+    },
+    {
+      "word": "this",
+      "start": 22.592,
+      "end": 22.712
+    },
+    {
+      "word": "is",
+      "start": 22.772,
+      "end": 22.832
+    },
+    {
+      "word": "just",
+      "start": 22.872,
+      "end": 23.032
+    },
+    {
+      "word": "another",
+      "start": 23.093,
+      "end": 23.313
+    },
+    {
+      "word": "way",
+      "start": 23.353,
+      "end": 23.493
+    },
+    {
+      "word": "for",
+      "start": 23.533,
+      "end": 23.633
+    },
+    {
+      "word": "tech",
+      "start": 23.673,
+      "end": 23.873
+    },
+    {
+      "word": "giants",
+      "start": 23.913,
+      "end": 24.214
+    },
+    {
+      "word": "to",
+      "start": 24.254,
+      "end": 24.334
+    },
+    {
+      "word": "feed",
+      "start": 24.374,
+      "end": 24.534
+    },
+    {
+      "word": "us",
+      "start": 24.574,
+      "end": 24.654
+    },
+    {
+      "word": "targeted",
+      "start": 24.694,
+      "end": 25.014
+    },
+    {
+      "word": "ads.",
+      "start": 25.114,
+      "end": 25.295
+    },
+    {
+      "word": "Google",
+      "start": 26.135,
+      "end": 26.436
+    },
+    {
+      "word": "already",
+      "start": 26.456,
+      "end": 26.696
+    },
+    {
+      "word": "launched",
+      "start": 26.736,
+      "end": 26.976
+    },
+    {
+      "word": "a",
+      "start": 27.016,
+      "end": 27.056
+    },
+    {
+      "word": "similar",
+      "start": 27.096,
+      "end": 27.377
+    },
+    {
+      "word": "tool",
+      "start": 27.417,
+      "end": 27.597
+    },
+    {
+      "word": "last",
+      "start": 27.637,
+      "end": 27.817
+    },
+    {
+      "word": "year,",
+      "start": 27.857,
+      "end": 28.037
+    },
+    {
+      "word": "so",
+      "start": 28.337,
+      "end": 28.438
+    },
+    {
+      "word": "the",
+      "start": 28.458,
+      "end": 28.538
+    },
+    {
+      "word": "real",
+      "start": 28.578,
+      "end": 28.738
+    },
+    {
+      "word": "question",
+      "start": 28.778,
+      "end": 28.938
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"
