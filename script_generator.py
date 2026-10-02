@@ -62,7 +62,7 @@ from config import BANNED_FILLER
 
 
 def _call_llm(messages: list[dict], temperature: float = 0.5,
-              max_tokens: int = 1024,
+              max_tokens: int = 4024,
               model_key: str = llm_client.DEFAULT_MODEL_KEY) -> str:
     """Wrapper over llm_client.call_llm for backward compatibility.
 
@@ -96,10 +96,7 @@ PART A — SCRIPT RULES:
 1. HOOK (sentence 1, 0-3s): The VERY FIRST line must be the most surprising,
    specific, or counterintuitive fact from the source. Drop the viewer directly
    into the story — no warm-up, no context-setting, no intro. Use a real number,
-   a named person/tool/community, or a striking outcome. NEVER open with
-   "Imagine...", "What if...", "Have you ever...", "Picture this...", "Today...",
-   "Recently...", or any generic scene-setter. A vague generality
-   ("a debate is brewing") is a failure.
+   a named person/tool/community, or a striking outcome.
 2. NO GENERIC INTRODUCTIONS: Do not introduce the story, the topic, or yourself.
    Never say "In this video", "Let's talk about", "You may have heard", or any
    phrase that delays delivering value. Start delivering the story from word one.
@@ -148,14 +145,13 @@ PART A — SCRIPT RULES:
 PART B — HEADLINE + YOUTUBE METADATA RULES:
 Generate 5 headline options (on-screen hook). Each must create a curiosity gap
 using a CONCRETE noun from the story (a name, tool, number, or group) — not a
-generic phrase. Under 8 words. The chosen_headline is the one you'd put on-screen
-as the hook text.
+generic phrase. Under 8 words. Generate a short hook for on screen text.
 Bad: "Coding Just Got Personal"
 Good: "This Subreddit Banned ChatGPT Code"
 
 ALSO generate:
 - youtube_title: punchy, ≤60 chars, curiosity-gap, YouTube-SEO style (NOT the raw
-  source title). Banned: "You won't believe", all-caps shouting, clickbait that
+  source title).banned: all-caps shouting, clickbait that
   doesn't match the content.
 - youtube_description: 1-2 line short caption (≤200 chars) ending with relevant
   hashtags, suitable to paste into Shorts description box.
