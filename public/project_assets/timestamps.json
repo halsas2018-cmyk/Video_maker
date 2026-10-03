@@ -1,522 +1,567 @@
 [
   {
-    "word": "A",
-    "start": 0.151,
-    "end": 0.191
+    "word": "David",
+    "start": 0.131,
+    "end": 0.351
   },
   {
-    "word": "journalist",
-    "start": 0.231,
-    "end": 0.632
+    "word": "Robinson",
+    "start": 0.391,
+    "end": 0.791
   },
   {
-    "word": "recently",
-    "start": 0.692,
-    "end": 1.032
+    "word": "just",
+    "start": 0.891,
+    "end": 1.051
   },
   {
-    "word": "claimed",
-    "start": 1.072,
-    "end": 1.352
-  },
-  {
-    "word": "that",
-    "start": 1.372,
-    "end": 1.473
-  },
-  {
-    "word": "an",
-    "start": 1.493,
-    "end": 1.533
-  },
-  {
-    "word": "AI",
-    "start": 1.653,
-    "end": 1.933
-  },
-  {
-    "word": "app",
-    "start": 2.053,
-    "end": 2.173
-  },
-  {
-    "word": "called",
-    "start": 2.193,
-    "end": 2.413
-  },
-  {
-    "word": "Muse",
-    "start": 2.474,
-    "end": 2.734
-  },
-  {
-    "word": "was",
-    "start": 2.754,
-    "end": 2.894
-  },
-  {
-    "word": "reading",
-    "start": 2.934,
-    "end": 3.134
+    "word": "quit",
+    "start": 1.131,
+    "end": 1.311
   },
   {
     "word": "his",
-    "start": 3.174,
-    "end": 3.274
+    "start": 1.351,
+    "end": 1.451
   },
   {
-    "word": "private",
-    "start": 3.334,
-    "end": 3.655
+    "word": "job",
+    "start": 1.511,
+    "end": 1.732
   },
   {
-    "word": "messages",
-    "start": 3.695,
-    "end": 4.055
+    "word": "writing",
+    "start": 1.752,
+    "end": 1.992
   },
   {
-    "word": "without",
-    "start": 4.155,
-    "end": 4.436
+    "word": "safety",
+    "start": 2.052,
+    "end": 2.312
   },
   {
-    "word": "permission.",
-    "start": 4.476,
-    "end": 4.836
+    "word": "reports",
+    "start": 2.352,
+    "end": 2.672
   },
   {
-    "word": "Meta",
-    "start": 5.196,
-    "end": 5.377
+    "word": "at",
+    "start": 2.712,
+    "end": 2.772
   },
   {
-    "word": "disputed",
-    "start": 5.417,
-    "end": 5.777
+    "word": "OpenAI",
+    "start": 2.812,
+    "end": 3.292
+  },
+  {
+    "word": "because",
+    "start": 3.532,
+    "end": 3.752
+  },
+  {
+    "word": "he",
+    "start": 3.772,
+    "end": 3.852
+  },
+  {
+    "word": "says",
+    "start": 3.892,
+    "end": 4.052
   },
   {
     "word": "the",
-    "start": 5.817,
-    "end": 5.877
+    "start": 4.092,
+    "end": 4.152
   },
   {
-    "word": "claim,",
-    "start": 5.897,
-    "end": 6.177
+    "word": "company",
+    "start": 4.192,
+    "end": 4.492
   },
   {
-    "word": "but",
-    "start": 6.438,
-    "end": 6.518
-  },
-  {
-    "word": "the",
-    "start": 6.558,
-    "end": 6.638
-  },
-  {
-    "word": "incident",
-    "start": 6.698,
-    "end": 6.998
-  },
-  {
-    "word": "sparked",
-    "start": 7.018,
-    "end": 7.299
-  },
-  {
-    "word": "a",
-    "start": 7.339,
-    "end": 7.379
-  },
-  {
-    "word": "massive",
-    "start": 7.479,
-    "end": 7.819
-  },
-  {
-    "word": "wake-up",
-    "start": 7.859,
-    "end": 8.139
-  },
-  {
-    "word": "call",
-    "start": 8.179,
-    "end": 8.42
-  },
-  {
-    "word": "for",
-    "start": 8.46,
-    "end": 8.56
-  },
-  {
-    "word": "Apple",
-    "start": 8.62,
-    "end": 8.8
-  },
-  {
-    "word": "security.",
-    "start": 8.82,
-    "end": 9.241
-  },
-  {
-    "word": "Apple",
-    "start": 9.621,
-    "end": 9.821
+    "word": "culture",
+    "start": 4.532,
+    "end": 4.852
   },
   {
     "word": "is",
-    "start": 9.861,
-    "end": 9.941
+    "start": 5.012,
+    "end": 5.073
   },
   {
-    "word": "now",
-    "start": 9.981,
-    "end": 10.142
+    "word": "broken.",
+    "start": 5.113,
+    "end": 5.413
   },
   {
-    "word": "rushing",
-    "start": 10.202,
-    "end": 10.462
+    "word": "Declaims",
+    "start": 5.733,
+    "end": 6.093
   },
   {
-    "word": "to",
-    "start": 10.502,
-    "end": 10.562
+    "word": "tech",
+    "start": 6.153,
+    "end": 6.353
   },
   {
-    "word": "tighten",
-    "start": 10.622,
-    "end": 10.922
+    "word": "giants",
+    "start": 6.433,
+    "end": 6.713
   },
   {
-    "word": "full",
-    "start": 11.002,
-    "end": 11.183
+    "word": "operate",
+    "start": 6.793,
+    "end": 7.093
   },
   {
-    "word": "disk",
-    "start": 11.223,
-    "end": 11.423
+    "word": "with",
+    "start": 7.133,
+    "end": 7.233
   },
   {
-    "word": "access,",
-    "start": 11.503,
-    "end": 11.843
+    "word": "extreme",
+    "start": 7.293,
+    "end": 7.653
   },
   {
-    "word": "a",
-    "start": 12.244,
-    "end": 12.284
+    "word": "confidence",
+    "start": 7.713,
+    "end": 8.173
   },
   {
-    "word": "setting",
-    "start": 12.324,
-    "end": 12.524
+    "word": "and",
+    "start": 8.393,
+    "end": 8.474
   },
   {
-    "word": "that",
-    "start": 12.544,
-    "end": 12.644
+    "word": "perpetual",
+    "start": 8.514,
+    "end": 8.914
   },
   {
-    "word": "gives",
-    "start": 12.684,
-    "end": 12.844
+    "word": "sprints,",
+    "start": 8.954,
+    "end": 9.254
   },
   {
-    "word": "apps",
-    "start": 12.984,
-    "end": 13.145
+    "word": "ignoring",
+    "start": 9.634,
+    "end": 9.934
   },
   {
-    "word": "total",
-    "start": 13.225,
-    "end": 13.485
+    "word": "potential",
+    "start": 9.974,
+    "end": 10.374
   },
   {
-    "word": "control",
-    "start": 13.505,
-    "end": 13.905
-  },
-  {
-    "word": "over",
-    "start": 14.006,
-    "end": 14.146
-  },
-  {
-    "word": "your",
-    "start": 14.166,
-    "end": 14.266
-  },
-  {
-    "word": "system.",
-    "start": 14.306,
-    "end": 14.586
-  },
-  {
-    "word": "This",
-    "start": 14.927,
-    "end": 15.067
-  },
-  {
-    "word": "feature",
-    "start": 15.107,
-    "end": 15.367
-  },
-  {
-    "word": "was",
-    "start": 15.387,
-    "end": 15.507
-  },
-  {
-    "word": "meant",
-    "start": 15.567,
-    "end": 15.727
-  },
-  {
-    "word": "for",
-    "start": 15.747,
-    "end": 15.847
-  },
-  {
-    "word": "simple",
-    "start": 15.908,
-    "end": 16.108
-  },
-  {
-    "word": "backups,",
-    "start": 16.148,
-    "end": 16.488
-  },
-  {
-    "word": "but",
-    "start": 16.788,
-    "end": 16.889
-  },
-  {
-    "word": "AI",
-    "start": 16.949,
-    "end": 17.229
-  },
-  {
-    "word": "agents",
-    "start": 17.309,
-    "end": 17.549
-  },
-  {
-    "word": "are",
-    "start": 17.569,
-    "end": 17.669
-  },
-  {
-    "word": "using",
-    "start": 17.769,
-    "end": 17.95
-  },
-  {
-    "word": "it",
-    "start": 17.97,
-    "end": 18.03
+    "word": "disasters",
+    "start": 10.394,
+    "end": 10.894
   },
   {
     "word": "to",
-    "start": 18.07,
-    "end": 18.13
+    "start": 11.114,
+    "end": 11.194
   },
   {
-    "word": "snoop",
-    "start": 18.19,
-    "end": 18.39
+    "word": "build",
+    "start": 11.214,
+    "end": 11.394
   },
   {
-    "word": "through",
-    "start": 18.41,
-    "end": 18.57
+    "word": "faster.",
+    "start": 11.434,
+    "end": 11.795
   },
   {
-    "word": "your",
-    "start": 18.59,
-    "end": 18.67
+    "word": "Robinson",
+    "start": 12.195,
+    "end": 12.575
   },
   {
-    "word": "files.",
-    "start": 18.71,
-    "end": 18.991
-  },
-  {
-    "word": "Going",
-    "start": 19.411,
-    "end": 19.631
-  },
-  {
-    "word": "forward,",
-    "start": 19.691,
-    "end": 20.012
-  },
-  {
-    "word": "Apple",
-    "start": 20.312,
-    "end": 20.492
-  },
-  {
-    "word": "will",
-    "start": 20.512,
-    "end": 20.652
-  },
-  {
-    "word": "force",
-    "start": 20.693,
-    "end": 20.913
-  },
-  {
-    "word": "developers",
-    "start": 20.953,
-    "end": 21.333
-  },
-  {
-    "word": "to",
-    "start": 21.373,
-    "end": 21.433
-  },
-  {
-    "word": "get",
-    "start": 21.473,
-    "end": 21.613
-  },
-  {
-    "word": "very",
-    "start": 21.694,
-    "end": 21.954
-  },
-  {
-    "word": "explicit",
-    "start": 21.994,
-    "end": 22.394
-  },
-  {
-    "word": "permission",
-    "start": 22.434,
-    "end": 22.795
-  },
-  {
-    "word": "before",
-    "start": 22.915,
-    "end": 23.275
-  },
-  {
-    "word": "grabbing",
-    "start": 23.315,
-    "end": 23.636
-  },
-  {
-    "word": "that",
-    "start": 23.656,
-    "end": 23.756
-  },
-  {
-    "word": "kind",
-    "start": 23.776,
-    "end": 23.916
-  },
-  {
-    "word": "of",
-    "start": 23.956,
-    "end": 23.996
-  },
-  {
-    "word": "power.",
-    "start": 24.036,
-    "end": 24.296
-  },
-  {
-    "word": "As",
-    "start": 24.697,
-    "end": 24.777
-  },
-  {
-    "word": "AI",
-    "start": 24.877,
-    "end": 25.137
-  },
-  {
-    "word": "gets",
-    "start": 25.177,
-    "end": 25.357
-  },
-  {
-    "word": "more",
-    "start": 25.397,
-    "end": 25.538
-  },
-  {
-    "word": "autonomous,",
-    "start": 25.578,
-    "end": 25.998
-  },
-  {
-    "word": "are",
-    "start": 26.358,
-    "end": 26.418
-  },
-  {
-    "word": "you",
-    "start": 26.439,
-    "end": 26.539
-  },
-  {
-    "word": "comfortable",
-    "start": 26.579,
-    "end": 26.939
-  },
-  {
-    "word": "letting",
-    "start": 26.979,
-    "end": 27.179
+    "word": "argues",
+    "start": 12.655,
+    "end": 12.915
   },
   {
     "word": "these",
-    "start": 27.199,
-    "end": 27.339
+    "start": 12.935,
+    "end": 13.075
   },
   {
-    "word": "agents",
-    "start": 27.42,
-    "end": 27.64
+    "word": "labs",
+    "start": 13.135,
+    "end": 13.415
   },
   {
-    "word": "see",
-    "start": 27.72,
-    "end": 27.86
+    "word": "need",
+    "start": 13.455,
+    "end": 13.615
   },
   {
-    "word": "your",
-    "start": 27.88,
-    "end": 28.0
+    "word": "to",
+    "start": 13.635,
+    "end": 13.735
   },
   {
-    "word": "browsing",
-    "start": 28.02,
-    "end": 28.361
+    "word": "run",
+    "start": 13.795,
+    "end": 13.975
   },
   {
-    "word": "history",
-    "start": 28.401,
-    "end": 28.701
+    "word": "like",
+    "start": 14.015,
+    "end": 14.155
   },
   {
-    "word": "in",
-    "start": 28.921,
-    "end": 28.981
+    "word": "nuclear",
+    "start": 14.215,
+    "end": 14.515
   },
   {
-    "word": "private",
-    "start": 29.021,
-    "end": 29.281
+    "word": "power",
+    "start": 14.535,
+    "end": 14.735
   },
   {
-    "word": "mail?",
-    "start": 29.301,
-    "end": 29.462
+    "word": "plants,",
+    "start": 14.775,
+    "end": 15.035
+  },
+  {
+    "word": "with",
+    "start": 15.376,
+    "end": 15.496
+  },
+  {
+    "word": "careful",
+    "start": 15.536,
+    "end": 15.816
+  },
+  {
+    "word": "planning",
+    "start": 15.856,
+    "end": 16.156
+  },
+  {
+    "word": "instead",
+    "start": 16.276,
+    "end": 16.596
+  },
+  {
+    "word": "of",
+    "start": 16.616,
+    "end": 16.656
+  },
+  {
+    "word": "move",
+    "start": 16.736,
+    "end": 16.916
+  },
+  {
+    "word": "fast",
+    "start": 16.936,
+    "end": 17.156
+  },
+  {
+    "word": "and",
+    "start": 17.196,
+    "end": 17.256
+  },
+  {
+    "word": "break",
+    "start": 17.276,
+    "end": 17.456
+  },
+  {
+    "word": "things.",
+    "start": 17.476,
+    "end": 17.696
+  },
+  {
+    "word": "It",
+    "start": 18.156,
+    "end": 18.216
+  },
+  {
+    "word": "is",
+    "start": 18.256,
+    "end": 18.316
+  },
+  {
+    "word": "not",
+    "start": 18.356,
+    "end": 18.476
+  },
+  {
+    "word": "just",
+    "start": 18.537,
+    "end": 18.737
+  },
+  {
+    "word": "him,",
+    "start": 18.777,
+    "end": 18.897
+  },
+  {
+    "word": "as",
+    "start": 19.257,
+    "end": 19.337
+  },
+  {
+    "word": "a",
+    "start": 19.377,
+    "end": 19.397
+  },
+  {
+    "word": "wave",
+    "start": 19.437,
+    "end": 19.637
+  },
+  {
+    "word": "of",
+    "start": 19.657,
+    "end": 19.717
+  },
+  {
+    "word": "safety",
+    "start": 19.777,
+    "end": 20.057
+  },
+  {
+    "word": "experts",
+    "start": 20.117,
+    "end": 20.417
+  },
+  {
+    "word": "are",
+    "start": 20.497,
+    "end": 20.577
+  },
+  {
+    "word": "now",
+    "start": 20.617,
+    "end": 20.797
+  },
+  {
+    "word": "walking",
+    "start": 20.877,
+    "end": 21.177
+  },
+  {
+    "word": "out",
+    "start": 21.197,
+    "end": 21.257
+  },
+  {
+    "word": "of",
+    "start": 21.277,
+    "end": 21.337
+  },
+  {
+    "word": "companies",
+    "start": 21.377,
+    "end": 21.677
+  },
+  {
+    "word": "like",
+    "start": 21.697,
+    "end": 21.837
+  },
+  {
+    "word": "Anthropic",
+    "start": 21.898,
+    "end": 22.358
+  },
+  {
+    "word": "and",
+    "start": 22.478,
+    "end": 22.558
+  },
+  {
+    "word": "Google",
+    "start": 22.578,
+    "end": 22.818
+  },
+  {
+    "word": "DeepMind.",
+    "start": 22.838,
+    "end": 23.278
+  },
+  {
+    "word": "One",
+    "start": 23.679,
+    "end": 23.759
+  },
+  {
+    "word": "researcher",
+    "start": 23.8,
+    "end": 24.202
+  },
+  {
+    "word": "even",
+    "start": 24.343,
+    "end": 24.504
+  },
+  {
+    "word": "warned",
+    "start": 24.524,
+    "end": 24.765
+  },
+  {
+    "word": "that",
+    "start": 24.785,
+    "end": 24.886
+  },
+  {
+    "word": "AI",
+    "start": 24.986,
+    "end": 25.248
+  },
+  {
+    "word": "could",
+    "start": 25.288,
+    "end": 25.409
+  },
+  {
+    "word": "kill",
+    "start": 25.449,
+    "end": 25.65
+  },
+  {
+    "word": "us",
+    "start": 25.69,
+    "end": 25.791
+  },
+  {
+    "word": "all",
+    "start": 25.992,
+    "end": 26.113
+  },
+  {
+    "word": "by",
+    "start": 26.133,
+    "end": 26.234
+  },
+  {
+    "word": "the",
+    "start": 26.254,
+    "end": 26.354
+  },
+  {
+    "word": "end",
+    "start": 26.435,
+    "end": 26.515
+  },
+  {
+    "word": "of",
+    "start": 26.535,
+    "end": 26.575
+  },
+  {
+    "word": "this",
+    "start": 26.616,
+    "end": 26.736
+  },
+  {
+    "word": "decade.",
+    "start": 26.757,
+    "end": 27.119
+  },
+  {
+    "word": "When",
+    "start": 27.44,
+    "end": 27.541
+  },
+  {
+    "word": "the",
+    "start": 27.561,
+    "end": 27.621
+  },
+  {
+    "word": "people",
+    "start": 27.642,
+    "end": 27.883
+  },
+  {
+    "word": "building",
+    "start": 27.903,
+    "end": 28.185
+  },
+  {
+    "word": "these",
+    "start": 28.205,
+    "end": 28.366
+  },
+  {
+    "word": "tools",
+    "start": 28.406,
+    "end": 28.688
+  },
+  {
+    "word": "are",
+    "start": 28.748,
+    "end": 28.828
+  },
+  {
+    "word": "the",
+    "start": 28.849,
+    "end": 28.929
+  },
+  {
+    "word": "ones",
+    "start": 29.009,
+    "end": 29.17
+  },
+  {
+    "word": "running",
+    "start": 29.231,
+    "end": 29.412
+  },
+  {
+    "word": "for",
+    "start": 29.432,
+    "end": 29.512
+  },
+  {
+    "word": "the",
+    "start": 29.532,
+    "end": 29.613
+  },
+  {
+    "word": "exits,",
+    "start": 29.714,
+    "end": 29.995
+  },
+  {
+    "word": "should",
+    "start": 30.317,
+    "end": 30.478
+  },
+  {
+    "word": "we",
+    "start": 30.498,
+    "end": 30.579
+  },
+  {
+    "word": "be",
+    "start": 30.599,
+    "end": 30.679
+  },
+  {
+    "word": "paying",
+    "start": 30.719,
+    "end": 30.92
+  },
+  {
+    "word": "more",
+    "start": 30.941,
+    "end": 31.081
+  },
+  {
+    "word": "attention?",
+    "start": 31.102,
+    "end": 31.443
   }
 ]

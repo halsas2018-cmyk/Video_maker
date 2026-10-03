@@ -97,6 +97,27 @@ PART A — SCRIPT RULES:
    specific, or counterintuitive fact from the source. Drop the viewer directly
    into the story — no warm-up, no context-setting, no intro. Use a real number,
    a named person/tool/community, or a striking outcome.
+
+   HOOK RULE: The first sentence must NOT restate or closely paraphrase the
+   video's title/thumbnail text — assume the viewer already read the title.
+   The first sentence's job is to immediately reveal the single most
+   surprising, specific detail from the story — the actual secret, the
+   specific mechanism of the cover-up, the exact thing that was hidden — not
+   general context or setup.
+
+   Bad hook (restates title): "Facebook knew Instagram was harming teen girls'
+   mental health."
+   Good hook (leads with the specific, damning detail): "Facebook's own
+   internal research showed 1 in 3 teen girls said Instagram made their body
+   image issues worse — and they kept using it as a growth metric anyway."
+
+   For concealment/exposure stories specifically (the type the ranker now
+   prioritizes), the hook must name WHAT was hidden and WHO hid it within the
+   first sentence wherever the source material supports it — don't make the
+   viewer wait for the reveal, since that's the entire reason this story was
+   selected as newsworthy. Never invent details not present in the source —
+   if the source doesn't specify who/what precisely, use the most specific
+   true detail it does provide rather than inventing one.
 2. NO GENERIC INTRODUCTIONS: Do not introduce the story, the topic, or yourself.
    Never say "In this video", "Let's talk about", "You may have heard", or any
    phrase that delays delivering value. Start delivering the story from word one.
@@ -116,7 +137,12 @@ PART A — SCRIPT RULES:
    same word or sentence structure. Alternate between short punchy lines and
    longer explanatory ones. Vary the rhythm so it never feels monotonous.
 8. SPECIFICITY: Use real names, real numbers, and quotes/paraphrased opinions
-   from the article and comments. Vague paraphrase is a failure state.
+   from the article and comments. Never replace a concrete named detail (company,
+   platform, person, specific number) already present in the source material with
+   a vaguer phrase — specificity should only increase, never decrease. If the
+   source mentions "Hugging Face", keep "Hugging Face" rather than changing to
+   "a public platform". If the source mentions "Meta", keep "Meta" rather than
+   changing to "a tech company". Vague paraphrase is a failure state.
 9. EMOTIONAL ARC: Move through distinct emotional beats — curiosity/shock,
    stakes/conflict, relatable tension, then a turn or payoff. Do not stay flat
    and explanatory throughout.

@@ -51,6 +51,28 @@ Rank the BEST stories for a short-form vertical video. Judge each story on:
   product, or surprising fact)?
 - Freshness: is this actual news, or evergreen/academic filler?
 - Visual filmability: could stock footage plausibly illustrate it?
+- Concealment/exposure signal: does the story involve something hidden,
+  secret, or covered up being revealed or exposed? (e.g. a company hiding a
+  problem, a system doing something behind the scenes it shouldn't, a
+  researcher or whistleblower exposing misconduct, a security flaw or
+  vulnerability that went undetected until discovered). Look for framing
+  cues in the source material: words like "secret," "hidden," "covert,"
+  "undisclosed," "leaked," "whistleblower," "rogue," "unauthorized,"
+  "caught," "exposed." A routine product launch or standard announcement
+  should score LOWER on this dimension than a story about a cover-up,
+  breach, or hidden flaw.
+
+FEW-SHOT EXAMPLES:
+High concealment/exposure score: "Internal emails show Facebook knew
+  Instagram harmed teen girls' mental health for years but hid the research"
+  (reveals hidden internal knowledge of harm)
+High concealment/exposure score: "Security researcher finds backdoor in
+  popular VPN service that let attackers decrypt user traffic for months"
+  (exposes undetected vulnerability)
+Low concealment/exposure score: "Apple announces new iPhone 16 with
+  improved camera and longer battery life" (routine product announcement)
+Low concealment/exposure score: "Google releases new AI model Gemini
+  with multimodal capabilities" (standard product launch, no concealment)
 
 DEMOTE or skip: academic papers without a news hook, niche-insider
 discussions, vague headlines with no concrete subject, opinion pieces,
