@@ -1,798 +1,642 @@
 {
   "shots": [
     {
-      "sentence": "An OpenAI researcher just quit, claiming the company's culture is fundamentally broken and incapable of building safe AI.",
-      "search_term": "stressed professional office",
-      "media_type": "video",
-      "visual": "A person looking frustrated at a laptop screen in a modern office.",
-      "asset_path": "project_assets/shot_1.mp4",
-      "duration_seconds": 2.725
-    },
-    {
-      "sentence": "An OpenAI researcher just quit, claiming the company's culture is fundamentally broken and incapable of building safe AI.",
-      "search_term": "empty office chair",
-      "media_type": "video",
-      "visual": "An empty desk setup with multiple monitors in a dim room.",
-      "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.725
-    },
-    {
-      "sentence": "Critics are calling out the timing, pointing out that these whistleblowers often leave with massive stock payouts already in their pockets.",
-      "search_term": "handing over stack of money",
-      "media_type": "video",
-      "visual": "Close up of hands exchanging cash or documents.",
-      "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 3.179
-    },
-    {
-      "sentence": "Critics are calling out the timing, pointing out that these whistleblowers often leave with massive stock payouts already in their pockets.",
-      "search_term": "stock market ticker",
-      "media_type": "video",
-      "visual": "Digital stock market numbers scrolling rapidly.",
-      "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 3.179
-    },
-    {
-      "sentence": "It is easy to find a moral compass once you and your children are set for life financially.",
-      "search_term": "luxury lifestyle",
-      "media_type": "video",
-      "visual": "A silhouette of a person looking out a window at a city skyline.",
-      "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 2.725
-    },
-    {
-      "sentence": "It is easy to find a moral compass once you and your children are set for life financially.",
-      "search_term": "abstract compass",
-      "media_type": "video",
-      "visual": "A close up of a nautical compass needle spinning.",
-      "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.725
-    },
-    {
-      "sentence": "Some argue these public exits are just a clever rebrand for becoming an AI influencer or raising money for a new project.",
-      "search_term": "influencer recording video",
-      "media_type": "video",
-      "visual": "Someone talking into a professional microphone and ring light.",
-      "asset_path": "project_assets/shot_7.jpg",
-      "duration_seconds": 3.33
-    },
-    {
-      "sentence": "Some argue these public exits are just a clever rebrand for becoming an AI influencer or raising money for a new project.",
-      "search_term": "business meeting handshake",
-      "media_type": "video",
-      "visual": "Two people shaking hands in a bright office.",
-      "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 3.33
-    },
-    {
-      "sentence": "The real problem is that we are building super-intelligent systems without actually knowing how to keep them under control.",
-      "search_term": "neural network animation",
-      "media_type": "video",
-      "visual": "Glowing nodes connecting in a complex digital web.",
-      "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 2.876
-    },
-    {
-      "sentence": "The real problem is that we are building super-intelligent systems without actually knowing how to keep them under control.",
-      "search_term": "futuristic data stream",
-      "media_type": "video",
-      "visual": "Abstract lines of code flowing down a screen.",
-      "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 2.876
-    },
-    {
-      "sentence": "One cynical suggestion to fix this is to hold the CEO personally responsible for any crime the AI agent commits.",
-      "search_term": "judge gavel",
-      "media_type": "video",
-      "visual": "A wooden gavel striking a sounding block.",
-      "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 3.028
-    },
-    {
-      "sentence": "One cynical suggestion to fix this is to hold the CEO personally responsible for any crime the AI agent commits.",
-      "search_term": "serious executive portrait",
+      "sentence": "Google tried to hide their massive water and electricity usage in Nebraska behind a simple redaction.",
+      "search_term": "redacted document",
       "media_type": "photo",
-      "visual": "A serious looking man in a suit looking at the camera.",
+      "visual": "Close up of a blacked out document.",
+      "asset_path": "project_assets/shot_1.jpg",
+      "duration_seconds": 2.295
+    },
+    {
+      "sentence": "Google tried to hide their massive water and electricity usage in Nebraska behind a simple redaction.",
+      "search_term": "server room technology",
+      "media_type": "video",
+      "visual": "Rows of blinking server racks in a dark room.",
+      "asset_path": "project_assets/shot_2.mp4",
+      "duration_seconds": 2.295
+    },
+    {
+      "sentence": "But they forgot one thing: if you highlight the blacked-out text and copy-paste it, the secrets appear.",
+      "search_term": "computer cursor clicking",
+      "media_type": "video",
+      "visual": "Close up of a mouse cursor selecting text on a screen.",
+      "asset_path": "project_assets/shot_3.mp4",
+      "duration_seconds": 2.438
+    },
+    {
+      "sentence": "But they forgot one thing: if you highlight the blacked-out text and copy-paste it, the secrets appear.",
+      "search_term": "copy paste action",
+      "media_type": "video",
+      "visual": "Finger hitting keys on a keyboard.",
+      "asset_path": "project_assets/shot_4.mp4",
+      "duration_seconds": 2.438
+    },
+    {
+      "sentence": "The data shows one site used thirteen million gallons of water in just one year.",
+      "search_term": "water cooling tower",
+      "media_type": "video",
+      "visual": "Industrial cooling towers emitting steam.",
+      "asset_path": "project_assets/shot_5.mp4",
+      "duration_seconds": 2.152
+    },
+    {
+      "sentence": "The data shows one site used thirteen million gallons of water in just one year.",
+      "search_term": "water splash",
+      "media_type": "video",
+      "visual": "Close up of clear water movement.",
+      "asset_path": "project_assets/shot_6.mp4",
+      "duration_seconds": 2.152
+    },
+    {
+      "sentence": "That is enough to fill twenty Olympic-sized swimming pools, yet it is still less than half of what the city uses daily.",
+      "search_term": "swimming pool aerial",
+      "media_type": "video",
+      "visual": "Top down shot of a large blue swimming pool.",
+      "asset_path": "project_assets/shot_7.mp4",
+      "duration_seconds": 3.156
+    },
+    {
+      "sentence": "That is enough to fill twenty Olympic-sized swimming pools, yet it is still less than half of what the city uses daily.",
+      "search_term": "city skyline aerial",
+      "media_type": "video",
+      "visual": "Wide shot of a city landscape.",
+      "asset_path": "project_assets/shot_8.mp4",
+      "duration_seconds": 3.156
+    },
+    {
+      "sentence": "Even more surprising, these same centers are expecting over fifty million dollars in tax refunds for the coming year.",
+      "search_term": "money dollar bills",
+      "media_type": "video",
+      "visual": "Stacks of cash on a desk.",
+      "asset_path": "project_assets/shot_9.mp4",
+      "duration_seconds": 2.725
+    },
+    {
+      "sentence": "Even more surprising, these same centers are expecting over fifty million dollars in tax refunds for the coming year.",
+      "search_term": "tax form",
+      "media_type": "photo",
+      "visual": "Close up of a generic tax document.",
+      "asset_path": "project_assets/shot_10.jpg",
+      "duration_seconds": 2.725
+    },
+    {
+      "sentence": "Is this just the cost of keeping the internet running, or are these companies getting a free ride?",
+      "search_term": "person thinking",
+      "media_type": "video",
+      "visual": "A person looking at a screen with a confused expression.",
+      "asset_path": "project_assets/shot_11.mp4",
+      "duration_seconds": 2.582
+    },
+    {
+      "sentence": "Is this just the cost of keeping the internet running, or are these companies getting a free ride?",
+      "search_term": "fiber optic cables",
+      "media_type": "video",
+      "visual": "Glowing fiber optic light strands.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 3.028
-    },
-    {
-      "sentence": "Until then, do you think these safety warnings are real progress or just a very expensive distraction?",
-      "search_term": "question mark digital",
-      "media_type": "video",
-      "visual": "A glowing digital question mark floating in a dark space.",
-      "asset_path": "project_assets/shot_13.mp4",
-      "duration_seconds": 2.573
-    },
-    {
-      "sentence": "Until then, do you think these safety warnings are real progress or just a very expensive distraction?",
-      "search_term": "thinking person",
-      "media_type": "video",
-      "visual": "A person resting their chin on their hand looking pensive.",
-      "asset_path": "project_assets/shot_14.mp4",
-      "duration_seconds": 2.573
+      "duration_seconds": 2.582
     }
   ],
   "words": [
     {
-      "word": "An",
+      "word": "Google",
       "start": 0.191,
-      "end": 0.291
+      "end": 0.471
     },
     {
-      "word": "open",
-      "start": 0.391,
-      "end": 0.571
+      "word": "tried",
+      "start": 0.512,
+      "end": 0.692
     },
     {
-      "word": "AI",
-      "start": 0.611,
-      "end": 0.851
+      "word": "to",
+      "start": 0.732,
+      "end": 0.792
     },
     {
-      "word": "researcher",
-      "start": 0.911,
-      "end": 1.332
-    },
-    {
-      "word": "just",
-      "start": 1.352,
-      "end": 1.512
-    },
-    {
-      "word": "quit,",
-      "start": 1.572,
-      "end": 1.812
-    },
-    {
-      "word": "claiming",
-      "start": 2.132,
-      "end": 2.412
-    },
-    {
-      "word": "the",
-      "start": 2.452,
-      "end": 2.512
-    },
-    {
-      "word": "company's",
-      "start": 2.552,
-      "end": 2.912
-    },
-    {
-      "word": "culture",
-      "start": 2.952,
-      "end": 3.252
-    },
-    {
-      "word": "is",
-      "start": 3.313,
-      "end": 3.373
-    },
-    {
-      "word": "fundamentally",
-      "start": 3.433,
-      "end": 3.933
-    },
-    {
-      "word": "broken",
-      "start": 3.953,
-      "end": 4.253
-    },
-    {
-      "word": "and",
-      "start": 4.353,
-      "end": 4.453
-    },
-    {
-      "word": "incapable",
-      "start": 4.493,
-      "end": 4.933
-    },
-    {
-      "word": "of",
-      "start": 4.953,
-      "end": 5.013
-    },
-    {
-      "word": "building",
-      "start": 5.053,
-      "end": 5.333
-    },
-    {
-      "word": "safe",
-      "start": 5.373,
-      "end": 5.574
-    },
-    {
-      "word": "AI.",
-      "start": 5.614,
-      "end": 5.934
-    },
-    {
-      "word": "Critics",
-      "start": 6.754,
-      "end": 6.994
-    },
-    {
-      "word": "are",
-      "start": 7.034,
-      "end": 7.114
-    },
-    {
-      "word": "calling",
-      "start": 7.134,
-      "end": 7.394
-    },
-    {
-      "word": "out",
-      "start": 7.434,
-      "end": 7.534
-    },
-    {
-      "word": "the",
-      "start": 7.554,
-      "end": 7.615
-    },
-    {
-      "word": "timing,",
-      "start": 7.655,
-      "end": 7.955
-    },
-    {
-      "word": "pointing",
-      "start": 8.295,
-      "end": 8.575
-    },
-    {
-      "word": "out",
-      "start": 8.635,
-      "end": 8.715
-    },
-    {
-      "word": "that",
-      "start": 8.735,
-      "end": 8.855
-    },
-    {
-      "word": "these",
-      "start": 8.875,
-      "end": 9.015
-    },
-    {
-      "word": "whistleblowers",
-      "start": 9.055,
-      "end": 9.615
-    },
-    {
-      "word": "often",
-      "start": 9.735,
-      "end": 9.956
-    },
-    {
-      "word": "leave",
-      "start": 9.996,
-      "end": 10.196
-    },
-    {
-      "word": "with",
-      "start": 10.216,
-      "end": 10.316
-    },
-    {
-      "word": "massive",
-      "start": 10.376,
-      "end": 10.676
-    },
-    {
-      "word": "stock",
-      "start": 10.696,
-      "end": 10.916
-    },
-    {
-      "word": "payouts",
-      "start": 10.956,
-      "end": 11.296
-    },
-    {
-      "word": "already",
-      "start": 11.396,
-      "end": 11.676
-    },
-    {
-      "word": "in",
-      "start": 11.696,
-      "end": 11.736
+      "word": "hide",
+      "start": 0.832,
+      "end": 1.032
     },
     {
       "word": "their",
-      "start": 11.776,
-      "end": 11.896
+      "start": 1.052,
+      "end": 1.172
     },
     {
-      "word": "pockets.",
-      "start": 11.916,
-      "end": 12.257
+      "word": "massive",
+      "start": 1.212,
+      "end": 1.513
     },
     {
-      "word": "It",
-      "start": 13.157,
-      "end": 13.237
-    },
-    {
-      "word": "is",
-      "start": 13.277,
-      "end": 13.337
-    },
-    {
-      "word": "easy",
-      "start": 13.417,
-      "end": 13.617
-    },
-    {
-      "word": "to",
-      "start": 13.657,
-      "end": 13.717
-    },
-    {
-      "word": "find",
-      "start": 13.757,
-      "end": 13.957
-    },
-    {
-      "word": "a",
-      "start": 13.997,
-      "end": 14.017
-    },
-    {
-      "word": "moral",
-      "start": 14.077,
-      "end": 14.318
-    },
-    {
-      "word": "compass",
-      "start": 14.358,
-      "end": 14.638
-    },
-    {
-      "word": "once",
-      "start": 14.718,
-      "end": 14.858
-    },
-    {
-      "word": "you",
-      "start": 14.878,
-      "end": 15.018
+      "word": "water",
+      "start": 1.553,
+      "end": 1.773
     },
     {
       "word": "and",
-      "start": 15.078,
-      "end": 15.138
+      "start": 1.813,
+      "end": 1.893
     },
     {
-      "word": "your",
-      "start": 15.178,
-      "end": 15.298
+      "word": "electricity",
+      "start": 1.913,
+      "end": 2.414
     },
     {
-      "word": "children",
-      "start": 15.318,
-      "end": 15.618
+      "word": "usage",
+      "start": 2.494,
+      "end": 2.734
     },
     {
-      "word": "are",
-      "start": 15.698,
-      "end": 15.798
+      "word": "in",
+      "start": 2.754,
+      "end": 2.814
     },
     {
-      "word": "set",
-      "start": 15.818,
-      "end": 15.978
+      "word": "Nebraska,",
+      "start": 2.834,
+      "end": 3.295
     },
     {
-      "word": "for",
-      "start": 16.018,
-      "end": 16.118
-    },
-    {
-      "word": "life",
-      "start": 16.158,
-      "end": 16.319
-    },
-    {
-      "word": "financially.",
-      "start": 16.359,
-      "end": 16.859
-    },
-    {
-      "word": "Some",
-      "start": 17.719,
-      "end": 17.899
-    },
-    {
-      "word": "argue",
-      "start": 17.979,
-      "end": 18.219
-    },
-    {
-      "word": "these",
-      "start": 18.239,
-      "end": 18.399
-    },
-    {
-      "word": "public",
-      "start": 18.44,
-      "end": 18.68
-    },
-    {
-      "word": "exits",
-      "start": 18.76,
-      "end": 19.04
-    },
-    {
-      "word": "are",
-      "start": 19.12,
-      "end": 19.2
-    },
-    {
-      "word": "just",
-      "start": 19.22,
-      "end": 19.38
+      "word": "behind",
+      "start": 3.395,
+      "end": 3.635
     },
     {
       "word": "a",
-      "start": 19.42,
-      "end": 19.46
+      "start": 3.675,
+      "end": 3.715
     },
     {
-      "word": "clever",
-      "start": 19.48,
-      "end": 19.76
+      "word": "simple",
+      "start": 3.755,
+      "end": 3.975
     },
     {
-      "word": "rebrand",
-      "start": 19.8,
-      "end": 20.16
+      "word": "reduction.",
+      "start": 3.995,
+      "end": 4.416
     },
     {
-      "word": "for",
-      "start": 20.18,
-      "end": 20.3
+      "word": "But",
+      "start": 5.217,
+      "end": 5.317
     },
     {
-      "word": "becoming",
-      "start": 20.32,
-      "end": 20.641
+      "word": "they",
+      "start": 5.337,
+      "end": 5.457
     },
     {
-      "word": "an",
-      "start": 20.681,
-      "end": 20.721
+      "word": "forgot",
+      "start": 5.497,
+      "end": 5.757
     },
     {
-      "word": "AI",
-      "start": 20.841,
-      "end": 21.081
+      "word": "one",
+      "start": 5.837,
+      "end": 5.917
     },
     {
-      "word": "influencer",
-      "start": 21.141,
-      "end": 21.661
+      "word": "thing,",
+      "start": 5.957,
+      "end": 6.158
     },
     {
-      "word": "or",
-      "start": 21.781,
-      "end": 21.861
-    },
-    {
-      "word": "raising",
-      "start": 21.901,
-      "end": 22.161
-    },
-    {
-      "word": "money",
-      "start": 22.201,
-      "end": 22.401
-    },
-    {
-      "word": "for",
-      "start": 22.441,
-      "end": 22.541
-    },
-    {
-      "word": "a",
-      "start": 22.581,
-      "end": 22.601
-    },
-    {
-      "word": "new",
-      "start": 22.641,
-      "end": 22.741
-    },
-    {
-      "word": "project.",
-      "start": 22.782,
-      "end": 23.162
-    },
-    {
-      "word": "The",
-      "start": 24.042,
-      "end": 24.142
-    },
-    {
-      "word": "real",
-      "start": 24.182,
-      "end": 24.343
-    },
-    {
-      "word": "problem",
-      "start": 24.383,
-      "end": 24.683
-    },
-    {
-      "word": "is",
-      "start": 24.723,
-      "end": 24.803
-    },
-    {
-      "word": "that",
-      "start": 24.823,
-      "end": 24.923
-    },
-    {
-      "word": "we",
-      "start": 24.943,
-      "end": 25.023
-    },
-    {
-      "word": "are",
-      "start": 25.043,
-      "end": 25.123
-    },
-    {
-      "word": "building",
-      "start": 25.163,
-      "end": 25.464
-    },
-    {
-      "word": "superintelligent",
-      "start": 25.524,
-      "end": 26.225
-    },
-    {
-      "word": "systems",
-      "start": 26.265,
-      "end": 26.605
-    },
-    {
-      "word": "without",
-      "start": 26.665,
-      "end": 26.885
-    },
-    {
-      "word": "actually",
-      "start": 27.005,
-      "end": 27.286
-    },
-    {
-      "word": "knowing",
-      "start": 27.326,
-      "end": 27.566
-    },
-    {
-      "word": "how",
-      "start": 27.606,
-      "end": 27.706
-    },
-    {
-      "word": "to",
-      "start": 27.746,
-      "end": 27.786
-    },
-    {
-      "word": "keep",
-      "start": 27.826,
-      "end": 27.986
-    },
-    {
-      "word": "them",
-      "start": 28.007,
-      "end": 28.127
-    },
-    {
-      "word": "under",
-      "start": 28.147,
-      "end": 28.307
-    },
-    {
-      "word": "control.",
-      "start": 28.347,
-      "end": 28.687
-    },
-    {
-      "word": "One",
-      "start": 29.588,
-      "end": 29.708
-    },
-    {
-      "word": "cynical",
-      "start": 29.748,
-      "end": 30.069
-    },
-    {
-      "word": "suggestion",
-      "start": 30.089,
-      "end": 30.549
-    },
-    {
-      "word": "to",
-      "start": 30.609,
-      "end": 30.669
-    },
-    {
-      "word": "fix",
-      "start": 30.729,
-      "end": 30.93
-    },
-    {
-      "word": "this",
-      "start": 30.95,
-      "end": 31.09
-    },
-    {
-      "word": "is",
-      "start": 31.15,
-      "end": 31.21
-    },
-    {
-      "word": "to",
-      "start": 31.25,
-      "end": 31.31
-    },
-    {
-      "word": "hold",
-      "start": 31.37,
-      "end": 31.51
-    },
-    {
-      "word": "the",
-      "start": 31.55,
-      "end": 31.61
-    },
-    {
-      "word": "CEO",
-      "start": 31.67,
-      "end": 32.111
-    },
-    {
-      "word": "personally",
-      "start": 32.211,
-      "end": 32.571
-    },
-    {
-      "word": "responsible",
-      "start": 32.632,
-      "end": 33.112
-    },
-    {
-      "word": "for",
-      "start": 33.192,
-      "end": 33.292
-    },
-    {
-      "word": "any",
-      "start": 33.392,
-      "end": 33.532
-    },
-    {
-      "word": "crime",
-      "start": 33.573,
-      "end": 33.813
-    },
-    {
-      "word": "the",
-      "start": 33.853,
-      "end": 33.953
-    },
-    {
-      "word": "AI",
-      "start": 34.033,
-      "end": 34.273
-    },
-    {
-      "word": "agent",
-      "start": 34.373,
-      "end": 34.594
-    },
-    {
-      "word": "commits.",
-      "start": 34.634,
-      "end": 34.954
-    },
-    {
-      "word": "Until",
-      "start": 35.855,
-      "end": 36.115
-    },
-    {
-      "word": "then,",
-      "start": 36.155,
-      "end": 36.315
-    },
-    {
-      "word": "do",
-      "start": 36.596,
-      "end": 36.676
+      "word": "if",
+      "start": 6.438,
+      "end": 6.498
     },
     {
       "word": "you",
-      "start": 36.696,
-      "end": 36.776
+      "start": 6.538,
+      "end": 6.638
     },
     {
-      "word": "think",
-      "start": 36.796,
-      "end": 36.956
+      "word": "highlight",
+      "start": 6.658,
+      "end": 6.999
     },
     {
-      "word": "these",
-      "start": 36.976,
-      "end": 37.116
+      "word": "the",
+      "start": 7.019,
+      "end": 7.079
     },
     {
-      "word": "safety",
-      "start": 37.156,
-      "end": 37.437
+      "word": "blacked",
+      "start": 7.119,
+      "end": 7.339
     },
     {
-      "word": "warnings",
-      "start": 37.457,
-      "end": 37.757
+      "word": "out",
+      "start": 7.399,
+      "end": 7.499
     },
     {
-      "word": "are",
-      "start": 37.817,
-      "end": 37.897
+      "word": "text",
+      "start": 7.539,
+      "end": 7.819
     },
     {
-      "word": "real",
-      "start": 37.937,
-      "end": 38.097
+      "word": "and",
+      "start": 7.86,
+      "end": 7.94
     },
     {
-      "word": "progress",
-      "start": 38.137,
-      "end": 38.518
+      "word": "copy",
+      "start": 7.98,
+      "end": 8.24
     },
     {
-      "word": "or",
-      "start": 38.638,
-      "end": 38.718
+      "word": "paste",
+      "start": 8.26,
+      "end": 8.5
+    },
+    {
+      "word": "it,",
+      "start": 8.54,
+      "end": 8.62
+    },
+    {
+      "word": "the",
+      "start": 8.781,
+      "end": 8.881
+    },
+    {
+      "word": "secrets",
+      "start": 8.901,
+      "end": 9.201
+    },
+    {
+      "word": "appear.",
+      "start": 9.241,
+      "end": 9.501
+    },
+    {
+      "word": "The",
+      "start": 10.322,
+      "end": 10.422
+    },
+    {
+      "word": "data",
+      "start": 10.442,
+      "end": 10.683
+    },
+    {
+      "word": "shows",
+      "start": 10.723,
+      "end": 10.923
+    },
+    {
+      "word": "one",
+      "start": 11.023,
+      "end": 11.143
+    },
+    {
+      "word": "site",
+      "start": 11.183,
+      "end": 11.383
+    },
+    {
+      "word": "used",
+      "start": 11.483,
+      "end": 11.624
+    },
+    {
+      "word": "13",
+      "start": 11.784,
+      "end": 12.064
+    },
+    {
+      "word": "million",
+      "start": 12.104,
+      "end": 12.364
+    },
+    {
+      "word": "gallons",
+      "start": 12.384,
+      "end": 12.685
+    },
+    {
+      "word": "of",
+      "start": 12.725,
+      "end": 12.785
+    },
+    {
+      "word": "water",
+      "start": 12.825,
+      "end": 13.065
+    },
+    {
+      "word": "in",
+      "start": 13.145,
+      "end": 13.205
     },
     {
       "word": "just",
-      "start": 38.758,
-      "end": 38.898
+      "start": 13.245,
+      "end": 13.406
+    },
+    {
+      "word": "one",
+      "start": 13.506,
+      "end": 13.586
+    },
+    {
+      "word": "year.",
+      "start": 13.626,
+      "end": 13.806
+    },
+    {
+      "word": "That",
+      "start": 14.667,
+      "end": 14.807
+    },
+    {
+      "word": "is",
+      "start": 14.847,
+      "end": 14.907
+    },
+    {
+      "word": "enough",
+      "start": 14.947,
+      "end": 15.168
+    },
+    {
+      "word": "to",
+      "start": 15.208,
+      "end": 15.288
+    },
+    {
+      "word": "fill",
+      "start": 15.328,
+      "end": 15.488
+    },
+    {
+      "word": "20",
+      "start": 15.628,
+      "end": 15.788
+    },
+    {
+      "word": "Olympic-sized",
+      "start": 15.828,
+      "end": 16.389
+    },
+    {
+      "word": "swimming",
+      "start": 16.429,
+      "end": 16.689
+    },
+    {
+      "word": "pools,",
+      "start": 16.709,
+      "end": 16.969
+    },
+    {
+      "word": "yet",
+      "start": 17.31,
+      "end": 17.43
+    },
+    {
+      "word": "it",
+      "start": 17.47,
+      "end": 17.51
+    },
+    {
+      "word": "is",
+      "start": 17.57,
+      "end": 17.63
+    },
+    {
+      "word": "still",
+      "start": 17.67,
+      "end": 17.85
+    },
+    {
+      "word": "less",
+      "start": 17.89,
+      "end": 18.051
+    },
+    {
+      "word": "than",
+      "start": 18.091,
+      "end": 18.211
+    },
+    {
+      "word": "half",
+      "start": 18.251,
+      "end": 18.431
+    },
+    {
+      "word": "of",
+      "start": 18.451,
+      "end": 18.511
+    },
+    {
+      "word": "what",
+      "start": 18.531,
+      "end": 18.651
+    },
+    {
+      "word": "the",
+      "start": 18.671,
+      "end": 18.731
+    },
+    {
+      "word": "city",
+      "start": 18.771,
+      "end": 18.952
+    },
+    {
+      "word": "uses",
+      "start": 19.032,
+      "end": 19.232
+    },
+    {
+      "word": "daily.",
+      "start": 19.272,
+      "end": 19.552
+    },
+    {
+      "word": "Even",
+      "start": 20.393,
+      "end": 20.534
+    },
+    {
+      "word": "more",
+      "start": 20.574,
+      "end": 20.734
+    },
+    {
+      "word": "surprising,",
+      "start": 20.774,
+      "end": 21.235
+    },
+    {
+      "word": "these",
+      "start": 21.496,
+      "end": 21.636
+    },
+    {
+      "word": "same",
+      "start": 21.676,
+      "end": 21.856
+    },
+    {
+      "word": "centers",
+      "start": 21.917,
+      "end": 22.237
+    },
+    {
+      "word": "are",
+      "start": 22.277,
+      "end": 22.357
+    },
+    {
+      "word": "expecting",
+      "start": 22.398,
+      "end": 22.798
+    },
+    {
+      "word": "over",
+      "start": 22.838,
+      "end": 22.999
+    },
+    {
+      "word": "$50",
+      "start": 23.019,
+      "end": 23.319
+    },
+    {
+      "word": "million",
+      "start": 23.38,
+      "end": 23.961
+    },
+    {
+      "word": "in",
+      "start": 24.021,
+      "end": 24.101
+    },
+    {
+      "word": "tax",
+      "start": 24.121,
+      "end": 24.362
+    },
+    {
+      "word": "refunds",
+      "start": 24.402,
+      "end": 24.742
+    },
+    {
+      "word": "for",
+      "start": 24.783,
+      "end": 24.883
+    },
+    {
+      "word": "the",
+      "start": 24.903,
+      "end": 24.963
+    },
+    {
+      "word": "coming",
+      "start": 25.003,
+      "end": 25.203
+    },
+    {
+      "word": "year.",
+      "start": 25.223,
+      "end": 25.424
+    },
+    {
+      "word": "Is",
+      "start": 26.286,
+      "end": 26.346
+    },
+    {
+      "word": "this",
+      "start": 26.386,
+      "end": 26.526
+    },
+    {
+      "word": "just",
+      "start": 26.566,
+      "end": 26.727
+    },
+    {
+      "word": "the",
+      "start": 26.767,
+      "end": 26.847
+    },
+    {
+      "word": "cost",
+      "start": 26.867,
+      "end": 27.107
+    },
+    {
+      "word": "of",
+      "start": 27.148,
+      "end": 27.208
+    },
+    {
+      "word": "keeping",
+      "start": 27.248,
+      "end": 27.488
+    },
+    {
+      "word": "the",
+      "start": 27.508,
+      "end": 27.588
+    },
+    {
+      "word": "internet",
+      "start": 27.629,
+      "end": 27.909
+    },
+    {
+      "word": "running,",
+      "start": 27.949,
+      "end": 28.17
+    },
+    {
+      "word": "or",
+      "start": 28.45,
+      "end": 28.51
+    },
+    {
+      "word": "are",
+      "start": 28.55,
+      "end": 28.651
+    },
+    {
+      "word": "these",
+      "start": 28.671,
+      "end": 28.791
+    },
+    {
+      "word": "companies",
+      "start": 28.851,
+      "end": 29.192
+    },
+    {
+      "word": "getting",
+      "start": 29.212,
+      "end": 29.412
     },
     {
       "word": "a",
-      "start": 38.938,
-      "end": 38.958
+      "start": 29.452,
+      "end": 29.492
     },
     {
-      "word": "very",
-      "start": 38.998,
-      "end": 39.199
+      "word": "free",
+      "start": 29.512,
+      "end": 29.673
     },
     {
-      "word": "expensive",
-      "start": 39.239,
-      "end": 39.639
-    },
-    {
-      "word": "distraction?",
-      "start": 39.659,
-      "end": 40.1
+      "word": "ride?",
+      "start": 29.713,
+      "end": 29.933
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"
