@@ -28,6 +28,16 @@ jobs:
             --props=public/remotion_props.json \
             --output=output/remotion-render.mp4
 
+      - name: Install Python packages for YouTube upload
+        run: |
+          python3 -m pip install google-api-python-client google-auth-oauthlib
+
+      - name: Upload to YouTube
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+        run: |
+          python3 youtube_upload.py output/remotion-render.mp4 public/youtube_meta.json
+
       - name: Upload rendered video
         uses: actions/upload-artifact@v4
         with:

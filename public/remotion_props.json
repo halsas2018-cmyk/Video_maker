@@ -1,783 +1,798 @@
 {
   "shots": [
     {
-      "sentence": "One of the godfathers of modern AI, Yann LeCun, says he has zero concerns about artificial intelligence wiping out humanity.",
-      "search_term": "tech researcher portrait",
-      "media_type": "photo",
-      "visual": "A serious, thoughtful portrait of a man in a professional tech setting.",
-      "asset_path": "project_assets/shot_1.jpg",
-      "duration_seconds": 3.279
+      "sentence": "An OpenAI researcher just quit, claiming the company's culture is fundamentally broken and incapable of building safe AI.",
+      "search_term": "stressed professional office",
+      "media_type": "video",
+      "visual": "A person looking frustrated at a laptop screen in a modern office.",
+      "asset_path": "project_assets/shot_1.mp4",
+      "duration_seconds": 2.725
     },
     {
-      "sentence": "One of the godfathers of modern AI, Yann LeCun, says he has zero concerns about artificial intelligence wiping out humanity.",
-      "search_term": "abstract neural network",
+      "sentence": "An OpenAI researcher just quit, claiming the company's culture is fundamentally broken and incapable of building safe AI.",
+      "search_term": "empty office chair",
       "media_type": "video",
-      "visual": "Glowing nodes and lines connecting in a dark digital space.",
+      "visual": "An empty desk setup with multiple monitors in a dim room.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 3.279
+      "duration_seconds": 2.725
     },
     {
-      "sentence": "While other leaders warn of doom, LeCun claims those fears are just a misguided and destructive marketing campaign.",
-      "search_term": "business meeting disagreement",
+      "sentence": "Critics are calling out the timing, pointing out that these whistleblowers often leave with massive stock payouts already in their pockets.",
+      "search_term": "handing over stack of money",
       "media_type": "video",
-      "visual": "Two people in a boardroom looking skeptical and debating.",
+      "visual": "Close up of hands exchanging cash or documents.",
       "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 2.951
+      "duration_seconds": 3.179
     },
     {
-      "sentence": "While other leaders warn of doom, LeCun claims those fears are just a misguided and destructive marketing campaign.",
-      "search_term": "digital marketing graph",
+      "sentence": "Critics are calling out the timing, pointing out that these whistleblowers often leave with massive stock payouts already in their pockets.",
+      "search_term": "stock market ticker",
       "media_type": "video",
-      "visual": "Animated charts and data rising on a screen.",
+      "visual": "Digital stock market numbers scrolling rapidly.",
       "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 2.951
+      "duration_seconds": 3.179
     },
     {
-      "sentence": "He even called Anthropic CEO Dario Amodei deluded and crazy for pushing the idea that AI could kill us all.",
-      "search_term": "intense discussion",
+      "sentence": "It is easy to find a moral compass once you and your children are set for life financially.",
+      "search_term": "luxury lifestyle",
       "media_type": "video",
-      "visual": "A close-up of a person speaking passionately with hand gestures.",
+      "visual": "A silhouette of a person looking out a window at a city skyline.",
       "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 3.279
+      "duration_seconds": 2.725
     },
     {
-      "sentence": "He even called Anthropic CEO Dario Amodei deluded and crazy for pushing the idea that AI could kill us all.",
-      "search_term": "server room lights",
+      "sentence": "It is easy to find a moral compass once you and your children are set for life financially.",
+      "search_term": "abstract compass",
       "media_type": "video",
-      "visual": "Rows of blinking server lights in a dark room.",
+      "visual": "A close up of a nautical compass needle spinning.",
       "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 3.279
+      "duration_seconds": 2.725
     },
     {
-      "sentence": "LeCun insists recent rogue incidents, like agents hacking systems, are just the result of poor design and leaky sandboxes.",
-      "search_term": "hacker typing on keyboard",
+      "sentence": "Some argue these public exits are just a clever rebrand for becoming an AI influencer or raising money for a new project.",
+      "search_term": "influencer recording video",
       "media_type": "video",
-      "visual": "Close up of fingers rapidly typing on a mechanical keyboard.",
-      "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 3.115
+      "visual": "Someone talking into a professional microphone and ring light.",
+      "asset_path": "project_assets/shot_7.jpg",
+      "duration_seconds": 3.33
     },
     {
-      "sentence": "LeCun insists recent rogue incidents, like agents hacking systems, are just the result of poor design and leaky sandboxes.",
-      "search_term": "system error code",
+      "sentence": "Some argue these public exits are just a clever rebrand for becoming an AI influencer or raising money for a new project.",
+      "search_term": "business meeting handshake",
       "media_type": "video",
-      "visual": "Red warning text and code scrolling on a computer monitor.",
+      "visual": "Two people shaking hands in a bright office.",
       "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 3.115
+      "duration_seconds": 3.33
     },
     {
-      "sentence": "He labels the safety obsession as super toxic paranoia, claiming it is actually causing mental distress among lab staff.",
-      "search_term": "stressed office worker",
+      "sentence": "The real problem is that we are building super-intelligent systems without actually knowing how to keep them under control.",
+      "search_term": "neural network animation",
       "media_type": "video",
-      "visual": "A person sitting at a desk looking overwhelmed and tired.",
+      "visual": "Glowing nodes connecting in a complex digital web.",
       "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 3.115
+      "duration_seconds": 2.876
     },
     {
-      "sentence": "He labels the safety obsession as super toxic paranoia, claiming it is actually causing mental distress among lab staff.",
-      "search_term": "modern tech office",
+      "sentence": "The real problem is that we are building super-intelligent systems without actually knowing how to keep them under control.",
+      "search_term": "futuristic data stream",
       "media_type": "video",
-      "visual": "Wide shot of a clean, high-tech open office space.",
+      "visual": "Abstract lines of code flowing down a screen.",
       "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 3.115
+      "duration_seconds": 2.876
     },
     {
-      "sentence": "Instead of extinction, he argues we should focus on real problems like misinformation rather than chasing sci-fi nightmares.",
-      "search_term": "fake news headline on screen",
+      "sentence": "One cynical suggestion to fix this is to hold the CEO personally responsible for any crime the AI agent commits.",
+      "search_term": "judge gavel",
       "media_type": "video",
-      "visual": "A digital tablet showing flashing news alerts.",
+      "visual": "A wooden gavel striking a sounding block.",
       "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 2.951
+      "duration_seconds": 3.028
     },
     {
-      "sentence": "Instead of extinction, he argues we should focus on real problems like misinformation rather than chasing sci-fi nightmares.",
-      "search_term": "futuristic city skyline",
-      "media_type": "video",
-      "visual": "A wide shot of a glowing, high-tech city at night.",
+      "sentence": "One cynical suggestion to fix this is to hold the CEO personally responsible for any crime the AI agent commits.",
+      "search_term": "serious executive portrait",
+      "media_type": "photo",
+      "visual": "A serious looking man in a suit looking at the camera.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 2.951
+      "duration_seconds": 3.028
     },
     {
-      "sentence": "Do you think the industry is genuinely scared of their own inventions, or is it just a calculated distraction?",
-      "search_term": "person thinking looking away",
+      "sentence": "Until then, do you think these safety warnings are real progress or just a very expensive distraction?",
+      "search_term": "question mark digital",
       "media_type": "video",
-      "visual": "A person looking thoughtful and staring off into the distance.",
+      "visual": "A glowing digital question mark floating in a dark space.",
       "asset_path": "project_assets/shot_13.mp4",
-      "duration_seconds": 3.115
+      "duration_seconds": 2.573
     },
     {
-      "sentence": "Do you think the industry is genuinely scared of their own inventions, or is it just a calculated distraction?",
-      "search_term": "abstract digital connection",
+      "sentence": "Until then, do you think these safety warnings are real progress or just a very expensive distraction?",
+      "search_term": "thinking person",
       "media_type": "video",
-      "visual": "Intricate digital patterns shifting and evolving.",
+      "visual": "A person resting their chin on their hand looking pensive.",
       "asset_path": "project_assets/shot_14.mp4",
-      "duration_seconds": 3.115
+      "duration_seconds": 2.573
     }
   ],
   "words": [
     {
-      "word": "One",
-      "start": 0.251,
-      "end": 0.331
+      "word": "An",
+      "start": 0.191,
+      "end": 0.291
     },
     {
-      "word": "of",
-      "start": 0.351,
-      "end": 0.411
-    },
-    {
-      "word": "the",
-      "start": 0.431,
-      "end": 0.491
-    },
-    {
-      "word": "godfathers",
-      "start": 0.531,
-      "end": 1.051
-    },
-    {
-      "word": "of",
-      "start": 1.091,
-      "end": 1.151
-    },
-    {
-      "word": "modern",
-      "start": 1.192,
-      "end": 1.452
-    },
-    {
-      "word": "AI,",
-      "start": 1.512,
-      "end": 1.812
-    },
-    {
-      "word": "Jan",
-      "start": 1.952,
-      "end": 2.132
-    },
-    {
-      "word": "Lecune,",
-      "start": 2.152,
-      "end": 2.512
-    },
-    {
-      "word": "says",
-      "start": 2.832,
-      "end": 2.992
-    },
-    {
-      "word": "he",
-      "start": 3.032,
-      "end": 3.112
-    },
-    {
-      "word": "has",
-      "start": 3.132,
-      "end": 3.232
-    },
-    {
-      "word": "zero",
-      "start": 3.272,
-      "end": 3.533
-    },
-    {
-      "word": "concerns",
-      "start": 3.573,
-      "end": 4.013
-    },
-    {
-      "word": "about",
-      "start": 4.053,
-      "end": 4.233
-    },
-    {
-      "word": "artificial",
-      "start": 4.333,
-      "end": 4.753
-    },
-    {
-      "word": "intelligence",
-      "start": 4.793,
-      "end": 5.293
-    },
-    {
-      "word": "wiping",
-      "start": 5.373,
-      "end": 5.633
-    },
-    {
-      "word": "out",
-      "start": 5.673,
-      "end": 5.773
-    },
-    {
-      "word": "humanity.",
-      "start": 5.814,
-      "end": 6.274
-    },
-    {
-      "word": "While",
-      "start": 7.074,
-      "end": 7.234
-    },
-    {
-      "word": "other",
-      "start": 7.334,
-      "end": 7.474
-    },
-    {
-      "word": "leaders",
-      "start": 7.514,
-      "end": 7.774
-    },
-    {
-      "word": "warn",
-      "start": 7.794,
-      "end": 7.994
-    },
-    {
-      "word": "of",
-      "start": 8.014,
-      "end": 8.074
-    },
-    {
-      "word": "doom,",
-      "start": 8.114,
-      "end": 8.355
-    },
-    {
-      "word": "Lecune",
-      "start": 8.615,
-      "end": 8.935
-    },
-    {
-      "word": "claims",
-      "start": 8.975,
-      "end": 9.255
-    },
-    {
-      "word": "those",
-      "start": 9.295,
-      "end": 9.475
-    },
-    {
-      "word": "fears",
-      "start": 9.515,
-      "end": 9.775
-    },
-    {
-      "word": "are",
-      "start": 9.835,
-      "end": 9.915
-    },
-    {
-      "word": "just",
-      "start": 9.935,
-      "end": 10.095
-    },
-    {
-      "word": "a",
-      "start": 10.135,
-      "end": 10.155
-    },
-    {
-      "word": "misguided",
-      "start": 10.215,
-      "end": 10.656
-    },
-    {
-      "word": "and",
-      "start": 10.716,
-      "end": 10.796
-    },
-    {
-      "word": "destructive",
-      "start": 10.836,
-      "end": 11.256
-    },
-    {
-      "word": "marketing",
-      "start": 11.276,
-      "end": 11.616
-    },
-    {
-      "word": "campaign.",
-      "start": 11.636,
-      "end": 12.056
-    },
-    {
-      "word": "He",
-      "start": 12.877,
-      "end": 12.977
-    },
-    {
-      "word": "even",
-      "start": 13.077,
-      "end": 13.237
-    },
-    {
-      "word": "called",
-      "start": 13.277,
-      "end": 13.497
-    },
-    {
-      "word": "anthropic",
-      "start": 13.597,
-      "end": 14.037
-    },
-    {
-      "word": "CEO",
-      "start": 14.057,
-      "end": 14.417
-    },
-    {
-      "word": "Dario",
-      "start": 14.457,
-      "end": 14.757
-    },
-    {
-      "word": "Amade,",
-      "start": 14.837,
-      "end": 15.138
-    },
-    {
-      "word": "deluded",
-      "start": 15.198,
-      "end": 15.538
-    },
-    {
-      "word": "and",
-      "start": 15.558,
-      "end": 15.638
-    },
-    {
-      "word": "crazy",
-      "start": 15.698,
-      "end": 15.998
-    },
-    {
-      "word": "for",
-      "start": 16.058,
-      "end": 16.158
-    },
-    {
-      "word": "pushing",
-      "start": 16.198,
-      "end": 16.458
-    },
-    {
-      "word": "the",
-      "start": 16.478,
-      "end": 16.578
-    },
-    {
-      "word": "idea",
-      "start": 16.618,
-      "end": 16.878
-    },
-    {
-      "word": "that",
-      "start": 16.918,
-      "end": 17.018
+      "word": "open",
+      "start": 0.391,
+      "end": 0.571
     },
     {
       "word": "AI",
-      "start": 17.118,
-      "end": 17.358
+      "start": 0.611,
+      "end": 0.851
     },
     {
-      "word": "could",
-      "start": 17.399,
-      "end": 17.539
-    },
-    {
-      "word": "kill",
-      "start": 17.559,
-      "end": 17.719
-    },
-    {
-      "word": "us",
-      "start": 17.779,
-      "end": 17.819
-    },
-    {
-      "word": "all.",
-      "start": 17.919,
-      "end": 18.039
-    },
-    {
-      "word": "Lecune",
-      "start": 18.879,
-      "end": 19.219
-    },
-    {
-      "word": "insists",
-      "start": 19.239,
-      "end": 19.599
-    },
-    {
-      "word": "recent",
-      "start": 19.659,
-      "end": 19.92
-    },
-    {
-      "word": "rogue",
-      "start": 19.94,
-      "end": 20.14
-    },
-    {
-      "word": "incidents,",
-      "start": 20.16,
-      "end": 20.54
-    },
-    {
-      "word": "like",
-      "start": 20.8,
-      "end": 20.96
-    },
-    {
-      "word": "agent",
-      "start": 21.02,
-      "end": 21.28
-    },
-    {
-      "word": "hacking",
-      "start": 21.3,
-      "end": 21.6
-    },
-    {
-      "word": "systems,",
-      "start": 21.62,
-      "end": 21.98
-    },
-    {
-      "word": "are",
-      "start": 22.281,
-      "end": 22.361
+      "word": "researcher",
+      "start": 0.911,
+      "end": 1.332
     },
     {
       "word": "just",
-      "start": 22.401,
-      "end": 22.581
+      "start": 1.352,
+      "end": 1.512
     },
     {
-      "word": "the",
-      "start": 22.621,
-      "end": 22.701
-    },
-    {
-      "word": "result",
-      "start": 22.721,
-      "end": 23.001
-    },
-    {
-      "word": "of",
-      "start": 23.041,
-      "end": 23.081
-    },
-    {
-      "word": "poor",
-      "start": 23.121,
-      "end": 23.301
-    },
-    {
-      "word": "design",
-      "start": 23.341,
-      "end": 23.661
-    },
-    {
-      "word": "and",
-      "start": 23.721,
-      "end": 23.801
-    },
-    {
-      "word": "leaky",
-      "start": 23.841,
-      "end": 24.081
-    },
-    {
-      "word": "sandboxes.",
-      "start": 24.121,
-      "end": 24.722
-    },
-    {
-      "word": "He",
-      "start": 25.622,
-      "end": 25.702
-    },
-    {
-      "word": "labels",
-      "start": 25.762,
-      "end": 26.043
-    },
-    {
-      "word": "the",
-      "start": 26.083,
-      "end": 26.163
-    },
-    {
-      "word": "safety",
-      "start": 26.203,
-      "end": 26.483
-    },
-    {
-      "word": "obsession",
-      "start": 26.523,
-      "end": 26.884
-    },
-    {
-      "word": "as",
-      "start": 26.944,
-      "end": 27.004
-    },
-    {
-      "word": "super",
-      "start": 27.064,
-      "end": 27.284
-    },
-    {
-      "word": "toxic",
-      "start": 27.324,
-      "end": 27.644
-    },
-    {
-      "word": "paranoia,",
-      "start": 27.665,
-      "end": 28.165
+      "word": "quit,",
+      "start": 1.572,
+      "end": 1.812
     },
     {
       "word": "claiming",
-      "start": 28.525,
-      "end": 28.806
-    },
-    {
-      "word": "it",
-      "start": 28.846,
-      "end": 28.886
-    },
-    {
-      "word": "is",
-      "start": 28.926,
-      "end": 28.986
-    },
-    {
-      "word": "actually",
-      "start": 29.106,
-      "end": 29.406
-    },
-    {
-      "word": "causing",
-      "start": 29.447,
-      "end": 29.727
-    },
-    {
-      "word": "mental",
-      "start": 29.767,
-      "end": 30.007
-    },
-    {
-      "word": "distress",
-      "start": 30.027,
-      "end": 30.388
-    },
-    {
-      "word": "among",
-      "start": 30.428,
-      "end": 30.628
-    },
-    {
-      "word": "lab",
-      "start": 30.668,
-      "end": 30.868
-    },
-    {
-      "word": "staff.",
-      "start": 30.888,
-      "end": 31.168
-    },
-    {
-      "word": "Instead",
-      "start": 32.029,
-      "end": 32.33
-    },
-    {
-      "word": "of",
-      "start": 32.35,
-      "end": 32.39
-    },
-    {
-      "word": "extinction,",
-      "start": 32.45,
-      "end": 32.91
-    },
-    {
-      "word": "he",
-      "start": 33.211,
-      "end": 33.311
-    },
-    {
-      "word": "argues",
-      "start": 33.411,
-      "end": 33.671
-    },
-    {
-      "word": "we",
-      "start": 33.711,
-      "end": 33.791
-    },
-    {
-      "word": "should",
-      "start": 33.811,
-      "end": 33.952
-    },
-    {
-      "word": "focus",
-      "start": 33.992,
-      "end": 34.292
-    },
-    {
-      "word": "on",
-      "start": 34.332,
-      "end": 34.412
-    },
-    {
-      "word": "real",
-      "start": 34.452,
-      "end": 34.612
-    },
-    {
-      "word": "problems",
-      "start": 34.652,
-      "end": 35.013
-    },
-    {
-      "word": "like",
-      "start": 35.053,
-      "end": 35.193
-    },
-    {
-      "word": "misinformation",
-      "start": 35.233,
-      "end": 35.874
-    },
-    {
-      "word": "rather",
-      "start": 35.934,
-      "end": 36.154
-    },
-    {
-      "word": "than",
-      "start": 36.174,
-      "end": 36.294
-    },
-    {
-      "word": "chasing",
-      "start": 36.334,
-      "end": 36.655
-    },
-    {
-      "word": "sci-fi",
-      "start": 36.715,
-      "end": 37.055
-    },
-    {
-      "word": "nightmares.",
-      "start": 37.075,
-      "end": 37.476
-    },
-    {
-      "word": "Do",
-      "start": 38.337,
-      "end": 38.417
-    },
-    {
-      "word": "you",
-      "start": 38.437,
-      "end": 38.537
-    },
-    {
-      "word": "think",
-      "start": 38.557,
-      "end": 38.697
+      "start": 2.132,
+      "end": 2.412
     },
     {
       "word": "the",
-      "start": 38.737,
-      "end": 38.837
+      "start": 2.452,
+      "end": 2.512
     },
     {
-      "word": "industry",
-      "start": 38.877,
-      "end": 39.238
+      "word": "company's",
+      "start": 2.552,
+      "end": 2.912
+    },
+    {
+      "word": "culture",
+      "start": 2.952,
+      "end": 3.252
     },
     {
       "word": "is",
-      "start": 39.298,
-      "end": 39.358
+      "start": 3.313,
+      "end": 3.373
     },
     {
-      "word": "genuinely",
-      "start": 39.418,
-      "end": 39.798
+      "word": "fundamentally",
+      "start": 3.433,
+      "end": 3.933
     },
     {
-      "word": "scared",
-      "start": 39.838,
-      "end": 40.099
+      "word": "broken",
+      "start": 3.953,
+      "end": 4.253
+    },
+    {
+      "word": "and",
+      "start": 4.353,
+      "end": 4.453
+    },
+    {
+      "word": "incapable",
+      "start": 4.493,
+      "end": 4.933
     },
     {
       "word": "of",
-      "start": 40.119,
-      "end": 40.179
+      "start": 4.953,
+      "end": 5.013
+    },
+    {
+      "word": "building",
+      "start": 5.053,
+      "end": 5.333
+    },
+    {
+      "word": "safe",
+      "start": 5.373,
+      "end": 5.574
+    },
+    {
+      "word": "AI.",
+      "start": 5.614,
+      "end": 5.934
+    },
+    {
+      "word": "Critics",
+      "start": 6.754,
+      "end": 6.994
+    },
+    {
+      "word": "are",
+      "start": 7.034,
+      "end": 7.114
+    },
+    {
+      "word": "calling",
+      "start": 7.134,
+      "end": 7.394
+    },
+    {
+      "word": "out",
+      "start": 7.434,
+      "end": 7.534
+    },
+    {
+      "word": "the",
+      "start": 7.554,
+      "end": 7.615
+    },
+    {
+      "word": "timing,",
+      "start": 7.655,
+      "end": 7.955
+    },
+    {
+      "word": "pointing",
+      "start": 8.295,
+      "end": 8.575
+    },
+    {
+      "word": "out",
+      "start": 8.635,
+      "end": 8.715
+    },
+    {
+      "word": "that",
+      "start": 8.735,
+      "end": 8.855
+    },
+    {
+      "word": "these",
+      "start": 8.875,
+      "end": 9.015
+    },
+    {
+      "word": "whistleblowers",
+      "start": 9.055,
+      "end": 9.615
+    },
+    {
+      "word": "often",
+      "start": 9.735,
+      "end": 9.956
+    },
+    {
+      "word": "leave",
+      "start": 9.996,
+      "end": 10.196
+    },
+    {
+      "word": "with",
+      "start": 10.216,
+      "end": 10.316
+    },
+    {
+      "word": "massive",
+      "start": 10.376,
+      "end": 10.676
+    },
+    {
+      "word": "stock",
+      "start": 10.696,
+      "end": 10.916
+    },
+    {
+      "word": "payouts",
+      "start": 10.956,
+      "end": 11.296
+    },
+    {
+      "word": "already",
+      "start": 11.396,
+      "end": 11.676
+    },
+    {
+      "word": "in",
+      "start": 11.696,
+      "end": 11.736
     },
     {
       "word": "their",
-      "start": 40.199,
-      "end": 40.339
+      "start": 11.776,
+      "end": 11.896
     },
     {
-      "word": "own",
-      "start": 40.379,
-      "end": 40.479
+      "word": "pockets.",
+      "start": 11.916,
+      "end": 12.257
     },
     {
-      "word": "inventions,",
-      "start": 40.519,
-      "end": 40.94
-    },
-    {
-      "word": "or",
-      "start": 41.3,
-      "end": 41.38
+      "word": "It",
+      "start": 13.157,
+      "end": 13.237
     },
     {
       "word": "is",
-      "start": 41.42,
-      "end": 41.5
+      "start": 13.277,
+      "end": 13.337
     },
     {
-      "word": "it",
-      "start": 41.54,
-      "end": 41.58
+      "word": "easy",
+      "start": 13.417,
+      "end": 13.617
     },
     {
-      "word": "just",
-      "start": 41.62,
-      "end": 41.781
+      "word": "to",
+      "start": 13.657,
+      "end": 13.717
+    },
+    {
+      "word": "find",
+      "start": 13.757,
+      "end": 13.957
     },
     {
       "word": "a",
-      "start": 41.821,
-      "end": 41.841
+      "start": 13.997,
+      "end": 14.017
     },
     {
-      "word": "calculated",
-      "start": 41.881,
-      "end": 42.361
+      "word": "moral",
+      "start": 14.077,
+      "end": 14.318
+    },
+    {
+      "word": "compass",
+      "start": 14.358,
+      "end": 14.638
+    },
+    {
+      "word": "once",
+      "start": 14.718,
+      "end": 14.858
+    },
+    {
+      "word": "you",
+      "start": 14.878,
+      "end": 15.018
+    },
+    {
+      "word": "and",
+      "start": 15.078,
+      "end": 15.138
+    },
+    {
+      "word": "your",
+      "start": 15.178,
+      "end": 15.298
+    },
+    {
+      "word": "children",
+      "start": 15.318,
+      "end": 15.618
+    },
+    {
+      "word": "are",
+      "start": 15.698,
+      "end": 15.798
+    },
+    {
+      "word": "set",
+      "start": 15.818,
+      "end": 15.978
+    },
+    {
+      "word": "for",
+      "start": 16.018,
+      "end": 16.118
+    },
+    {
+      "word": "life",
+      "start": 16.158,
+      "end": 16.319
+    },
+    {
+      "word": "financially.",
+      "start": 16.359,
+      "end": 16.859
+    },
+    {
+      "word": "Some",
+      "start": 17.719,
+      "end": 17.899
+    },
+    {
+      "word": "argue",
+      "start": 17.979,
+      "end": 18.219
+    },
+    {
+      "word": "these",
+      "start": 18.239,
+      "end": 18.399
+    },
+    {
+      "word": "public",
+      "start": 18.44,
+      "end": 18.68
+    },
+    {
+      "word": "exits",
+      "start": 18.76,
+      "end": 19.04
+    },
+    {
+      "word": "are",
+      "start": 19.12,
+      "end": 19.2
+    },
+    {
+      "word": "just",
+      "start": 19.22,
+      "end": 19.38
+    },
+    {
+      "word": "a",
+      "start": 19.42,
+      "end": 19.46
+    },
+    {
+      "word": "clever",
+      "start": 19.48,
+      "end": 19.76
+    },
+    {
+      "word": "rebrand",
+      "start": 19.8,
+      "end": 20.16
+    },
+    {
+      "word": "for",
+      "start": 20.18,
+      "end": 20.3
+    },
+    {
+      "word": "becoming",
+      "start": 20.32,
+      "end": 20.641
+    },
+    {
+      "word": "an",
+      "start": 20.681,
+      "end": 20.721
+    },
+    {
+      "word": "AI",
+      "start": 20.841,
+      "end": 21.081
+    },
+    {
+      "word": "influencer",
+      "start": 21.141,
+      "end": 21.661
+    },
+    {
+      "word": "or",
+      "start": 21.781,
+      "end": 21.861
+    },
+    {
+      "word": "raising",
+      "start": 21.901,
+      "end": 22.161
+    },
+    {
+      "word": "money",
+      "start": 22.201,
+      "end": 22.401
+    },
+    {
+      "word": "for",
+      "start": 22.441,
+      "end": 22.541
+    },
+    {
+      "word": "a",
+      "start": 22.581,
+      "end": 22.601
+    },
+    {
+      "word": "new",
+      "start": 22.641,
+      "end": 22.741
+    },
+    {
+      "word": "project.",
+      "start": 22.782,
+      "end": 23.162
+    },
+    {
+      "word": "The",
+      "start": 24.042,
+      "end": 24.142
+    },
+    {
+      "word": "real",
+      "start": 24.182,
+      "end": 24.343
+    },
+    {
+      "word": "problem",
+      "start": 24.383,
+      "end": 24.683
+    },
+    {
+      "word": "is",
+      "start": 24.723,
+      "end": 24.803
+    },
+    {
+      "word": "that",
+      "start": 24.823,
+      "end": 24.923
+    },
+    {
+      "word": "we",
+      "start": 24.943,
+      "end": 25.023
+    },
+    {
+      "word": "are",
+      "start": 25.043,
+      "end": 25.123
+    },
+    {
+      "word": "building",
+      "start": 25.163,
+      "end": 25.464
+    },
+    {
+      "word": "superintelligent",
+      "start": 25.524,
+      "end": 26.225
+    },
+    {
+      "word": "systems",
+      "start": 26.265,
+      "end": 26.605
+    },
+    {
+      "word": "without",
+      "start": 26.665,
+      "end": 26.885
+    },
+    {
+      "word": "actually",
+      "start": 27.005,
+      "end": 27.286
+    },
+    {
+      "word": "knowing",
+      "start": 27.326,
+      "end": 27.566
+    },
+    {
+      "word": "how",
+      "start": 27.606,
+      "end": 27.706
+    },
+    {
+      "word": "to",
+      "start": 27.746,
+      "end": 27.786
+    },
+    {
+      "word": "keep",
+      "start": 27.826,
+      "end": 27.986
+    },
+    {
+      "word": "them",
+      "start": 28.007,
+      "end": 28.127
+    },
+    {
+      "word": "under",
+      "start": 28.147,
+      "end": 28.307
+    },
+    {
+      "word": "control.",
+      "start": 28.347,
+      "end": 28.687
+    },
+    {
+      "word": "One",
+      "start": 29.588,
+      "end": 29.708
+    },
+    {
+      "word": "cynical",
+      "start": 29.748,
+      "end": 30.069
+    },
+    {
+      "word": "suggestion",
+      "start": 30.089,
+      "end": 30.549
+    },
+    {
+      "word": "to",
+      "start": 30.609,
+      "end": 30.669
+    },
+    {
+      "word": "fix",
+      "start": 30.729,
+      "end": 30.93
+    },
+    {
+      "word": "this",
+      "start": 30.95,
+      "end": 31.09
+    },
+    {
+      "word": "is",
+      "start": 31.15,
+      "end": 31.21
+    },
+    {
+      "word": "to",
+      "start": 31.25,
+      "end": 31.31
+    },
+    {
+      "word": "hold",
+      "start": 31.37,
+      "end": 31.51
+    },
+    {
+      "word": "the",
+      "start": 31.55,
+      "end": 31.61
+    },
+    {
+      "word": "CEO",
+      "start": 31.67,
+      "end": 32.111
+    },
+    {
+      "word": "personally",
+      "start": 32.211,
+      "end": 32.571
+    },
+    {
+      "word": "responsible",
+      "start": 32.632,
+      "end": 33.112
+    },
+    {
+      "word": "for",
+      "start": 33.192,
+      "end": 33.292
+    },
+    {
+      "word": "any",
+      "start": 33.392,
+      "end": 33.532
+    },
+    {
+      "word": "crime",
+      "start": 33.573,
+      "end": 33.813
+    },
+    {
+      "word": "the",
+      "start": 33.853,
+      "end": 33.953
+    },
+    {
+      "word": "AI",
+      "start": 34.033,
+      "end": 34.273
+    },
+    {
+      "word": "agent",
+      "start": 34.373,
+      "end": 34.594
+    },
+    {
+      "word": "commits.",
+      "start": 34.634,
+      "end": 34.954
+    },
+    {
+      "word": "Until",
+      "start": 35.855,
+      "end": 36.115
+    },
+    {
+      "word": "then,",
+      "start": 36.155,
+      "end": 36.315
+    },
+    {
+      "word": "do",
+      "start": 36.596,
+      "end": 36.676
+    },
+    {
+      "word": "you",
+      "start": 36.696,
+      "end": 36.776
+    },
+    {
+      "word": "think",
+      "start": 36.796,
+      "end": 36.956
+    },
+    {
+      "word": "these",
+      "start": 36.976,
+      "end": 37.116
+    },
+    {
+      "word": "safety",
+      "start": 37.156,
+      "end": 37.437
+    },
+    {
+      "word": "warnings",
+      "start": 37.457,
+      "end": 37.757
+    },
+    {
+      "word": "are",
+      "start": 37.817,
+      "end": 37.897
+    },
+    {
+      "word": "real",
+      "start": 37.937,
+      "end": 38.097
+    },
+    {
+      "word": "progress",
+      "start": 38.137,
+      "end": 38.518
+    },
+    {
+      "word": "or",
+      "start": 38.638,
+      "end": 38.718
+    },
+    {
+      "word": "just",
+      "start": 38.758,
+      "end": 38.898
+    },
+    {
+      "word": "a",
+      "start": 38.938,
+      "end": 38.958
+    },
+    {
+      "word": "very",
+      "start": 38.998,
+      "end": 39.199
+    },
+    {
+      "word": "expensive",
+      "start": 39.239,
+      "end": 39.639
     },
     {
       "word": "distraction?",
-      "start": 42.401,
-      "end": 42.862
+      "start": 39.659,
+      "end": 40.1
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"

@@ -35,3 +35,7 @@ youtube-transcript-api==1.2.2
 # For stock footage: No extra deps needed (uses stdlib urllib)
 # Get a free Pexels API key at: https://www.pexels.com/api/
 # Get a free Pixabay API key at: https://pixabay.com/api/docs/
+
+# YouTube upload (GitHub Actions)
+google-api-python-client>=2.201.0
+google-auth-oauthlib>=1.2.2

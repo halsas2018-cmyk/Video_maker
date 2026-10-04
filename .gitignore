@@ -11,3 +11,8 @@ out/
 .agents/
 .claude/skills/
 pandoc-*.deb
+client_secret.json
+
+# Local OAuth secrets
+client_secret.json
+token.json

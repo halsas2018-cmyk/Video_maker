@@ -37,6 +37,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from collections import defaultdict
@@ -685,6 +686,18 @@ def save_project(result: dict, outdir: Path, index: int, no_video: bool = False,
             except Exception as e:
                 print(f"  ⚠ Could not publish to public/: {e}")
 
+            # Also publish youtube_meta.json to public/
+            try:
+                project_youtube_meta = project_dir / "youtube_meta.json"
+                public_youtube_meta = Path(__file__).parent / "public" / "youtube_meta.json"
+                if project_youtube_meta.exists():
+                    shutil.copy(project_youtube_meta, public_youtube_meta)
+                    print(f"  ✓ published youtube_meta.json to public/")
+                else:
+                    print(f"  ⚠ youtube_meta.json not found in project dir")
+            except Exception as e:
+                print(f"  ⚠ Could not publish youtube_meta.json to public/: {e}")
+
             print(f"  ✓ Assets staged to public directory (skipping Remotion render)")
         except Exception as e:
             print(f"  ⚠ Asset staging FAILED: {e}")
@@ -837,6 +850,7 @@ def _suggest_bgm(script: str, title: str) -> dict:
                 "Pixabay Music (pixabay.com/music)",
             ],
         }
+
 
 
 def main():
