@@ -1167,6 +1167,31 @@ Default model: {llm_client.DEFAULT_MODEL_KEY}
                 failed += 1
                 continue
 
+    # Git handoff step - run after all stories are processed and staged
+    try:
+        # Check if there are any changes to commit
+        result = subprocess.run(
+            ["git", "diff-index", "--quiet", "HEAD", "--"],
+            capture_output=True
+        )
+        if result.returncode == 0:
+            print("  [git] No changes to commit.")
+        else:
+            # Add all changes
+            subprocess.run(["git", "add", "."], check=True, capture_output=True, text=True)
+            # Commit
+            subprocess.run(["git", "commit", "-m", "Automated news video build"], check=True, capture_output=True, text=True)
+            # Push
+            subprocess.run(["git", "push", "origin", "main"], check=True, capture_output=True, text=True)
+            print("  [git] Successfully pushed to origin/main.")
+    except subprocess.CalledProcessError as e:
+        print(f"  [git] Git operation failed: {e}")
+        print("  [git] Pipeline exiting unsuccessfully.")
+        sys.exit(1)
+    except Exception as e:
+        print(f"  [git] Unexpected error during Git operations: {e}")
+        sys.exit(1)
+
     # --- Summary ---
     print()
     daily_dir = _get_daily_outdir(outdir)
