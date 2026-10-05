@@ -1,622 +1,572 @@
 [
   {
-    "word": "Modern",
-    "start": 0.211,
-    "end": 0.471
+    "word": "A",
+    "start": 0.151,
+    "end": 0.191
   },
   {
-    "word": "artificial",
-    "start": 0.511,
-    "end": 0.932
+    "word": "Florida",
+    "start": 0.231,
+    "end": 0.551
   },
   {
-    "word": "intelligence",
-    "start": 0.972,
-    "end": 1.432
+    "word": "woman",
+    "start": 0.591,
+    "end": 0.811
   },
   {
-    "word": "models",
-    "start": 1.472,
-    "end": 1.732
+    "word": "is",
+    "start": 0.871,
+    "end": 0.951
   },
   {
-    "word": "are",
-    "start": 1.792,
-    "end": 1.872
+    "word": "facing",
+    "start": 0.991,
+    "end": 1.292
   },
   {
-    "word": "accidentally",
-    "start": 1.952,
-    "end": 2.433
+    "word": "felony",
+    "start": 1.352,
+    "end": 1.632
   },
   {
-    "word": "memorizing",
-    "start": 2.473,
-    "end": 2.913
+    "word": "charges",
+    "start": 1.652,
+    "end": 1.972
   },
   {
-    "word": "your",
-    "start": 2.933,
-    "end": 3.053
+    "word": "after",
+    "start": 2.092,
+    "end": 2.272
   },
   {
-    "word": "home",
-    "start": 3.073,
-    "end": 3.213
+    "word": "she",
+    "start": 2.292,
+    "end": 2.412
   },
   {
-    "word": "address,",
-    "start": 3.233,
-    "end": 3.534
-  },
-  {
-    "word": "birth",
-    "start": 3.854,
-    "end": 4.054
-  },
-  {
-    "word": "date,",
-    "start": 4.074,
-    "end": 4.294
-  },
-  {
-    "word": "and",
-    "start": 4.574,
-    "end": 4.674
-  },
-  {
-    "word": "even",
-    "start": 4.734,
-    "end": 4.875
-  },
-  {
-    "word": "your",
-    "start": 4.895,
-    "end": 5.015
-  },
-  {
-    "word": "private",
-    "start": 5.035,
-    "end": 5.315
-  },
-  {
-    "word": "phone",
-    "start": 5.335,
-    "end": 5.515
-  },
-  {
-    "word": "number.",
-    "start": 5.535,
-    "end": 5.775
-  },
-  {
-    "word": "These",
-    "start": 6.616,
-    "end": 6.776
-  },
-  {
-    "word": "systems",
-    "start": 6.836,
-    "end": 7.156
-  },
-  {
-    "word": "scrape",
-    "start": 7.196,
-    "end": 7.456
+    "word": "used",
+    "start": 2.492,
+    "end": 2.612
   },
   {
     "word": "the",
-    "start": 7.476,
-    "end": 7.557
-  },
-  {
-    "word": "entire",
-    "start": 7.597,
-    "end": 7.957
-  },
-  {
-    "word": "web,",
-    "start": 7.997,
-    "end": 8.237
-  },
-  {
-    "word": "turning",
-    "start": 8.457,
-    "end": 8.677
-  },
-  {
-    "word": "your",
-    "start": 8.697,
-    "end": 8.817
-  },
-  {
-    "word": "most",
-    "start": 8.858,
-    "end": 8.998
-  },
-  {
-    "word": "sensitive",
-    "start": 9.058,
-    "end": 9.398
-  },
-  {
-    "word": "personal",
-    "start": 9.438,
-    "end": 9.758
-  },
-  {
-    "word": "details",
-    "start": 9.798,
-    "end": 10.178
-  },
-  {
-    "word": "into",
-    "start": 10.219,
-    "end": 10.379
-  },
-  {
-    "word": "part",
-    "start": 10.419,
-    "end": 10.579
-  },
-  {
-    "word": "of",
-    "start": 10.599,
-    "end": 10.659
-  },
-  {
-    "word": "their",
-    "start": 10.679,
-    "end": 10.799
-  },
-  {
-    "word": "permanent",
-    "start": 10.819,
-    "end": 11.119
-  },
-  {
-    "word": "memory.",
-    "start": 11.159,
-    "end": 11.459
-  },
-  {
-    "word": "Existing",
-    "start": 12.3,
-    "end": 12.68
-  },
-  {
-    "word": "attempts",
-    "start": 12.72,
-    "end": 13.021
-  },
-  {
-    "word": "to",
-    "start": 13.041,
-    "end": 13.121
-  },
-  {
-    "word": "fix",
-    "start": 13.181,
-    "end": 13.361
-  },
-  {
-    "word": "this",
-    "start": 13.381,
-    "end": 13.521
-  },
-  {
-    "word": "often",
-    "start": 13.601,
-    "end": 13.821
-  },
-  {
-    "word": "break",
-    "start": 13.861,
-    "end": 14.061
-  },
-  {
-    "word": "the",
-    "start": 14.081,
-    "end": 14.161
-  },
-  {
-    "word": "model",
-    "start": 14.201,
-    "end": 14.462
-  },
-  {
-    "word": "or",
-    "start": 14.542,
-    "end": 14.602
-  },
-  {
-    "word": "delete",
-    "start": 14.642,
-    "end": 14.902
-  },
-  {
-    "word": "too",
-    "start": 14.982,
-    "end": 15.122
-  },
-  {
-    "word": "much",
-    "start": 15.162,
-    "end": 15.322
-  },
-  {
-    "word": "useful",
-    "start": 15.422,
-    "end": 15.643
-  },
-  {
-    "word": "information",
-    "start": 15.663,
-    "end": 16.103
-  },
-  {
-    "word": "in",
-    "start": 16.143,
-    "end": 16.203
-  },
-  {
-    "word": "the",
-    "start": 16.223,
-    "end": 16.283
-  },
-  {
-    "word": "process.",
-    "start": 16.323,
-    "end": 16.723
-  },
-  {
-    "word": "Enter",
-    "start": 17.624,
-    "end": 17.804
-  },
-  {
-    "word": "Whiteout,",
-    "start": 17.844,
-    "end": 18.224
-  },
-  {
-    "word": "a",
-    "start": 18.485,
-    "end": 18.525
-  },
-  {
-    "word": "new",
-    "start": 18.585,
-    "end": 18.705
-  },
-  {
-    "word": "tool",
-    "start": 18.765,
-    "end": 18.985
-  },
-  {
-    "word": "that",
-    "start": 19.025,
-    "end": 19.145
-  },
-  {
-    "word": "specifically",
-    "start": 19.185,
-    "end": 19.686
-  },
-  {
-    "word": "overrides",
-    "start": 19.786,
-    "end": 20.186
-  },
-  {
-    "word": "your",
-    "start": 20.206,
-    "end": 20.326
-  },
-  {
-    "word": "private",
-    "start": 20.346,
-    "end": 20.646
-  },
-  {
-    "word": "data",
-    "start": 20.686,
-    "end": 20.886
-  },
-  {
-    "word": "with",
-    "start": 20.926,
-    "end": 21.047
-  },
-  {
-    "word": "precise,",
-    "start": 21.087,
-    "end": 21.467
-  },
-  {
-    "word": "calculated",
-    "start": 21.747,
-    "end": 22.207
-  },
-  {
-    "word": "noise.",
-    "start": 22.247,
-    "end": 22.528
-  },
-  {
-    "word": "It",
-    "start": 23.415,
-    "end": 23.475
-  },
-  {
-    "word": "effectively",
-    "start": 23.495,
-    "end": 23.936
-  },
-  {
-    "word": "blinds",
-    "start": 23.976,
-    "end": 24.276
-  },
-  {
-    "word": "the",
-    "start": 24.296,
-    "end": 24.376
-  },
-  {
-    "word": "artificial",
-    "start": 24.436,
-    "end": 24.837
-  },
-  {
-    "word": "intelligence",
-    "start": 24.877,
-    "end": 25.377
-  },
-  {
-    "word": "to",
-    "start": 25.397,
-    "end": 25.477
-  },
-  {
-    "word": "your",
-    "start": 25.497,
-    "end": 25.638
-  },
-  {
-    "word": "specific",
-    "start": 25.658,
-    "end": 26.058
-  },
-  {
-    "word": "secrets",
-    "start": 26.118,
-    "end": 26.438
-  },
-  {
-    "word": "without",
-    "start": 26.519,
-    "end": 26.759
-  },
-  {
-    "word": "making",
-    "start": 26.799,
-    "end": 27.019
-  },
-  {
-    "word": "the",
-    "start": 27.059,
-    "end": 27.119
-  },
-  {
-    "word": "entire",
-    "start": 27.159,
-    "end": 27.52
-  },
-  {
-    "word": "system",
-    "start": 27.56,
-    "end": 27.86
-  },
-  {
-    "word": "stupid.",
-    "start": 27.9,
-    "end": 28.22
-  },
-  {
-    "word": "Tests",
-    "start": 29.021,
-    "end": 29.342
-  },
-  {
-    "word": "show",
-    "start": 29.402,
-    "end": 29.562
-  },
-  {
-    "word": "it",
-    "start": 29.602,
-    "end": 29.662
-  },
-  {
-    "word": "even",
-    "start": 29.722,
-    "end": 29.882
-  },
-  {
-    "word": "holds",
-    "start": 29.902,
-    "end": 30.103
-  },
-  {
-    "word": "up",
-    "start": 30.163,
-    "end": 30.243
-  },
-  {
-    "word": "against",
-    "start": 30.283,
-    "end": 30.503
-  },
-  {
-    "word": "advanced",
-    "start": 30.563,
-    "end": 30.843
-  },
-  {
-    "word": "hackers",
-    "start": 30.863,
-    "end": 31.204
-  },
-  {
-    "word": "trying",
-    "start": 31.244,
-    "end": 31.444
-  },
-  {
-    "word": "to",
-    "start": 31.484,
-    "end": 31.544
-  },
-  {
-    "word": "force",
-    "start": 31.584,
-    "end": 31.805
-  },
-  {
-    "word": "the",
-    "start": 31.825,
-    "end": 31.905
-  },
-  {
-    "word": "model",
-    "start": 31.925,
-    "end": 32.185
-  },
-  {
-    "word": "to",
-    "start": 32.205,
-    "end": 32.285
-  },
-  {
-    "word": "reveal",
-    "start": 32.345,
-    "end": 32.625
-  },
-  {
-    "word": "hidden",
-    "start": 32.665,
-    "end": 32.866
-  },
-  {
-    "word": "facts.",
-    "start": 32.926,
-    "end": 33.246
-  },
-  {
-    "word": "If",
-    "start": 34.147,
-    "end": 34.207
-  },
-  {
-    "word": "you",
-    "start": 34.227,
-    "end": 34.307
-  },
-  {
-    "word": "could",
-    "start": 34.347,
-    "end": 34.468
-  },
-  {
-    "word": "force",
-    "start": 34.508,
-    "end": 34.768
-  },
-  {
-    "word": "every",
-    "start": 34.828,
-    "end": 35.008
+    "start": 2.652,
+    "end": 2.732
   },
   {
     "word": "AI",
-    "start": 35.048,
-    "end": 35.328
+    "start": 2.852,
+    "end": 3.133
   },
   {
-    "word": "company",
-    "start": 35.389,
-    "end": 35.669
+    "word": "chatbot",
+    "start": 3.173,
+    "end": 3.573
   },
   {
-    "word": "to",
-    "start": 35.689,
-    "end": 35.789
+    "word": "clawed",
+    "start": 3.613,
+    "end": 3.893
   },
   {
-    "word": "run",
-    "start": 35.829,
-    "end": 35.929
+    "word": "as",
+    "start": 4.113,
+    "end": 4.193
   },
   {
     "word": "a",
-    "start": 35.969,
-    "end": 35.989
+    "start": 4.233,
+    "end": 4.253
   },
   {
-    "word": "wide",
-    "start": 36.029,
-    "end": 36.229
+    "word": "personal",
+    "start": 4.293,
+    "end": 4.633
   },
   {
-    "word": "out",
-    "start": 36.27,
-    "end": 36.37
+    "word": "diary.",
+    "start": 4.673,
+    "end": 4.994
   },
   {
-    "word": "scan",
-    "start": 36.41,
-    "end": 36.67
+    "word": "She",
+    "start": 5.354,
+    "end": 5.454
   },
   {
-    "word": "on",
-    "start": 36.71,
-    "end": 36.77
+    "word": "allegedly",
+    "start": 5.494,
+    "end": 5.854
+  },
+  {
+    "word": "wrote",
+    "start": 5.894,
+    "end": 6.074
+  },
+  {
+    "word": "that",
+    "start": 6.094,
+    "end": 6.194
+  },
+  {
+    "word": "she",
+    "start": 6.214,
+    "end": 6.334
+  },
+  {
+    "word": "planned",
+    "start": 6.374,
+    "end": 6.654
+  },
+  {
+    "word": "to",
+    "start": 6.694,
+    "end": 6.754
+  },
+  {
+    "word": "shoot",
+    "start": 6.794,
+    "end": 6.975
+  },
+  {
+    "word": "up",
+    "start": 7.015,
+    "end": 7.115
+  },
+  {
+    "word": "the",
+    "start": 7.135,
+    "end": 7.235
+  },
+  {
+    "word": "local",
+    "start": 7.275,
+    "end": 7.515
+  },
+  {
+    "word": "sheriff's",
+    "start": 7.575,
+    "end": 7.895
+  },
+  {
+    "word": "office,",
+    "start": 7.955,
+    "end": 8.195
+  },
+  {
+    "word": "triggering",
+    "start": 8.495,
+    "end": 8.775
+  },
+  {
+    "word": "the",
+    "start": 8.795,
+    "end": 8.876
+  },
+  {
+    "word": "company's",
+    "start": 8.916,
+    "end": 9.216
+  },
+  {
+    "word": "safety",
+    "start": 9.236,
+    "end": 9.516
+  },
+  {
+    "word": "systems.",
+    "start": 9.556,
+    "end": 9.876
+  },
+  {
+    "word": "Anthropic",
+    "start": 10.336,
+    "end": 10.817
+  },
+  {
+    "word": "didn't",
+    "start": 10.877,
+    "end": 11.097
+  },
+  {
+    "word": "just",
+    "start": 11.157,
+    "end": 11.357
+  },
+  {
+    "word": "ignore",
+    "start": 11.377,
+    "end": 11.657
+  },
+  {
+    "word": "it.",
+    "start": 11.697,
+    "end": 11.757
+  },
+  {
+    "word": "They",
+    "start": 12.077,
+    "end": 12.177
+  },
+  {
+    "word": "had",
+    "start": 12.217,
+    "end": 12.297
+  },
+  {
+    "word": "a",
+    "start": 12.317,
+    "end": 12.357
+  },
+  {
+    "word": "human",
+    "start": 12.397,
+    "end": 12.657
+  },
+  {
+    "word": "reviewer",
+    "start": 12.698,
+    "end": 13.038
+  },
+  {
+    "word": "confirm",
+    "start": 13.078,
+    "end": 13.398
+  },
+  {
+    "word": "the",
+    "start": 13.418,
+    "end": 13.478
+  },
+  {
+    "word": "threat",
+    "start": 13.518,
+    "end": 13.778
+  },
+  {
+    "word": "and",
+    "start": 14.078,
+    "end": 14.158
+  },
+  {
+    "word": "immediately",
+    "start": 14.198,
+    "end": 14.719
+  },
+  {
+    "word": "alerted",
+    "start": 14.759,
+    "end": 15.039
+  },
+  {
+    "word": "law",
+    "start": 15.059,
+    "end": 15.179
+  },
+  {
+    "word": "enforcement.",
+    "start": 15.199,
+    "end": 15.679
+  },
+  {
+    "word": "This",
+    "start": 16.039,
+    "end": 16.199
+  },
+  {
+    "word": "isn't",
+    "start": 16.239,
+    "end": 16.419
+  },
+  {
+    "word": "an",
+    "start": 16.459,
+    "end": 16.499
+  },
+  {
+    "word": "isolated",
+    "start": 16.62,
+    "end": 16.98
+  },
+  {
+    "word": "incident,",
+    "start": 17.02,
+    "end": 17.3
+  },
+  {
+    "word": "as",
+    "start": 17.58,
+    "end": 17.66
+  },
+  {
+    "word": "tech",
+    "start": 17.7,
+    "end": 17.86
+  },
+  {
+    "word": "companies",
+    "start": 17.88,
+    "end": 18.18
+  },
+  {
+    "word": "are",
+    "start": 18.2,
+    "end": 18.3
+  },
+  {
+    "word": "now",
+    "start": 18.34,
+    "end": 18.5
+  },
+  {
+    "word": "under",
+    "start": 18.581,
+    "end": 18.741
+  },
+  {
+    "word": "massive",
+    "start": 18.801,
+    "end": 19.101
+  },
+  {
+    "word": "pressure",
+    "start": 19.141,
+    "end": 19.401
+  },
+  {
+    "word": "to",
+    "start": 19.441,
+    "end": 19.501
+  },
+  {
+    "word": "police",
+    "start": 19.541,
+    "end": 19.841
+  },
+  {
+    "word": "their",
+    "start": 19.861,
+    "end": 20.021
+  },
+  {
+    "word": "user's",
+    "start": 20.121,
+    "end": 20.381
+  },
+  {
+    "word": "private",
+    "start": 20.441,
+    "end": 20.722
+  },
+  {
+    "word": "thoughts.",
+    "start": 20.762,
+    "end": 21.062
+  },
+  {
+    "word": "Earlier",
+    "start": 21.502,
+    "end": 21.763
+  },
+  {
+    "word": "this",
+    "start": 21.803,
+    "end": 21.944
+  },
+  {
+    "word": "year,",
+    "start": 21.964,
+    "end": 22.124
+  },
+  {
+    "word": "OpenAI",
+    "start": 22.505,
+    "end": 23.007
+  },
+  {
+    "word": "faced",
+    "start": 23.047,
+    "end": 23.288
+  },
+  {
+    "word": "lawsuits",
+    "start": 23.328,
+    "end": 23.709
+  },
+  {
+    "word": "for",
+    "start": 23.729,
+    "end": 23.85
+  },
+  {
+    "word": "allegedly",
+    "start": 23.89,
+    "end": 24.351
+  },
+  {
+    "word": "failing",
+    "start": 24.392,
+    "end": 24.693
+  },
+  {
+    "word": "to",
+    "start": 24.733,
+    "end": 24.793
+  },
+  {
+    "word": "prevent",
+    "start": 24.833,
+    "end": 25.094
+  },
+  {
+    "word": "shootings",
+    "start": 25.154,
+    "end": 25.475
+  },
+  {
+    "word": "despite",
+    "start": 25.515,
+    "end": 25.917
+  },
+  {
+    "word": "seeing",
+    "start": 25.977,
+    "end": 26.198
+  },
+  {
+    "word": "warning",
+    "start": 26.238,
+    "end": 26.498
+  },
+  {
+    "word": "signs",
+    "start": 26.539,
+    "end": 26.799
+  },
+  {
+    "word": "and",
+    "start": 26.88,
+    "end": 26.94
+  },
+  {
+    "word": "user",
+    "start": 27.02,
+    "end": 27.221
+  },
+  {
+    "word": "conversations.",
+    "start": 27.241,
+    "end": 27.803
+  },
+  {
+    "word": "So",
+    "start": 28.244,
+    "end": 28.365
+  },
+  {
+    "word": "remember,",
+    "start": 28.385,
+    "end": 28.706
+  },
+  {
+    "word": "these",
+    "start": 29.067,
+    "end": 29.207
+  },
+  {
+    "word": "chatbots",
+    "start": 29.247,
+    "end": 29.669
+  },
+  {
+    "word": "aren't",
+    "start": 29.729,
+    "end": 29.87
   },
   {
     "word": "your",
-    "start": 36.79,
-    "end": 36.91
+    "start": 29.89,
+    "end": 29.99
   },
   {
-    "word": "own",
-    "start": 36.95,
-    "end": 37.05
+    "word": "secret",
+    "start": 30.03,
+    "end": 30.311
   },
   {
-    "word": "name,",
-    "start": 37.09,
-    "end": 37.311
+    "word": "best",
+    "start": 30.351,
+    "end": 30.512
   },
   {
-    "word": "would",
-    "start": 37.571,
-    "end": 37.691
+    "word": "friend.",
+    "start": 30.552,
+    "end": 30.793
   },
   {
-    "word": "you",
-    "start": 37.711,
-    "end": 37.791
+    "word": "They",
+    "start": 31.114,
+    "end": 31.214
   },
   {
-    "word": "trust",
-    "start": 37.811,
-    "end": 38.052
+    "word": "are",
+    "start": 31.234,
+    "end": 31.314
   },
   {
-    "word": "it?",
-    "start": 38.092,
-    "end": 38.152
+    "word": "monitored",
+    "start": 31.374,
+    "end": 31.716
+  },
+  {
+    "word": "tools",
+    "start": 31.756,
+    "end": 31.996
+  },
+  {
+    "word": "that",
+    "start": 32.017,
+    "end": 32.097
+  },
+  {
+    "word": "will",
+    "start": 32.137,
+    "end": 32.277
+  },
+  {
+    "word": "snitch",
+    "start": 32.318,
+    "end": 32.598
+  },
+  {
+    "word": "if",
+    "start": 32.719,
+    "end": 32.779
+  },
+  {
+    "word": "they",
+    "start": 32.799,
+    "end": 32.92
+  },
+  {
+    "word": "see",
+    "start": 32.96,
+    "end": 33.1
+  },
+  {
+    "word": "a",
+    "start": 33.14,
+    "end": 33.2
+  },
+  {
+    "word": "red",
+    "start": 33.241,
+    "end": 33.381
+  },
+  {
+    "word": "flag.",
+    "start": 33.441,
+    "end": 33.722
   }
 ]

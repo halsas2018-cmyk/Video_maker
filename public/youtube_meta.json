@@ -1,14 +1,14 @@
 {
-  "youtube_title": "Is Your Private Data Trapped in AI?",
-  "youtube_description": "Large language models often memorize your personal data. Here is how a new tool called Whiteout plans to scrub your private info for good. #AI #Privacy #TechNews",
-  "on_screen_hook": "Whiteout Tool Blocks AI Data Leaks",
+  "youtube_title": "Why You Should Never Use AI As A Diary",
+  "youtube_description": "Think your AI chats are private? A Florida woman just found out the hard way that they aren't. #AI #TechNews #Privacy",
+  "on_screen_hook": "Claude Reported Her To The Police",
   "headline_options": [
-    "Whiteout Tool Blocks AI Data Leaks",
-    "How Whiteout Stops AI Memorizing You",
-    "Can Whiteout Hide Your Private Data?",
-    "Whiteout Prevents AI From Regurgitating Info",
-    "AI Privacy With The Whiteout Tool"
+    "Claude Reported Her To The Police",
+    "Why Anthropic Read Her Private Diary",
+    "Florida Woman Arrested Over Claude Chat",
+    "Your AI Diary Is Not Private",
+    "Claude Flagged A Potential Mass Shooting"
   ],
-  "video_title_source": "Mitigating Private Data Leakage in LLMs with Whiteout",
-  "source_link": "https://arxiv.org/abs/2610.02418"
+  "video_title_source": "Anthropic reported diary entry to police, woman faces felony charge",
+  "source_link": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html"
 }
