@@ -1,642 +1,738 @@
 {
   "shots": [
     {
-      "sentence": "Google tried to hide their massive water and electricity usage in Nebraska behind a simple redaction.",
-      "search_term": "redacted document",
-      "media_type": "photo",
-      "visual": "Close up of a blacked out document.",
-      "asset_path": "project_assets/shot_1.jpg",
-      "duration_seconds": 2.295
+      "sentence": "Modern artificial intelligence models are accidentally memorizing your home address, birth date, and even your private phone number.",
+      "search_term": "digital privacy breach",
+      "media_type": "video",
+      "visual": "A close up of a digital screen displaying scrambled personal data.",
+      "asset_path": "project_assets/shot_1.mp4",
+      "duration_seconds": 2.845
     },
     {
-      "sentence": "Google tried to hide their massive water and electricity usage in Nebraska behind a simple redaction.",
-      "search_term": "server room technology",
+      "sentence": "Modern artificial intelligence models are accidentally memorizing your home address, birth date, and even your private phone number.",
+      "search_term": "data security warning",
       "media_type": "video",
-      "visual": "Rows of blinking server racks in a dark room.",
+      "visual": "A glowing red warning symbol on a dark computer monitor.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.295
+      "duration_seconds": 2.845
     },
     {
-      "sentence": "But they forgot one thing: if you highlight the blacked-out text and copy-paste it, the secrets appear.",
-      "search_term": "computer cursor clicking",
+      "sentence": "These systems scrape the entire web, turning your most sensitive personal details into part of their permanent memory.",
+      "search_term": "internet web scraping",
       "media_type": "video",
-      "visual": "Close up of a mouse cursor selecting text on a screen.",
+      "visual": "Fast moving lines of code and data scrolling on a dark screen.",
       "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 2.438
+      "duration_seconds": 2.845
     },
     {
-      "sentence": "But they forgot one thing: if you highlight the blacked-out text and copy-paste it, the secrets appear.",
-      "search_term": "copy paste action",
+      "sentence": "These systems scrape the entire web, turning your most sensitive personal details into part of their permanent memory.",
+      "search_term": "neural network nodes",
       "media_type": "video",
-      "visual": "Finger hitting keys on a keyboard.",
+      "visual": "Abstract animation of interconnected glowing nodes forming a web.",
       "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 2.438
+      "duration_seconds": 2.845
     },
     {
-      "sentence": "The data shows one site used thirteen million gallons of water in just one year.",
-      "search_term": "water cooling tower",
+      "sentence": "Existing attempts to fix this often break the model or delete too much useful information in the process.",
+      "search_term": "broken computer screen",
       "media_type": "video",
-      "visual": "Industrial cooling towers emitting steam.",
+      "visual": "A computer screen with a glitch effect or error message.",
       "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 2.152
+      "duration_seconds": 2.845
     },
     {
-      "sentence": "The data shows one site used thirteen million gallons of water in just one year.",
-      "search_term": "water splash",
+      "sentence": "Existing attempts to fix this often break the model or delete too much useful information in the process.",
+      "search_term": "data deletion",
       "media_type": "video",
-      "visual": "Close up of clear water movement.",
+      "visual": "A file icon being dragged into a digital trash bin.",
       "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.152
+      "duration_seconds": 2.845
     },
     {
-      "sentence": "That is enough to fill twenty Olympic-sized swimming pools, yet it is still less than half of what the city uses daily.",
-      "search_term": "swimming pool aerial",
+      "sentence": "Enter Whiteout, a new tool that specifically overwrites your private data with precise, calculated noise.",
+      "search_term": "digital eraser",
       "media_type": "video",
-      "visual": "Top down shot of a large blue swimming pool.",
+      "visual": "A stylized digital brush wiping away static noise on a screen.",
       "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 3.156
+      "duration_seconds": 2.371
     },
     {
-      "sentence": "That is enough to fill twenty Olympic-sized swimming pools, yet it is still less than half of what the city uses daily.",
-      "search_term": "city skyline aerial",
+      "sentence": "Enter Whiteout, a new tool that specifically overwrites your private data with precise, calculated noise.",
+      "search_term": "data encryption",
       "media_type": "video",
-      "visual": "Wide shot of a city landscape.",
+      "visual": "Abstract patterns of geometric shapes shifting and reconfiguring.",
       "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 3.156
+      "duration_seconds": 2.371
     },
     {
-      "sentence": "Even more surprising, these same centers are expecting over fifty million dollars in tax refunds for the coming year.",
-      "search_term": "money dollar bills",
+      "sentence": "It effectively blinds the artificial intelligence to your specific secrets without making the entire system stupid.",
+      "search_term": "blindfolded technology",
       "media_type": "video",
-      "visual": "Stacks of cash on a desk.",
+      "visual": "A symbolic shot of an eye being obscured by digital pixels.",
       "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 2.725
+      "duration_seconds": 2.529
     },
     {
-      "sentence": "Even more surprising, these same centers are expecting over fifty million dollars in tax refunds for the coming year.",
-      "search_term": "tax form",
-      "media_type": "photo",
-      "visual": "Close up of a generic tax document.",
-      "asset_path": "project_assets/shot_10.jpg",
-      "duration_seconds": 2.725
-    },
-    {
-      "sentence": "Is this just the cost of keeping the internet running, or are these companies getting a free ride?",
-      "search_term": "person thinking",
+      "sentence": "It effectively blinds the artificial intelligence to your specific secrets without making the entire system stupid.",
+      "search_term": "smart artificial intelligence",
       "media_type": "video",
-      "visual": "A person looking at a screen with a confused expression.",
+      "visual": "A glowing human-like silhouette made of light against a dark background.",
+      "asset_path": "project_assets/shot_10.mp4",
+      "duration_seconds": 2.529
+    },
+    {
+      "sentence": "Tests show it even holds up against advanced hackers trying to force the model to reveal hidden facts.",
+      "search_term": "hacker typing",
+      "media_type": "video",
+      "visual": "Close up of fingers typing rapidly on a mechanical keyboard.",
       "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 2.582
+      "duration_seconds": 2.845
     },
     {
-      "sentence": "Is this just the cost of keeping the internet running, or are these companies getting a free ride?",
-      "search_term": "fiber optic cables",
+      "sentence": "Tests show it even holds up against advanced hackers trying to force the model to reveal hidden facts.",
+      "search_term": "cyber security shield",
       "media_type": "video",
-      "visual": "Glowing fiber optic light strands.",
+      "visual": "A shimmering blue digital barrier protecting a server cluster.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 2.582
+      "duration_seconds": 2.845
+    },
+    {
+      "sentence": "If you could force every AI company to run a Whiteout scan on your own name, would you trust it?",
+      "search_term": "person looking at screen",
+      "media_type": "video",
+      "visual": "A person sitting at a desk looking thoughtful while staring at a monitor.",
+      "asset_path": "project_assets/shot_13.mp4",
+      "duration_seconds": 3.161
+    },
+    {
+      "sentence": "If you could force every AI company to run a Whiteout scan on your own name, would you trust it?",
+      "search_term": "question mark digital",
+      "media_type": "video",
+      "visual": "A glowing question mark floating in a digital space.",
+      "asset_path": "project_assets/shot_14.mp4",
+      "duration_seconds": 3.161
     }
   ],
   "words": [
     {
-      "word": "Google",
-      "start": 0.191,
+      "word": "Modern",
+      "start": 0.211,
       "end": 0.471
     },
     {
-      "word": "tried",
-      "start": 0.512,
-      "end": 0.692
+      "word": "artificial",
+      "start": 0.511,
+      "end": 0.932
     },
     {
-      "word": "to",
-      "start": 0.732,
-      "end": 0.792
+      "word": "intelligence",
+      "start": 0.972,
+      "end": 1.432
     },
     {
-      "word": "hide",
-      "start": 0.832,
-      "end": 1.032
+      "word": "models",
+      "start": 1.472,
+      "end": 1.732
+    },
+    {
+      "word": "are",
+      "start": 1.792,
+      "end": 1.872
+    },
+    {
+      "word": "accidentally",
+      "start": 1.952,
+      "end": 2.433
+    },
+    {
+      "word": "memorizing",
+      "start": 2.473,
+      "end": 2.913
+    },
+    {
+      "word": "your",
+      "start": 2.933,
+      "end": 3.053
+    },
+    {
+      "word": "home",
+      "start": 3.073,
+      "end": 3.213
+    },
+    {
+      "word": "address,",
+      "start": 3.233,
+      "end": 3.534
+    },
+    {
+      "word": "birth",
+      "start": 3.854,
+      "end": 4.054
+    },
+    {
+      "word": "date,",
+      "start": 4.074,
+      "end": 4.294
+    },
+    {
+      "word": "and",
+      "start": 4.574,
+      "end": 4.674
+    },
+    {
+      "word": "even",
+      "start": 4.734,
+      "end": 4.875
+    },
+    {
+      "word": "your",
+      "start": 4.895,
+      "end": 5.015
+    },
+    {
+      "word": "private",
+      "start": 5.035,
+      "end": 5.315
+    },
+    {
+      "word": "phone",
+      "start": 5.335,
+      "end": 5.515
+    },
+    {
+      "word": "number.",
+      "start": 5.535,
+      "end": 5.775
+    },
+    {
+      "word": "These",
+      "start": 6.616,
+      "end": 6.776
+    },
+    {
+      "word": "systems",
+      "start": 6.836,
+      "end": 7.156
+    },
+    {
+      "word": "scrape",
+      "start": 7.196,
+      "end": 7.456
+    },
+    {
+      "word": "the",
+      "start": 7.476,
+      "end": 7.557
+    },
+    {
+      "word": "entire",
+      "start": 7.597,
+      "end": 7.957
+    },
+    {
+      "word": "web,",
+      "start": 7.997,
+      "end": 8.237
+    },
+    {
+      "word": "turning",
+      "start": 8.457,
+      "end": 8.677
+    },
+    {
+      "word": "your",
+      "start": 8.697,
+      "end": 8.817
+    },
+    {
+      "word": "most",
+      "start": 8.858,
+      "end": 8.998
+    },
+    {
+      "word": "sensitive",
+      "start": 9.058,
+      "end": 9.398
+    },
+    {
+      "word": "personal",
+      "start": 9.438,
+      "end": 9.758
+    },
+    {
+      "word": "details",
+      "start": 9.798,
+      "end": 10.178
+    },
+    {
+      "word": "into",
+      "start": 10.219,
+      "end": 10.379
+    },
+    {
+      "word": "part",
+      "start": 10.419,
+      "end": 10.579
+    },
+    {
+      "word": "of",
+      "start": 10.599,
+      "end": 10.659
     },
     {
       "word": "their",
-      "start": 1.052,
-      "end": 1.172
+      "start": 10.679,
+      "end": 10.799
     },
     {
-      "word": "massive",
-      "start": 1.212,
-      "end": 1.513
+      "word": "permanent",
+      "start": 10.819,
+      "end": 11.119
     },
     {
-      "word": "water",
-      "start": 1.553,
-      "end": 1.773
+      "word": "memory.",
+      "start": 11.159,
+      "end": 11.459
     },
     {
-      "word": "and",
-      "start": 1.813,
-      "end": 1.893
+      "word": "Existing",
+      "start": 12.3,
+      "end": 12.68
     },
     {
-      "word": "electricity",
-      "start": 1.913,
-      "end": 2.414
-    },
-    {
-      "word": "usage",
-      "start": 2.494,
-      "end": 2.734
-    },
-    {
-      "word": "in",
-      "start": 2.754,
-      "end": 2.814
-    },
-    {
-      "word": "Nebraska,",
-      "start": 2.834,
-      "end": 3.295
-    },
-    {
-      "word": "behind",
-      "start": 3.395,
-      "end": 3.635
-    },
-    {
-      "word": "a",
-      "start": 3.675,
-      "end": 3.715
-    },
-    {
-      "word": "simple",
-      "start": 3.755,
-      "end": 3.975
-    },
-    {
-      "word": "reduction.",
-      "start": 3.995,
-      "end": 4.416
-    },
-    {
-      "word": "But",
-      "start": 5.217,
-      "end": 5.317
-    },
-    {
-      "word": "they",
-      "start": 5.337,
-      "end": 5.457
-    },
-    {
-      "word": "forgot",
-      "start": 5.497,
-      "end": 5.757
-    },
-    {
-      "word": "one",
-      "start": 5.837,
-      "end": 5.917
-    },
-    {
-      "word": "thing,",
-      "start": 5.957,
-      "end": 6.158
-    },
-    {
-      "word": "if",
-      "start": 6.438,
-      "end": 6.498
-    },
-    {
-      "word": "you",
-      "start": 6.538,
-      "end": 6.638
-    },
-    {
-      "word": "highlight",
-      "start": 6.658,
-      "end": 6.999
-    },
-    {
-      "word": "the",
-      "start": 7.019,
-      "end": 7.079
-    },
-    {
-      "word": "blacked",
-      "start": 7.119,
-      "end": 7.339
-    },
-    {
-      "word": "out",
-      "start": 7.399,
-      "end": 7.499
-    },
-    {
-      "word": "text",
-      "start": 7.539,
-      "end": 7.819
-    },
-    {
-      "word": "and",
-      "start": 7.86,
-      "end": 7.94
-    },
-    {
-      "word": "copy",
-      "start": 7.98,
-      "end": 8.24
-    },
-    {
-      "word": "paste",
-      "start": 8.26,
-      "end": 8.5
-    },
-    {
-      "word": "it,",
-      "start": 8.54,
-      "end": 8.62
-    },
-    {
-      "word": "the",
-      "start": 8.781,
-      "end": 8.881
-    },
-    {
-      "word": "secrets",
-      "start": 8.901,
-      "end": 9.201
-    },
-    {
-      "word": "appear.",
-      "start": 9.241,
-      "end": 9.501
-    },
-    {
-      "word": "The",
-      "start": 10.322,
-      "end": 10.422
-    },
-    {
-      "word": "data",
-      "start": 10.442,
-      "end": 10.683
-    },
-    {
-      "word": "shows",
-      "start": 10.723,
-      "end": 10.923
-    },
-    {
-      "word": "one",
-      "start": 11.023,
-      "end": 11.143
-    },
-    {
-      "word": "site",
-      "start": 11.183,
-      "end": 11.383
-    },
-    {
-      "word": "used",
-      "start": 11.483,
-      "end": 11.624
-    },
-    {
-      "word": "13",
-      "start": 11.784,
-      "end": 12.064
-    },
-    {
-      "word": "million",
-      "start": 12.104,
-      "end": 12.364
-    },
-    {
-      "word": "gallons",
-      "start": 12.384,
-      "end": 12.685
-    },
-    {
-      "word": "of",
-      "start": 12.725,
-      "end": 12.785
-    },
-    {
-      "word": "water",
-      "start": 12.825,
-      "end": 13.065
-    },
-    {
-      "word": "in",
-      "start": 13.145,
-      "end": 13.205
-    },
-    {
-      "word": "just",
-      "start": 13.245,
-      "end": 13.406
-    },
-    {
-      "word": "one",
-      "start": 13.506,
-      "end": 13.586
-    },
-    {
-      "word": "year.",
-      "start": 13.626,
-      "end": 13.806
-    },
-    {
-      "word": "That",
-      "start": 14.667,
-      "end": 14.807
-    },
-    {
-      "word": "is",
-      "start": 14.847,
-      "end": 14.907
-    },
-    {
-      "word": "enough",
-      "start": 14.947,
-      "end": 15.168
+      "word": "attempts",
+      "start": 12.72,
+      "end": 13.021
     },
     {
       "word": "to",
-      "start": 15.208,
-      "end": 15.288
+      "start": 13.041,
+      "end": 13.121
     },
     {
-      "word": "fill",
-      "start": 15.328,
-      "end": 15.488
-    },
-    {
-      "word": "20",
-      "start": 15.628,
-      "end": 15.788
-    },
-    {
-      "word": "Olympic-sized",
-      "start": 15.828,
-      "end": 16.389
-    },
-    {
-      "word": "swimming",
-      "start": 16.429,
-      "end": 16.689
-    },
-    {
-      "word": "pools,",
-      "start": 16.709,
-      "end": 16.969
-    },
-    {
-      "word": "yet",
-      "start": 17.31,
-      "end": 17.43
-    },
-    {
-      "word": "it",
-      "start": 17.47,
-      "end": 17.51
-    },
-    {
-      "word": "is",
-      "start": 17.57,
-      "end": 17.63
-    },
-    {
-      "word": "still",
-      "start": 17.67,
-      "end": 17.85
-    },
-    {
-      "word": "less",
-      "start": 17.89,
-      "end": 18.051
-    },
-    {
-      "word": "than",
-      "start": 18.091,
-      "end": 18.211
-    },
-    {
-      "word": "half",
-      "start": 18.251,
-      "end": 18.431
-    },
-    {
-      "word": "of",
-      "start": 18.451,
-      "end": 18.511
-    },
-    {
-      "word": "what",
-      "start": 18.531,
-      "end": 18.651
-    },
-    {
-      "word": "the",
-      "start": 18.671,
-      "end": 18.731
-    },
-    {
-      "word": "city",
-      "start": 18.771,
-      "end": 18.952
-    },
-    {
-      "word": "uses",
-      "start": 19.032,
-      "end": 19.232
-    },
-    {
-      "word": "daily.",
-      "start": 19.272,
-      "end": 19.552
-    },
-    {
-      "word": "Even",
-      "start": 20.393,
-      "end": 20.534
-    },
-    {
-      "word": "more",
-      "start": 20.574,
-      "end": 20.734
-    },
-    {
-      "word": "surprising,",
-      "start": 20.774,
-      "end": 21.235
-    },
-    {
-      "word": "these",
-      "start": 21.496,
-      "end": 21.636
-    },
-    {
-      "word": "same",
-      "start": 21.676,
-      "end": 21.856
-    },
-    {
-      "word": "centers",
-      "start": 21.917,
-      "end": 22.237
-    },
-    {
-      "word": "are",
-      "start": 22.277,
-      "end": 22.357
-    },
-    {
-      "word": "expecting",
-      "start": 22.398,
-      "end": 22.798
-    },
-    {
-      "word": "over",
-      "start": 22.838,
-      "end": 22.999
-    },
-    {
-      "word": "$50",
-      "start": 23.019,
-      "end": 23.319
-    },
-    {
-      "word": "million",
-      "start": 23.38,
-      "end": 23.961
-    },
-    {
-      "word": "in",
-      "start": 24.021,
-      "end": 24.101
-    },
-    {
-      "word": "tax",
-      "start": 24.121,
-      "end": 24.362
-    },
-    {
-      "word": "refunds",
-      "start": 24.402,
-      "end": 24.742
-    },
-    {
-      "word": "for",
-      "start": 24.783,
-      "end": 24.883
-    },
-    {
-      "word": "the",
-      "start": 24.903,
-      "end": 24.963
-    },
-    {
-      "word": "coming",
-      "start": 25.003,
-      "end": 25.203
-    },
-    {
-      "word": "year.",
-      "start": 25.223,
-      "end": 25.424
-    },
-    {
-      "word": "Is",
-      "start": 26.286,
-      "end": 26.346
+      "word": "fix",
+      "start": 13.181,
+      "end": 13.361
     },
     {
       "word": "this",
-      "start": 26.386,
-      "end": 26.526
+      "start": 13.381,
+      "end": 13.521
     },
     {
-      "word": "just",
-      "start": 26.566,
-      "end": 26.727
+      "word": "often",
+      "start": 13.601,
+      "end": 13.821
     },
     {
-      "word": "the",
-      "start": 26.767,
-      "end": 26.847
-    },
-    {
-      "word": "cost",
-      "start": 26.867,
-      "end": 27.107
-    },
-    {
-      "word": "of",
-      "start": 27.148,
-      "end": 27.208
-    },
-    {
-      "word": "keeping",
-      "start": 27.248,
-      "end": 27.488
+      "word": "break",
+      "start": 13.861,
+      "end": 14.061
     },
     {
       "word": "the",
-      "start": 27.508,
-      "end": 27.588
+      "start": 14.081,
+      "end": 14.161
     },
     {
-      "word": "internet",
-      "start": 27.629,
-      "end": 27.909
-    },
-    {
-      "word": "running,",
-      "start": 27.949,
-      "end": 28.17
+      "word": "model",
+      "start": 14.201,
+      "end": 14.462
     },
     {
       "word": "or",
-      "start": 28.45,
-      "end": 28.51
+      "start": 14.542,
+      "end": 14.602
     },
     {
-      "word": "are",
-      "start": 28.55,
-      "end": 28.651
+      "word": "delete",
+      "start": 14.642,
+      "end": 14.902
     },
     {
-      "word": "these",
-      "start": 28.671,
-      "end": 28.791
+      "word": "too",
+      "start": 14.982,
+      "end": 15.122
     },
     {
-      "word": "companies",
-      "start": 28.851,
-      "end": 29.192
+      "word": "much",
+      "start": 15.162,
+      "end": 15.322
     },
     {
-      "word": "getting",
-      "start": 29.212,
-      "end": 29.412
+      "word": "useful",
+      "start": 15.422,
+      "end": 15.643
+    },
+    {
+      "word": "information",
+      "start": 15.663,
+      "end": 16.103
+    },
+    {
+      "word": "in",
+      "start": 16.143,
+      "end": 16.203
+    },
+    {
+      "word": "the",
+      "start": 16.223,
+      "end": 16.283
+    },
+    {
+      "word": "process.",
+      "start": 16.323,
+      "end": 16.723
+    },
+    {
+      "word": "Enter",
+      "start": 17.624,
+      "end": 17.804
+    },
+    {
+      "word": "Whiteout,",
+      "start": 17.844,
+      "end": 18.224
     },
     {
       "word": "a",
-      "start": 29.452,
-      "end": 29.492
+      "start": 18.485,
+      "end": 18.525
     },
     {
-      "word": "free",
-      "start": 29.512,
-      "end": 29.673
+      "word": "new",
+      "start": 18.585,
+      "end": 18.705
     },
     {
-      "word": "ride?",
-      "start": 29.713,
-      "end": 29.933
+      "word": "tool",
+      "start": 18.765,
+      "end": 18.985
+    },
+    {
+      "word": "that",
+      "start": 19.025,
+      "end": 19.145
+    },
+    {
+      "word": "specifically",
+      "start": 19.185,
+      "end": 19.686
+    },
+    {
+      "word": "overrides",
+      "start": 19.786,
+      "end": 20.186
+    },
+    {
+      "word": "your",
+      "start": 20.206,
+      "end": 20.326
+    },
+    {
+      "word": "private",
+      "start": 20.346,
+      "end": 20.646
+    },
+    {
+      "word": "data",
+      "start": 20.686,
+      "end": 20.886
+    },
+    {
+      "word": "with",
+      "start": 20.926,
+      "end": 21.047
+    },
+    {
+      "word": "precise,",
+      "start": 21.087,
+      "end": 21.467
+    },
+    {
+      "word": "calculated",
+      "start": 21.747,
+      "end": 22.207
+    },
+    {
+      "word": "noise.",
+      "start": 22.247,
+      "end": 22.528
+    },
+    {
+      "word": "It",
+      "start": 23.415,
+      "end": 23.475
+    },
+    {
+      "word": "effectively",
+      "start": 23.495,
+      "end": 23.936
+    },
+    {
+      "word": "blinds",
+      "start": 23.976,
+      "end": 24.276
+    },
+    {
+      "word": "the",
+      "start": 24.296,
+      "end": 24.376
+    },
+    {
+      "word": "artificial",
+      "start": 24.436,
+      "end": 24.837
+    },
+    {
+      "word": "intelligence",
+      "start": 24.877,
+      "end": 25.377
+    },
+    {
+      "word": "to",
+      "start": 25.397,
+      "end": 25.477
+    },
+    {
+      "word": "your",
+      "start": 25.497,
+      "end": 25.638
+    },
+    {
+      "word": "specific",
+      "start": 25.658,
+      "end": 26.058
+    },
+    {
+      "word": "secrets",
+      "start": 26.118,
+      "end": 26.438
+    },
+    {
+      "word": "without",
+      "start": 26.519,
+      "end": 26.759
+    },
+    {
+      "word": "making",
+      "start": 26.799,
+      "end": 27.019
+    },
+    {
+      "word": "the",
+      "start": 27.059,
+      "end": 27.119
+    },
+    {
+      "word": "entire",
+      "start": 27.159,
+      "end": 27.52
+    },
+    {
+      "word": "system",
+      "start": 27.56,
+      "end": 27.86
+    },
+    {
+      "word": "stupid.",
+      "start": 27.9,
+      "end": 28.22
+    },
+    {
+      "word": "Tests",
+      "start": 29.021,
+      "end": 29.342
+    },
+    {
+      "word": "show",
+      "start": 29.402,
+      "end": 29.562
+    },
+    {
+      "word": "it",
+      "start": 29.602,
+      "end": 29.662
+    },
+    {
+      "word": "even",
+      "start": 29.722,
+      "end": 29.882
+    },
+    {
+      "word": "holds",
+      "start": 29.902,
+      "end": 30.103
+    },
+    {
+      "word": "up",
+      "start": 30.163,
+      "end": 30.243
+    },
+    {
+      "word": "against",
+      "start": 30.283,
+      "end": 30.503
+    },
+    {
+      "word": "advanced",
+      "start": 30.563,
+      "end": 30.843
+    },
+    {
+      "word": "hackers",
+      "start": 30.863,
+      "end": 31.204
+    },
+    {
+      "word": "trying",
+      "start": 31.244,
+      "end": 31.444
+    },
+    {
+      "word": "to",
+      "start": 31.484,
+      "end": 31.544
+    },
+    {
+      "word": "force",
+      "start": 31.584,
+      "end": 31.805
+    },
+    {
+      "word": "the",
+      "start": 31.825,
+      "end": 31.905
+    },
+    {
+      "word": "model",
+      "start": 31.925,
+      "end": 32.185
+    },
+    {
+      "word": "to",
+      "start": 32.205,
+      "end": 32.285
+    },
+    {
+      "word": "reveal",
+      "start": 32.345,
+      "end": 32.625
+    },
+    {
+      "word": "hidden",
+      "start": 32.665,
+      "end": 32.866
+    },
+    {
+      "word": "facts.",
+      "start": 32.926,
+      "end": 33.246
+    },
+    {
+      "word": "If",
+      "start": 34.147,
+      "end": 34.207
+    },
+    {
+      "word": "you",
+      "start": 34.227,
+      "end": 34.307
+    },
+    {
+      "word": "could",
+      "start": 34.347,
+      "end": 34.468
+    },
+    {
+      "word": "force",
+      "start": 34.508,
+      "end": 34.768
+    },
+    {
+      "word": "every",
+      "start": 34.828,
+      "end": 35.008
+    },
+    {
+      "word": "AI",
+      "start": 35.048,
+      "end": 35.328
+    },
+    {
+      "word": "company",
+      "start": 35.389,
+      "end": 35.669
+    },
+    {
+      "word": "to",
+      "start": 35.689,
+      "end": 35.789
+    },
+    {
+      "word": "run",
+      "start": 35.829,
+      "end": 35.929
+    },
+    {
+      "word": "a",
+      "start": 35.969,
+      "end": 35.989
+    },
+    {
+      "word": "wide",
+      "start": 36.029,
+      "end": 36.229
+    },
+    {
+      "word": "out",
+      "start": 36.27,
+      "end": 36.37
+    },
+    {
+      "word": "scan",
+      "start": 36.41,
+      "end": 36.67
+    },
+    {
+      "word": "on",
+      "start": 36.71,
+      "end": 36.77
+    },
+    {
+      "word": "your",
+      "start": 36.79,
+      "end": 36.91
+    },
+    {
+      "word": "own",
+      "start": 36.95,
+      "end": 37.05
+    },
+    {
+      "word": "name,",
+      "start": 37.09,
+      "end": 37.311
+    },
+    {
+      "word": "would",
+      "start": 37.571,
+      "end": 37.691
+    },
+    {
+      "word": "you",
+      "start": 37.711,
+      "end": 37.791
+    },
+    {
+      "word": "trust",
+      "start": 37.811,
+      "end": 38.052
+    },
+    {
+      "word": "it?",
+      "start": 38.092,
+      "end": 38.152
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"
