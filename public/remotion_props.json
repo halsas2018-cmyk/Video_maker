@@ -1,672 +1,712 @@
 {
   "shots": [
     {
-      "sentence": "A Florida woman is facing felony charges after she used the AI chatbot Claude as a personal diary.",
-      "search_term": "person typing on laptop",
+      "sentence": "SpaceX is currently in talks to borrow forty billion dollars specifically to stock up on Nvidia computer chips.",
+      "search_term": "high tech server room",
       "media_type": "video",
-      "visual": "Close up of hands typing on a laptop keyboard.",
+      "visual": "Rows of glowing server racks in a high-tech data center.",
       "asset_path": "project_assets/shot_1.mp4",
-      "duration_seconds": 2.681
+      "duration_seconds": 2.548
     },
     {
-      "sentence": "A Florida woman is facing felony charges after she used the AI chatbot Claude as a personal diary.",
-      "search_term": "worried woman looking at screen",
+      "sentence": "SpaceX is currently in talks to borrow forty billion dollars specifically to stock up on Nvidia computer chips.",
+      "search_term": "microchip close up",
       "media_type": "video",
-      "visual": "A woman looking concerned at a glowing computer screen.",
+      "visual": "Extreme close up of a shiny computer processor chip.",
       "asset_path": "project_assets/shot_2.mp4",
-      "duration_seconds": 2.681
+      "duration_seconds": 2.548
     },
     {
-      "sentence": "She allegedly wrote that she planned to shoot up the local Sheriff's office, triggering the company's safety systems.",
-      "search_term": "police siren lights",
+      "sentence": "To put that number in perspective, that is roughly the same amount of money the company generates in total revenue annually.",
+      "search_term": "financial graph rising",
       "media_type": "video",
-      "visual": "Flashing police emergency lights at night.",
+      "visual": "A digital bar chart showing rapid growth.",
       "asset_path": "project_assets/shot_3.mp4",
-      "duration_seconds": 2.681
+      "duration_seconds": 2.973
     },
     {
-      "sentence": "She allegedly wrote that she planned to shoot up the local Sheriff's office, triggering the company's safety systems.",
-      "search_term": "digital warning icon",
+      "sentence": "To put that number in perspective, that is roughly the same amount of money the company generates in total revenue annually.",
+      "search_term": "money stack",
       "media_type": "video",
-      "visual": "A digital red warning sign flickering on a screen.",
+      "visual": "Abstract shot of currency being counted or stacked.",
       "asset_path": "project_assets/shot_4.mp4",
-      "duration_seconds": 2.681
+      "duration_seconds": 2.973
     },
     {
-      "sentence": "Anthropic didn't just ignore it; they had a human reviewer confirm the threat and immediately alerted law enforcement.",
-      "search_term": "man looking at computer monitors",
+      "sentence": "It is essentially betting an entire year of company earnings on the power of these specific processing units.",
+      "search_term": "person thinking intense",
       "media_type": "video",
-      "visual": "A tech worker reviewing data on multiple screens.",
+      "visual": "A close up of a person looking at a screen with a thoughtful expression.",
       "asset_path": "project_assets/shot_5.mp4",
-      "duration_seconds": 2.681
+      "duration_seconds": 2.548
     },
     {
-      "sentence": "Anthropic didn't just ignore it; they had a human reviewer confirm the threat and immediately alerted law enforcement.",
-      "search_term": "talking on telephone",
+      "sentence": "It is essentially betting an entire year of company earnings on the power of these specific processing units.",
+      "search_term": "digital network nodes",
       "media_type": "video",
-      "visual": "Someone making an urgent phone call.",
+      "visual": "Glowing lines connecting points in a digital space.",
       "asset_path": "project_assets/shot_6.mp4",
-      "duration_seconds": 2.681
+      "duration_seconds": 2.548
     },
     {
-      "sentence": "This isn't an isolated incident, as tech companies are now under massive pressure to police their users' private thoughts.",
-      "search_term": "abstract data network",
+      "sentence": "Most companies might buy a few thousand, but SpaceX is moving with the kind of aggression that makes everyone else look like they are window shopping.",
+      "search_term": "crowded stock exchange floor",
       "media_type": "video",
-      "visual": "Glowing nodes connecting in a digital space.",
+      "visual": "Fast paced movement on a busy trading floor.",
       "asset_path": "project_assets/shot_7.mp4",
-      "duration_seconds": 2.83
+      "duration_seconds": 3.681
     },
     {
-      "sentence": "This isn't an isolated incident, as tech companies are now under massive pressure to police their users' private thoughts.",
-      "search_term": "server room technology",
+      "sentence": "Most companies might buy a few thousand, but SpaceX is moving with the kind of aggression that makes everyone else look like they are window shopping.",
+      "search_term": "business meeting intense",
       "media_type": "video",
-      "visual": "Rows of blinking server lights in a data center.",
+      "visual": "Professional setting with people gesturing at a large screen.",
       "asset_path": "project_assets/shot_8.mp4",
-      "duration_seconds": 2.83
+      "duration_seconds": 3.681
     },
     {
-      "sentence": "Earlier this year, OpenAI faced lawsuits for allegedly failing to prevent shootings despite seeing warning signs in user conversations.",
-      "search_term": "gavel hitting sound block",
+      "sentence": "They are clearly convinced that whoever controls the most computing power will ultimately control the future of their industry.",
+      "search_term": "futuristic city skyline",
       "media_type": "video",
-      "visual": "A judge's gavel hitting a wooden block in a courtroom.",
+      "visual": "A wide shot of a modern, glowing city at night.",
       "asset_path": "project_assets/shot_9.mp4",
-      "duration_seconds": 2.83
+      "duration_seconds": 2.69
     },
     {
-      "sentence": "Earlier this year, OpenAI faced lawsuits for allegedly failing to prevent shootings despite seeing warning signs in user conversations.",
-      "search_term": "news broadcast studio",
+      "sentence": "They are clearly convinced that whoever controls the most computing power will ultimately control the future of their industry.",
+      "search_term": "abstract artificial intelligence",
       "media_type": "video",
-      "visual": "A blurred background of a news studio.",
+      "visual": "Swirling blue light patterns representing AI processing.",
       "asset_path": "project_assets/shot_10.mp4",
-      "duration_seconds": 2.83
+      "duration_seconds": 2.69
     },
     {
-      "sentence": "So remember, these chatbots aren't your secret best friend; they are monitored tools that will snitch if they see a red flag.",
-      "search_term": "cctv camera",
+      "sentence": "If you were in charge, would you risk your entire yearly income just to stay ahead of the artificial intelligence race?",
+      "search_term": "person looking at camera",
       "media_type": "video",
-      "visual": "A security camera panning across a room.",
+      "visual": "A person looking directly into the camera lens with a curious expression.",
       "asset_path": "project_assets/shot_11.mp4",
-      "duration_seconds": 3.277
+      "duration_seconds": 2.973
     },
     {
-      "sentence": "So remember, these chatbots aren't your secret best friend; they are monitored tools that will snitch if they see a red flag.",
-      "search_term": "person looking at phone",
+      "sentence": "If you were in charge, would you risk your entire yearly income just to stay ahead of the artificial intelligence race?",
+      "search_term": "question mark abstract",
       "media_type": "video",
-      "visual": "A person looking at their phone with a thoughtful, serious expression.",
+      "visual": "Subtle abstract animation of a question mark in a digital environment.",
       "asset_path": "project_assets/shot_12.mp4",
-      "duration_seconds": 3.277
+      "duration_seconds": 2.973
     }
   ],
   "words": [
     {
-      "word": "A",
-      "start": 0.151,
-      "end": 0.191
-    },
-    {
-      "word": "Florida",
+      "word": "SpaceX",
       "start": 0.231,
-      "end": 0.551
-    },
-    {
-      "word": "woman",
-      "start": 0.591,
-      "end": 0.811
+      "end": 0.712
     },
     {
       "word": "is",
-      "start": 0.871,
-      "end": 0.951
+      "start": 0.752,
+      "end": 0.832
     },
     {
-      "word": "facing",
-      "start": 0.991,
-      "end": 1.292
+      "word": "currently",
+      "start": 0.872,
+      "end": 1.192
     },
     {
-      "word": "felony",
+      "word": "in",
+      "start": 1.252,
+      "end": 1.312
+    },
+    {
+      "word": "talks",
       "start": 1.352,
-      "end": 1.632
-    },
-    {
-      "word": "charges",
-      "start": 1.652,
-      "end": 1.972
-    },
-    {
-      "word": "after",
-      "start": 2.092,
-      "end": 2.272
-    },
-    {
-      "word": "she",
-      "start": 2.292,
-      "end": 2.412
-    },
-    {
-      "word": "used",
-      "start": 2.492,
-      "end": 2.612
-    },
-    {
-      "word": "the",
-      "start": 2.652,
-      "end": 2.732
-    },
-    {
-      "word": "AI",
-      "start": 2.852,
-      "end": 3.133
-    },
-    {
-      "word": "chatbot",
-      "start": 3.173,
-      "end": 3.573
-    },
-    {
-      "word": "clawed",
-      "start": 3.613,
-      "end": 3.893
-    },
-    {
-      "word": "as",
-      "start": 4.113,
-      "end": 4.193
-    },
-    {
-      "word": "a",
-      "start": 4.233,
-      "end": 4.253
-    },
-    {
-      "word": "personal",
-      "start": 4.293,
-      "end": 4.633
-    },
-    {
-      "word": "diary.",
-      "start": 4.673,
-      "end": 4.994
-    },
-    {
-      "word": "She",
-      "start": 5.354,
-      "end": 5.454
-    },
-    {
-      "word": "allegedly",
-      "start": 5.494,
-      "end": 5.854
-    },
-    {
-      "word": "wrote",
-      "start": 5.894,
-      "end": 6.074
-    },
-    {
-      "word": "that",
-      "start": 6.094,
-      "end": 6.194
-    },
-    {
-      "word": "she",
-      "start": 6.214,
-      "end": 6.334
-    },
-    {
-      "word": "planned",
-      "start": 6.374,
-      "end": 6.654
+      "end": 1.612
     },
     {
       "word": "to",
-      "start": 6.694,
-      "end": 6.754
+      "start": 1.632,
+      "end": 1.712
     },
     {
-      "word": "shoot",
-      "start": 6.794,
-      "end": 6.975
+      "word": "borrow",
+      "start": 1.752,
+      "end": 1.992
+    },
+    {
+      "word": "$40",
+      "start": 2.033,
+      "end": 2.273
+    },
+    {
+      "word": "billion",
+      "start": 2.293,
+      "end": 2.853
+    },
+    {
+      "word": "specifically",
+      "start": 2.873,
+      "end": 3.374
+    },
+    {
+      "word": "to",
+      "start": 3.414,
+      "end": 3.494
+    },
+    {
+      "word": "stock",
+      "start": 3.514,
+      "end": 3.754
     },
     {
       "word": "up",
-      "start": 7.015,
-      "end": 7.115
+      "start": 3.814,
+      "end": 3.894
     },
     {
-      "word": "the",
-      "start": 7.135,
-      "end": 7.235
+      "word": "on",
+      "start": 3.954,
+      "end": 4.034
     },
     {
-      "word": "local",
-      "start": 7.275,
-      "end": 7.515
+      "word": "Nvidia",
+      "start": 4.154,
+      "end": 4.474
     },
     {
-      "word": "sheriff's",
-      "start": 7.575,
-      "end": 7.895
+      "word": "computer",
+      "start": 4.514,
+      "end": 4.855
     },
     {
-      "word": "office,",
-      "start": 7.955,
-      "end": 8.195
+      "word": "chips.",
+      "start": 4.875,
+      "end": 5.135
     },
     {
-      "word": "triggering",
-      "start": 8.495,
-      "end": 8.775
+      "word": "To",
+      "start": 6.016,
+      "end": 6.096
     },
     {
-      "word": "the",
-      "start": 8.795,
-      "end": 8.876
-    },
-    {
-      "word": "company's",
-      "start": 8.916,
-      "end": 9.216
-    },
-    {
-      "word": "safety",
-      "start": 9.236,
-      "end": 9.516
-    },
-    {
-      "word": "systems.",
-      "start": 9.556,
-      "end": 9.876
-    },
-    {
-      "word": "Anthropic",
-      "start": 10.336,
-      "end": 10.817
-    },
-    {
-      "word": "didn't",
-      "start": 10.877,
-      "end": 11.097
-    },
-    {
-      "word": "just",
-      "start": 11.157,
-      "end": 11.357
-    },
-    {
-      "word": "ignore",
-      "start": 11.377,
-      "end": 11.657
-    },
-    {
-      "word": "it.",
-      "start": 11.697,
-      "end": 11.757
-    },
-    {
-      "word": "They",
-      "start": 12.077,
-      "end": 12.177
-    },
-    {
-      "word": "had",
-      "start": 12.217,
-      "end": 12.297
-    },
-    {
-      "word": "a",
-      "start": 12.317,
-      "end": 12.357
-    },
-    {
-      "word": "human",
-      "start": 12.397,
-      "end": 12.657
-    },
-    {
-      "word": "reviewer",
-      "start": 12.698,
-      "end": 13.038
-    },
-    {
-      "word": "confirm",
-      "start": 13.078,
-      "end": 13.398
-    },
-    {
-      "word": "the",
-      "start": 13.418,
-      "end": 13.478
-    },
-    {
-      "word": "threat",
-      "start": 13.518,
-      "end": 13.778
-    },
-    {
-      "word": "and",
-      "start": 14.078,
-      "end": 14.158
-    },
-    {
-      "word": "immediately",
-      "start": 14.198,
-      "end": 14.719
-    },
-    {
-      "word": "alerted",
-      "start": 14.759,
-      "end": 15.039
-    },
-    {
-      "word": "law",
-      "start": 15.059,
-      "end": 15.179
-    },
-    {
-      "word": "enforcement.",
-      "start": 15.199,
-      "end": 15.679
-    },
-    {
-      "word": "This",
-      "start": 16.039,
-      "end": 16.199
-    },
-    {
-      "word": "isn't",
-      "start": 16.239,
-      "end": 16.419
-    },
-    {
-      "word": "an",
-      "start": 16.459,
-      "end": 16.499
-    },
-    {
-      "word": "isolated",
-      "start": 16.62,
-      "end": 16.98
-    },
-    {
-      "word": "incident,",
-      "start": 17.02,
-      "end": 17.3
-    },
-    {
-      "word": "as",
-      "start": 17.58,
-      "end": 17.66
-    },
-    {
-      "word": "tech",
-      "start": 17.7,
-      "end": 17.86
-    },
-    {
-      "word": "companies",
-      "start": 17.88,
-      "end": 18.18
-    },
-    {
-      "word": "are",
-      "start": 18.2,
-      "end": 18.3
-    },
-    {
-      "word": "now",
-      "start": 18.34,
-      "end": 18.5
-    },
-    {
-      "word": "under",
-      "start": 18.581,
-      "end": 18.741
-    },
-    {
-      "word": "massive",
-      "start": 18.801,
-      "end": 19.101
-    },
-    {
-      "word": "pressure",
-      "start": 19.141,
-      "end": 19.401
-    },
-    {
-      "word": "to",
-      "start": 19.441,
-      "end": 19.501
-    },
-    {
-      "word": "police",
-      "start": 19.541,
-      "end": 19.841
-    },
-    {
-      "word": "their",
-      "start": 19.861,
-      "end": 20.021
-    },
-    {
-      "word": "user's",
-      "start": 20.121,
-      "end": 20.381
-    },
-    {
-      "word": "private",
-      "start": 20.441,
-      "end": 20.722
-    },
-    {
-      "word": "thoughts.",
-      "start": 20.762,
-      "end": 21.062
-    },
-    {
-      "word": "Earlier",
-      "start": 21.502,
-      "end": 21.763
-    },
-    {
-      "word": "this",
-      "start": 21.803,
-      "end": 21.944
-    },
-    {
-      "word": "year,",
-      "start": 21.964,
-      "end": 22.124
-    },
-    {
-      "word": "OpenAI",
-      "start": 22.505,
-      "end": 23.007
-    },
-    {
-      "word": "faced",
-      "start": 23.047,
-      "end": 23.288
-    },
-    {
-      "word": "lawsuits",
-      "start": 23.328,
-      "end": 23.709
-    },
-    {
-      "word": "for",
-      "start": 23.729,
-      "end": 23.85
-    },
-    {
-      "word": "allegedly",
-      "start": 23.89,
-      "end": 24.351
-    },
-    {
-      "word": "failing",
-      "start": 24.392,
-      "end": 24.693
-    },
-    {
-      "word": "to",
-      "start": 24.733,
-      "end": 24.793
-    },
-    {
-      "word": "prevent",
-      "start": 24.833,
-      "end": 25.094
-    },
-    {
-      "word": "shootings",
-      "start": 25.154,
-      "end": 25.475
-    },
-    {
-      "word": "despite",
-      "start": 25.515,
-      "end": 25.917
-    },
-    {
-      "word": "seeing",
-      "start": 25.977,
-      "end": 26.198
-    },
-    {
-      "word": "warning",
-      "start": 26.238,
-      "end": 26.498
-    },
-    {
-      "word": "signs",
-      "start": 26.539,
-      "end": 26.799
-    },
-    {
-      "word": "and",
-      "start": 26.88,
-      "end": 26.94
-    },
-    {
-      "word": "user",
-      "start": 27.02,
-      "end": 27.221
-    },
-    {
-      "word": "conversations.",
-      "start": 27.241,
-      "end": 27.803
-    },
-    {
-      "word": "So",
-      "start": 28.244,
-      "end": 28.365
-    },
-    {
-      "word": "remember,",
-      "start": 28.385,
-      "end": 28.706
-    },
-    {
-      "word": "these",
-      "start": 29.067,
-      "end": 29.207
-    },
-    {
-      "word": "chatbots",
-      "start": 29.247,
-      "end": 29.669
-    },
-    {
-      "word": "aren't",
-      "start": 29.729,
-      "end": 29.87
-    },
-    {
-      "word": "your",
-      "start": 29.89,
-      "end": 29.99
-    },
-    {
-      "word": "secret",
-      "start": 30.03,
-      "end": 30.311
-    },
-    {
-      "word": "best",
-      "start": 30.351,
-      "end": 30.512
-    },
-    {
-      "word": "friend.",
-      "start": 30.552,
-      "end": 30.793
-    },
-    {
-      "word": "They",
-      "start": 31.114,
-      "end": 31.214
-    },
-    {
-      "word": "are",
-      "start": 31.234,
-      "end": 31.314
-    },
-    {
-      "word": "monitored",
-      "start": 31.374,
-      "end": 31.716
-    },
-    {
-      "word": "tools",
-      "start": 31.756,
-      "end": 31.996
+      "word": "put",
+      "start": 6.136,
+      "end": 6.276
     },
     {
       "word": "that",
-      "start": 32.017,
-      "end": 32.097
+      "start": 6.296,
+      "end": 6.436
     },
     {
-      "word": "will",
-      "start": 32.137,
-      "end": 32.277
+      "word": "number",
+      "start": 6.496,
+      "end": 6.716
     },
     {
-      "word": "snitch",
-      "start": 32.318,
-      "end": 32.598
+      "word": "in",
+      "start": 6.756,
+      "end": 6.816
     },
     {
-      "word": "if",
-      "start": 32.719,
-      "end": 32.779
+      "word": "perspective,",
+      "start": 6.856,
+      "end": 7.357
     },
     {
-      "word": "they",
-      "start": 32.799,
-      "end": 32.92
+      "word": "that",
+      "start": 7.617,
+      "end": 7.717
     },
     {
-      "word": "see",
-      "start": 32.96,
-      "end": 33.1
+      "word": "is",
+      "start": 7.777,
+      "end": 7.837
+    },
+    {
+      "word": "roughly",
+      "start": 7.897,
+      "end": 8.177
+    },
+    {
+      "word": "the",
+      "start": 8.217,
+      "end": 8.297
+    },
+    {
+      "word": "same",
+      "start": 8.337,
+      "end": 8.517
+    },
+    {
+      "word": "amount",
+      "start": 8.557,
+      "end": 8.778
+    },
+    {
+      "word": "of",
+      "start": 8.818,
+      "end": 8.858
+    },
+    {
+      "word": "money",
+      "start": 8.918,
+      "end": 9.098
+    },
+    {
+      "word": "the",
+      "start": 9.118,
+      "end": 9.218
+    },
+    {
+      "word": "company",
+      "start": 9.238,
+      "end": 9.538
+    },
+    {
+      "word": "generates",
+      "start": 9.578,
+      "end": 9.979
+    },
+    {
+      "word": "in",
+      "start": 10.039,
+      "end": 10.119
+    },
+    {
+      "word": "total",
+      "start": 10.179,
+      "end": 10.439
+    },
+    {
+      "word": "revenue",
+      "start": 10.479,
+      "end": 10.799
+    },
+    {
+      "word": "annually.",
+      "start": 10.879,
+      "end": 11.239
+    },
+    {
+      "word": "It",
+      "start": 12.06,
+      "end": 12.12
+    },
+    {
+      "word": "is",
+      "start": 12.16,
+      "end": 12.22
+    },
+    {
+      "word": "essentially",
+      "start": 12.26,
+      "end": 12.681
+    },
+    {
+      "word": "betting",
+      "start": 12.721,
+      "end": 12.941
+    },
+    {
+      "word": "an",
+      "start": 12.981,
+      "end": 13.041
+    },
+    {
+      "word": "entire",
+      "start": 13.081,
+      "end": 13.461
+    },
+    {
+      "word": "year",
+      "start": 13.481,
+      "end": 13.661
+    },
+    {
+      "word": "of",
+      "start": 13.701,
+      "end": 13.761
+    },
+    {
+      "word": "company",
+      "start": 13.801,
+      "end": 14.102
+    },
+    {
+      "word": "earnings",
+      "start": 14.182,
+      "end": 14.422
+    },
+    {
+      "word": "on",
+      "start": 14.462,
+      "end": 14.522
+    },
+    {
+      "word": "the",
+      "start": 14.542,
+      "end": 14.602
+    },
+    {
+      "word": "power",
+      "start": 14.642,
+      "end": 14.902
+    },
+    {
+      "word": "of",
+      "start": 14.922,
+      "end": 14.982
+    },
+    {
+      "word": "these",
+      "start": 15.002,
+      "end": 15.142
+    },
+    {
+      "word": "specific",
+      "start": 15.162,
+      "end": 15.563
+    },
+    {
+      "word": "processing",
+      "start": 15.603,
+      "end": 16.063
+    },
+    {
+      "word": "units.",
+      "start": 16.143,
+      "end": 16.383
+    },
+    {
+      "word": "Most",
+      "start": 17.284,
+      "end": 17.484
+    },
+    {
+      "word": "companies",
+      "start": 17.544,
+      "end": 17.885
+    },
+    {
+      "word": "might",
+      "start": 17.925,
+      "end": 18.085
+    },
+    {
+      "word": "buy",
+      "start": 18.125,
+      "end": 18.225
     },
     {
       "word": "a",
-      "start": 33.14,
-      "end": 33.2
+      "start": 18.265,
+      "end": 18.285
     },
     {
-      "word": "red",
-      "start": 33.241,
-      "end": 33.381
+      "word": "few",
+      "start": 18.325,
+      "end": 18.465
     },
     {
-      "word": "flag.",
-      "start": 33.441,
-      "end": 33.722
+      "word": "thousand,",
+      "start": 18.485,
+      "end": 18.845
+    },
+    {
+      "word": "but",
+      "start": 19.065,
+      "end": 19.186
+    },
+    {
+      "word": "SpaceX",
+      "start": 19.226,
+      "end": 19.686
+    },
+    {
+      "word": "is",
+      "start": 19.726,
+      "end": 19.806
+    },
+    {
+      "word": "moving",
+      "start": 19.866,
+      "end": 20.066
+    },
+    {
+      "word": "with",
+      "start": 20.106,
+      "end": 20.186
+    },
+    {
+      "word": "the",
+      "start": 20.206,
+      "end": 20.286
+    },
+    {
+      "word": "kind",
+      "start": 20.306,
+      "end": 20.466
+    },
+    {
+      "word": "of",
+      "start": 20.486,
+      "end": 20.527
+    },
+    {
+      "word": "aggression",
+      "start": 20.567,
+      "end": 20.907
+    },
+    {
+      "word": "that",
+      "start": 20.947,
+      "end": 21.047
+    },
+    {
+      "word": "makes",
+      "start": 21.067,
+      "end": 21.227
+    },
+    {
+      "word": "everyone",
+      "start": 21.267,
+      "end": 21.527
+    },
+    {
+      "word": "else",
+      "start": 21.547,
+      "end": 21.707
+    },
+    {
+      "word": "look",
+      "start": 21.747,
+      "end": 21.908
+    },
+    {
+      "word": "like",
+      "start": 21.928,
+      "end": 22.048
+    },
+    {
+      "word": "they",
+      "start": 22.068,
+      "end": 22.168
+    },
+    {
+      "word": "are",
+      "start": 22.188,
+      "end": 22.268
+    },
+    {
+      "word": "window",
+      "start": 22.288,
+      "end": 22.528
+    },
+    {
+      "word": "shopping.",
+      "start": 22.548,
+      "end": 22.888
+    },
+    {
+      "word": "They",
+      "start": 23.669,
+      "end": 23.769
+    },
+    {
+      "word": "are",
+      "start": 23.809,
+      "end": 23.889
+    },
+    {
+      "word": "clearly",
+      "start": 23.949,
+      "end": 24.269
+    },
+    {
+      "word": "convinced",
+      "start": 24.309,
+      "end": 24.69
+    },
+    {
+      "word": "that",
+      "start": 24.71,
+      "end": 24.83
+    },
+    {
+      "word": "whoever",
+      "start": 24.85,
+      "end": 25.15
+    },
+    {
+      "word": "controls",
+      "start": 25.19,
+      "end": 25.57
+    },
+    {
+      "word": "the",
+      "start": 25.61,
+      "end": 25.67
+    },
+    {
+      "word": "most",
+      "start": 25.71,
+      "end": 25.851
+    },
+    {
+      "word": "computing",
+      "start": 25.891,
+      "end": 26.271
+    },
+    {
+      "word": "power",
+      "start": 26.291,
+      "end": 26.551
+    },
+    {
+      "word": "will",
+      "start": 26.591,
+      "end": 26.711
+    },
+    {
+      "word": "ultimately",
+      "start": 26.771,
+      "end": 27.132
+    },
+    {
+      "word": "control",
+      "start": 27.172,
+      "end": 27.492
+    },
+    {
+      "word": "the",
+      "start": 27.512,
+      "end": 27.592
+    },
+    {
+      "word": "future",
+      "start": 27.632,
+      "end": 27.912
+    },
+    {
+      "word": "of",
+      "start": 27.952,
+      "end": 27.992
+    },
+    {
+      "word": "their",
+      "start": 28.012,
+      "end": 28.152
+    },
+    {
+      "word": "industry.",
+      "start": 28.172,
+      "end": 28.533
+    },
+    {
+      "word": "If",
+      "start": 29.352,
+      "end": 29.412
+    },
+    {
+      "word": "you",
+      "start": 29.433,
+      "end": 29.493
+    },
+    {
+      "word": "were",
+      "start": 29.533,
+      "end": 29.633
+    },
+    {
+      "word": "in",
+      "start": 29.653,
+      "end": 29.714
+    },
+    {
+      "word": "charge,",
+      "start": 29.754,
+      "end": 30.075
+    },
+    {
+      "word": "would",
+      "start": 30.316,
+      "end": 30.437
+    },
+    {
+      "word": "you",
+      "start": 30.477,
+      "end": 30.557
+    },
+    {
+      "word": "risk",
+      "start": 30.597,
+      "end": 30.758
+    },
+    {
+      "word": "your",
+      "start": 30.798,
+      "end": 30.899
+    },
+    {
+      "word": "entire",
+      "start": 30.939,
+      "end": 31.28
+    },
+    {
+      "word": "yearly",
+      "start": 31.34,
+      "end": 31.601
+    },
+    {
+      "word": "income",
+      "start": 31.662,
+      "end": 31.963
+    },
+    {
+      "word": "just",
+      "start": 32.003,
+      "end": 32.164
+    },
+    {
+      "word": "to",
+      "start": 32.184,
+      "end": 32.244
+    },
+    {
+      "word": "stay",
+      "start": 32.284,
+      "end": 32.465
+    },
+    {
+      "word": "ahead",
+      "start": 32.505,
+      "end": 32.646
+    },
+    {
+      "word": "of",
+      "start": 32.666,
+      "end": 32.726
+    },
+    {
+      "word": "the",
+      "start": 32.746,
+      "end": 32.826
+    },
+    {
+      "word": "artificial",
+      "start": 32.866,
+      "end": 33.288
+    },
+    {
+      "word": "intelligence",
+      "start": 33.328,
+      "end": 33.79
+    },
+    {
+      "word": "race?",
+      "start": 33.83,
+      "end": 34.031
     }
   ],
   "narrationSrc": "project_assets/narration.mp3"
