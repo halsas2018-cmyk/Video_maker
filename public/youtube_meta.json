@@ -1,14 +1,14 @@
 {
-  "youtube_title": "SpaceX Wants to Borrow $40 Billion for Nvidia Chips",
-  "youtube_description": "Elon Musk's SpaceX is reportedly in talks to borrow $40 billion to buy Nvidia chips. That's as much as the company makes in a year. #SpaceX #Nvidia #TechNews #ElonMusk",
-  "on_screen_hook": "SpaceX\u2019s Massive $40 Billion Chip Gamble",
+  "youtube_title": "Is Your AI Financial Advisor Lying to You?",
+  "youtube_description": "New research shows AI models like Llama 3.1 are inventing debt and income details when you ask for money advice. #AI #Finance #TechNews",
+  "on_screen_hook": "Llama 3.1 is Inventing Your Financial History",
   "headline_options": [
-    "SpaceX\u2019s Massive $40 Billion Chip Gamble",
-    "Why SpaceX Needs $40 Billion For Nvidia",
-    "SpaceX Is Going All In On Nvidia",
-    "The $40 Billion SpaceX Chip Bet",
-    "SpaceX Plans To Borrow Its Entire Revenue"
+    "Llama 3.1 is Inventing Your Financial History",
+    "AI Financial Advice Based on Hidden Biases",
+    "How Llama 3.1 Imagines Your Debt",
+    "Is Your AI Advisor Just Guessing?",
+    "The Financial Facts AI Models Are Faking"
   ],
-  "video_title_source": "SpaceX reportedly is looking to borrow as much money as the company generates in revenue to buy Nvidia chips",
-  "source_link": "https://www.marketwatch.com/story/spacex-reportedly-is-looking-to-raise-as-much-money-as-the-company-generates-in-revenue-to-buy-nvidia-chips-01ca6d82?mod=mw_rss_topstories"
+  "video_title_source": "Thin Evidence, Thick Priors: How Language Models Substitute Identity for Missing Financial Facts",
+  "source_link": "https://arxiv.org/abs/2610.07798"
 }
