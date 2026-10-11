@@ -71,8 +71,9 @@ jobs:
         run: |
           python3 -m pip install --break-system-packages --upgrade pip
           python3 -m pip install --break-system-packages -r requirements.txt
-          # WhisperX for word-level timestamps (CPU build)
-          python3 -m pip install --break-system-packages whisperx torch --index-url https://download.pytorch.org/whl/cpu
+          # WhisperX for word-level timestamps (install from GitHub, not PyPI)
+          python3 -m pip install --break-system-packages git+https://github.com/m-bain/whisperx.git
+          python3 -m pip install --break-system-packages torch --index-url https://download.pytorch.org/whl/cpu
 
       # ──────────────────────────────────────────────────────────────────────
       # Node Dependencies (Remotion)
