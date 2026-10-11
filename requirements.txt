@@ -4,6 +4,7 @@
 
 # Core
 requests>=2.31.0
+httpx>=0.27.0
 
 # Voice generation (free, local via Microsoft Edge TTS)
 edge-tts>=7.0.0
