@@ -618,6 +618,19 @@ def available_models() -> list[str]:
     return avail
 
 
+def resolve_model(model_key: str) -> dict:
+    """Return the registry row for `model_key` as a plain dict (back-compat for run_pipeline.py)."""
+    if not model_key:
+        model_key = DEFAULT_MODEL_KEY
+    row = MODEL_REGISTRY.get(model_key)
+    if row is None:
+        valid = ", ".join(sorted(MODEL_REGISTRY))
+        raise ValueError(
+            f"Unknown model '{model_key}'. Valid --model keys: {valid}"
+        )
+    return {"key": model_key, "provider": row.provider.value, "model": row.model_id, "key_env": row.key_env, "notes": row.description}
+
+
 # ═══════════════════════════════════════════════════════════════════════════
 # Config Loading (Explicit, Not at Import Time)
 # ═══════════════════════════════════════════════════════════════════════════
