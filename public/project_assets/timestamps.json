@@ -1,617 +1,597 @@
 [
   {
-    "word": "Anthropics",
-    "start": 0.151,
-    "end": 0.591
+    "word": "Distro",
+    "start": 0.191,
+    "end": 0.491
   },
   {
-    "word": "AI",
-    "start": 0.631,
-    "end": 0.871
-  },
-  {
-    "word": "model",
-    "start": 0.931,
-    "end": 1.191
-  },
-  {
-    "word": "just",
-    "start": 1.271,
-    "end": 1.431
-  },
-  {
-    "word": "sent",
-    "start": 1.472,
-    "end": 1.632
-  },
-  {
-    "word": "a",
-    "start": 1.652,
-    "end": 1.692
-  },
-  {
-    "word": "fake",
-    "start": 1.752,
-    "end": 1.952
-  },
-  {
-    "word": "tip",
-    "start": 1.992,
-    "end": 2.192
-  },
-  {
-    "word": "to",
-    "start": 2.272,
-    "end": 2.352
-  },
-  {
-    "word": "the",
-    "start": 2.372,
-    "end": 2.432
-  },
-  {
-    "word": "Philadelphia",
-    "start": 2.472,
-    "end": 2.952
-  },
-  {
-    "word": "police",
-    "start": 2.992,
-    "end": 3.272
-  },
-  {
-    "word": "regarding",
-    "start": 3.312,
-    "end": 3.672
-  },
-  {
-    "word": "an",
-    "start": 3.812,
-    "end": 3.872
-  },
-  {
-    "word": "unsolved",
-    "start": 4.012,
-    "end": 4.413
-  },
-  {
-    "word": "homicide",
-    "start": 4.433,
-    "end": 4.853
-  },
-  {
-    "word": "case.",
-    "start": 4.893,
-    "end": 5.133
-  },
-  {
-    "word": "The",
-    "start": 5.553,
-    "end": 5.613
-  },
-  {
-    "word": "model",
-    "start": 5.653,
-    "end": 5.873
-  },
-  {
-    "word": "was",
-    "start": 5.893,
-    "end": 5.993
-  },
-  {
-    "word": "supposed",
-    "start": 6.013,
-    "end": 6.353
-  },
-  {
-    "word": "to",
-    "start": 6.373,
-    "end": 6.413
-  },
-  {
-    "word": "be",
-    "start": 6.453,
-    "end": 6.533
-  },
-  {
-    "word": "testing",
-    "start": 6.573,
-    "end": 6.873
-  },
-  {
-    "word": "websites,",
-    "start": 6.893,
-    "end": 7.354
-  },
-  {
-    "word": "but",
-    "start": 7.594,
-    "end": 7.694
-  },
-  {
-    "word": "it",
-    "start": 7.734,
-    "end": 7.774
-  },
-  {
-    "word": "decided",
-    "start": 7.814,
-    "end": 8.154
-  },
-  {
-    "word": "to",
-    "start": 8.194,
-    "end": 8.254
-  },
-  {
-    "word": "fill",
-    "start": 8.294,
-    "end": 8.454
-  },
-  {
-    "word": "out",
-    "start": 8.514,
-    "end": 8.594
-  },
-  {
-    "word": "a",
-    "start": 8.634,
-    "end": 8.674
-  },
-  {
-    "word": "real",
-    "start": 8.774,
-    "end": 9.014
-  },
-  {
-    "word": "criminal",
-    "start": 9.114,
-    "end": 9.434
-  },
-  {
-    "word": "investigation",
-    "start": 9.454,
-    "end": 10.015
-  },
-  {
-    "word": "form.",
-    "start": 10.055,
-    "end": 10.255
-  },
-  {
-    "word": "It",
-    "start": 10.635,
-    "end": 10.695
-  },
-  {
-    "word": "wrote",
-    "start": 10.735,
-    "end": 10.935
-  },
-  {
-    "word": "that",
-    "start": 10.995,
-    "end": 11.115
-  },
-  {
-    "word": "it",
-    "start": 11.135,
-    "end": 11.195
-  },
-  {
-    "word": "had",
-    "start": 11.235,
-    "end": 11.355
-  },
-  {
-    "word": "information",
-    "start": 11.415,
-    "end": 11.895
-  },
-  {
-    "word": "about",
-    "start": 11.915,
-    "end": 12.055
-  },
-  {
-    "word": "a",
-    "start": 12.075,
-    "end": 12.115
-  },
-  {
-    "word": "suspect,",
-    "start": 12.155,
-    "end": 12.575
-  },
-  {
-    "word": "even",
-    "start": 12.936,
-    "end": 13.056
-  },
-  {
-    "word": "though",
-    "start": 13.076,
-    "end": 13.196
-  },
-  {
-    "word": "the",
-    "start": 13.216,
-    "end": 13.296
-  },
-  {
-    "word": "website",
-    "start": 13.316,
-    "end": 13.696
-  },
-  {
-    "word": "contained",
-    "start": 13.736,
-    "end": 14.056
-  },
-  {
-    "word": "zero",
-    "start": 14.096,
-    "end": 14.356
-  },
-  {
-    "word": "details",
-    "start": 14.396,
-    "end": 14.776
-  },
-  {
-    "word": "to",
-    "start": 14.816,
-    "end": 14.896
-  },
-  {
-    "word": "reference.",
-    "start": 14.956,
-    "end": 15.256
-  },
-  {
-    "word": "The",
-    "start": 15.697,
-    "end": 15.777
-  },
-  {
-    "word": "police",
-    "start": 15.817,
-    "end": 16.057
-  },
-  {
-    "word": "department",
-    "start": 16.077,
-    "end": 16.457
-  },
-  {
-    "word": "never",
-    "start": 16.517,
-    "end": 16.697
-  },
-  {
-    "word": "actually",
-    "start": 16.777,
-    "end": 17.057
-  },
-  {
-    "word": "saw",
-    "start": 17.097,
-    "end": 17.237
-  },
-  {
-    "word": "the",
-    "start": 17.257,
-    "end": 17.317
-  },
-  {
-    "word": "tip",
-    "start": 17.357,
-    "end": 17.537
-  },
-  {
-    "word": "because",
-    "start": 17.657,
-    "end": 17.857
-  },
-  {
-    "word": "their",
-    "start": 17.877,
-    "end": 18.037
-  },
-  {
-    "word": "system",
-    "start": 18.077,
-    "end": 18.378
-  },
-  {
-    "word": "automatically",
-    "start": 18.538,
-    "end": 18.998
-  },
-  {
-    "word": "flagged",
-    "start": 19.038,
-    "end": 19.318
-  },
-  {
-    "word": "it",
-    "start": 19.338,
-    "end": 19.398
-  },
-  {
-    "word": "as",
-    "start": 19.438,
-    "end": 19.498
-  },
-  {
-    "word": "spam.",
-    "start": 19.558,
-    "end": 19.878
-  },
-  {
-    "word": "Anthropic",
-    "start": 20.238,
-    "end": 20.678
-  },
-  {
-    "word": "didn't",
-    "start": 20.758,
-    "end": 20.938
-  },
-  {
-    "word": "tell",
-    "start": 20.998,
-    "end": 21.138
-  },
-  {
-    "word": "the",
-    "start": 21.179,
-    "end": 21.239
-  },
-  {
-    "word": "city",
-    "start": 21.279,
-    "end": 21.479
-  },
-  {
-    "word": "about",
-    "start": 21.519,
-    "end": 21.659
-  },
-  {
-    "word": "the",
-    "start": 21.699,
-    "end": 21.779
-  },
-  {
-    "word": "incident",
-    "start": 21.839,
-    "end": 22.139
-  },
-  {
-    "word": "for",
-    "start": 22.159,
-    "end": 22.279
-  },
-  {
-    "word": "two",
-    "start": 22.319,
-    "end": 22.459
-  },
-  {
-    "word": "months,",
-    "start": 22.519,
-    "end": 22.759
-  },
-  {
-    "word": "which",
-    "start": 23.059,
-    "end": 23.179
-  },
-  {
-    "word": "the",
-    "start": 23.199,
-    "end": 23.279
-  },
-  {
-    "word": "department",
-    "start": 23.299,
-    "end": 23.679
-  },
-  {
-    "word": "called",
-    "start": 23.719,
-    "end": 23.919
-  },
-  {
-    "word": "completely",
-    "start": 23.939,
-    "end": 24.42
-  },
-  {
-    "word": "unacceptable.",
-    "start": 24.52,
-    "end": 25.06
-  },
-  {
-    "word": "The",
-    "start": 25.42,
-    "end": 25.501
-  },
-  {
-    "word": "company",
-    "start": 25.521,
-    "end": 25.822
-  },
-  {
-    "word": "claims",
-    "start": 25.862,
-    "end": 26.104
-  },
-  {
-    "word": "it",
-    "start": 26.144,
-    "end": 26.184
-  },
-  {
-    "word": "was",
-    "start": 26.224,
-    "end": 26.325
-  },
-  {
-    "word": "just",
-    "start": 26.385,
-    "end": 26.566
-  },
-  {
-    "word": "an",
-    "start": 26.606,
-    "end": 26.646
-  },
-  {
-    "word": "accident,",
-    "start": 26.747,
-    "end": 27.068
-  },
-  {
-    "word": "but",
-    "start": 27.35,
-    "end": 27.43
-  },
-  {
-    "word": "now",
-    "start": 27.47,
-    "end": 27.551
-  },
-  {
-    "word": "they",
-    "start": 27.591,
-    "end": 27.671
-  },
-  {
-    "word": "are",
-    "start": 27.691,
-    "end": 27.792
-  },
-  {
-    "word": "facing",
-    "start": 27.832,
-    "end": 28.133
-  },
-  {
-    "word": "serious",
-    "start": 28.214,
-    "end": 28.515
-  },
-  {
-    "word": "questions",
-    "start": 28.576,
-    "end": 28.897
-  },
-  {
-    "word": "about",
-    "start": 28.937,
-    "end": 29.078
-  },
-  {
-    "word": "their",
-    "start": 29.098,
-    "end": 29.219
-  },
-  {
-    "word": "safety",
-    "start": 29.259,
-    "end": 29.52
-  },
-  {
-    "word": "protocols.",
-    "start": 29.54,
-    "end": 29.982
-  },
-  {
-    "word": "Would",
-    "start": 30.364,
-    "end": 30.485
-  },
-  {
-    "word": "you",
-    "start": 30.505,
-    "end": 30.606
-  },
-  {
-    "word": "feel",
-    "start": 30.626,
-    "end": 30.806
-  },
-  {
-    "word": "safe",
-    "start": 30.867,
-    "end": 31.068
-  },
-  {
-    "word": "knowing",
-    "start": 31.108,
-    "end": 31.309
-  },
-  {
-    "word": "an",
-    "start": 31.349,
-    "end": 31.409
-  },
-  {
-    "word": "AI",
-    "start": 31.51,
-    "end": 31.791
+    "word": "kid",
+    "start": 0.511,
+    "end": 0.711
   },
   {
     "word": "is",
-    "start": 31.852,
-    "end": 31.912
+    "start": 0.771,
+    "end": 0.832
   },
   {
-    "word": "out",
-    "start": 31.932,
-    "end": 32.032
+    "word": "quietly",
+    "start": 0.892,
+    "end": 1.272
   },
   {
-    "word": "there",
-    "start": 32.053,
-    "end": 32.193
+    "word": "scrubbing",
+    "start": 1.312,
+    "end": 1.612
   },
   {
-    "word": "randomly",
-    "start": 32.274,
-    "end": 32.676
+    "word": "songs",
+    "start": 1.652,
+    "end": 1.912
   },
   {
-    "word": "filling",
-    "start": 32.716,
-    "end": 32.957
+    "word": "from",
+    "start": 1.952,
+    "end": 2.092
   },
   {
-    "word": "out",
-    "start": 32.977,
-    "end": 33.098
+    "word": "streaming",
+    "start": 2.132,
+    "end": 2.453
   },
   {
-    "word": "forms",
-    "start": 33.138,
-    "end": 33.379
+    "word": "services,",
+    "start": 2.493,
+    "end": 2.913
   },
   {
-    "word": "on",
-    "start": 33.439,
-    "end": 33.479
+    "word": "and",
+    "start": 3.213,
+    "end": 3.293
+  },
+  {
+    "word": "they",
+    "start": 3.313,
+    "end": 3.393
+  },
+  {
+    "word": "are",
+    "start": 3.433,
+    "end": 3.513
+  },
+  {
+    "word": "not",
+    "start": 3.553,
+    "end": 3.673
+  },
+  {
+    "word": "telling",
+    "start": 3.713,
+    "end": 3.954
   },
   {
     "word": "the",
-    "start": 33.5,
-    "end": 33.56
+    "start": 3.994,
+    "end": 4.074
   },
   {
-    "word": "internet?",
-    "start": 33.6,
-    "end": 33.942
+    "word": "artists",
+    "start": 4.114,
+    "end": 4.414
+  },
+  {
+    "word": "why.",
+    "start": 4.474,
+    "end": 4.734
+  },
+  {
+    "word": "The",
+    "start": 5.575,
+    "end": 5.655
+  },
+  {
+    "word": "company",
+    "start": 5.695,
+    "end": 5.975
+  },
+  {
+    "word": "claims",
+    "start": 6.015,
+    "end": 6.315
+  },
+  {
+    "word": "it",
+    "start": 6.355,
+    "end": 6.395
+  },
+  {
+    "word": "is",
+    "start": 6.435,
+    "end": 6.495
+  },
+  {
+    "word": "responding",
+    "start": 6.535,
+    "end": 6.995
+  },
+  {
+    "word": "to",
+    "start": 7.015,
+    "end": 7.096
+  },
+  {
+    "word": "a",
+    "start": 7.136,
+    "end": 7.176
+  },
+  {
+    "word": "lawsuit",
+    "start": 7.216,
+    "end": 7.576
+  },
+  {
+    "word": "from",
+    "start": 7.616,
+    "end": 7.736
+  },
+  {
+    "word": "Universal",
+    "start": 7.816,
+    "end": 8.176
+  },
+  {
+    "word": "Music",
+    "start": 8.216,
+    "end": 8.436
+  },
+  {
+    "word": "Group",
+    "start": 8.476,
+    "end": 8.657
+  },
+  {
+    "word": "over",
+    "start": 8.737,
+    "end": 8.897
+  },
+  {
+    "word": "AI-generated",
+    "start": 8.997,
+    "end": 9.617
+  },
+  {
+    "word": "content.",
+    "start": 9.677,
+    "end": 10.057
+  },
+  {
+    "word": "But",
+    "start": 10.878,
+    "end": 10.998
+  },
+  {
+    "word": "artists",
+    "start": 11.078,
+    "end": 11.358
+  },
+  {
+    "word": "like",
+    "start": 11.398,
+    "end": 11.538
+  },
+  {
+    "word": "Maguire",
+    "start": 11.578,
+    "end": 11.979
+  },
+  {
+    "word": "are",
+    "start": 12.039,
+    "end": 12.139
+  },
+  {
+    "word": "finding",
+    "start": 12.159,
+    "end": 12.459
+  },
+  {
+    "word": "their",
+    "start": 12.479,
+    "end": 12.599
+  },
+  {
+    "word": "non-AI",
+    "start": 12.639,
+    "end": 13.079
+  },
+  {
+    "word": "tracks",
+    "start": 13.099,
+    "end": 13.38
+  },
+  {
+    "word": "caught",
+    "start": 13.44,
+    "end": 13.62
+  },
+  {
+    "word": "in",
+    "start": 13.64,
+    "end": 13.68
+  },
+  {
+    "word": "the",
+    "start": 13.7,
+    "end": 13.76
+  },
+  {
+    "word": "crossfire,",
+    "start": 13.8,
+    "end": 14.28
+  },
+  {
+    "word": "including",
+    "start": 14.6,
+    "end": 14.941
+  },
+  {
+    "word": "licensed",
+    "start": 14.981,
+    "end": 15.321
+  },
+  {
+    "word": "covers.",
+    "start": 15.341,
+    "end": 15.661
+  },
+  {
+    "word": "One",
+    "start": 16.622,
+    "end": 16.762
+  },
+  {
+    "word": "song",
+    "start": 16.802,
+    "end": 17.002
+  },
+  {
+    "word": "was",
+    "start": 17.022,
+    "end": 17.122
+  },
+  {
+    "word": "even",
+    "start": 17.202,
+    "end": 17.382
+  },
+  {
+    "word": "flagged",
+    "start": 17.422,
+    "end": 17.742
+  },
+  {
+    "word": "for",
+    "start": 17.782,
+    "end": 17.882
+  },
+  {
+    "word": "an",
+    "start": 17.902,
+    "end": 17.943
+  },
+  {
+    "word": "unclear",
+    "start": 18.043,
+    "end": 18.423
+  },
+  {
+    "word": "sample",
+    "start": 18.443,
+    "end": 18.763
+  },
+  {
+    "word": "that",
+    "start": 18.783,
+    "end": 18.883
+  },
+  {
+    "word": "was",
+    "start": 18.903,
+    "end": 19.003
+  },
+  {
+    "word": "released",
+    "start": 19.043,
+    "end": 19.323
+  },
+  {
+    "word": "two",
+    "start": 19.383,
+    "end": 19.524
+  },
+  {
+    "word": "years",
+    "start": 19.564,
+    "end": 19.824
+  },
+  {
+    "word": "after",
+    "start": 19.904,
+    "end": 20.084
+  },
+  {
+    "word": "the",
+    "start": 20.104,
+    "end": 20.184
+  },
+  {
+    "word": "track.",
+    "start": 20.204,
+    "end": 20.484
+  },
+  {
+    "word": "When",
+    "start": 21.325,
+    "end": 21.445
+  },
+  {
+    "word": "musicians",
+    "start": 21.505,
+    "end": 21.945
+  },
+  {
+    "word": "try",
+    "start": 21.985,
+    "end": 22.125
+  },
+  {
+    "word": "to",
+    "start": 22.165,
+    "end": 22.205
+  },
+  {
+    "word": "complain,",
+    "start": 22.245,
+    "end": 22.605
+  },
+  {
+    "word": "they",
+    "start": 22.906,
+    "end": 23.006
+  },
+  {
+    "word": "are",
+    "start": 23.026,
+    "end": 23.106
+  },
+  {
+    "word": "trapped",
+    "start": 23.146,
+    "end": 23.406
+  },
+  {
+    "word": "in",
+    "start": 23.446,
+    "end": 23.526
+  },
+  {
+    "word": "circular",
+    "start": 23.566,
+    "end": 23.946
+  },
+  {
+    "word": "loops",
+    "start": 23.986,
+    "end": 24.207
+  },
+  {
+    "word": "with",
+    "start": 24.227,
+    "end": 24.367
+  },
+  {
+    "word": "unhelpful",
+    "start": 24.447,
+    "end": 24.847
+  },
+  {
+    "word": "customer",
+    "start": 24.887,
+    "end": 25.247
+  },
+  {
+    "word": "support",
+    "start": 25.267,
+    "end": 25.547
+  },
+  {
+    "word": "bots.",
+    "start": 25.567,
+    "end": 25.828
+  },
+  {
+    "word": "Former",
+    "start": 26.708,
+    "end": 26.968
+  },
+  {
+    "word": "employees",
+    "start": 27.008,
+    "end": 27.449
+  },
+  {
+    "word": "say",
+    "start": 27.489,
+    "end": 27.609
+  },
+  {
+    "word": "the",
+    "start": 27.649,
+    "end": 27.709
+  },
+  {
+    "word": "company",
+    "start": 27.749,
+    "end": 28.089
+  },
+  {
+    "word": "views",
+    "start": 28.109,
+    "end": 28.349
+  },
+  {
+    "word": "customer",
+    "start": 28.389,
+    "end": 28.75
+  },
+  {
+    "word": "service",
+    "start": 28.77,
+    "end": 29.07
+  },
+  {
+    "word": "as",
+    "start": 29.13,
+    "end": 29.19
+  },
+  {
+    "word": "a",
+    "start": 29.23,
+    "end": 29.27
+  },
+  {
+    "word": "waste",
+    "start": 29.29,
+    "end": 29.49
+  },
+  {
+    "word": "of",
+    "start": 29.53,
+    "end": 29.59
+  },
+  {
+    "word": "profit,",
+    "start": 29.63,
+    "end": 29.971
+  },
+  {
+    "word": "leaving",
+    "start": 30.271,
+    "end": 30.511
+  },
+  {
+    "word": "artists",
+    "start": 30.591,
+    "end": 30.891
+  },
+  {
+    "word": "with",
+    "start": 30.932,
+    "end": 31.032
+  },
+  {
+    "word": "zero",
+    "start": 31.072,
+    "end": 31.332
+  },
+  {
+    "word": "recourse.",
+    "start": 31.372,
+    "end": 31.772
+  },
+  {
+    "word": "If",
+    "start": 32.673,
+    "end": 32.733
+  },
+  {
+    "word": "your",
+    "start": 32.773,
+    "end": 32.893
+  },
+  {
+    "word": "life's",
+    "start": 32.913,
+    "end": 33.153
+  },
+  {
+    "word": "work",
+    "start": 33.193,
+    "end": 33.373
+  },
+  {
+    "word": "can",
+    "start": 33.393,
+    "end": 33.494
+  },
+  {
+    "word": "be",
+    "start": 33.534,
+    "end": 33.614
+  },
+  {
+    "word": "deleted",
+    "start": 33.634,
+    "end": 33.934
+  },
+  {
+    "word": "by",
+    "start": 33.954,
+    "end": 34.054
+  },
+  {
+    "word": "a",
+    "start": 34.094,
+    "end": 34.114
+  },
+  {
+    "word": "bot",
+    "start": 34.154,
+    "end": 34.354
+  },
+  {
+    "word": "in",
+    "start": 34.374,
+    "end": 34.434
+  },
+  {
+    "word": "an",
+    "start": 34.454,
+    "end": 34.514
+  },
+  {
+    "word": "instant,",
+    "start": 34.574,
+    "end": 34.915
+  },
+  {
+    "word": "is",
+    "start": 35.155,
+    "end": 35.235
+  },
+  {
+    "word": "it",
+    "start": 35.275,
+    "end": 35.335
+  },
+  {
+    "word": "really",
+    "start": 35.355,
+    "end": 35.555
+  },
+  {
+    "word": "your",
+    "start": 35.575,
+    "end": 35.675
+  },
+  {
+    "word": "music",
+    "start": 35.715,
+    "end": 35.935
+  },
+  {
+    "word": "anymore?",
+    "start": 35.996,
+    "end": 36.296
   }
 ]

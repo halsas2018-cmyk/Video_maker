@@ -455,14 +455,15 @@ def save_project(result: dict, outdir: Path, index: int, no_video: bool = False,
     if narration_path.exists():
         print(f"  ─ Extracting word timestamps with WhisperX...")
         try:
-            whisper_py = "/root/kinetic_typo_vid/venv/bin/python3"
+            # Use the same python executable that's running this script
+            # (works both locally and in CI where whisperx is installed globally)
             extractor = project_dir / "extract_word_timestamps.py"
             if not extractor.exists():
                 import shutil
                 shutil.copy("extract_word_timestamps.py", extractor)
 
             subprocess.run(
-                [whisper_py, str(extractor), str(narration_path), "--output", str(project_dir / "timestamps.json")],
+                [sys.executable, str(extractor), str(narration_path), "--output", str(project_dir / "timestamps.json")],
                 check=True,
                 capture_output=True,
                 text=True
