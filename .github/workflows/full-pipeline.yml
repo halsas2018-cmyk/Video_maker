@@ -122,7 +122,7 @@ jobs:
       # Upload Videos as Artifacts
       # ──────────────────────────────────────────────────────────────────────
       - name: Upload generated videos
-        if: github.event.inputs.no_video == 'false'
+        if: github.event.inputs.no_video != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: shorts-videos-${{ github.run_id }}
@@ -149,7 +149,7 @@ jobs:
           echo "=== YouTube Upload Debug ==="
           echo "YOUTUBE_TOKEN set: ${YOUTUBE_TOKEN:+yes}"
           echo "Looking for videos in output/**/draft_video.mp4"
-          shopt -s nullglob
+          shopt -s nullglob globstar
           videos=(output/**/draft_video.mp4)
           echo "Found ${#videos[@]} video(s)"
           for video in "${videos[@]}"; do
@@ -184,7 +184,7 @@ jobs:
           echo "Rank model: ${{ github.event.inputs.rank_model }}"
           echo "No-video mode: ${{ github.event.inputs.no_video }}"
           echo ""
-          if [[ "${{ github.event.inputs.no_video }}" == "false" ]]; then
+          if [[ "${{ github.event.inputs.no_video }}" != "true" ]]; then
             echo "### Generated videos:"
             find output -name "draft_video.mp4" -exec ls -lh {} \;
           fi
