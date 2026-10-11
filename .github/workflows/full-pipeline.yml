@@ -98,7 +98,7 @@ jobs:
             --count ${{ github.event.inputs.count }} \
             --model ${{ github.event.inputs.model }} \
             --rank-model ${{ github.event.inputs.rank_model }} \
-            ${{ github.event.inputs.no_video && '--no-video' || '--render' }}
+            ${{ github.event.inputs.no_video == 'true' && '--no-video' || '--render' }}
 
       # ──────────────────────────────────────────────────────────────────────
       # Upload Videos as Artifacts
