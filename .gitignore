@@ -4,7 +4,7 @@ __pycache__/
 *.srt
 _bg_gradient.png
 .aider*
-
+models/
 node_modules/
 out/
 
