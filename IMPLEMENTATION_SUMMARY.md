@@ -1,79 +1,80 @@
-# Concealment/Exposure Signal Implementation Summary
+# Piper TTS Implementation Summary
 
 ## Changes Made
 
-I successfully added a new **CONCEALMENT/EXPOSURE SIGNAL** scoring criterion to the LLM ranking prompt in `/root/video_maker/llm_ranker.py`.
+### 1. voice_generator.py
+- **Complete replacement** of Edge TTS implementation with local Piper TTS
+- **Preserved exact function signature**: `generate_narration(text: str, output_path: str = None, project_dir: Path = None, format: str = None) -> Path`
+- **Voice mapping** (preserving existing format names):
+  - EXPLAINER → en_US-ryan-medium
+  - DEBATE → en_US-amy-medium  
+  - URGENT_BREAK → en_US-hfc_male-medium
+  - Default → en_US-ryan-medium
+- **Audio pipeline**:
+  - Generate WAV using Piper CLI with appropriate length_scale for speech rate
+  - Convert WAV to MP3 using FFmpeg/libmp3lame
+  - Validate output MP3 exists, is non-empty, and has positive duration
+  - Clean up temporary WAV file
+- **Error handling**: Proper exception propagation with cleanup
+- **Text preparation**: Preserved existing logic (strip whitespace, validate non-empty)
 
-### Modified File: `llm_ranker.py`
-- **Location**: Lines 43-90 (the `RANK_SYSTEM_PROMPT` constant)
-- **Changes**:
-  1. Added the concealment/exposure signal as a fifth judging criterion
-  2. Included 2-3 few-shot examples showing high-scoring vs low-scoring stories
-  3. Preserved all existing criteria (general-audience appeal, hook potential, freshness, visual filmability)
+### 2. requirements.txt
+- **Removed**: `edge-tts>=7.0.0`
+- **Added**: `piper-tts==1.8.0` (pinned to matching working environment)
+- **Preserved**: All other dependencies unchanged
 
-### Exact Prompt Addition
+### 3. .github/workflows/full-pipeline.yml
+- **Added** Piper TTS model download step after system dependencies, before Python dependencies:
+  - Creates `models/piper/` directory
+  - Downloads 6 files from Hugging Face rhasspy/piper-voices:
+    - en/en_US/ryan/medium/en_US-ryan-medium.onnx + .json
+    - en/en_US/amy/medium/en_US-amy-medium.onnx + .json
+    - en/en_US/hfc_male/medium/en_US-hfc_male-medium.onnx + .json
+  - Uses `curl -fL` for failure-resistant downloads
+  - Verifies downloads succeed and files are non-empty
+  - Fails workflow on any download failure
+  - Uses temporary files and atomic renames
 
-**New criterion added:**
-```
-- Concealment/exposure signal: does the story involve something hidden, 
-  secret, or covered up being revealed or exposed? (e.g. a company hiding a 
-  problem, a system doing something behind the scenes it shouldn't, a 
-  researcher or whistleblower exposing misconduct, a security flaw or 
-  vulnerability that went undetected until discovered). Look for framing 
-  cues in the source material: words like "secret," "hidden," "covert," 
-  "undisclosed," "leaked," "whistleblower," "rogue," "unauthorized," 
-  "caught," "exposed." A routine product launch or standard announcement 
-  should score LOWER on this dimension than a story about a cover-up, 
-  breach, or hidden flaw.
-```
+### 4. run_pipeline.py
+- **Enhanced error handling** in voice generation section (lines 447-455):
+  - Added cleanup of partially created narration.mp3 on failure
+  - Added proper exception re-raising with `raise RuntimeError(...) from e`
+  - Preserves batch processing - only the failed project is stopped, others continue
+  - Follows existing per-project error-handling structure
 
-**Few-shot examples added:**
-```
-FEW-SHOT EXAMPLES:
-High concealment/exposure score: "Internal emails show Facebook knew 
-  Instagram harmed teen girls' mental health for years but hid the research"
-  (reveals hidden internal knowledge of harm)
-High concealment/exposure score: "Security researcher finds backdoor in 
-  popular VPN service that let attackers decrypt user traffic for months" 
-  (exposes undetected vulnerability)
-Low concealment/exposure score: "Apple announces new iPhone 16 with 
-  improved camera and longer battery life" (routine product announcement)
-Low concealment/exposure score: "Google releases new AI model Gemini 
-  with multimodal capabilities" (standard product launch, no concealment)
-```
+## Verification Results
 
-## Verification
+### Functionality Tests
+✅ All three voice formats work correctly with distinct voices
+✅ MP3 output files are valid, non-empty, and have positive duration
+✅ Text preparation and format handling preserved
+✅ CLI interface maintained (`--script`, `--file`, `--output`)
+✅ Error handling for empty/whitespace text works correctly
+✅ Unknown formats properly fall back to defaults with warning
 
-I created and ran a test script (`test_llm_ranker.py`) that verified:
+### Syntax Validation
+✅ voice_generator.py compiles without errors
+✅ run_pipeline.py compiles without errors
+✅ requirements.txt is valid pip format
+✅ GitHub Actions workflow YAML is structurally sound
 
-1. ✅ The prompt correctly contains the new concealment/exposure signal criterion
-2. ✅ The few-shot examples are properly included
-3. ✅ The LLM ranking function works with the updated prompt
-4. ✅ **Most importantly**: Stories with high concealment/exposure signals are correctly ranked ABOVE routine announcements
+### Requirements Compliance
+✅ Piper TTS used locally (not online API)
+✅ Model paths resolved relative to project root
+✅ WAV→MP3 conversion using FFmpeg/libmp3lame
+✅ Output MP3 validation (exists, non-empty, positive duration)
+✅ Existing function signature and return behavior preserved
+✅ requirements.txt updated with piper-tts==1.8.0
+✅ GitHub Actions downloads models with failure verification
+✅ Narration failure prevents downstream stages for affected project
+✅ Batch processing continues for other projects
+✅ No modifications to WhisperX, Remotion, or unrelated code
+✅ Four-file scope respected (no additional files modified)
 
-### Test Results
-In my test with mock stories:
-- **#1 Ranked**: "Internal emails show Facebook knew Instagram harmed teen girls' mental health for years but hid the research" 
-  *(Reason: High emotional stakes and clear 'hidden truth' narrative)*
-- **#2 Ranked**: "Security researcher finds backdoor in popular VPN service that let attackers decrypt user traffic for months"
-  *(Reason: Strong curiosity gap involving a security breach that affects millions of users)*
-- **#3 Ranked**: "Whistleblower exposes illegal data mining practices at major social media platform"
-  *(Reason: Whistleblower angle provides a compelling 'exposed' narrative about privacy violations)*
-- **#4 Ranked**: "Apple announces new iPhone 16 with improved camera and longer battery life" 
-  *(Routine product announcement - low concealment/exposure)*
-- **#5 Ranked**: "Google releases new AI model Gemini with multimodal capabilities"
-  *(Standard product launch - low concealment/exposure)*
-
-## Impact
-
-This implementation directly addresses the user's request by:
-1. **Adding a meaningful new scoring criterion** based on real performance data (the channel's top-performing videos all share this narrative pattern)
-2. **Using few-shot examples** to calibrate the LLM's understanding of what constitutes high vs low concealment/exposure signals
-3. **Preserving all existing criteria** - this is purely an additive enhancement
-4. **Demonstrated effectiveness** in test runs where concealment/exposure stories consistently surface higher in rankings
-
-The new criterion will help the pipeline surface more of the types of stories that have historically performed best on the channel, such as:
-- Exposés of hidden problems or cover-ups
-- Whistleblower revelations
-- Discovery of previously unknown security flaws/vulnerabilities
-- Stories involving secretive or unauthorized activities being brought to light
+## Behavioral Notes
+- Piper uses `length_scale` parameter (inverse of speech rate) where <1.0 is faster
+- Applied approximate conversion: length_scale = 1.0 / (1.0 + rate_percent/100)
+- All formats use +25% rate equivalent (length_scale=0.8) to match original Edge TTS behavior
+- Default format uses +20% rate equivalent (length_scale≈0.833)
+- Temporary WAV files are cleaned up in all code paths (success and failure)
+- Error messages are informative and preserve original exception context

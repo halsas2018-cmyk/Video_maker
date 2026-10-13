@@ -449,6 +449,10 @@ def save_project(result: dict, outdir: Path, index: int, no_video: bool = False,
         print(f"  ✓ narration.mp3")
     except Exception as e:
         print(f"  ✗ narration.mp3 FAILED: {e}")
+        # Remove any partially created file to avoid confusion
+        if narration_path.exists():
+            narration_path.unlink(missing_ok=True)
+        raise RuntimeError(f"Narration generation failed: {e}") from e
 
     # --- WhisperX Timestamp Extraction (before timing.json) ---
     timestamps = []

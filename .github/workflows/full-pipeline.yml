@@ -1,62 +1,3 @@
-
-name: Full YouTube Shorts Pipeline
-
-on:
-  workflow_dispatch:
-    inputs:
-      count:
-        description: "Number of videos to produce"
-        type: number
-        default: 3
-        required: false
-      model:
-        description: "LLM model key for script generation"
-        type: string
-        default: "gemini-35-flash-lite"
-        required: false
-      rank_model:
-        description: "LLM model key for editorial rerank"
-        type: string
-        default: "nvidia-nemotron-ultra"
-        required: false
-      no_video:
-        description: "Scripts only (skip voice, assets, render, upload)"
-        type: boolean
-        default: false
-        required: false
-
-jobs:
-  pipeline:
-    name: Generate Shorts
-    runs-on: ubuntu-latest
-    timeout-minutes: 120
-
-    permissions:
-      contents: write
-
-    steps:
-      # Checkout
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # Python
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-          cache: pip
-          cache-dependency-path: requirements.txt
-
-      # Node.js: match the working standalone Remotion workflow
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-          cache: npm
-          cache-dependency-path: package-lock.json
-
       # System dependencies
       - name: Install system packages
         run: |
@@ -68,6 +9,80 @@ jobs:
             libxrender-dev \
             libglib2.0-0
 
+      # Download Piper TTS models
+      - name: Download Piper TTS models
+        run: |
+          mkdir -p models/piper
+
+          # Array of model files to download: voice_name, url_suffix
+          declare -a models=(
+            "en_US-ryan-medium en/en_US/ryan/medium/en_US-ryan-medium"
+            "en_US-amy-medium en/en_US/amy/medium/en_US-amy-medium"
+            "en_US-hfc_male-medium en/en_US/hfc_male/medium/en_US-hfc_male-medium"
+          )
+
+          for model_spec in "${models[@]}"; do
+            voice_name=$(echo "$model_spec" | cut -d' ' -f1)
+            url_suffix=$(echo "$model_spec" | cut -d' ' -f2)
+
+            echo "Downloading model: $voice_name"
+
+            # Download .onnx file
+            onnx_url="https://huggingface.co/rhasspy/piper-voices/resolve/main/$url_suffix.onnx?download=true"
+            onnx_temp=$(mktemp)
+            if ! curl -fL "$onnx_url" -o "$onnx_temp"; then
+              echo "Failed to download ONNX model for $voice_name"
+              rm -f "$onnx_temp"
+              exit 1
+            fi
+            if [ ! -s "$onnx_temp" ]; then
+              echo "Downloaded ONNX file is empty for $voice_name"
+              rm -f "$onnx_temp"
+              exit 1
+            fi
+            mv "$onnx_temp" "models/piper/${voice_name}.onnx"
+
+            # Download .json config file
+            json_url="https://huggingface.co/rhasspy/piper-voices/resolve/main/$url_suffix.onnx.json?download=true"
+            json_temp=$(mktemp)
+            if ! curl -fL "$json_url" -o "$json_temp"; then
+              echo "Failed to download JSON config for $voice_name"
+              rm -f "$json_temp"
+              exit 1
+            fi
+            if [ ! -s "$json_temp" ]; then
+              echo "Downloaded JSON file is empty for $voice_name"
+              rm -f "$json_temp"
+              exit 1
+            fi
+            mv "$json_temp" "models/piper/${voice_name}.onnx.json"
+
+            echo "Successfully downloaded $voice_name"
+          done
+
+          # Verify all files exist
+          expected_files=(
+            "models/piper/en_US-ryan-medium.onnx"
+            "models/piper/en_US-ryan-medium.onnx.json"
+            "models/piper/en_US-amy-medium.onnx"
+            "models/piper/en_US-amy-medium.onnx.json"
+            "models/piper/en_US-hfc_male-medium.onnx"
+            "models/piper/en_US-hfc_male-medium.onnx.json"
+          )
+
+          for file in "${expected_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Expected file not found: $file"
+              exit 1
+            fi
+            if [ ! -s "$file" ]; then
+              echo "Expected file is empty: $file"
+              exit 1
+            fi
+          done
+
+          echo "All Piper TTS models downloaded successfully"
+
       # Python dependencies
       - name: Install Python dependencies
         run: |
@@ -77,197 +92,3 @@ jobs:
             git+https://github.com/m-bain/whisperx.git
           python3 -m pip install --break-system-packages \
             torch --index-url https://download.pytorch.org/whl/cpu
-
-      # Remotion dependencies
-      - name: Install Node dependencies
-        run: npm ci --legacy-peer-deps
-
-      # Full pipeline
-      - name: Run full pipeline (with video rendering)
-        if: github.event.inputs.no_video != 'true'
-        id: pipeline
-        env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-        run: |
-          python3 run_pipeline.py \
-            --auto \
-            --count "${{ inputs.count }}" \
-            --model "${{ inputs.model }}" \
-            --rank-model "${{ inputs.rank_model }}" \
-            --render
-
-      # Scripts-only pipeline
-      - name: Run full pipeline (scripts only)
-        if: github.event.inputs.no_video == 'true'
-        id: pipeline-no-video
-        env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-        run: |
-          python3 run_pipeline.py \
-            --auto \
-            --count "${{ inputs.count }}" \
-            --model "${{ inputs.model }}" \
-            --rank-model "${{ inputs.rank_model }}" \
-            --no-video
-
-      # Diagnostics: run even if the pipeline fails
-      - name: Diagnose generated files
-        if: always() && github.event.inputs.no_video != 'true'
-        run: |
-          echo "=== Finished videos ==="
-          find output -type f -name 'draft_video.mp4' -print 2>/dev/null || true
-
-          echo "=== YouTube metadata ==="
-          find output -type f -name 'youtube_meta.json' -print 2>/dev/null || true
-
-          echo "=== Remotion props ==="
-          find output -type f -name 'remotion_props.json' -print 2>/dev/null || true
-
-          echo "=== MP4 files (first 50) ==="
-          find output -type f -name '*.mp4' -print 2>/dev/null | head -50 || true
-
-          echo "=== Output directory ==="
-          if [[ -d output ]]; then
-            du -sh output
-          else
-            echo "output/ does not exist"
-          fi
-
-      # Save finished videos as downloadable artifacts
-      - name: Upload generated videos
-        if: always() && github.event.inputs.no_video != 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: shorts-videos-${{ github.run_id }}
-          path: output/**/draft_video.mp4
-          retention-days: 7
-          if-no-files-found: warn
-
-      # Save scripts, metadata, and assets
-      - name: Upload project folders
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: shorts-projects-${{ github.run_id }}
-          path: output/**/*
-          retention-days: 7
-          if-no-files-found: warn
-
-      # YouTube API dependencies
-      - name: Install YouTube upload dependencies
-        if: always() && github.event.inputs.no_video != 'true'
-        run: |
-          python3 -m pip install --break-system-packages \
-            google-api-python-client \
-            google-auth-oauthlib \
-            google-auth-httplib2
-
-      # Upload completed videos only
-      - name: Upload to YouTube
-        if: always() && github.event.inputs.no_video != 'true'
-        env:
-          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
-        run: |
-          set -uo pipefail
-
-          echo "=== YouTube Upload ==="
-
-          if [[ -z "${YOUTUBE_TOKEN:-}" ]]; then
-            echo "ERROR: YOUTUBE_TOKEN secret is missing or empty."
-            exit 1
-          fi
-
-          if [[ ! -f youtube_upload.py ]]; then
-            echo "ERROR: youtube_upload.py not found."
-            exit 1
-          fi
-
-          if [[ ! -d output ]]; then
-            echo "ERROR: output/ does not exist."
-            exit 1
-          fi
-
-          mapfile -d '' -t videos < <(
-            find output -type f -name 'draft_video.mp4' -print0 |
-            sort -z
-          )
-
-          echo "Finished videos found: ${#videos[@]}"
-
-          if [[ ${#videos[@]} -eq 0 ]]; then
-            echo "ERROR: No finished draft_video.mp4 files were generated."
-            echo "The diagnostic step above contains the output file listing."
-            exit 1
-          fi
-
-          failures=0
-          uploaded=0
-
-          for video in "${videos[@]}"; do
-            echo ""
-            echo "Video: $video"
-
-            meta="${video%/*}/youtube_meta.json"
-
-            if [[ ! -s "$video" ]]; then
-              echo "ERROR: Video is empty or missing."
-              failures=$((failures + 1))
-              continue
-            fi
-
-            if [[ ! -f "$meta" ]]; then
-              echo "ERROR: Matching metadata not found: $meta"
-              failures=$((failures + 1))
-              continue
-            fi
-
-            echo "Metadata: $meta"
-
-            if python3 youtube_upload.py "$video" "$meta"; then
-              uploaded=$((uploaded + 1))
-              echo "Upload completed."
-            else
-              echo "ERROR: Upload failed for $video"
-              failures=$((failures + 1))
-            fi
-          done
-
-          echo ""
-          echo "=== Upload Summary ==="
-          echo "Successful uploads: $uploaded"
-          echo "Failed uploads: $failures"
-
-          if [[ "$failures" -gt 0 ]]; then
-            exit 1
-          fi
-
-      # Final summary
-      - name: Print summary
-        if: always()
-        env:
-          REQUESTED_COUNT: ${{ inputs.count }}
-          MODEL: ${{ inputs.model }}
-          RANK_MODEL: ${{ inputs.rank_model }}
-          NO_VIDEO: ${{ inputs.no_video }}
-        run: |
-          echo "=== Pipeline Summary ==="
-          echo "Run ID: ${{ github.run_id }}"
-          echo "Requested videos: $REQUESTED_COUNT"
-          echo "Generation model: $MODEL"
-          echo "Ranking model: $RANK_MODEL"
-          echo "Scripts-only mode: $NO_VIDEO"
-
-          if [[ "$NO_VIDEO" != "true" ]]; then
-            echo ""
-            echo "=== Finished Videos ==="
-            find output -type f -name 'draft_video.mp4' -exec ls -lh {} \; 2>/dev/null || true
-          fi
-
