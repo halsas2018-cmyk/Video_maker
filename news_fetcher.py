@@ -33,28 +33,20 @@ RSS_FEEDS = {
 "https://krebsonsecurity.com/feed/",
     "EFF Deeplinks":
 "https://www.eff.org/rss/updates.xml",
-    # Broader AI news (still needed to catch AI-crime crossover
-stories)
     "TechCrunch AI":
-"https://techcrunch.com/category/artificial-
-intelligence/feed/",
-    "The Verge AI":           "https://www.theverge.com/rss/ai-
-artificial-intelligence/index.xml",
+"https://techcrunch.com/category/artificial-intelligence/feed/",
+    "The Verge AI":           "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
     "VentureBeat AI":
 "https://venturebeat.com/category/ai/feed/",
     # Google News RSS — crime/AI/surveillance queries
     "Google News AI Crime":
-"https://news.google.com/rss/search?q=AI+crime+police+arrest&hl
-=en-US&gl=US&ceid=US:en",
+"https://news.google.com/rss/search?q=AI+crime+police+arrest&hl=en-US&gl=US&ceid=US:en",
     "Google News Surveillance":
-"https://news.google.com/rss/search?q=AI+surveillance+law+enfor
-cement+facial+recognition&hl=en-US&gl=US&ceid=US:en",
+"https://news.google.com/rss/search?q=AI+surveillance+law+enforcement&hl=en-US&gl=US&ceid=US:en",
     "Google News Deepfake Crime":
-"https://news.google.com/rss/search?q=deepfake+fraud+scam+cyber
-crime&hl=en-US&gl=US&ceid=US:en",
+"https://news.google.com/rss/search?q=deepfake+fraud+scam+cybercrime&hl=en-US&gl=US&ceid=US:en",
     "Google News AI Court":
-"https://news.google.com/rss/search?q=AI+evidence+court+crimina
-l+justice&hl=en-US&gl=US&ceid=US:en",
+"https://news.google.com/rss/search?q=AI+evidence+court+criminal+justice&hl=en-US&gl=US&ceid=US:en",
     # Reddit
     "Reddit r/privacy":
 "https://old.reddit.com/r/privacy/top/.rss",
