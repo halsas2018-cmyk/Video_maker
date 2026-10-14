@@ -20,24 +20,46 @@ from collections import defaultdict
 # ---------------------------------------------------------------------------
 
 RSS_FEEDS = {
-    "OpenAI Blog": "https://openai.com/blog/rss.xml",
-    "Google AI Blog": "https://blog.google/technology/ai/rss/",
-    "TechCrunch AI": "https://techcrunch.com/category/artificial-intelligence/feed/",
-    "The Verge AI": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-    "Ars Technica": "https://feeds.arstechnica.com/arstechnica/technology-lab",
-    "MIT Tech Review": "https://www.technologyreview.com/feed/",
-    "VentureBeat AI": "https://venturebeat.com/category/ai/feed/",
-    "arXiv cs.AI": "https://export.arxiv.org/rss/cs.AI",
-    # Google News RSS — one query per category for proper tagging
-    "Google News AI": "https://news.google.com/rss/search?q=AI+artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
-    "Google News Business": "https://news.google.com/rss/search?q=business+startup+funding&hl=en-US&gl=US&ceid=US:en",
-    "Google News Science": "https://news.google.com/rss/search?q=science+research+breakthrough&hl=en-US&gl=US&ceid=US:en",
-    # Reddit RSS feeds (only ones that work reliably)
-    "Reddit r/programming": "https://old.reddit.com/r/programming/top/.rss",
-    # Business / Finance feeds (Part 2 of UPGRADE_PLAN.md)
-    "CNBC Business": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147",
-    "TechCrunch Startups": "https://techcrunch.com/category/startups/feed/",
-    "MarketWatch": "https://feeds.marketwatch.com/marketwatch/topstories/",
+    # Crime / policing / surveillance — core niche
+    "Wired Security":
+"https://www.wired.com/feed/category/security/latest/rss",
+    "MIT Tech Review Security":
+"https://www.technologyreview.com/topic/security/feed/",
+    "The Intercept Tech":
+"https://theintercept.com/topic/technology/feed/",
+    "ArsTechnica Security":
+"https://feeds.arstechnica.com/arstechnica/security",
+    "Krebs on Security":
+"https://krebsonsecurity.com/feed/",
+    "EFF Deeplinks":
+"https://www.eff.org/rss/updates.xml",
+    # Broader AI news (still needed to catch AI-crime crossover
+stories)
+    "TechCrunch AI":
+"https://techcrunch.com/category/artificial-
+intelligence/feed/",
+    "The Verge AI":           "https://www.theverge.com/rss/ai-
+artificial-intelligence/index.xml",
+    "VentureBeat AI":
+"https://venturebeat.com/category/ai/feed/",
+    # Google News RSS — crime/AI/surveillance queries
+    "Google News AI Crime":
+"https://news.google.com/rss/search?q=AI+crime+police+arrest&hl
+=en-US&gl=US&ceid=US:en",
+    "Google News Surveillance":
+"https://news.google.com/rss/search?q=AI+surveillance+law+enfor
+cement+facial+recognition&hl=en-US&gl=US&ceid=US:en",
+    "Google News Deepfake Crime":
+"https://news.google.com/rss/search?q=deepfake+fraud+scam+cyber
+crime&hl=en-US&gl=US&ceid=US:en",
+    "Google News AI Court":
+"https://news.google.com/rss/search?q=AI+evidence+court+crimina
+l+justice&hl=en-US&gl=US&ceid=US:en",
+    # Reddit
+    "Reddit r/privacy":
+"https://old.reddit.com/r/privacy/top/.rss",
+    "Reddit r/cybersecurity":
+"https://old.reddit.com/r/cybersecurity/top/.rss",
 }
 
 # ---------------------------------------------------------------------------
@@ -60,9 +82,9 @@ RSS_FEEDS = {
 # A wrong/dead ID fails soft: fetch_youtube_feed logs "[skip]" and moves on.
 # ---------------------------------------------------------------------------
 YOUTUBE_CHANNELS = {
-    "YouTube CNBC": "UCrp_UI8XtuYfpiqluWLD7Lw",           # CNBC Television — markets/earnings interviews
-    "YouTube Bloomberg Tech": "UCIALMKvObZNtJ6AmdCLP7Lg", # Bloomberg Technology — tech + AI coverage
-    "YouTube Yahoo Finance": "UCEAZeUIeJs0IjQiqTCdVSIg",  # broad business coverage
+    "YouTube VICE News":     "UCZaT_X_mc0BI-djXOlfhqWQ",   # crime + tech investigations
+    "YouTube Bloomberg Tech": "UCIALMKvObZNtJ6AmdCLP7Lg",  # AI + business crossover
+    "YouTube CNBC":          "UCrp_UI8XtuYfpiqluWLD7Lw",   # broad news coverage
 }
 YOUTUBE_FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
 
@@ -72,9 +94,10 @@ HN_ITEM_URL = "https://hacker-news.firebaseio.com/v0/item/{}.json"
 # Widened: AI terms + business/finance terms (Part 2 of UPGRADE_PLAN.md)
 HN_KEYWORDS = re.compile(
     r"\b("
-    r"ai|llm|gpt|model|openai|anthropic|google|robot|chip|nvidia|"
-    r"business|finance|market|stock|earnings|startup funding|crypto|bitcoin|"
-    r"economy|inflation|layoff|acquisition|ipo|revenue|fed|interest rate"
+    r"ai|llm|gpt|model|openai|deepfake|surveillance|facialrecognition|"
+    r"crime|police|arrest|hack|breach|scam|fraud|phishing|malware|ransomware|"
+    r"cybercrime|stalkerware|spyware|lawenforcement|criminal|prison|court|"
+    r"biometric|predictivepolicing|wrongful|civilliberties|aclu|privacy"
     r")\b",
     re.I,
 )
@@ -82,52 +105,61 @@ HN_KEYWORDS = re.compile(
 # Keywords that define "relevance to the niche" — tune this to your channel
 # Widened: existing AI terms + business/finance terms (Part 2 of UPGRADE_PLAN.md)
 NICHE_KEYWORDS = [
-    # AI / Tech terms (existing)
-    "ai", "artificial intelligence", "llm", "gpt", "openai", "anthropic",
-    "google deepmind", "model", "chatbot", "robot", "chip", "nvidia",
-    "research paper", "startup", "launch", "release", "breakthrough",
-    # Business / Finance terms (new — additive)
-    "business", "finance", "market", "stock", "earnings", "startup funding",
-    "crypto", "bitcoin", "economy", "inflation", "layoff", "acquisition",
-    "ipo", "revenue", "fed", "interest rate",
+    # AI crime / policing core
+    "ai", "artificial intelligence", "deepfake", "facialrecognition", "surveillance",
+    "predictivepolicing", "biometric", "algorithmic",
+    # Crime & law enforcement
+    "crime", "police", "arrest", "wrongfularrest", "falsearrest", "criminal",
+    "court", "evidence", "lawenforcement", "prison", "jail", "sentence",
+    "detective", "fbi", "investigat",
+    # Cyber crime
+    "hack", "breach", "scam", "fraud", "phishing", "malware", "ransomware",
+    "cybercrime", "stalkerware", "spyware", "datatheft", "identitytheft",
+    # Civil liberties / accountability
+    "aclu", "civilliberties", "privacy", "surveillance", "whistleblower",
+    "leaked", "exposed", "cover-up", "misconduct", "abuse",
+    # AI tools used in crime context
+    "openai", "gpt", "llm", "chatbot", "deepfake", "voiceclone", "generated",
 ]
 
 # Source-to-category mapping for grouping in picker and logging
 SOURCE_CATEGORIES = {
-    # AI sources
-    "OpenAI Blog": "ai",
-    "Google AI Blog": "ai",
-    "TechCrunch AI": "ai",
-    "The Verge AI": "ai",
-    "Ars Technica": "ai",
-    "MIT Tech Review": "ai",
-    "VentureBeat AI": "ai",
-    "arXiv cs.AI": "ai",
-    "Google News AI": "ai",
-    "Reddit r/programming": "ai",
-    # Business sources
-    "Google News Business": "business",
-    "CNBC Business": "business",
-    "TechCrunch Startups": "business",
-    "MarketWatch": "business",
-    # Science sources
-    "Google News Science": "science",
-    # YouTube channels
-    "YouTube CNBC": "business",
-    "YouTube Bloomberg Tech": "ai",
-    "YouTube Yahoo Finance": "business",
+    # Crime / surveillance / security sources
+    "Wired Security":            "crime",
+    "MIT Tech Review Security":  "crime",
+    "The Intercept Tech":        "crime",
+    "ArsTechnica Security":      "crime",
+    "Krebs on Security":         "crime",
+    "EFF Deeplinks":             "crime",
+    # AI (crossover potential)
+    "TechCrunch AI":             "ai",
+    "The Verge AI":              "ai",
+    "VentureBeat AI":            "ai",
+    # Google News
+    "Google News AI Crime":      "crime",
+    "Google News Surveillance":  "crime",
+    "Google News Deepfake Crime":"crime",
+    "Google News AI Court":      "crime",
+    # Reddit
+    "Reddit r/privacy":          "crime",
+    "Reddit r/cybersecurity":    "crime",
+    # YouTube
+    "YouTube VICE News":         "crime",
+    "YouTube Bloomberg Tech":    "ai",
+    "YouTube CNBC":              "ai",
     # Hacker News
-    "Hacker News": "ai",  # primarily AI/tech discussions
+    "Hacker News":               "crime",
 }
 
 # Sources that have native engagement data (HN points, Reddit upvotes/comments,
 # YouTube view counts)
 ENGAGEMENT_SOURCES = {
     "Hacker News",
-    "Reddit r/programming",
-    "YouTube CNBC",
+    "Reddit r/privacy",
+    "Reddit r/cybersecurity",
+    "YouTube VICE News",
     "YouTube Bloomberg Tech",
-    "YouTube Yahoo Finance",
+    "YouTube CNBC",
 }
 
 REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; ShortsBot/1.0)"}
@@ -151,7 +183,7 @@ def _strip_html(text: str) -> str:
 
 # Google News RSS redirect resolution
 GOOGLE_NEWS_DELAY = 1.5  # seconds between category queries
-GOOGLE_NEWS_SOURCES = {"Google News AI", "Google News Business", "Google News Science"}
+GOOGLE_NEWS_SOURCES = {"Google News AI Crime", "Google News Surveillance", "Google News Deepfake Crime", "Google News AI Court"}
 
 def _resolve_google_news_redirect(url: str) -> str:
     """Resolve Google News RSS redirect URL to final article URL.
@@ -443,6 +475,19 @@ def score_story(story: dict, now: datetime) -> float:
     hits = sum(1 for kw in NICHE_KEYWORDS if kw in text)
     score += min(hits, 6) * 5  # up to 30 pts
 
+    # Niche boost: crime/police/surveillance stories get bonus points to
+    # ensure they surface above generic AI product launches.
+    CRIME_BOOST_TERMS = [
+        "crime", "police", "arrest", "criminal", "court", "prison", "jail",
+        "surveillance", "facialrecognition", "deepfake", "fraud", "scam",
+        "hack", "breach", "ransomware", "phishing", "wrongful", "civilliberties",
+        "aclu", "biometric", "predictivepolicing", "lawenforcement",
+        "stalkerware", "spyware", "cybercrime", "misconduct",
+    ]
+    title_lower = story.get("title", "").lower()
+    if any(term in title_lower for term in CRIME_BOOST_TERMS):
+        score += 20  # strong boost to surface niche stories
+
     # Social engagement proxy — normalized per source type
     # Sources with native engagement data (HN, Reddit, YouTube) get engagement score
     # Sources without (plain RSS, Google News) get neutral default (15 pts mid-range)
@@ -516,7 +561,7 @@ def rank_top_stories(candidate_pool: int = 40) -> list[dict]:
 
     print(f"\nCollected {len(all_stories)} unique stories, {len(candidates)} in candidate pool.")
     print("Category breakdown:")
-    for cat in ["ai", "business", "science", "general"]:
+    for cat in ["crime", "ai", "general"]:
         if cat_counts[cat]:
             avg = sum(cat_scores[cat]) / len(cat_scores[cat])
             print(f"  {cat}: {cat_counts[cat]} stories, avg score {avg:.1f}")
